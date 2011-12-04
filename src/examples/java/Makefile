@@ -1,0 +1,61 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+# 
+#     http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Makefile.
+
+SHELL = '/bin/sh'
+
+BINDIR = ../../../bin
+LIBDIR = ../../../lib
+
+OUTDIR = $(BINDIR)/examples/java
+
+JAVA_HOME = /usr/lib/jvm/java-6-openjdk
+
+JAVA_CLASSES = $(OUTDIR)/TestFramework.class			\
+               $(OUTDIR)/TestExecutor.class			\
+               $(OUTDIR)/TestExceptionFramework.class		\
+               $(OUTDIR)/TestMultipleExecutorsFramework.class
+
+JAVA_SCRIPTS = $(OUTDIR)/test_framework $(OUTDIR)/test_executor	\
+	       $(OUTDIR)/test_exception_framework		\
+	       $(OUTDIR)/test_multiple_executors_framework
+
+JAVA = $(JAVA_CLASSES) $(JAVA_SCRIPTS)
+
+MESOS_JAVA_JAR = $(LIBDIR)/java/mesos.jar
+
+default: all
+
+$(OUTDIR):
+	mkdir -p $@
+
+$(JAVA): | $(OUTDIR)
+
+$(JAVA_CLASSES): $(MESOS_JAVA_JAR)
+
+$(JAVA_CLASSES): $(OUTDIR)/%.class: ./%.java
+	$(JAVA_HOME)/bin/javac -classpath ../../../third_party/protobuf-2.3.0/java/src/main/java:$(MESOS_JAVA_JAR):. -sourcepath . -d $(OUTDIR) $<
+
+$(JAVA_SCRIPTS): $(OUTDIR)/%: ./%
+	cp -r $< $@
+
+all: $(JAVA)
+
+clean:
+	rm -f $(JAVA)
+
+.phony: default all clean

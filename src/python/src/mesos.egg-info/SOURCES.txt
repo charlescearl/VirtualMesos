@@ -1,0 +1,12 @@
+setup.py
+native/mesos_executor_driver_impl.cpp
+native/mesos_scheduler_driver_impl.cpp
+native/module.cpp
+native/proxy_executor.cpp
+native/proxy_scheduler.cpp
+src/mesos.py
+src/mesos_pb2.py
+src/mesos.egg-info/PKG-INFO
+src/mesos.egg-info/SOURCES.txt
+src/mesos.egg-info/dependency_links.txt
+src/mesos.egg-info/top_level.txt
