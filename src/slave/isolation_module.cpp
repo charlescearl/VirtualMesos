@@ -23,6 +23,7 @@
 #elif __linux__
 #include "lxc_isolation_module.hpp"
 #endif
+#include "vm_isolation_module.hpp"
 
 
 namespace mesos { namespace internal { namespace slave {
@@ -32,12 +33,14 @@ IsolationModule* IsolationModule::create(const std::string &type)
   if (type == "process")
     return new ProcessBasedIsolationModule();
 #ifdef __sun__
-  else if (type == "project")
+  if (type == "project")
     return new SolarisProjectIsolationModule();
 #elif __linux__
-  else if (type == "lxc")
+  if (type == "lxc")
     return new LxcIsolationModule();
 #endif
+  else if (type == "vm")
+    return new ProcessBasedIsolationModule();
 
   return NULL;
 }

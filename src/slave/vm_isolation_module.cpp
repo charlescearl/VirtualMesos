@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#include <libvirt/libvirt.h>
 #include <algorithm>
 #include <sstream>
 #include <map>
@@ -77,18 +77,21 @@ VmIsolationModule::~VmIsolationModule()
 }
 
 
+
 void VmIsolationModule::initialize(
     const Configuration& _conf,
     bool _local,
     const PID<Slave>& _slave)
 {
+  // This will need to get passed the name of the virtual machine guest domain
+  // in conf
   conf = _conf;
   local = _local;
   slave = _slave;
 
   // Check if Linux Container tools are available.
-  if (system("vm-version > /dev/null") != 0) {
-    LOG(FATAL) << "Could not run vm-version; make sure Linux Container "
+  if (system("virsh -v > /dev/null") != 0) {
+    LOG(FATAL) << "Could not run virsh; make sure Libvirt  "
                 << "tools are installed";
   }
 
@@ -133,6 +136,8 @@ void VmIsolationModule::launchExecutor(
   info->pid = -1;
 
   infos[frameworkId][executorId] = info;
+
+  // cce: How do we communicate with the executor?
 
   // Run vm-execute mesos-launcher using a fork-exec (since vm-execute
   // does not return until the container is finished). Note that vm-execute
@@ -180,6 +185,8 @@ void VmIsolationModule::launchExecutor(
         executorInfo.params().param(i).value();
     }
 
+    // This launcher environment has to be setup inside of the VM, so we would need something like
+    // launcher->setupVirtualEnvironmentForLauncher()
     ExecutorLauncher* launcher =
       new ExecutorLauncher(frameworkId,
 			   executorId,
@@ -207,10 +214,14 @@ void VmIsolationModule::launchExecutor(
 
     // This will have to be changed to account for the virtual machine init
     // Assume that for now we will use libvirt
-    args[i++] = "lxc-execute";
-    args[i++] = "-n";
+    args[i++] = "virsh";
+    args[i++] = "start";
+    // the container name will be fixed...some VM that is in the local cache
     args[i++] = container.c_str();
 
+    // Here is where I think he launches the mesos task...or is it rather the place
+    // that he configures an environment that will "phone home" to the mesos 
+    // master
     for (int j = 0; j < options.size(); j++) {
       args[i++] = options[j].c_str();
     }
@@ -221,6 +232,10 @@ void VmIsolationModule::launchExecutor(
     args[i++] = NULL;
 
     // Run lxc-execute.
+    // So here, have launched the VM within the forked executor process
+    // I think that the lxc is already passed the arguments of the task?
+    // How do we manage the VM?
+    // So one command has to launch the vm, ssh to start the task
     execvp(args[0], (char* const*) args);
 
     // If we get here, the execvp call failed.
@@ -247,14 +262,14 @@ void VmIsolationModule::killExecutor(
   LOG(INFO) << "Stopping container " << info->container;
 
   Try<int> status =
-    utils::os::shell(NULL, "lxc-stop -n %s", info->container.c_str());
+    utils::os::shell(NULL, "virsh shutdown %s", info->container.c_str());
 
   if (status.isError()) {
     LOG(ERROR) << "Failed to stop container " << info->container
                << ": " << status.error();
   } else if (status.get() != 0) {
     LOG(ERROR) << "Failed to stop container " << info->container
-               << ", lxc-stop returned: " << status.get();
+               << ", virsh returned: " << status.get();
   }
 
   if (infos[frameworkId].size() == 1) {

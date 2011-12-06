@@ -23,6 +23,7 @@
 #elif __linux__
 #include "lxc_isolation_module.hpp"
 #endif
+#include "vm_isolation_module.hpp"
 
 using namespace mesos::internal::slave;
 
@@ -35,4 +36,5 @@ DEFINE_FACTORY(IsolationModule, Slave *)
 #elif __linux__
   registerClass<LxcIsolationModule>("lxc");
 #endif
+  registerClass<VmIsolationModule>("vm");
 }

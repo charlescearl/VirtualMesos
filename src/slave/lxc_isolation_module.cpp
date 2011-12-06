@@ -178,6 +178,7 @@ void LxcIsolationModule::launchExecutor(
     for (int i = 0; i < executorInfo.params().param_size(); i++) {
       params[executorInfo.params().param(i).key()] =
         executorInfo.params().param(i).value();
+      LOG(INFO) << "Executor info " << executorInfo.params().param(i).value();
     }
 
     ExecutorLauncher* launcher =
@@ -211,6 +212,7 @@ void LxcIsolationModule::launchExecutor(
 
     for (int j = 0; j < options.size(); j++) {
       args[i++] = options[j].c_str();
+      LOG(INFO) << "Option " << i-1 << " : " << options[j].c_str();
     }
 
     // Determine path for mesos-launcher from Mesos home directory.

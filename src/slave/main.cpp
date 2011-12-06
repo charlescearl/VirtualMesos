@@ -62,6 +62,7 @@ int main(int argc, char** argv)
   configurator.addOption<string>("ip", "IP address to listen on");
   configurator.addOption<string>("master", 'm', "Master URL");
   configurator.addOption<string>("isolation", 'i', "Isolation module name", "process");
+  configurator.addOption<string>("vm", "Virtual machine domain");
 #ifdef MESOS_WEBUI
   configurator.addOption<int>("webui_port", 'w', "Web UI port", 8081);
 #endif
@@ -83,6 +84,11 @@ int main(int argc, char** argv)
 
   if (conf.contains("port")) {
     setenv("LIBPROCESS_PORT", conf["port"].c_str(), 1);
+  }
+
+  if (conf.contains("vm")) {
+    // At least set LIBVIRT_DEFAULT_URI=qemu:///system so that root is not needed
+    setenv("LIBVIRT_DEFAULT_URI", "qemu:///system", 1);
   }
 
   if (conf.contains("ip")) {
