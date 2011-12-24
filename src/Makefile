@@ -110,7 +110,7 @@ CFLAGS += -MMD -MP
 CXXFLAGS += -MMD -MP
 
 # Add protobuf, glog, leveldb, libev, libprocess, pthread, and dl to LIBS.
-LIBS += -lprotobuf -lglog -lleveldb -lprocess -lev -lpthread -ldl
+LIBS += -lprotobuf -lglog -lleveldb -lprocess -lev -lpthread -ldl -lvirt
 
 # Add ZooKeeper if necessary.
 ifeq ($(WITH_ZOOKEEPER),1)
@@ -123,7 +123,7 @@ MASTER_OBJ = master/master.o master/http.o master/slaves_manager.o	\
 
 SLAVE_OBJ = slave/slave.o slave/http.o slave/isolation_module.o		\
 	    slave/process_based_isolation_module.o slave/reaper.o	\
-	    launcher/launcher.o
+	    slave/vm_isolation_module.o launcher/launcher.o
 
 ifeq ($(OS_NAME),solaris)
   SLAVE_OBJ += slave/solaris_project_isolation_module.o

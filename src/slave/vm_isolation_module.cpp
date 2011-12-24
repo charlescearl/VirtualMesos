@@ -126,13 +126,13 @@ void VmIsolationModule::launchExecutor(
   std::ostringstream out;
   out << "mesos.executor-" << executorId << ".framework-" << frameworkId;
 
-  const string& container = out.str();
+  const string& vm = out.str();
 
-  ContainerInfo* info = new ContainerInfo();
+  VmInfo* info = new VmInfo();
 
   info->frameworkId = frameworkId;
   info->executorId = executorId;
-  info->container = container;
+  info->vm = vm;
   info->pid = -1;
 
   infos[frameworkId][executorId] = info;
@@ -199,7 +199,7 @@ void VmIsolationModule::launchExecutor(
 			   conf.get("hadoop_home", ""),
 			   !local,
 			   conf.get("switch_user", true),
-			   container,
+			   vm,
 			   params);
 
     launcher->setupEnvironmentForLauncherMain();
@@ -217,7 +217,7 @@ void VmIsolationModule::launchExecutor(
     args[i++] = "virsh";
     args[i++] = "start";
     // the container name will be fixed...some VM that is in the local cache
-    args[i++] = container.c_str();
+    args[i++] = vm.c_str();
 
     // Here is where I think he launches the mesos task...or is it rather the place
     // that he configures an environment that will "phone home" to the mesos 
@@ -255,20 +255,20 @@ void VmIsolationModule::killExecutor(
     return;
   }
 
-  ContainerInfo* info = infos[frameworkId][executorId];
+  VmInfo* info = infos[frameworkId][executorId];
 
-  CHECK(info->container != "");
+  CHECK(info->vm != "");
 
-  LOG(INFO) << "Stopping container " << info->container;
+  LOG(INFO) << "Stopping container " << info->vm;
 
   Try<int> status =
-    utils::os::shell(NULL, "virsh shutdown %s", info->container.c_str());
+    utils::os::shell(NULL, "virsh shutdown %s", info->vm.c_str());
 
   if (status.isError()) {
-    LOG(ERROR) << "Failed to stop container " << info->container
+    LOG(ERROR) << "Failed to stop container " << info->vm
                << ": " << status.error();
   } else if (status.get() != 0) {
-    LOG(ERROR) << "Failed to stop container " << info->container
+    LOG(ERROR) << "Failed to stop container " << info->vm
                << ", virsh returned: " << status.get();
   }
 
@@ -297,11 +297,11 @@ void VmIsolationModule::resourcesChanged(
     return;
   }
 
-  ContainerInfo* info = infos[frameworkId][executorId];
+  VmInfo* info = infos[frameworkId][executorId];
 
-  CHECK(info->container != "");
+  CHECK(info->vm != "");
 
-  const string& container = info->container;
+  const string& vm = info->vm;
 
   // For now, just try setting the CPUs and memory right away, and kill the
   // framework if this fails (needs to be fixed).
@@ -317,7 +317,7 @@ void VmIsolationModule::resourcesChanged(
   property = "cpu.shares";
   value = cpu_shares;
 
-  if (!setControlGroupValue(container, property, value)) {
+  if (!setControlGroupValue(vm, property, value)) {
     // TODO(benh): Kill the executor, but do it in such a way that the
     // slave finds out about it exiting.
     return;
@@ -329,7 +329,7 @@ void VmIsolationModule::resourcesChanged(
   property = "memory.limit_in_bytes";
   value = limit_in_bytes;
 
-  if (!setControlGroupValue(container, property, value)) {
+  if (!setControlGroupValue(vm, property, value)) {
     // TODO(benh): Kill the executor, but do it in such a way that the
     // slave finds out about it exiting.
     return;
@@ -340,7 +340,7 @@ void VmIsolationModule::resourcesChanged(
 void VmIsolationModule::processExited(pid_t pid, int status)
 {
   foreachkey (const FrameworkID& frameworkId, infos) {
-    foreachvalue (ContainerInfo* info, infos[frameworkId]) {
+    foreachvalue (VmInfo* info, infos[frameworkId]) {
       if (info->pid == pid) {
         LOG(INFO) << "Telling slave of lost executor "
 		  << info->executorId
@@ -359,26 +359,26 @@ void VmIsolationModule::processExited(pid_t pid, int status)
 
 
 bool VmIsolationModule::setControlGroupValue(
-    const string& container,
+    const string& vm,
     const string& property,
     int64_t value)
 {
   LOG(INFO) << "Setting " << property
-            << " for container " << container
+            << " for vm " << vm
             << " to " << value;
 
   Try<int> status =
     utils::os::shell(NULL, "lxc-cgroup -n %s %s %lld",
-                     container.c_str(), property.c_str(), value);
+                     vm.c_str(), property.c_str(), value);
 
   if (status.isError()) {
     LOG(ERROR) << "Failed to set " << property
-               << " for container " << container
+               << " for vm " << vm
                << ": " << status.error();
     return false;
   } else if (status.get() != 0) {
     LOG(ERROR) << "Failed to set " << property
-               << " for container " << container
+               << " for vm " << vm
                << ": lxc-cgroup returned " << status.get();
     return false;
   }

@@ -355,7 +355,8 @@ slave/isolation_module.o: slave/isolation_module.cpp \
  ../third_party/boost-1.37.0/boost/memory_order.hpp \
  ../third_party/boost-1.37.0/boost/smart_ptr/detail/operator_bool.hpp \
  configurator/configurator.hpp configurator/option.hpp \
- launcher/launcher.hpp common/fatal.hpp slave/lxc_isolation_module.hpp
+ launcher/launcher.hpp common/fatal.hpp slave/lxc_isolation_module.hpp \
+ slave/vm_isolation_module.hpp
 
 slave/isolation_module.hpp:
 
@@ -1102,3 +1103,5 @@ launcher/launcher.hpp:
 common/fatal.hpp:
 
 slave/lxc_isolation_module.hpp:
+
+slave/vm_isolation_module.hpp:
