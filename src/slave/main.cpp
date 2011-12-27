@@ -87,6 +87,7 @@ int main(int argc, char** argv)
   }
 
   if (conf.contains("vm")) {
+    // Actual vm gets passed in through the configuration parameters
     // At least set LIBVIRT_DEFAULT_URI=qemu:///system so that root is not needed
     setenv("LIBVIRT_DEFAULT_URI", "qemu:///system", 1);
   }

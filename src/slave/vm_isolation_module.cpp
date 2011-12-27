@@ -88,8 +88,9 @@ void VmIsolationModule::initialize(
   conf = _conf;
   local = _local;
   slave = _slave;
-
-  // Check if Linux Container tools are available.
+  // We set conf to contain the parameter vm which will be used 
+  // used to pass the domain name of the virtual machine
+  // Check if Virsh is available.
   if (system("virsh -v > /dev/null") != 0) {
     LOG(FATAL) << "Could not run virsh; make sure Libvirt  "
                 << "tools are installed";
@@ -126,13 +127,19 @@ void VmIsolationModule::launchExecutor(
   std::ostringstream out;
   out << "mesos.executor-" << executorId << ".framework-" << frameworkId;
 
-  const string& vm = out.str();
+  const string& vmId = out.str();
 
   VmInfo* info = new VmInfo();
 
   info->frameworkId = frameworkId;
   info->executorId = executorId;
-  info->vm = vm;
+  // Get the name of the vm or set to default
+  info->vm = conf.get("vm","hostvirkaz2");
+  // Assume that the executorInfo will contain a value for the 
+  // virtual machine name
+  // There should be a command line argument in which the 
+  // virtual machine was passed.
+  info->vmId= vmId;
   info->pid = -1;
 
   infos[frameworkId][executorId] = info;
