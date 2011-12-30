@@ -284,6 +284,7 @@ void Slave::operator () ()
   // Spawn and initialize the isolation module.
   // TODO(benh): Seems like the isolation module should really be
   // spawned before being passed to the slave.
+  LOG(INFO) << "Spawning the isolation module";
   spawn(isolationModule);
   dispatch(isolationModule,
            &IsolationModule::initialize,

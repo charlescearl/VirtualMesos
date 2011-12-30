@@ -109,6 +109,7 @@ void LxcIsolationModule::launchExecutor(
     const string& directory,
     const Resources& resources)
 {
+  LOG(INFO) << "Entering LxcIsolationModule::launchExecutor ";
   CHECK(initialized) << "Cannot launch executors before initialization!";
 
   const ExecutorID& executorId = executorInfo.executor_id();
@@ -139,7 +140,7 @@ void LxcIsolationModule::launchExecutor(
   // automatically creates the container and will delete it when finished.
   pid_t pid;
   if ((pid = fork()) == -1) {
-    PLOG(FATAL) << "Failed to fork to launch new executor";
+    LOG(FATAL) << "Failed to fork to launch new executor";
   }
 
   if (pid) {

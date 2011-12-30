@@ -43,6 +43,7 @@ public:
                           bool local,
                           const process::PID<Slave>& slave);
 
+
   virtual void launchExecutor(const FrameworkID& frameworkId,
                               const FrameworkInfo& frameworkInfo,
                               const ExecutorInfo& executorInfo,
@@ -58,6 +59,8 @@ public:
 
   virtual void processExited(pid_t pid, int status);
 
+  
+
 private:
   // No copying, no assigning.
   VmIsolationModule(const VmIsolationModule&);
@@ -69,6 +72,14 @@ private:
                             const std::string& property,
                             int64_t value);
 
+  int launchVirtualTask(const ExecutorInfo&  executorInfo,
+			const ExecutorID& executorId,
+			const FrameworkID& frameworkId,
+			const std::string& directory,
+			const process::PID<Slave>& slave,
+			const Configuration& conf,
+			bool local);
+
   std::vector<std::string> getControlGroupOptions(const Resources& resources);
 
   // Per-framework information object maintained in info hashmap.
@@ -76,9 +87,14 @@ private:
   {
     FrameworkID frameworkId;
     ExecutorID executorId;
-    std::string vm; // Name of Linux virtual machine used for this framework.
+    std::string vmId; // Name of Linux virtual machine used for this framework.
+    std::string vm; // The unique virtual machine
     pid_t pid; // PID of vm-execute command running the executor.
   };
+
+  // Actually, launch the process which is responsible for control of the
+  // virtual machine
+  int launchVirtualMachine(VmInfo* info);
 
   // TODO(benh): Make variables const by passing them via constructor.
   Configuration conf;

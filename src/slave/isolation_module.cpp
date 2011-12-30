@@ -40,7 +40,7 @@ IsolationModule* IsolationModule::create(const std::string &type)
     return new LxcIsolationModule();
 #endif
   else if (type == "vm")
-    return new ProcessBasedIsolationModule();
+    return new VmIsolationModule();
 
   return NULL;
 }

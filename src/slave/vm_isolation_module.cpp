@@ -182,7 +182,10 @@ void VmIsolationModule::launchExecutor(
         }
       }
     }
-
+    // Launch the virtual machine in its own process
+    int vm_controller_pid= launchVirtualMachine(info);
+    // Now launch the task that is associated with the virtual machine.
+    launchVirtualTask(executorInfo,executorId,frameworkId,directory,slave,conf,local);
     // Create an ExecutorLauncher to set up the environment for executing
     // an external launcher_main.cpp process (inside of vm-execute).
     map<string, string> params;
@@ -206,8 +209,9 @@ void VmIsolationModule::launchExecutor(
 			   conf.get("hadoop_home", ""),
 			   !local,
 			   conf.get("switch_user", true),
-			   vm,
+			   info->vm,
 			   params);
+
 
     launcher->setupEnvironmentForLauncherMain();
 
@@ -215,20 +219,22 @@ void VmIsolationModule::launchExecutor(
     // initial resources limits for this executor.
     const vector<string>& options = getControlGroupOptions(resources);
 
+
     const char** args = (const char**) new char*[3 + options.size() + 2];
 
-    int i = 0;
+    //    vmArgs[i++] = info->vm;
+    // We can fork and exec the virtual machine
+    
+    // Then here first get the ip address
+    // Then launch an ssh that will run the job inside of the vm
+    // The first test is just the fork exec
 
-    // This will have to be changed to account for the virtual machine init
-    // Assume that for now we will use libvirt
-    args[i++] = "virsh";
-    args[i++] = "start";
-    // the container name will be fixed...some VM that is in the local cache
-    args[i++] = vm.c_str();
+
 
     // Here is where I think he launches the mesos task...or is it rather the place
     // that he configures an environment that will "phone home" to the mesos 
     // master
+    int i = 0;
     for (int j = 0; j < options.size(); j++) {
       args[i++] = options[j].c_str();
     }
@@ -236,14 +242,15 @@ void VmIsolationModule::launchExecutor(
     // Determine path for mesos-launcher from Mesos home directory.
     string path = conf.get("home", ".") + "/bin/mesos-launcher";
     args[i++] = path.c_str();
-    args[i++] = NULL;
+    args[i] = NULL;
 
     // Run lxc-execute.
     // So here, have launched the VM within the forked executor process
     // I think that the lxc is already passed the arguments of the task?
     // How do we manage the VM?
     // So one command has to launch the vm, ssh to start the task
-    execvp(args[0], (char* const*) args);
+    LOG(INFO) << "Starting up the virtual machine ";
+    // execvp(args[0], (char* const*) args);
 
     // If we get here, the execvp call failed.
     LOG(FATAL) << "Could not exec lxc-execute";
@@ -419,3 +426,57 @@ vector<string> VmIsolationModule::getControlGroupOptions(
 
   return options;
 }
+
+
+/**
+ * Launches the virtual machine controller process.
+ */
+int VmIsolationModule::launchVirtualMachine(VmInfo* info){
+
+  int vm_launch_pid= fork();
+
+  if (vm_launch_pid){
+    LOG(INFO) << "VM control process is " << vm_launch_pid;
+    return vm_launch_pid;
+  }
+  else if (vm_launch_pid <0){
+    LOG(ERROR) << "Failed to fork process to launch virsh VM controller";
+    return vm_launch_pid;
+  }
+
+  else{
+    
+    const char** vmArgs = (const char**) new char*[3 +1];
+    int i = 0;
+
+    // First launch the virtual machine
+    // This will have to be changed to account for the virtual machine init
+    // Assume that for now we will use libvirt
+    vmArgs[i++] = "/usr/bin/virsh";
+    vmArgs[i++] = "start";
+    // the container name will be fixed...some VM that is in the local cache
+    vmArgs[i++] = info->vm.c_str();
+    LOG(INFO) << "Arguments for launching the virtual machine are : " << vmArgs[0] << 
+      " " << vmArgs[1] << " " << vmArgs[2];
+    vmArgs[3]= NULL;
+
+    execvp(vmArgs[0], (char* const*) vmArgs);
+    LOG(ERROR) << "Did not launch vm " << " err no is " << errno;
+  }
+}
+
+/**
+ * Launch the task within the virtual machine. Thsi is the task that 
+ * will communicate with mesos
+ */
+int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
+			const ExecutorID& executorId,
+			const FrameworkID& frameworkId,
+			const std::string& directory,
+			const process::PID<Slave>& slave,
+			const Configuration& conf,
+					  bool local){
+
+  return 0;
+}
+
