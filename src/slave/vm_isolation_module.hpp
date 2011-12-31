@@ -96,6 +96,9 @@ private:
   // virtual machine
   int launchVirtualMachine(VmInfo* info);
 
+  // Get the ip address of the virtual machine 
+  std::string getVirtualMachineIp(std::string& vm);
+
   // TODO(benh): Make variables const by passing them via constructor.
   Configuration conf;
   bool local;

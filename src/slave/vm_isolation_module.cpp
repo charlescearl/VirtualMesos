@@ -184,6 +184,9 @@ void VmIsolationModule::launchExecutor(
     }
     // Launch the virtual machine in its own process
     int vm_controller_pid= launchVirtualMachine(info);
+
+    // now get the ip address of the virtual machine
+    std::string vm_ip = getVirtualMachineIp(info->vm);
     // Now launch the task that is associated with the virtual machine.
     launchVirtualTask(executorInfo,executorId,frameworkId,directory,slave,conf,local);
     // Create an ExecutorLauncher to set up the environment for executing
@@ -478,5 +481,34 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
 					  bool local){
 
   return 0;
+}
+
+std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
+  //  std::string ip= "192.168.1.1";
+  std::string ip;
+  // Local non-relative path, please resolve
+  std::string find_ip_perl = "/media/LinuxShare2/mesos/bin/find_addr.pl ";
+  find_ip_perl += vm;
+  LOG(INFO) << find_ip_perl << " is command line.";
+  FILE * ip_result;
+  char tempChar[100];
+  LOG(INFO) << "Running command to retrieve IP of the guest.";
+  ip_result = popen(find_ip_perl.c_str(),"r");
+  if (ip_result == NULL) perror ("Error reading input");
+  else {
+    if ( fgets (tempChar , 100 , ip_result) != NULL )
+      {
+	ip += tempChar;
+	LOG(INFO) << " Read char " << tempChar;
+      }
+    LOG(INFO) << "Determine IP of guest to be ." << ip;
+    if (pclose (ip_result) != 0)
+      {
+	fprintf (stderr,
+		 "Could not run find_addr.pl .\n");
+      }
+  }
+  
+  return ip;
 }
 
