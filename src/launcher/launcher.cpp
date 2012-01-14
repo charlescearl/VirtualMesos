@@ -35,6 +35,7 @@
 
 #include "common/foreach.hpp"
 
+#include "common/utils.hpp"
 using namespace mesos;
 using namespace mesos::internal;
 using namespace mesos::internal::launcher;
@@ -111,7 +112,9 @@ int ExecutorLauncher::run()
       int status;
       wait(&status);
       // TODO(benh): Provide a utils::os::system.
+      // CCE: This block has to be specialized for VM case -->
       string command = "lxc-stop -n " + container;
+      // <-- CCE: This block has to be specialized for VM case 
       system(command.c_str());
       return status;
     } else {
@@ -257,13 +260,18 @@ string ExecutorLauncher::fetchExecutor()
 // Set up environment variables for launching a framework's executor.
 void ExecutorLauncher::setupEnvironment()
 {
+  LOG(INFO) << "ExecutorLauncher::setupEnvironment";
   // Set any environment variables given as env.* params in the ExecutorInfo
   setupEnvVariablesFromParams();
 
   // Set Mesos environment variables to pass slave ID, framework ID, etc.
+  LOG(INFO) << "ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: " << workDirectory.c_str();
   setenv("MESOS_DIRECTORY", workDirectory.c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: " << slavePid.c_str();
   setenv("MESOS_SLAVE_PID", slavePid.c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: " << frameworkId.value().c_str();
   setenv("MESOS_FRAMEWORK_ID", frameworkId.value().c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: " << executorId.value().c_str();
   setenv("MESOS_EXECUTOR_ID", executorId.value().c_str(), 1);
 
   // Set LIBPROCESS_PORT so that we bind to a random free port.
@@ -271,6 +279,8 @@ void ExecutorLauncher::setupEnvironment()
 
   // Set MESOS_HOME so that Java and Python executors can find libraries
   if (mesosHome != "") {
+    LOG(INFO) << "ExecutorLauncher::setupEnvironment: MESOS_HOME: " << mesosHome.c_str();
+
     setenv("MESOS_HOME", mesosHome.c_str(), 1);
   }
 }
@@ -310,14 +320,24 @@ void ExecutorLauncher::setupEnvironmentForLauncherMain()
 
   // Set up Mesos environment variables that launcher_main.cpp will
   // pass as arguments to an ExecutorLauncher there
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_FRAMEWORK_ID: " << frameworkId.value().c_str();
   setenv("MESOS_FRAMEWORK_ID", frameworkId.value().c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_EXECUTOR_URI: " << executorUri.c_str();
   setenv("MESOS_EXECUTOR_URI", executorUri.c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_USER: " << user.c_str();
   setenv("MESOS_USER", user.c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_WORK_DIRECTORY: " << workDirectory.c_str();
   setenv("MESOS_WORK_DIRECTORY", workDirectory.c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_SLAVE_PID: " << slavePid.c_str();
   setenv("MESOS_SLAVE_PID", slavePid.c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_HOME: " << mesosHome.c_str();
   setenv("MESOS_HOME", mesosHome.c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_HADOOP_HOME: " << hadoopHome.c_str();
   setenv("MESOS_HADOOP_HOME", hadoopHome.c_str(), 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_REDIRECT_IO: " << redirectIO;
   setenv("MESOS_REDIRECT_IO", redirectIO ? "1" : "0", 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_SWITCH_USER: " << shouldSwitchUser;
   setenv("MESOS_SWITCH_USER", shouldSwitchUser ? "1" : "0", 1);
+  LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_CONTAINER: " << container.c_str();
   setenv("MESOS_CONTAINER", container.c_str(), 1);
 }

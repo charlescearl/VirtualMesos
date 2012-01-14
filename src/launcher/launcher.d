@@ -274,7 +274,14 @@ launcher/launcher.o: launcher/launcher.cpp \
  ../third_party/boost-1.37.0/boost/type_traits/cv_traits.hpp \
  ../third_party/boost-1.37.0/boost/type_traits/add_cv.hpp \
  ../third_party/boost-1.37.0/boost/type_traits/remove_volatile.hpp \
- ../third_party/boost-1.37.0/boost/type_traits/function_traits.hpp
+ ../third_party/boost-1.37.0/boost/type_traits/function_traits.hpp \
+ common/utils.hpp ../third_party/glog-0.3.1/src/glog/logging.h \
+ ../third_party/glog-0.3.1/src/glog/log_severity.h \
+ ../third_party/glog-0.3.1/src/glog/vlog_is_on.h \
+ ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl.h \
+ ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream.h \
+ ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl_lite.h \
+ common/option.hpp common/result.hpp common/strings.hpp common/try.hpp
 
 ../third_party/boost-1.37.0/boost/lexical_cast.hpp:
 
@@ -831,3 +838,25 @@ common/foreach.hpp:
 ../third_party/boost-1.37.0/boost/type_traits/remove_volatile.hpp:
 
 ../third_party/boost-1.37.0/boost/type_traits/function_traits.hpp:
+
+common/utils.hpp:
+
+../third_party/glog-0.3.1/src/glog/logging.h:
+
+../third_party/glog-0.3.1/src/glog/log_severity.h:
+
+../third_party/glog-0.3.1/src/glog/vlog_is_on.h:
+
+../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl.h:
+
+../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream.h:
+
+../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl_lite.h:
+
+common/option.hpp:
+
+common/result.hpp:
+
+common/strings.hpp:
+
+common/try.hpp:

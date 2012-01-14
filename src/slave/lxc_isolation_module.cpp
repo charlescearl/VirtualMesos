@@ -179,9 +179,10 @@ void LxcIsolationModule::launchExecutor(
     for (int i = 0; i < executorInfo.params().param_size(); i++) {
       params[executorInfo.params().param(i).key()] =
         executorInfo.params().param(i).value();
-      LOG(INFO) << "Executor info " << executorInfo.params().param(i).value();
+      LOG(INFO) << "Executor info, key: " << executorInfo.params().param(i).key() << ", value: "<< executorInfo.params().param(i).value();
     }
 
+    LOG(INFO) << "Now calling the launcher inside LxcIsolationModule::launchExecutor.";
     ExecutorLauncher* launcher =
       new ExecutorLauncher(frameworkId,
 			   executorId,
