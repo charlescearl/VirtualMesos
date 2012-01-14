@@ -188,75 +188,12 @@ void VmIsolationModule::launchExecutor(
     // now get the ip address of the virtual machine
     std::string vm_ip = getVirtualMachineIp(info->vm);
     // Now launch the task that is associated with the virtual machine.
-    launchVirtualTask(executorInfo,executorId,frameworkId,directory,slave,conf,local);
+    launchVirtualTask(executorInfo,executorId,frameworkId,frameworkInfo,info->vm,vm_ip,directory,slave,conf,local);
     // Create an ExecutorLauncher to set up the environment for executing
     // an external launcher_main.cpp process (inside of vm-execute).
-    map<string, string> params;
-
-    for (int i = 0; i < executorInfo.params().param_size(); i++) {
-      params[executorInfo.params().param(i).key()] =
-        executorInfo.params().param(i).value();
-    }
-
-    // This launcher environment has to be setup inside of the VM, so we would need something like
-    // launcher->setupVirtualEnvironmentForLauncher()
-    ExecutorLauncher* launcher =
-      new ExecutorLauncher(frameworkId,
-			   executorId,
-			   executorInfo.uri(),
-			   frameworkInfo.user(),
-                           directory,
-			   slave,
-			   conf.get("frameworks_home", ""),
-			   conf.get("home", ""),
-			   conf.get("hadoop_home", ""),
-			   !local,
-			   conf.get("switch_user", true),
-			   info->vm,
-			   params);
-
-
-    launcher->setupEnvironmentForLauncherMain();
-
-    // Construct the initial control group options that specify the
-    // initial resources limits for this executor.
-    const vector<string>& options = getControlGroupOptions(resources);
-
-
-    const char** args = (const char**) new char*[3 + options.size() + 2];
-
-    //    vmArgs[i++] = info->vm;
-    // We can fork and exec the virtual machine
-    
-    // Then here first get the ip address
-    // Then launch an ssh that will run the job inside of the vm
-    // The first test is just the fork exec
-
-
-
-    // Here is where I think he launches the mesos task...or is it rather the place
-    // that he configures an environment that will "phone home" to the mesos 
-    // master
-    int i = 0;
-    for (int j = 0; j < options.size(); j++) {
-      args[i++] = options[j].c_str();
-    }
-
-    // Determine path for mesos-launcher from Mesos home directory.
-    string path = conf.get("home", ".") + "/bin/mesos-launcher";
-    args[i++] = path.c_str();
-    args[i] = NULL;
-
-    // Run lxc-execute.
-    // So here, have launched the VM within the forked executor process
-    // I think that the lxc is already passed the arguments of the task?
-    // How do we manage the VM?
-    // So one command has to launch the vm, ssh to start the task
-    LOG(INFO) << "Starting up the virtual machine ";
-    // execvp(args[0], (char* const*) args);
-
-    // If we get here, the execvp call failed.
-    LOG(FATAL) << "Could not exec lxc-execute";
+    // We want to perform the operations below in a process inside of the 
+    // launched virtual machine.
+    // -->> Begin env setup
   }
 }
 
@@ -470,16 +407,111 @@ int VmIsolationModule::launchVirtualMachine(VmInfo* info){
 
 /**
  * Launch the task within the virtual machine. Thsi is the task that 
- * will communicate with mesos
+ * will communicate with mesos. Further, there are several ways to go.
+ * A) Just launch a new instance of the slave inside of the virtual machine.
+ * B) Launch a command that does the steps of environment lauch 
+ * C) Communicate the commands via ssh
+ * I think that B is the real way to go.
  */
 int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
 			const ExecutorID& executorId,
 			const FrameworkID& frameworkId,
+					 const FrameworkInfo& frameworkInfo,
+					 const std::string& vm,
+					 const std::string& vmIp,
 			const std::string& directory,
 			const process::PID<Slave>& slave,
 			const Configuration& conf,
 					  bool local){
 
+    map<string, string> params;
+    std::string vmLaunchCommand= "ssh ";
+    vmLaunchCommand += frameworkInfo.user();
+    vmLaunchCommand += "@";
+    vmLaunchCommand += vmIp;
+    vmLaunchCommand += " 'cd /mesos-distro;ls -l'";
+
+    FILE * remoteCommandPipe;
+    char tempChar[100];
+    std::string remoteResultString;
+  
+    LOG(INFO) << "Running on guest: " << vmLaunchCommand;
+    remoteCommandPipe = popen(vmLaunchCommand.c_str(),"r");
+    if (remoteCommandPipe == NULL) perror ("Error reading input");
+    else {
+      if ( fgets (tempChar , 100 , remoteCommandPipe) != NULL )
+	{
+	  remoteResultString += tempChar;
+	}
+      LOG(INFO) << "Result of running the command on guest is ." << remoteResultString;
+    }
+
+    for (int i = 0; i < executorInfo.params().param_size(); i++) {
+      params[executorInfo.params().param(i).key()] =
+	executorInfo.params().param(i).value();
+    }
+
+    // This launcher environment has to be setup inside of the VM, so we would need something like
+    // launcher->setupVirtualEnvironmentForLauncher()
+    ExecutorLauncher* launcher =
+      new ExecutorLauncher(frameworkId,
+			   executorId,
+			   executorInfo.uri(),
+			   frameworkInfo.user(),
+                           directory,
+			   slave,
+			   conf.get("frameworks_home", ""),
+			   conf.get("home", ""),
+			   conf.get("hadoop_home", ""),
+			   !local,
+			   conf.get("switch_user", true),
+			   vm,
+			   params);
+
+    /*
+    launcher->setupEnvironmentForLauncherMain();
+
+    // Construct the initial control group options that specify the
+    // initial resources limits for this executor.
+    const vector<string>& options = getControlGroupOptions(resources);
+
+
+    const char** args = (const char**) new char*[3 + options.size() + 2];
+
+    //    vmArgs[i++] = info->vm;
+    // We can fork and exec the virtual machine
+    
+    // Then here first get the ip address
+    // Then launch an ssh that will run the job inside of the vm
+    // The first test is just the fork exec
+
+
+
+    // Here is where I think he launches the mesos task...or is it rather the place
+    // that he configures an environment that will "phone home" to the mesos 
+    // master
+    int i = 0;
+    for (int j = 0; j < options.size(); j++) {
+      args[i++] = options[j].c_str();
+    }
+
+    // Determine path for mesos-launcher from Mesos home directory.
+    string path = conf.get("home", ".") + "/bin/mesos-launcher";
+    args[i++] = path.c_str();
+    args[i] = NULL;
+
+    // Run lxc-execute.
+    // So here, have launched the VM within the forked executor process
+    // I think that the lxc is already passed the arguments of the task?
+    // How do we manage the VM?
+    // So one command has to launch the vm, ssh to start the task
+    LOG(INFO) << "Starting up the virtual machine ";
+    // execvp(args[0], (char* const*) args);
+
+    // If we get here, the execvp call failed.
+    LOG(FATAL) << "Could not exec lxc-execute";
+    // <<-- End env setup
+    */
   return 0;
 }
 
