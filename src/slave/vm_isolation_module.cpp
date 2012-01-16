@@ -18,6 +18,8 @@
 #include <libvirt/libvirt.h>
 #include <algorithm>
 #include <sstream>
+#include <iostream>
+#include <fstream>
 #include <map>
 
 #include <process/dispatch.hpp>
@@ -134,7 +136,7 @@ void VmIsolationModule::launchExecutor(
   info->frameworkId = frameworkId;
   info->executorId = executorId;
   // Get the name of the vm or set to default
-  info->vm = conf.get("vm","hostvirkaz2");
+  info->vm = conf.get("vm","hostvirkaz3-clone");
   // Assume that the executorInfo will contain a value for the 
   // virtual machine name
   // There should be a command line argument in which the 
@@ -184,7 +186,8 @@ void VmIsolationModule::launchExecutor(
     }
     // Launch the virtual machine in its own process
     int vm_controller_pid= launchVirtualMachine(info);
-
+    // wait here
+    sleep(10);
     // now get the ip address of the virtual machine
     std::string vm_ip = getVirtualMachineIp(info->vm);
     // Now launch the task that is associated with the virtual machine.
@@ -423,13 +426,40 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
 			const process::PID<Slave>& slave,
 			const Configuration& conf,
 					  bool local){
-
+  
+  
     map<string, string> params;
-    std::string vmLaunchCommand= "ssh ";
+
+    // Create a new template file and store in the work directory
+    // Create an ExecutorLauncher to set up the environment for executing
+    // an external launcher_main.cpp process (inside of lxc-execute).
+    std::string mesosDirectory= "/mesos-distro/";
+    std::ofstream templateShellFile;
+    // change the file name to MESOS_FRAMEWORK_ID
+    //    std::string frameworkId;
+    std::string launchFileName= mesosDirectory;
+    launchFileName += "bin/vmLauncherTemplate-";
+    launchFileName += frameworkId.value();
+    launchFileName += ".sh";
+    templateShellFile.open(launchFileName.c_str());
+    templateShellFile << "#!/bin/sh" << std::endl;
+    // Write the environment variables here
+
+    // Write the appropriate executor here
+
+    
+    templateShellFile.close();
+    // scp the file here
+    std::string newIp(vmIp);
+    std::string vmLaunchCopyCommand= "scp -i /home/hduser/.ssh/id_rsa "+launchFileName+" hduser@"+newIp+":"+launchFileName;
+    popen(vmLaunchCopyCommand.c_str(),"r");
+    std::string vmLaunchCommand= "ssh -i /home/hduser/.ssh/id_rsa ";
     vmLaunchCommand += frameworkInfo.user();
     vmLaunchCommand += "@";
-    vmLaunchCommand += vmIp;
-    vmLaunchCommand += " 'cd /mesos-distro;ls -l'";
+    newIp.erase(std::remove(newIp.begin(), newIp.end(), '\n'), newIp.end());
+    vmLaunchCommand += newIp;
+    //    vmLaunchCommand += " 'cd /mesos-distro;ls -l'";
+    vmLaunchCommand += " 'bash "+launchFileName+"'";
 
     FILE * remoteCommandPipe;
     char tempChar[100];
@@ -542,5 +572,19 @@ std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
   }
   
   return ip;
+}
+
+void VmIsolationModule::copyEnvParametersToScriptFile (const std::ofstream & ofs, ExecutorLauncher* launcher)
+{
+  ofs << "MESOS_FRAMEWORK_ID=" << launcher->frameworkId.value().c_str() << std::endl;
+  ofs << "MESOS_EXECUTOR_URI=" << launcher->executorUri.c_str()  << std::endl;
+  ofs << "MESOS_USER=" << launcher->user.c_str()  << std::endl;
+  ofs << "MESOS_WORK_DIRECTORY=" << launcher->workDirectory.c_str()  << std::endl;
+  ofs << "MESOS_SLAVE_PID=" << launcher->slavePid.c_str()  << std::endl;
+  ofs << "MESOS_HOME=" << launcher->mesosHome.c_str()  << std::endl;
+  ofs << "MESOS_HADOOP_HOME=" << launcher->hadoopHome.c_str()  << std::endl;
+  ofs << "MESOS_REDIRECT_IO=" << launcher->redirectIO  << std::endl;
+  ofs << "MESOS_SWITCH_USER=" << launcher->shouldSwitchUser  << std::endl;
+  ofs << "MESOS_CONTAINER=" << launcher->container.c_str()  << std::endl;
 }
 

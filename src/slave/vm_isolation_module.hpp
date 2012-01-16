@@ -28,6 +28,7 @@
 
 #include "common/hashmap.hpp"
 
+#include "launcher/launcher.hpp"
 
 namespace mesos { namespace internal { namespace slave {
 
@@ -59,7 +60,7 @@ public:
 
   virtual void processExited(pid_t pid, int status);
 
-  
+
 
 private:
   // No copying, no assigning.
@@ -71,6 +72,9 @@ private:
   bool setControlGroupValue(const std::string& container,
                             const std::string& property,
                             int64_t value);
+
+void copyEnvParametersToScriptFile (const std::ofstream & ofs, 
+				    ExecutorLauncher* launcher)  ;
 
   int launchVirtualTask(const ExecutorInfo&  executorInfo,
 			const ExecutorID& executorId,
