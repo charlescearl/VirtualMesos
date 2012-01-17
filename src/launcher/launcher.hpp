@@ -84,6 +84,7 @@ public:
   // cannot exec the user's executor directly, such as the LXC isolation
   // module, which must run lxc-execute and have it run the launcher.
   virtual void setupEnvironmentForLauncherMain();
+  virtual void setupEnvironmentForLauncherMain(std::ofstream & ofs);
 
 protected:
   // Initialize executor's working director.
@@ -96,6 +97,7 @@ protected:
 
   // Set up environment variables for launching a framework's executor.
   virtual void setupEnvironment();
+  virtual void setupEnvironment( std::ofstream & ofs);
 
   // Switch to a framework's user in preparation for exec()'ing its executor.
   virtual void switchUser();
@@ -103,6 +105,7 @@ protected:
 private:
   // Set any environment variables given as env.* params in the ExecutorInfo
   void setupEnvVariablesFromParams();
+  void setupEnvVariablesFromParams( std::ofstream & ofs);
 };
 
 }}}

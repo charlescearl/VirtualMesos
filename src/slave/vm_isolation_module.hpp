@@ -72,9 +72,10 @@ private:
   bool setControlGroupValue(const std::string& container,
                             const std::string& property,
                             int64_t value);
-
-void copyEnvParametersToScriptFile (const std::ofstream & ofs, 
+  /*
+  void copyEnvParametersToScriptFile (const std::ofstream & ofs, 
 				    ExecutorLauncher* launcher)  ;
+  */
 
   int launchVirtualTask(const ExecutorInfo&  executorInfo,
 			const ExecutorID& executorId,
@@ -105,6 +106,9 @@ void copyEnvParametersToScriptFile (const std::ofstream & ofs,
 
   // Get the ip address of the virtual machine 
   std::string getVirtualMachineIp(std::string& vm);
+
+  // Handle the setup of a virtual machine launch
+  void launchVmTask(const std::string & vmIp,std::string & launchFileName,const FrameworkInfo& frameworkInfo);
 
   // TODO(benh): Make variables const by passing them via constructor.
   Configuration conf;

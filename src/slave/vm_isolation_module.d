@@ -355,12 +355,12 @@ slave/vm_isolation_module.o: slave/vm_isolation_module.cpp \
  ../third_party/boost-1.37.0/boost/smart_ptr/detail/yield_k.hpp \
  ../third_party/boost-1.37.0/boost/memory_order.hpp \
  ../third_party/boost-1.37.0/boost/smart_ptr/detail/operator_bool.hpp \
- configurator/configurator.hpp configurator/option.hpp common/units.hpp \
- common/utils.hpp \
+ configurator/configurator.hpp configurator/option.hpp \
+ launcher/launcher.hpp common/fatal.hpp common/units.hpp common/utils.hpp \
  ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl.h \
  ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream.h \
  ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl_lite.h \
- common/result.hpp launcher/launcher.hpp common/fatal.hpp
+ common/result.hpp
 
 ../third_party/libprocess/include/process/dispatch.hpp:
 
@@ -1102,6 +1102,10 @@ configurator/configurator.hpp:
 
 configurator/option.hpp:
 
+launcher/launcher.hpp:
+
+common/fatal.hpp:
+
 common/units.hpp:
 
 common/utils.hpp:
@@ -1113,7 +1117,3 @@ common/utils.hpp:
 ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl_lite.h:
 
 common/result.hpp:
-
-launcher/launcher.hpp:
-
-common/fatal.hpp:

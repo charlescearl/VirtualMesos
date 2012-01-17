@@ -429,60 +429,16 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
   
   
     map<string, string> params;
+    // This launcher environment has to be setup inside of the VM, so we would need something like
+    // launcher->setupVirtualEnvironmentForLauncher()
 
-    // Create a new template file and store in the work directory
-    // Create an ExecutorLauncher to set up the environment for executing
-    // an external launcher_main.cpp process (inside of lxc-execute).
-    std::string mesosDirectory= "/mesos-distro/";
-    std::ofstream templateShellFile;
-    // change the file name to MESOS_FRAMEWORK_ID
-    //    std::string frameworkId;
-    std::string launchFileName= mesosDirectory;
-    launchFileName += "bin/vmLauncherTemplate-";
-    launchFileName += frameworkId.value();
-    launchFileName += ".sh";
-    templateShellFile.open(launchFileName.c_str());
-    templateShellFile << "#!/bin/sh" << std::endl;
-    // Write the environment variables here
-
-    // Write the appropriate executor here
-
-    
-    templateShellFile.close();
-    // scp the file here
-    std::string newIp(vmIp);
-    std::string vmLaunchCopyCommand= "scp -i /home/hduser/.ssh/id_rsa "+launchFileName+" hduser@"+newIp+":"+launchFileName;
-    popen(vmLaunchCopyCommand.c_str(),"r");
-    std::string vmLaunchCommand= "ssh -i /home/hduser/.ssh/id_rsa ";
-    vmLaunchCommand += frameworkInfo.user();
-    vmLaunchCommand += "@";
-    newIp.erase(std::remove(newIp.begin(), newIp.end(), '\n'), newIp.end());
-    vmLaunchCommand += newIp;
-    //    vmLaunchCommand += " 'cd /mesos-distro;ls -l'";
-    vmLaunchCommand += " 'bash "+launchFileName+"'";
-
-    FILE * remoteCommandPipe;
-    char tempChar[100];
-    std::string remoteResultString;
-  
-    LOG(INFO) << "Running on guest: " << vmLaunchCommand;
-    remoteCommandPipe = popen(vmLaunchCommand.c_str(),"r");
-    if (remoteCommandPipe == NULL) perror ("Error reading input");
-    else {
-      if ( fgets (tempChar , 100 , remoteCommandPipe) != NULL )
-	{
-	  remoteResultString += tempChar;
-	}
-      LOG(INFO) << "Result of running the command on guest is ." << remoteResultString;
-    }
-
+    // Setup the parameters
     for (int i = 0; i < executorInfo.params().param_size(); i++) {
       params[executorInfo.params().param(i).key()] =
 	executorInfo.params().param(i).value();
     }
 
-    // This launcher environment has to be setup inside of the VM, so we would need something like
-    // launcher->setupVirtualEnvironmentForLauncher()
+    // Use the configuration stored in the launcher
     ExecutorLauncher* launcher =
       new ExecutorLauncher(frameworkId,
 			   executorId,
@@ -498,9 +454,33 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
 			   vm,
 			   params);
 
-    /*
-    launcher->setupEnvironmentForLauncherMain();
 
+    // Create a new template file and store in the work directory
+    // Create an ExecutorLauncher to set up the environment for executing
+    // an external launcher_main.cpp process (inside of lxc-execute).
+    
+    std::string mesosDirectory= "/mesos-distro/";
+    std::ofstream templateShellFile;
+    // change the file name to MESOS_FRAMEWORK_ID
+    //    std::string frameworkId;
+    std::string launchFileName= mesosDirectory;
+    launchFileName += "bin/vmLauncherTemplate-";
+    launchFileName += frameworkId.value();
+    launchFileName += ".sh";
+    templateShellFile.open(launchFileName.c_str());
+    templateShellFile << "#!/bin/sh" << std::endl;
+    // Write the environment variables here
+    launcher->setupEnvironmentForLauncherMain(templateShellFile);
+    
+    templateShellFile.close();
+
+    launchVmTask(vmIp,launchFileName,frameworkInfo);
+
+    // scp the file here
+
+    
+
+    /*
     // Construct the initial control group options that specify the
     // initial resources limits for this executor.
     const vector<string>& options = getControlGroupOptions(resources);
@@ -574,17 +554,48 @@ std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
   return ip;
 }
 
+/*
 void VmIsolationModule::copyEnvParametersToScriptFile (const std::ofstream & ofs, ExecutorLauncher* launcher)
 {
-  ofs << "MESOS_FRAMEWORK_ID=" << launcher->frameworkId.value().c_str() << std::endl;
-  ofs << "MESOS_EXECUTOR_URI=" << launcher->executorUri.c_str()  << std::endl;
-  ofs << "MESOS_USER=" << launcher->user.c_str()  << std::endl;
-  ofs << "MESOS_WORK_DIRECTORY=" << launcher->workDirectory.c_str()  << std::endl;
-  ofs << "MESOS_SLAVE_PID=" << launcher->slavePid.c_str()  << std::endl;
-  ofs << "MESOS_HOME=" << launcher->mesosHome.c_str()  << std::endl;
-  ofs << "MESOS_HADOOP_HOME=" << launcher->hadoopHome.c_str()  << std::endl;
-  ofs << "MESOS_REDIRECT_IO=" << launcher->redirectIO  << std::endl;
-  ofs << "MESOS_SWITCH_USER=" << launcher->shouldSwitchUser  << std::endl;
-  ofs << "MESOS_CONTAINER=" << launcher->container.c_str()  << std::endl;
+  ofs << "export MESOS_FRAMEWORK_ID=" << launcher->frameworkId.value().c_str() << std::endl;
+  ofs << "export MESOS_EXECUTOR_URI=" << launcher->executorUri.c_str()  << std::endl;
+  ofs << "export MESOS_USER=" << launcher->user.c_str()  << std::endl;
+  ofs << "export MESOS_WORK_DIRECTORY=" << launcher->workDirectory.c_str()  << std::endl;
+  ofs << "export MESOS_SLAVE_PID=" << launcher->slavePid.c_str()  << std::endl;
+  ofs << "export MESOS_HOME=" << launcher->mesosHome.c_str()  << std::endl;
+  ofs << "export MESOS_HADOOP_HOME=" << launcher->hadoopHome.c_str()  << std::endl;
+  ofs << "export MESOS_REDIRECT_IO=" << launcher->redirectIO  << std::endl;
+  ofs << "export MESOS_SWITCH_USER=" << launcher->shouldSwitchUser  << std::endl;
+  ofs << "export MESOS_CONTAINER=" << launcher->container.c_str()  << std::endl;
 }
+*/
 
+void VmIsolationModule::launchVmTask(const std::string & vmIp,std::string & launchFileName,
+				     const FrameworkInfo& frameworkInfo){
+    std::string newIp(vmIp);
+    std::string vmLaunchCopyCommand= "scp -i /home/hduser/.ssh/id_rsa "+launchFileName+" hduser@"+newIp+":"+launchFileName;
+    popen(vmLaunchCopyCommand.c_str(),"r");
+    std::string vmLaunchCommand= "ssh -i /home/hduser/.ssh/id_rsa ";
+    vmLaunchCommand += frameworkInfo.user();
+    vmLaunchCommand += "@";
+    newIp.erase(std::remove(newIp.begin(), newIp.end(), '\n'), newIp.end());
+    vmLaunchCommand += newIp;
+    //    vmLaunchCommand += " 'cd /mesos-distro;ls -l'";
+    vmLaunchCommand += " 'bash "+launchFileName+"'";
+
+    FILE * remoteCommandPipe;
+    char tempChar[100];
+    std::string remoteResultString;
+  
+    LOG(INFO) << "Running on guest: " << vmLaunchCommand;
+    remoteCommandPipe = popen(vmLaunchCommand.c_str(),"r");
+    if (remoteCommandPipe == NULL) perror ("Error reading input");
+    else {
+      if ( fgets (tempChar , 100 , remoteCommandPipe) != NULL )
+	{
+	  remoteResultString += tempChar;
+	}
+      LOG(INFO) << "Result of running the command on guest is ." << remoteResultString;
+    }
+
+}

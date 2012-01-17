@@ -23,6 +23,7 @@
 #include <pwd.h>
 
 #include <iostream>
+#include <fstream>
 #include <sstream>
 
 #include <sys/stat.h>
@@ -285,6 +286,41 @@ void ExecutorLauncher::setupEnvironment()
   }
 }
 
+// Set up environment variables for launching a framework's executor.
+void ExecutorLauncher::setupEnvironment( std::ofstream & ofs)
+{
+  LOG(INFO) << "ExecutorLauncher::setupEnvironment";
+  // Set any environment variables given as env.* params in the ExecutorInfo
+  setupEnvVariablesFromParams(ofs);
+
+  ofs << "export MESOS_FRAMEWORK_ID=" << frameworkId.value() << std::endl;
+  ofs << "export MESOS_EXECUTOR_URI=" << executorUri  << std::endl;
+  ofs << "export MESOS_USER=" << user  << std::endl;
+  ofs << "export MESOS_WORK_DIRECTORY=" << workDirectory  << std::endl;
+  ofs << "export MESOS_SLAVE_PID=" << slavePid  << std::endl;
+  ofs << "export MESOS_HADOOP_HOME=" << hadoopHome  << std::endl;
+  ofs << "export MESOS_REDIRECT_IO=" << redirectIO  << std::endl;
+  ofs << "export MESOS_SWITCH_USER=" << shouldSwitchUser  << std::endl;
+  ofs << "export MESOS_CONTAINER=" << container  << std::endl;
+
+  // Set MESOS_HOME so that Java and Python executors can find libraries
+  if (mesosHome != "") {
+    ofs << "export MESOS_HOME=" << mesosHome  << std::endl;
+    // setenv("MESOS_HOME", mesosHome.c_str(), 1);
+  }
+}
+
+
+void ExecutorLauncher::setupEnvVariablesFromParams( std::ofstream & ofs)
+{
+  foreachpair (const string& key, const string& value, params) {
+    if (key.find("env.") == 0) {
+      const string& var = key.substr(strlen("env."));
+      ofs << "export " << var << "=" << value  << std::endl;
+    }
+  }
+}
+
 
 void ExecutorLauncher::setupEnvVariablesFromParams()
 {
@@ -340,4 +376,23 @@ void ExecutorLauncher::setupEnvironmentForLauncherMain()
   setenv("MESOS_SWITCH_USER", shouldSwitchUser ? "1" : "0", 1);
   LOG(INFO) << "ExecutorLauncher::setupEnvironmentForLauncherMain: MESOS_CONTAINER: " << container.c_str();
   setenv("MESOS_CONTAINER", container.c_str(), 1);
+}
+
+void ExecutorLauncher::setupEnvironmentForLauncherMain(std::ofstream & ofs)
+{
+  // Set up environment variables passed through env.* params
+  setupEnvironment(ofs);
+
+  // Set up Mesos environment variables that launcher_main.cpp will
+  // pass as arguments to an ExecutorLauncher there
+  ofs << "MESOS_FRAMEWORK_ID=" << frameworkId.value();
+  ofs << "MESOS_EXECUTOR_URI=" << executorUri;
+  ofs << "MESOS_USER=" << user;
+  ofs << "MESOS_WORK_DIRECTORY=" << workDirectory;
+  ofs << "MESOS_SLAVE_PID=" << slavePid;
+  ofs << "MESOS_HOME=" << mesosHome;
+  ofs << "MESOS_HADOOP_HOME=" << hadoopHome;
+  ofs << "MESOS_REDIRECT_IO=" << redirectIO;
+  ofs << "MESOS_SWITCH_USER=" << shouldSwitchUser;
+  ofs << "MESOS_CONTAINER=" << container;
 }
