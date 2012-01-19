@@ -51,10 +51,13 @@ using std::vector;
 
 namespace {
 
-const int32_t CPU_SHARES_PER_CPU = 1024;
-const int32_t MIN_CPU_SHARES = 10;
-const int64_t MIN_MEMORY_MB = 128 * Megabyte;
+  const int32_t CPU_SHARES_PER_CPU = 1024;
+  const int32_t MIN_CPU_SHARES = 10;
+  const int64_t MIN_MEMORY_MB = 128 * Megabyte;
 
+  const std::string defaultMesosHome = "/mesos-distro";
+  const std::string defaultHadoopHome = "/hadoop-distro";
+  const std::string defaultSparkHome = "/spark-distro";
 } // namespace {
 
 
@@ -190,6 +193,10 @@ void VmIsolationModule::launchExecutor(
     sleep(10);
     // now get the ip address of the virtual machine
     std::string vm_ip = getVirtualMachineIp(info->vm);
+    if (vm_ip.length() <= 1){
+      LOG(FATAL) << "Failed to get ip of vm container.";
+      return;
+    }
     // Now launch the task that is associated with the virtual machine.
     launchVirtualTask(executorInfo,executorId,frameworkId,frameworkInfo,info->vm,vm_ip,directory,slave,conf,local);
     // Create an ExecutorLauncher to set up the environment for executing
@@ -438,17 +445,56 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
 	executorInfo.params().param(i).value();
     }
 
+    
+    /*
+I0118 20:40:23.559878  5558 vm_isolation_module.cpp:568] /media/LinuxShare2/mesos/bin/find_addr.pl hostvirkaz3-clone is command line.
+I0118 20:40:23.559913  5558 vm_isolation_module.cpp:571] Running command to retrieve IP of the guest.
+I0118 20:40:24.150392  5558 vm_isolation_module.cpp:586] Determine IP of guest to be :192.168.122.148
+I0118 20:40:24.152222  5558 vm_isolation_module.cpp:455] VmIsolationModule::launchVirtualTask: host mesos home /media/LinuxShare2/mesos
+I0118 20:40:24.152245  5558 vm_isolation_module.cpp:457] VmIsolationModule::launchVirtualTask: vmExecutorInfo originally /media/LinuxShare2/spark/spark-executor
+I0118 20:40:24.152268  5558 vm_isolation_module.cpp:459] VmIsolationModule::launchVirtualTask: vmExecutorInfo setup to be /mesos-distror
+I0118 20:40:24.152279  5558 vm_isolation_module.cpp:462] VmIsolationModule::launchVirtualTask: vmDirectory originally /media/LinuxShare2/mesos/work/slaves/201201182040-0-0/frameworks/201201182040-0-0000/executors/default/runs/0
+I0118 20:40:24.152290  5558 vm_isolation_module.cpp:464] VmIsolationModule::launchVirtualTask: vmDirectory setup to be /mesos-distro/0
+I0118 20:40:24.152300  5558 vm_isolation_module.cpp:467] VmIsolationModule::launchVirtualTask: vmFrameworksHome originally 
+I0118 20:40:24.152309  5558 vm_isolation_module.cpp:469] VmIsolationModule::launchVirtualTask: vmFrameworksHome setup to be 
+    */
     // Use the configuration stored in the launcher
+    // Set up the mesos_home and spark_home based parameters to use the 
+    // default value
+    // one approach would be to just do a replace substring in the approrpriate 
+    // places.
+    const std::string hostMesosHome= conf.get("home", "");
+    LOG(INFO) << "VmIsolationModule::launchVirtualTask: host mesos home " << hostMesosHome;
+    std::string vmExecutorInfo = executorInfo.uri();
+    LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmExecutorInfo originally " << vmExecutorInfo;
+    replacePathSubstring(vmExecutorInfo,hostMesosHome,defaultMesosHome);
+    LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmExecutorInfo setup to be " << vmExecutorInfo;
+
+    std::string vmDirectory = directory;
+    LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmDirectory originally " << vmDirectory;
+    replacePathSubstring(vmDirectory,hostMesosHome,defaultMesosHome);
+    LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmDirectory setup to be " << vmDirectory;
+
+    std::string vmFrameworksHome = conf.get("frameworks_home", "");
+    LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmFrameworksHome originally " << vmFrameworksHome;
+    replacePathSubstring(vmFrameworksHome,hostMesosHome,defaultMesosHome);
+    LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmFrameworksHome setup to be " << vmFrameworksHome;
+    
     ExecutorLauncher* launcher =
       new ExecutorLauncher(frameworkId,
 			   executorId,
-			   executorInfo.uri(),
+			   vmExecutorInfo,
+			   // executorInfo.uri(), // should be relative to defaultSparkHome
 			   frameworkInfo.user(),
-                           directory,
+			   vmDirectory,
+                           // directory, // should be relative to defaultMesosHome
 			   slave,
-			   conf.get("frameworks_home", ""),
-			   conf.get("home", ""),
-			   conf.get("hadoop_home", ""),
+			   vmFrameworksHome,
+			   // conf.get("frameworks_home", ""), // check this
+			   defaultMesosHome,
+			   //			   conf.get("home", ""), // should be defaultMesosHome
+			   defaultHadoopHome,
+			   // conf.get("hadoop_home", ""), // should be defaultHadoopHome
 			   !local,
 			   conf.get("switch_user", true),
 			   vm,
@@ -474,7 +520,7 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
     
     templateShellFile.close();
 
-    launchVmTask(vmIp,launchFileName,frameworkInfo);
+    // launchVmTask(vmIp,launchFileName,frameworkInfo);
 
     // scp the file here
 
@@ -535,22 +581,36 @@ std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
   FILE * ip_result;
   char tempChar[100];
   LOG(INFO) << "Running command to retrieve IP of the guest.";
-  ip_result = popen(find_ip_perl.c_str(),"r");
-  if (ip_result == NULL) perror ("Error reading input");
-  else {
-    if ( fgets (tempChar , 100 , ip_result) != NULL )
-      {
-	ip += tempChar;
-	LOG(INFO) << " Read char " << tempChar;
-      }
-    LOG(INFO) << "Determine IP of guest to be ." << ip;
-    if (pclose (ip_result) != 0)
-      {
-	fprintf (stderr,
-		 "Could not run find_addr.pl .\n");
-      }
+  bool ipNotFound= true;
+  int tryIpFetchCount = 0;
+  const int maxFetchIpTries = 4;
+  while(ipNotFound && tryIpFetchCount < maxFetchIpTries){
+    ip_result = popen(find_ip_perl.c_str(),"r");
+    if (ip_result == NULL) {
+      LOG(ERROR) << "Find_Ip returned null" ;
+      perror ("Error reading input");
+      return NULL;
+    }
+    else {
+      if ( fgets (tempChar , 100 , ip_result) != NULL )
+	{
+	  ip += tempChar;
+	  LOG(INFO) << "Determine IP of guest to be :" << ip;
+	  if(ip.length() > 1)
+	    ipNotFound= false;
+	  else{
+	    sleep(2);
+	    LOG(INFO) << "Could not get guest IP, retrying";
+	  }
+	  if (pclose (ip_result) != 0)
+	    {
+	      fprintf (stderr,"Could not run find_addr.pl .\n");
+	      return NULL;
+	    }
+	}
+    }
   }
-  
+  if(ip.length() <= 1) LOG(INFO) << "Could not get ip address of guest vm";
   return ip;
 }
 
@@ -598,4 +658,12 @@ void VmIsolationModule::launchVmTask(const std::string & vmIp,std::string & laun
       LOG(INFO) << "Result of running the command on guest is ." << remoteResultString;
     }
 
+}
+
+void VmIsolationModule::replacePathSubstring(std::string & path, const std::string & orig, const std::string & rep){
+    int firstPath=0,lastPath=0;
+    firstPath= path.find_first_of(orig);
+    lastPath= path.find_last_of(orig);
+    if(lastPath > firstPath && lastPath > 0)
+      path.replace(firstPath, lastPath, rep);
 }

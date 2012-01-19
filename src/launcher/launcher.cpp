@@ -289,16 +289,16 @@ void ExecutorLauncher::setupEnvironment()
 // Set up environment variables for launching a framework's executor.
 void ExecutorLauncher::setupEnvironment( std::ofstream & ofs)
 {
-  LOG(INFO) << "ExecutorLauncher::setupEnvironment";
+  // LOG(INFO) << "ExecutorLauncher::setupEnvironment";
   // Set any environment variables given as env.* params in the ExecutorInfo
   setupEnvVariablesFromParams(ofs);
 
+  ofs << "export MESOS_HADOOP_HOME=" << hadoopHome  << std::endl;
   ofs << "export MESOS_FRAMEWORK_ID=" << frameworkId.value() << std::endl;
   ofs << "export MESOS_EXECUTOR_URI=" << executorUri  << std::endl;
   ofs << "export MESOS_USER=" << user  << std::endl;
   ofs << "export MESOS_WORK_DIRECTORY=" << workDirectory  << std::endl;
   ofs << "export MESOS_SLAVE_PID=" << slavePid  << std::endl;
-  ofs << "export MESOS_HADOOP_HOME=" << hadoopHome  << std::endl;
   ofs << "export MESOS_REDIRECT_IO=" << redirectIO  << std::endl;
   ofs << "export MESOS_SWITCH_USER=" << shouldSwitchUser  << std::endl;
   ofs << "export MESOS_CONTAINER=" << container  << std::endl;
@@ -385,14 +385,14 @@ void ExecutorLauncher::setupEnvironmentForLauncherMain(std::ofstream & ofs)
 
   // Set up Mesos environment variables that launcher_main.cpp will
   // pass as arguments to an ExecutorLauncher there
-  ofs << "MESOS_FRAMEWORK_ID=" << frameworkId.value();
-  ofs << "MESOS_EXECUTOR_URI=" << executorUri;
-  ofs << "MESOS_USER=" << user;
-  ofs << "MESOS_WORK_DIRECTORY=" << workDirectory;
-  ofs << "MESOS_SLAVE_PID=" << slavePid;
-  ofs << "MESOS_HOME=" << mesosHome;
-  ofs << "MESOS_HADOOP_HOME=" << hadoopHome;
-  ofs << "MESOS_REDIRECT_IO=" << redirectIO;
-  ofs << "MESOS_SWITCH_USER=" << shouldSwitchUser;
-  ofs << "MESOS_CONTAINER=" << container;
+  ofs << "MESOS_FRAMEWORK_ID=" << frameworkId.value() << std::endl;
+  ofs << "MESOS_EXECUTOR_URI=" << executorUri  << std::endl;
+  ofs << "MESOS_USER=" << user  << std::endl;
+  ofs << "MESOS_WORK_DIRECTORY=" << workDirectory  << std::endl;
+  ofs << "MESOS_SLAVE_PID=" << slavePid  << std::endl;
+  ofs << "MESOS_HOME=" << mesosHome  << std::endl;
+  ofs << "MESOS_HADOOP_HOME=" << hadoopHome  << std::endl;
+  ofs << "MESOS_REDIRECT_IO=" << redirectIO  << std::endl;
+  ofs << "MESOS_SWITCH_USER=" << shouldSwitchUser  << std::endl;
+  ofs << "MESOS_CONTAINER=" << container  << std::endl;
 }

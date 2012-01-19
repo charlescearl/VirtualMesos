@@ -72,6 +72,8 @@ private:
   bool setControlGroupValue(const std::string& container,
                             const std::string& property,
                             int64_t value);
+
+  void replacePathSubstring(std::string & path, const std::string & orig, const std::string & rep);
   /*
   void copyEnvParametersToScriptFile (const std::ofstream & ofs, 
 				    ExecutorLauncher* launcher)  ;
