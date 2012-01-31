@@ -74,6 +74,8 @@ private:
                             int64_t value);
 
   void replacePathSubstring(std::string & path, const std::string & orig, const std::string & rep);
+
+  std::string mapHostToGuestPath(std::string & path);
   /*
   void copyEnvParametersToScriptFile (const std::ofstream & ofs, 
 				    ExecutorLauncher* launcher)  ;

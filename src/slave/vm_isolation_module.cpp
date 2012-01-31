@@ -64,7 +64,7 @@ namespace {
 VmIsolationModule::VmIsolationModule()
   : initialized(false)
 {
-  // Spawn the reaper, note that it might send us a message before we
+  // Spawn the reaper, note that it might  us a message before we
   // actually get spawned ourselves, but that's okay, the message will
   // just get dropped.
   reaper = new Reaper();
@@ -166,9 +166,27 @@ void VmIsolationModule::launchExecutor(
     // Record the pid.
     info->pid = pid;
 
-    // Tell the slave this executor has started.
-    dispatch(slave, &Slave::executorStarted,
-             frameworkId, executorId, pid);
+    // - The notification should happen inside of the executor
+    // - The notification should be done with a send(slave,msg)
+    // -- Creating a separate variant of mesos-launch, mesos-vm-launcher perhaps
+    // -- What is contained in the msg?
+    // -- How is dispatch(slave, &Slave::executorStarted,frameworkId, executorId, pid)
+    // --  processed?
+    // -- Who processes it?
+    // -- Does slave do the same processing for sent messages?
+    // -- What is required to package parameters of dispath(...) into a message?
+    // dispatch(slave, &Slave::executorStarted,frameworkId, executorId, pid);
+    LOG(INFO) << " Will send registration later for the virtual machine";
+    LOG(INFO) << " Will need some way of tearing down the local launcher and vm";
+    LOG(INFO) << " Will need to register pid " << pid << " framework id " << frameworkId;
+    // Should this happen in the vm executor?
+    // 1. Look for "Got registration for executor" message
+    // 2. Can launch the executor, how do we register?
+    // 3. Can this be done at the command line on the vm? The vm runs /mesos-distro/bin/mesos-launcher
+    // Does the MESOS_CONTAINER variable need to be unset for the in-vm launcher?
+    // Does a new dispatch need to be called inside of the VM to send the id to the 
+    // slave?
+    
   } else {
     // Close unnecessary file descriptors. Note that we are assuming
     // stdin, stdout, and stderr can ONLY be found at the POSIX
@@ -281,6 +299,7 @@ void VmIsolationModule::resourcesChanged(
   property = "cpu.shares";
   value = cpu_shares;
 
+  /*
   if (!setControlGroupValue(vm, property, value)) {
     // TODO(benh): Kill the executor, but do it in such a way that the
     // slave finds out about it exiting.
@@ -298,6 +317,7 @@ void VmIsolationModule::resourcesChanged(
     // slave finds out about it exiting.
     return;
   }
+  */
 }
 
 
@@ -351,6 +371,7 @@ bool VmIsolationModule::setControlGroupValue(
 }
 
 
+// Are these applicable to running within a virtual machine?
 vector<string> VmIsolationModule::getControlGroupOptions(
     const Resources& resources)
 {
@@ -447,16 +468,9 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
 
     
     /*
-I0118 20:40:23.559878  5558 vm_isolation_module.cpp:568] /media/LinuxShare2/mesos/bin/find_addr.pl hostvirkaz3-clone is command line.
-I0118 20:40:23.559913  5558 vm_isolation_module.cpp:571] Running command to retrieve IP of the guest.
-I0118 20:40:24.150392  5558 vm_isolation_module.cpp:586] Determine IP of guest to be :192.168.122.148
-I0118 20:40:24.152222  5558 vm_isolation_module.cpp:455] VmIsolationModule::launchVirtualTask: host mesos home /media/LinuxShare2/mesos
-I0118 20:40:24.152245  5558 vm_isolation_module.cpp:457] VmIsolationModule::launchVirtualTask: vmExecutorInfo originally /media/LinuxShare2/spark/spark-executor
-I0118 20:40:24.152268  5558 vm_isolation_module.cpp:459] VmIsolationModule::launchVirtualTask: vmExecutorInfo setup to be /mesos-distror
-I0118 20:40:24.152279  5558 vm_isolation_module.cpp:462] VmIsolationModule::launchVirtualTask: vmDirectory originally /media/LinuxShare2/mesos/work/slaves/201201182040-0-0/frameworks/201201182040-0-0000/executors/default/runs/0
-I0118 20:40:24.152290  5558 vm_isolation_module.cpp:464] VmIsolationModule::launchVirtualTask: vmDirectory setup to be /mesos-distro/0
-I0118 20:40:24.152300  5558 vm_isolation_module.cpp:467] VmIsolationModule::launchVirtualTask: vmFrameworksHome originally 
-I0118 20:40:24.152309  5558 vm_isolation_module.cpp:469] VmIsolationModule::launchVirtualTask: vmFrameworksHome setup to be 
+      I0118 20:40:24.152222  5558 vm_isolation_module.cpp:455] VmIsolationModule::launchVirtualTask: host mesos home /media/LinuxShare2/mesos
+      I0118 20:40:24.152279  5558 vm_isolation_module.cpp:462] VmIsolationModule::launchVirtualTask: vmDirectory originally /media/LinuxShare2/mesos/work/slaves/201201182040-0-0/frameworks/201201182040-0-0000/executors/default/runs/0
+      I0118 20:40:24.152290  5558 vm_isolation_module.cpp:464] VmIsolationModule::launchVirtualTask: vmDirectory setup to be /mesos-distro/0
     */
     // Use the configuration stored in the launcher
     // Set up the mesos_home and spark_home based parameters to use the 
@@ -467,7 +481,7 @@ I0118 20:40:24.152309  5558 vm_isolation_module.cpp:469] VmIsolationModule::laun
     LOG(INFO) << "VmIsolationModule::launchVirtualTask: host mesos home " << hostMesosHome;
     std::string vmExecutorInfo = executorInfo.uri();
     LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmExecutorInfo originally " << vmExecutorInfo;
-    replacePathSubstring(vmExecutorInfo,hostMesosHome,defaultMesosHome);
+    vmExecutorInfo = mapHostToGuestPath(vmExecutorInfo);
     LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmExecutorInfo setup to be " << vmExecutorInfo;
 
     std::string vmDirectory = directory;
@@ -520,7 +534,7 @@ I0118 20:40:24.152309  5558 vm_isolation_module.cpp:469] VmIsolationModule::laun
     
     templateShellFile.close();
 
-    // launchVmTask(vmIp,launchFileName,frameworkInfo);
+    launchVmTask(vmIp,launchFileName,frameworkInfo);
 
     // scp the file here
 
@@ -610,8 +624,16 @@ std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
 	}
     }
   }
-  if(ip.length() <= 1) LOG(INFO) << "Could not get ip address of guest vm";
-  return ip;
+  if(ip.length() <= 1) {
+    LOG(INFO) << "Could not get ip address of guest vm";
+    return NULL;
+  }
+  else
+    {
+      std::string newIp(ip);
+      newIp.erase(std::remove(newIp.begin(), newIp.end(), '\n'), newIp.end());
+     return newIp;
+    }
 }
 
 /*
@@ -634,36 +656,74 @@ void VmIsolationModule::launchVmTask(const std::string & vmIp,std::string & laun
 				     const FrameworkInfo& frameworkInfo){
     std::string newIp(vmIp);
     std::string vmLaunchCopyCommand= "scp -i /home/hduser/.ssh/id_rsa "+launchFileName+" hduser@"+newIp+":"+launchFileName;
-    popen(vmLaunchCopyCommand.c_str(),"r");
+    LOG(INFO) << "Copy command is " << vmLaunchCopyCommand << std::endl;
+    FILE * remoteCommandPipe;
+    char tempChar[100];
+    std::string remoteResultString;
+    remoteCommandPipe= popen(vmLaunchCopyCommand.c_str(),"r");
+    if (remoteCommandPipe == NULL) {
+      perror ("Error copying to remote repository");
+      return;
+    }
+    else {
+      while ( fgets (tempChar , 100 , remoteCommandPipe) != NULL )
+	{
+	  remoteResultString += tempChar;
+	}
+      LOG(INFO) << "Result of running scp to guest is :\n" << remoteResultString;
+    }
+    if (pclose (remoteCommandPipe) != 0)
+      {
+	fprintf (stderr,"Could not complete scp of run shell\n");
+	return;
+      }
+    // Clear previous strings
+    tempChar[0] = '\0';
+    remoteResultString.clear();
+    
+    // Now setup for the commannd
     std::string vmLaunchCommand= "ssh -i /home/hduser/.ssh/id_rsa ";
     vmLaunchCommand += frameworkInfo.user();
     vmLaunchCommand += "@";
-    newIp.erase(std::remove(newIp.begin(), newIp.end(), '\n'), newIp.end());
     vmLaunchCommand += newIp;
     //    vmLaunchCommand += " 'cd /mesos-distro;ls -l'";
     vmLaunchCommand += " 'bash "+launchFileName+"'";
 
-    FILE * remoteCommandPipe;
-    char tempChar[100];
-    std::string remoteResultString;
-  
+    // Now run the command 
     LOG(INFO) << "Running on guest: " << vmLaunchCommand;
     remoteCommandPipe = popen(vmLaunchCommand.c_str(),"r");
     if (remoteCommandPipe == NULL) perror ("Error reading input");
     else {
-      if ( fgets (tempChar , 100 , remoteCommandPipe) != NULL )
+      while ( fgets (tempChar , 100 , remoteCommandPipe) != NULL )
 	{
 	  remoteResultString += tempChar;
 	}
       LOG(INFO) << "Result of running the command on guest is ." << remoteResultString;
     }
+    if (pclose (remoteCommandPipe) != 0)
+      {
+	fprintf (stderr,"Could not complete reading of launch command output\n");
+	return;
+      }
 
 }
 
+/**
+ * Performs substring replacement to map from paths of the host to the virtual machine guest
+ */
 void VmIsolationModule::replacePathSubstring(std::string & path, const std::string & orig, const std::string & rep){
-    int firstPath=0,lastPath=0;
-    firstPath= path.find_first_of(orig);
-    lastPath= path.find_last_of(orig);
-    if(lastPath > firstPath && lastPath > 0)
-      path.replace(firstPath, lastPath, rep);
+  int firstPath=0;
+  int origLen= orig.length();
+  firstPath= path.find_first_of(orig);
+  if(firstPath != std::string::npos)
+      path.replace(firstPath, firstPath+origLen, rep);
 }
+
+std::string VmIsolationModule::mapHostToGuestPath(std::string & path){
+  std::string sparkPath= "/spark-distro/spark-executor";
+  if(path.find_first_of("spark-executor") != std::string::npos)
+    return sparkPath;
+  else return path;
+}
+
+
