@@ -51,15 +51,18 @@ const char * getenvOrEmpty(const char *variable)
  * Send the pid of the child process. I think this would be executor->pid
  * This code taken from slave/slave.cpp
  */
-// TODO: Are these the correct types for setting up args?
-// TODO: Look at the call inside of slave.cpp to figure this out.
-void notifySlaveOfTask(int pid,const *ExecutorLauncher theExecutor,const *Framework theFramework){
+void notifySlaveOfTask(int pid,const  FrameworkID& frameworkId,
+		           const ExecutorID& executorId,
+		       const *Framework theFramework){
     ExecutorRegisteredMessage message;
     ExecutorArgs* args = message.mutable_args();
-    args->mutable_framework_id()->MergeFrom(framework->id);
-    args->mutable_executor_id()->MergeFrom(executor->id);
+    args->mutable_framework_id()->MergeFrom(frameworkId);
+    args->mutable_executor_id()->MergeFrom(executorId);
+    // TODO: figure out where slave_id comes from 
     args->mutable_slave_id()->MergeFrom(id);
+    // TODO: figure out where hostname comes from
     args->set_hostname(info.hostname());
+    // TODO: figure out where data comes from
     args->set_data(executor->info.data());
     send(id, message);
 }
