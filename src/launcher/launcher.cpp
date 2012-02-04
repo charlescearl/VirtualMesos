@@ -134,6 +134,68 @@ int ExecutorLauncher::run()
   }
 }
 
+/**
+ * Launch the executor and notify the slave of the pid
+ **/
+int ExecutorLauncher::runAndNotify()
+{
+  initializeWorkingDirectory();
+
+  // Enter working directory
+  if (chdir(workDirectory.c_str()) < 0)
+    fatalerror("chdir into framework working directory failed");
+
+  // Redirect output to files in working dir if required
+  if (redirectIO) {
+    if (freopen("stdout", "w", stdout) == NULL)
+      fatalerror("freopen failed");
+    if (freopen("stderr", "w", stderr) == NULL)
+      fatalerror("freopen failed");
+  }
+
+  string executor = fetchExecutor();
+
+  setupEnvironment();
+
+  if (shouldSwitchUser)
+    switchUser();
+
+  // TODO(benh): Clean up this gross special cased LXC garbage!!!!
+
+  if (container != "") {
+    pid_t pid;
+    if ((pid = fork()) == -1) {
+      fatalerror("Failed to fork to launch %s", executor.c_str());
+    }
+
+    if (pid) {
+      // In parent process.
+      int status;
+      // Here send the slave message.
+      notifySlaveOfTask(pid);
+      wait(&status);
+      // TODO(benh): Provide a utils::os::system.
+      // CCE: This block has to be specialized for VM case -->
+      string command = "lxc-stop -n " + container;
+      // <-- CCE: This block has to be specialized for VM case 
+      system(command.c_str());
+      return status;
+    } else {
+      // In child process, execute the executor.
+      execl(executor.c_str(), executor.c_str(), (char *) NULL);
+
+      // If we get here, the execl call failed
+      fatalerror("Could not execute %s", executor.c_str());
+    }
+  } else {
+    // Execute the executor.
+    execl(executor.c_str(), executor.c_str(), (char *) NULL);
+
+    // If we get here, the execl call failed
+    fatalerror("Could not execute %s", executor.c_str());
+  }
+}
+
 
 // Own the working directory, if necessary.
 void ExecutorLauncher::initializeWorkingDirectory()
@@ -402,4 +464,19 @@ void ExecutorLauncher::setupEnvironmentForLauncherMain(std::ofstream & ofs)
   ofs << "mkdir -p " << workDirectory <<  std::endl;
   // Add the mesosHome/bin/mesos-launcher call
   ofs <<  mesosHome << "/bin/mesos-launcher" << std::endl;
+}
+
+/**
+ * Send the slave the message. Will have to fork/exec in order to do this.
+ * Send the pid of the child process. I think this would be executor->pid
+ */
+void ExecutorLauncher::notifySlaveOfTask(int pid){
+    ExecutorRegisteredMessage message;
+    ExecutorArgs* args = message.mutable_args();
+    args->mutable_framework_id()->MergeFrom(framework->id);
+    args->mutable_executor_id()->MergeFrom(executor->id);
+    args->mutable_slave_id()->MergeFrom(id);
+    args->set_hostname(info.hostname());
+    args->set_data(executor->info.data());
+    send(executor->pid, message);
 }

@@ -49,8 +49,11 @@ const char * getenvOrEmpty(const char *variable)
 /**
  * Send the slave the message. Will have to fork/exec in order to do this.
  * Send the pid of the child process. I think this would be executor->pid
+ * This code taken from slave/slave.cpp
  */
-void notifySlaveOfTask(int pid){
+// TODO: Are these the correct types for setting up args?
+// TODO: Look at the call inside of slave.cpp to figure this out.
+void notifySlaveOfTask(int pid,const *ExecutorLauncher theExecutor,const *Framework theFramework){
     ExecutorRegisteredMessage message;
     ExecutorArgs* args = message.mutable_args();
     args->mutable_framework_id()->MergeFrom(framework->id);
@@ -58,7 +61,7 @@ void notifySlaveOfTask(int pid){
     args->mutable_slave_id()->MergeFrom(id);
     args->set_hostname(info.hostname());
     args->set_data(executor->info.data());
-    send(executor->pid, message);
+    send(id, message);
 }
 
 
@@ -70,11 +73,10 @@ int main(int argc, char **argv)
   ExecutorID executorId;
   executorId.set_value(getenvOrFail("MESOS_EXECUTOR_ID"));
 
-  // fork here,
-  // then exec the mesos_launcher found in this directory
-  // then can send the child process to the slave
+  // To fork off the child
+  int pid;
 
-  return ExecutorLauncher(frameworkId,
+  Executor *theExecutor = new    ExecutorLauncher(frameworkId,
 			  executorId,
 			  getenvOrFail("MESOS_EXECUTOR_URI"),
 			  getenvOrFail("MESOS_USER"),
@@ -86,5 +88,15 @@ int main(int argc, char **argv)
 			  lexical_cast<bool>(getenvOrFail("MESOS_REDIRECT_IO")),
 			  lexical_cast<bool>(getenvOrFail("MESOS_SWITCH_USER")),
 			  getenvOrEmpty("MESOS_CONTAINER"),
-			  map<string, string>()).run();
+						  map<string, string>());
+  // fork here,
+  if((pid = fork()) != 0){
+    notifySlaveOfTask(pid,theExecutor)
+    // Now send slave a notification of the child pid
+  }
+  // then exec the mesos_launcher found in this directory
+  // then can send the child process to the slave
+  else{
+    theExecutor->run();
+  }
 }
