@@ -37,6 +37,11 @@
 #include "common/foreach.hpp"
 
 #include "common/utils.hpp"
+
+
+#include "messages/messages.hpp"
+
+
 using namespace mesos;
 using namespace mesos::internal;
 using namespace mesos::internal::launcher;
@@ -466,17 +471,22 @@ void ExecutorLauncher::setupEnvironmentForLauncherMain(std::ofstream & ofs)
   ofs <<  mesosHome << "/bin/mesos-launcher" << std::endl;
 }
 
+
 /**
  * Send the slave the message. Will have to fork/exec in order to do this.
  * Send the pid of the child process. I think this would be executor->pid
+ * This code taken from slave/slave.cpp
  */
 void ExecutorLauncher::notifySlaveOfTask(int pid){
     ExecutorRegisteredMessage message;
     ExecutorArgs* args = message.mutable_args();
-    args->mutable_framework_id()->MergeFrom(framework->id);
-    args->mutable_executor_id()->MergeFrom(executor->id);
+    args->mutable_framework_id()->MergeFrom(frameworkId);
+    args->mutable_executor_id()->MergeFrom(executorId);
+    // TODO: figure out where slave_id comes from 
     args->mutable_slave_id()->MergeFrom(id);
+    // TODO: figure out where hostname comes from
     args->set_hostname(info.hostname());
-    args->set_data(executor->info.data());
-    send(executor->pid, message);
+    // TODO: figure out where data comes from
+    args->set_data(info.data());
+    send(id, message);
 }

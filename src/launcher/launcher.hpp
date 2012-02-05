@@ -101,6 +101,10 @@ protected:
 
   // Switch to a framework's user in preparation for exec()'ing its executor.
   virtual void switchUser();
+  // Send message to the slave informing of the existence of the virtual machine
+  // launched executor
+  virtual void notifySlaveOfTask(int pid);
+  virtual int runAndNotify();
 
 private:
   // Set any environment variables given as env.* params in the ExecutorInfo

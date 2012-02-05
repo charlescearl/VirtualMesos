@@ -46,26 +46,6 @@ const char * getenvOrEmpty(const char *variable)
   return value;
 }
 
-/**
- * Send the slave the message. Will have to fork/exec in order to do this.
- * Send the pid of the child process. I think this would be executor->pid
- * This code taken from slave/slave.cpp
- */
-void notifySlaveOfTask(int pid,const  FrameworkID& frameworkId,
-		           const ExecutorID& executorId,
-		       const *Framework theFramework){
-    ExecutorRegisteredMessage message;
-    ExecutorArgs* args = message.mutable_args();
-    args->mutable_framework_id()->MergeFrom(frameworkId);
-    args->mutable_executor_id()->MergeFrom(executorId);
-    // TODO: figure out where slave_id comes from 
-    args->mutable_slave_id()->MergeFrom(id);
-    // TODO: figure out where hostname comes from
-    args->set_hostname(info.hostname());
-    // TODO: figure out where data comes from
-    args->set_data(executor->info.data());
-    send(id, message);
-}
 
 
 int main(int argc, char **argv)
@@ -94,7 +74,7 @@ int main(int argc, char **argv)
 						  map<string, string>());
   // fork here,
   if((pid = fork()) != 0){
-    notifySlaveOfTask(pid,theExecutor)
+    theExecutor->notifySlaveOfTask(pid);
     // Now send slave a notification of the child pid
   }
   // then exec the mesos_launcher found in this directory
