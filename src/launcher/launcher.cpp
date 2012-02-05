@@ -38,6 +38,10 @@
 
 #include "common/utils.hpp"
 
+#include <process/process.hpp>
+#include <process/protobuf.hpp>
+
+
 
 #include "messages/messages.hpp"
 
@@ -482,11 +486,24 @@ void ExecutorLauncher::notifySlaveOfTask(int pid){
     ExecutorArgs* args = message.mutable_args();
     args->mutable_framework_id()->MergeFrom(frameworkId);
     args->mutable_executor_id()->MergeFrom(executorId);
-    // TODO: figure out where slave_id comes from 
-    args->mutable_slave_id()->MergeFrom(id);
-    // TODO: figure out where hostname comes from
-    args->set_hostname(info.hostname());
-    // TODO: figure out where data comes from
-    args->set_data(info.data());
-    send(id, message);
+    // TODO: figure out if slave id is needed for this message
+    // args->mutable_slave_id()->MergeFrom(id);
+
+
+    Result<string> result = utils::os::hostname();
+
+    if (result.isError()) {
+      LOG(FATAL) << "Failed to get hostname: " << result.error();
+    }
+
+    CHECK(result.isSome());
+    string hostname = result.get();
+
+    //    args->set_hostname(info.hostname());
+    args->set_hostname(hostname);
+    // TODO: figure out if info is needed for this message
+    // args->set_data(info.data());
+    // TODO: The signature is std::string,message but is defaulting to something else. How do we fix this?
+    send(slavePid, message);
+    //    send(slavePid, args->GetTypeName(),	 args->mutable_data(), args->mutable_data()->size());
 }

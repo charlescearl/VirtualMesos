@@ -281,7 +281,16 @@ launcher/launcher.o: launcher/launcher.cpp \
  ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl.h \
  ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream.h \
  ../third_party/protobuf-2.3.0/src/google/protobuf/io/zero_copy_stream_impl_lite.h \
- common/option.hpp common/result.hpp common/strings.hpp common/try.hpp
+ common/option.hpp common/result.hpp common/strings.hpp common/try.hpp \
+ ../third_party/libprocess/include/process/process.hpp \
+ ../third_party/libprocess/include/process/future.hpp \
+ ../third_party/libprocess/include/process/latch.hpp \
+ ../third_party/libprocess/include/process/pid.hpp \
+ ../third_party/libprocess/include/process/option.hpp \
+ ../third_party/libprocess/include/process/http.hpp \
+ ../third_party/libprocess/include/process/protobuf.hpp \
+ ../third_party/libprocess/include/process/dispatch.hpp \
+ messages/messages.hpp messages/messages.pb.h mesos.pb.h
 
 ../third_party/boost-1.37.0/boost/lexical_cast.hpp:
 
@@ -860,3 +869,25 @@ common/result.hpp:
 common/strings.hpp:
 
 common/try.hpp:
+
+../third_party/libprocess/include/process/process.hpp:
+
+../third_party/libprocess/include/process/future.hpp:
+
+../third_party/libprocess/include/process/latch.hpp:
+
+../third_party/libprocess/include/process/pid.hpp:
+
+../third_party/libprocess/include/process/option.hpp:
+
+../third_party/libprocess/include/process/http.hpp:
+
+../third_party/libprocess/include/process/protobuf.hpp:
+
+../third_party/libprocess/include/process/dispatch.hpp:
+
+messages/messages.hpp:
+
+messages/messages.pb.h:
+
+mesos.pb.h:
