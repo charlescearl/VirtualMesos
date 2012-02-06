@@ -58,6 +58,7 @@ using std::ostringstream;
 using std::string;
 using std::vector;
 
+//using process;
 
 ExecutorLauncher::ExecutorLauncher(const FrameworkID& _frameworkId,
                                    const ExecutorID& _executorId,
@@ -501,9 +502,12 @@ void ExecutorLauncher::notifySlaveOfTask(int pid){
 
     //    args->set_hostname(info.hostname());
     args->set_hostname(hostname);
+
+    process::ProcessBase baseProcess("executor");
     // TODO: figure out if info is needed for this message
     // args->set_data(info.data());
     // TODO: The signature is std::string,message but is defaulting to something else. How do we fix this?
-    send(slavePid, message);
-    //    send(slavePid, args->GetTypeName(),	 args->mutable_data(), args->mutable_data()->size());
+    //    baseProcess.send(slavePid, message);
+    baseProcess.send(slavePid, args->GetTypeName(),	 
+		     args->mutable_data(), args->mutable_data()->size());
 }
