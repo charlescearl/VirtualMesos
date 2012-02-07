@@ -473,7 +473,7 @@ void ExecutorLauncher::setupEnvironmentForLauncherMain(std::ofstream & ofs)
   // make the work directory
   ofs << "mkdir -p " << workDirectory <<  std::endl;
   // Add the mesosHome/bin/mesos-launcher call
-  ofs <<  mesosHome << "/bin/mesos-launcher" << std::endl;
+  ofs <<  mesosHome << "/bin/mesos-vm-launcher" << std::endl;
 }
 
 
@@ -485,6 +485,7 @@ void ExecutorLauncher::setupEnvironmentForLauncherMain(std::ofstream & ofs)
 void ExecutorLauncher::notifySlaveOfTask(int pid){
     ExecutorRegisteredMessage message;
     ExecutorArgs* args = message.mutable_args();
+    LOG(INFO) << "Notifying slave of task with message";
     args->mutable_framework_id()->MergeFrom(frameworkId);
     args->mutable_executor_id()->MergeFrom(executorId);
     // TODO: figure out if slave id is needed for this message
@@ -509,5 +510,9 @@ void ExecutorLauncher::notifySlaveOfTask(int pid){
     // TODO: The signature is std::string,message but is defaulting to something else. How do we fix this?
     //    baseProcess.send(slavePid, message);
     baseProcess.send(slavePid, args->GetTypeName(),	 
-		     args->mutable_data(), args->mutable_data()->size());
+		     args->mutable_data()->c_str(), (size_t) args->mutable_data()->size());
+    LOG(INFO) << "Slave Pid is: " << slavePid;
+    LOG(INFO) << "Exec type name is : " << args->GetTypeName();
+    LOG(INFO) << "Exec data is : " << args->mutable_data()->c_str();
+    LOG(INFO) << "Sent message to slave";
 }

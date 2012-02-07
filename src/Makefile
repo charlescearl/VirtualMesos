@@ -123,7 +123,7 @@ MASTER_OBJ = master/master.o master/http.o master/slaves_manager.o	\
 
 SLAVE_OBJ = slave/slave.o slave/http.o slave/isolation_module.o		\
 	    slave/process_based_isolation_module.o slave/reaper.o	\
-	    slave/vm_isolation_module.o launcher/launcher.o
+	    slave/vm_isolation_module.o launcher/launcher.o 
 
 ifeq ($(OS_NAME),solaris)
   SLAVE_OBJ += slave/solaris_project_isolation_module.o
@@ -168,6 +168,8 @@ SLAVE_EXE_OBJ = $(SLAVE_OBJ) $(SLAVE_WEBUI_OBJ) $(COMMON_OBJ)	\
 
 LAUNCHER_EXE_OBJ = launcher/launcher.o $(COMMON_OBJ)
 
+LAUNCHER_VM_EXE_OBJ = launcher/vm_mesos_launcher.o $(COMMON_OBJ)
+
 LOG_EXE_OBJ = log/replica.o
 
 LOCAL_EXE_OBJ = local/local.o $(MASTER_OBJ) $(SLAVE_OBJ) $(COMMON_OBJ)	\
@@ -177,13 +179,14 @@ MESOS_MASTER_EXE = $(BINDIR)/mesos-master
 MESOS_SLAVE_EXE = $(BINDIR)/mesos-slave
 MESOS_LOCAL_EXE = $(BINDIR)/mesos-local
 MESOS_LAUNCHER_EXE = $(BINDIR)/mesos-launcher
+MESOS_VM_LAUNCHER_EXE = $(BINDIR)/mesos-vm-launcher
 MESOS_LOG_EXE = $(BINDIR)/mesos-log
 MESOS_GETCONF_EXE = $(BINDIR)/mesos-getconf
 MESOS_PROJD_EXE = $(BINDIR)/mesos-projd
 MESOS_EXE = $(BINDIR)/mesos
 
 MESOS_EXES = $(MESOS_MASTER_EXE) $(MESOS_SLAVE_EXE) $(MESOS_LOCAL_EXE)	\
-             $(MESOS_LAUNCHER_EXE) $(MESOS_LOG_EXE)			\
+             $(MESOS_LAUNCHER_EXE) $(MESOS_VM_LAUNCHER_EXE) $(MESOS_LOG_EXE)			\
              $(MESOS_GETCONF_EXE) $(MESOS_EXE)
 
 ifeq ($(OS_NAME),solaris)
@@ -323,6 +326,20 @@ $(MESOS_SLAVE_EXE): $(SRCDIR)/slave/main.cpp $(SLAVE_EXE_OBJ) $(PROTOBUF_OBJ)
 
 $(MESOS_LAUNCHER_EXE): $(SRCDIR)/launcher/main.cpp $(LAUNCHER_EXE_OBJ) $(PROTOBUF_OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $< $(LAUNCHER_EXE_OBJ) $(PROTOBUF_OBJ) $(LDFLAGS) $(LIBS)
+
+$(MESOS_VM_LAUNCHER_EXE): $(SRCDIR)/launcher/vm_mesos_launcher.cpp $(LAUNCHER_VM_EXE_OBJ) $(PROTOBUF_OBJ)
+	$(CXX) $(CXXFLAGS) -o ../bin/mesos-vm-launcher launcher/vm_mesos_launcher.o \
+	launcher/launcher.o common/fatal.o common/lock.o detector/detector.o \
+	detector/url_processor.o configurator/configurator.o common/logging.o \
+	common/date_utils.o common/resources.o common/utils.o \
+	zookeeper/zookeeper.o zookeeper/authentication.o zookeeper/group.o \
+	mesos.pb.o messages/messages.pb.o messages/log.pb.o \
+	-L../third_party/protobuf-2.3.0/src/.libs \
+	-L../third_party/glog-0.3.1/.libs -L../third_party/leveldb \
+	-L../third_party/libprocess \
+	-L../third_party/libprocess/third_party/libev-3.8/.libs \
+	-L../third_party/zookeeper-3.3.1/src/c/.libs  -lprotobuf -lglog \
+	-lleveldb -lprocess -lev -lpthread -ldl -lvirt -lzookeeper_mt 
 
 $(MESOS_LOCAL_EXE): $(SRCDIR)/local/main.cpp $(LOCAL_EXE_OBJ) $(PROTOBUF_OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $< $(LOCAL_EXE_OBJ) $(PROTOBUF_OBJ) $(LDFLAGS) $(LIBS)

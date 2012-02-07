@@ -59,7 +59,7 @@ int main(int argc, char **argv)
   // To fork off the child
   int pid;
 
-  Executor *theExecutor = new    ExecutorLauncher(frameworkId,
+  ExecutorLauncher *theExecutor = new    ExecutorLauncher(frameworkId,
 			  executorId,
 			  getenvOrFail("MESOS_EXECUTOR_URI"),
 			  getenvOrFail("MESOS_USER"),

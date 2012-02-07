@@ -85,6 +85,9 @@ public:
   // module, which must run lxc-execute and have it run the launcher.
   virtual void setupEnvironmentForLauncherMain();
   virtual void setupEnvironmentForLauncherMain(std::ofstream & ofs);
+  // Send message to the slave informing of the existence of the virtual machine
+  // launched executor
+  virtual void notifySlaveOfTask(int pid);
 
 protected:
   // Initialize executor's working director.
@@ -101,9 +104,6 @@ protected:
 
   // Switch to a framework's user in preparation for exec()'ing its executor.
   virtual void switchUser();
-  // Send message to the slave informing of the existence of the virtual machine
-  // launched executor
-  virtual void notifySlaveOfTask(int pid);
   virtual int runAndNotify();
 
 private:
