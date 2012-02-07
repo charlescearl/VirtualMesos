@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 						  map<string, string>());
   // fork here,
   if((pid = fork()) != 0){
-    theExecutor->notifySlaveOfTask(pid);
+    //    theExecutor->notifySlaveOfTask(pid);
     // Now send slave a notification of the child pid
   }
   // then exec the mesos_launcher found in this directory

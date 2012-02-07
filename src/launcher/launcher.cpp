@@ -105,6 +105,11 @@ int ExecutorLauncher::run()
 
   string executor = fetchExecutor();
 
+
+    
+  cout << "The executor is " << executor << endl;
+  
+
   setupEnvironment();
 
   if (shouldSwitchUser)
@@ -182,7 +187,7 @@ int ExecutorLauncher::runAndNotify()
       // In parent process.
       int status;
       // Here send the slave message.
-      notifySlaveOfTask(pid);
+      //      notifySlaveOfTask(pid);
       wait(&status);
       // TODO(benh): Provide a utils::os::system.
       // CCE: This block has to be specialized for VM case -->
@@ -509,8 +514,7 @@ void ExecutorLauncher::notifySlaveOfTask(int pid){
     // args->set_data(info.data());
     // TODO: The signature is std::string,message but is defaulting to something else. How do we fix this?
     //    baseProcess.send(slavePid, message);
-    baseProcess.send(slavePid, args->GetTypeName(),	 
-		     args->mutable_data()->c_str(), (size_t) args->mutable_data()->size());
+    //    baseProcess.send(slavePid, args->GetTypeName(),args->mutable_data()->c_str(), (size_t) args->mutable_data()->size());
     LOG(INFO) << "Slave Pid is: " << slavePid;
     LOG(INFO) << "Exec type name is : " << args->GetTypeName();
     LOG(INFO) << "Exec data is : " << args->mutable_data()->c_str();

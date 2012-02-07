@@ -750,10 +750,12 @@ void Slave::registerExecutor(const FrameworkID& frameworkId,
   } else {
     // Save the pid for the executor.
     executor->pid = from();
+    LOG(INFO) << executor->pid << " is pid of the executor ";
 
     // First account for the tasks we're about to start.
     foreachvalue (const TaskDescription& task, executor->queuedTasks) {
       // Add the task to the executor.
+      // LOG(INFO) << " Adding task " << task << " to the q ";
       executor->addTask(task);
     }
 
