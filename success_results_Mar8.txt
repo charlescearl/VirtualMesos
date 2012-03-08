@@ -1,0 +1,128 @@
+Mesos Slave Command:sudo bin/mesos-slave -m mesos://master@azad:5050 -w 9839 --isolation=vm --vm=hostvirkaz3-clone
+Mesos Master Command: ./bin/mesos-master
+Spark Command:     ./run -verbose spark.examples.SparkPi mesos://master@azad:5050
+
+SERVANT Terminal:
+hduser@azad:/mesos-distro$ sudo bin/mesos-slave -m mesos://master@azad:5050 -w 9839 --isolation=vm --vm=hostvirkaz3-clone
+[sudo] password for hduser: 
+I0308 02:09:11.211570 17149 logging.cpp:70] Logging to /mesos-distro/logdir
+I0308 02:09:11.212502 17149 main.cpp:109] Creating "vm" isolation module
+I0308 02:09:11.212685 17149 main.cpp:117] Build: 2012-02-07 13:20:47 by hduser
+I0308 02:09:11.212717 17149 main.cpp:118] Starting Mesos slave
+I0308 02:09:11.213949 17150 slave.cpp:257] Slave started at slave@192.168.1.64:37276
+I0308 02:09:11.214030 17149 webui.cpp:92] Starting slave web server on port 9839
+I0308 02:09:11.214032 17150 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I0308 02:09:11.214215 17153 webui.cpp:50] Slave web server thread started
+I0308 02:09:11.214242 17150 slave.cpp:287] Spawning the isolation module
+I0308 02:09:11.214510 17150 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I0308 02:09:11.219528 17150 slave.cpp:340] Registered with master; given slave ID 201203080209-0-0
+I0308 02:09:11.227716 17153 webui.cpp:63] Loading webui/slave/webui.py
+Bottle server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:9839/
+Use Ctrl-C to quit.
+
+I0308 02:09:19.530346 17150 slave.cpp:398] Got assigned task 0 for framework 201203080209-0-0000
+I0308 02:09:19.530397 17150 slave.cpp:1390] Generating a unique work directory for executor 'default' of framework 201203080209-0-0000
+I0308 02:09:19.530591 17150 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201203080209-0-0/frameworks/201203080209-0-0000/executors/default/runs/0' as work directory for executor 'default' of framework 201203080209-0-0000
+I0308 02:09:19.531625 17150 vm_isolation_module.cpp:125] Launching default (/media/LinuxShare2/new-spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201203080209-0-0/frameworks/201203080209-0-0000/executors/default/runs/0 with resources mem=512' for framework 201203080209-0-0000
+I0308 02:09:19.531968 17150 vm_isolation_module.cpp:164] Forked executor at = 17229
+I0308 02:09:19.531999 17150 vm_isolation_module.cpp:179]  Will send registration later for the virtual machine
+I0308 02:09:19.532008 17150 vm_isolation_module.cpp:180]  Will need some way of tearing down the local launcher and vm
+I0308 02:09:19.532016 17150 vm_isolation_module.cpp:181]  Will need to register pid 17229 framework id 201203080209-0-0000
+I0308 02:09:19.532466 17229 vm_isolation_module.cpp:410] VM control process is 17230
+I0308 02:09:19.532538 17230 vm_isolation_module.cpp:430] Arguments for launching the virtual machine are : /usr/bin/virsh start hostvirkaz3-clone
+error: Domain is already active
+
+I0308 02:09:29.532696 17229 vm_isolation_module.cpp:594] /media/LinuxShare2/mesos/bin/find_addr.pl hostvirkaz3-clone is command line.
+I0308 02:09:29.532735 17229 vm_isolation_module.cpp:597] Running command to retrieve IP of the guest.
+I0308 02:09:29.636324 17229 vm_isolation_module.cpp:612] Determine IP of guest to be :192.168.122.148
+I0308 02:09:29.638409 17229 vm_isolation_module.cpp:481] VmIsolationModule::launchVirtualTask: host mesos home /media/LinuxShare2/mesos
+I0308 02:09:29.638450 17229 vm_isolation_module.cpp:483] VmIsolationModule::launchVirtualTask: vmExecutorInfo originally /media/LinuxShare2/new-spark/spark-executor
+I0308 02:09:29.638481 17229 vm_isolation_module.cpp:485] VmIsolationModule::launchVirtualTask: vmExecutorInfo setup to be /spark-distro/spark-executor
+I0308 02:09:29.638514 17229 vm_isolation_module.cpp:488] VmIsolationModule::launchVirtualTask: vmDirectory originally /media/LinuxShare2/mesos/work/slaves/201203080209-0-0/frameworks/201203080209-0-0000/executors/default/runs/0
+I0308 02:09:29.638568 17229 vm_isolation_module.cpp:490] VmIsolationModule::launchVirtualTask: vmDirectory setup to be /mesos-distro/work/slaves/201203080209-0-0/frameworks/201203080209-0-0000/executors/default/runs/0
+I0308 02:09:29.638602 17229 vm_isolation_module.cpp:493] VmIsolationModule::launchVirtualTask: vmFrameworksHome originally 
+I0308 02:09:29.638631 17229 vm_isolation_module.cpp:495] VmIsolationModule::launchVirtualTask: vmFrameworksHome setup to be 
+I0308 02:09:29.638988 17229 vm_isolation_module.cpp:659] Copy command is scp -i /home/hduser/.ssh/id_rsa /mesos-distro/bin/vmLauncherTemplate-201203080209-0-0000.sh hduser@192.168.122.148:/mesos-distro/bin/vmLauncherTemplate-201203080209-0-0000.sh
+I0308 02:09:38.067638 17229 vm_isolation_module.cpp:673] Result of running scp to guest is :
+I0308 02:09:38.067754 17229 vm_isolation_module.cpp:693] Running on guest: ssh -i /home/hduser/.ssh/id_rsa hduser@192.168.122.148 'bash /mesos-distro/bin/vmLauncherTemplate-201203080209-0-0000.sh'
+I0308 02:09:47.478672 17229 vm_isolation_module.cpp:701] Result of running the command on guest is .
+I0308 02:09:56.188424 17150 slave.cpp:725] Got registration for executor 'default' of framework 201203080209-0-0000
+I0308 02:09:56.188480 17150 slave.cpp:753] 2@192.168.122.148:43228 is pid of the executor 
+I0308 02:09:56.188637 17150 slave.cpp:781] Flushing queued tasks for framework 201203080209-0-0000
+I0308 02:09:59.866410 17150 slave.cpp:922] Status update: task 0 of framework 201203080209-0-0000 is now in state TASK_RUNNING
+I0308 02:09:59.867506 17150 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201203080209-0-0000
+I0308 02:10:00.999737 17150 slave.cpp:922] Status update: task 0 of framework 201203080209-0-0000 is now in state TASK_FINISHED
+I0308 02:10:01.001049 17150 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201203080209-0-0000
+I0308 02:10:01.071702 17150 slave.cpp:398] Got assigned task 1 for framework 201203080209-0-0000
+I0308 02:10:01.159848 17150 slave.cpp:922] Status update: task 1 of framework 201203080209-0-0000 is now in state TASK_RUNNING
+I0308 02:10:01.161056 17150 slave.cpp:642] Got acknowledgement of status update for task 1 of framework 201203080209-0-0000
+I0308 02:10:01.189693 17150 slave.cpp:922] Status update: task 1 of framework 201203080209-0-0000 is now in state TASK_FINISHED
+I0308 02:10:01.190847 17150 slave.cpp:642] Got acknowledgement of status update for task 1 of framework 201203080209-0-0000
+
+SPARK TERMINAL:
+hduser@azad:/spark-distro$ ./run -verbose spark.examples.SparkPi mesos://master@azad:5050
+MESOS_LIBRARY_PATH is /mesos-distro/lib/java
+12/03/08 02:09:19 INFO spark.CacheTrackerActor: Registered actor on port 7077
+12/03/08 02:09:19 INFO spark.MapOutputTrackerActor: Registered actor on port 7077
+12/03/08 02:09:19 INFO spark.SparkContext: Starting job...
+12/03/08 02:09:19 INFO spark.CacheTracker: Registering RDD ID 0 with cache
+12/03/08 02:09:19 INFO spark.CacheTrackerActor: Registering RDD 0 with 2 partitions
+12/03/08 02:09:19 INFO spark.CacheTrackerActor: Asked for current cache locations
+12/03/08 02:09:19 INFO spark.MesosScheduler: Final stage: Stage 0
+12/03/08 02:09:19 INFO spark.MesosScheduler: Parents of final stage: List()
+12/03/08 02:09:19 INFO spark.MesosScheduler: Missing parents: List()
+12/03/08 02:09:19 INFO spark.MesosScheduler: Submitting Stage 0, which has no missing parents
+12/03/08 02:09:19 INFO spark.MesosScheduler: Got a job with 2 tasks
+12/03/08 02:09:19 INFO spark.MesosScheduler: Registered as framework ID 201203080209-0-0000
+12/03/08 02:09:19 INFO spark.MesosScheduler: Adding job with ID 0
+12/03/08 02:09:19 INFO spark.SimpleJob: Starting task 0:0 as TID 0 on slave 201203080209-0-0: azad.gateway.2wire.net (preferred)
+12/03/08 02:10:01 INFO spark.SimpleJob: Finished TID 0 (progress: 1/2)
+12/03/08 02:10:01 INFO spark.MesosScheduler: Completed ResultTask(0, 0)
+12/03/08 02:10:01 INFO spark.SimpleJob: Starting task 0:1 as TID 1 on slave 201203080209-0-0: azad.gateway.2wire.net (preferred)
+12/03/08 02:10:01 INFO spark.SimpleJob: Finished TID 1 (progress: 2/2)
+12/03/08 02:10:01 INFO spark.MesosScheduler: Completed ResultTask(0, 1)
+12/03/08 02:10:01 INFO spark.SparkContext: Job finished in 41.847923857 s
+Pi is roughly 3.13468
+
+
+MASTER TERMINAL:
+hduser@azad:/mesos-distro$ ./bin/mesos-master 
+I0308 02:09:04.290807 17128 logging.cpp:70] Logging to /mesos-distro/logdir
+I0308 02:09:04.291491 17128 main.cpp:95] Build: 2012-02-07 13:20:47 by hduser
+I0308 02:09:04.291519 17128 main.cpp:96] Starting Mesos master
+I0308 02:09:04.292397 17129 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0308 02:09:04.292397 17128 webui.cpp:81] Starting master web server on port 9836
+I0308 02:09:04.292573 17129 master.cpp:279] Master ID: 201203080209-0
+I0308 02:09:04.292580 17132 webui.cpp:47] Master web server thread started
+I0308 02:09:04.292927 17129 master.cpp:462] Elected as master!
+I0308 02:09:04.301563 17132 webui.cpp:59] Loading webui/master/webui.py
+Bottle server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:9836/
+Use Ctrl-C to quit.
+
+I0308 02:09:11.214968 17129 master.cpp:814] Attempting to register slave 201203080209-0-0 at slave@192.168.1.64:37276
+I0308 02:09:11.215278 17129 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:37276 as active
+I0308 02:09:11.215339 17129 master.cpp:1588] Adding slave 201203080209-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0308 02:09:11.215543 17129 simple_allocator.cpp:71] Added slave 201203080209-0-0 with cpus=1; mem=1024
+I0308 02:09:19.472228 17129 master.cpp:492] Registering framework 201203080209-0-0000 at 2@192.168.1.64:35398
+I0308 02:09:19.472434 17129 simple_allocator.cpp:48] Added framework 201203080209-0-0000
+I0308 02:09:19.472528 17129 master.cpp:1184] Sending 1 offers to framework 201203080209-0-0000
+I0308 02:09:19.480697 17129 master.cpp:718] Reviving offers for framework 201203080209-0-0000
+I0308 02:09:19.480733 17129 simple_allocator.cpp:145] Filters removed for framework 201203080209-0-0000
+I0308 02:09:19.529934 17129 master.cpp:679] Received reply for offer 201203080209-0-0
+I0308 02:09:19.530042 17129 master.cpp:1453] Launching task 0 on slave 201203080209-0-0
+I0308 02:09:59.866852 17129 master.cpp:902] Status update from slave@192.168.1.64:37276: task 0 of framework 201203080209-0-0000 is now in state TASK_RUNNING
+I0308 02:10:01.000253 17129 master.cpp:902] Status update from slave@192.168.1.64:37276: task 0 of framework 201203080209-0-0000 is now in state TASK_FINISHED
+I0308 02:10:01.000388 17129 master.cpp:1184] Sending 1 offers to framework 201203080209-0-0000
+I0308 02:10:01.071069 17129 master.cpp:679] Received reply for offer 201203080209-0-1
+I0308 02:10:01.071171 17129 master.cpp:1453] Launching task 1 on slave 201203080209-0-0
+I0308 02:10:01.160212 17129 master.cpp:902] Status update from slave@192.168.1.64:37276: task 1 of framework 201203080209-0-0000 is now in state TASK_RUNNING
+I0308 02:10:01.190158 17129 master.cpp:902] Status update from slave@192.168.1.64:37276: task 1 of framework 201203080209-0-0000 is now in state TASK_FINISHED
+I0308 02:10:01.190364 17129 master.cpp:1184] Sending 1 offers to framework 201203080209-0-0000
+I0308 02:10:01.218543 17129 master.cpp:679] Received reply for offer 201203080209-0-2
+I0308 02:10:01.218613 17129 master.cpp:1403] Filtered slave 201203080209-0-0 for framework 201203080209-0-0000 for 1 seconds
+I0308 02:10:01.565368 17129 master.cpp:1118] Framework 201203080209-0-0000 disconnected
+
+
+
