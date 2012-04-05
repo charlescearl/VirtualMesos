@@ -1,0 +1,8 @@
+I0327 01:30:39.287859  1958 launcher.cpp:341] ExecutorLauncher::setupEnvironment
+I0327 01:30:39.287982  1958 launcher.cpp:346] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203262340-0-17/frameworks/201203262340-0-0019/executors/default/runs/0
+I0327 01:30:39.288005  1958 launcher.cpp:348] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:39821
+I0327 01:30:39.288018  1958 launcher.cpp:350] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203262340-0-0019
+I0327 01:30:39.288028  1958 launcher.cpp:352] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0327 01:30:39.288038  1958 launcher.cpp:360] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+12/03/27 01:30:40 INFO spark.Executor: Running task ID 0
+12/03/27 01:30:40 INFO spark.Executor: Finished task ID 0

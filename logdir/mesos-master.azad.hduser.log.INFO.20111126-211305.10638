@@ -1,0 +1,90 @@
+Log file created at: 2011/11/26 21:13:05
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1126 21:13:05.832952 10638 logging.cpp:40] Logging to /media/LinuxShare2/mesos/logdir
+I1126 21:13:05.833178 10638 main.cpp:60] Creating event logger.
+I1126 21:13:05.833199 10638 event_logger.cpp:52] creating EventLogger, using log_dir: /media/LinuxShare2/mesos/logdir
+I1126 21:13:05.833215 10638 event_logger.cpp:64] creating FileEventWriter
+I1126 21:13:05.833266 10638 main.cpp:71] Build: 2011-11-26 08:32:25 by hduser
+I1126 21:13:05.833286 10638 main.cpp:72] Starting Mesos master
+I1126 21:13:05.833825 10638 webui.cpp:63] Starting master web UI on port 9836
+I1126 21:13:05.833948 10639 master.cpp:266] Master started at mesos://1@127.0.0.1:5050
+I1126 21:13:05.834111 10641 webui.cpp:31] Web UI thread started
+I1126 21:13:05.834151 10639 master.cpp:276] Master ID: 201111262113-0
+I1126 21:13:05.834173 10639 master.cpp:1115] Creating "simple" allocator
+I1126 21:13:05.834527 10639 master.cpp:294] New master detected ... maybe it's us!
+I1126 21:13:05.847223 10641 webui.cpp:43] Loading webui/master/webui.py
+I1126 21:26:10.294708 10639 master.cpp:502] Registering slave 201111262113-0-0 at 1@127.0.0.1:49867
+I1126 21:26:10.294879 10639 simple_allocator.cpp:36] Added slave 201111262113-0-0
+I1126 21:29:29.860244 10639 master.cpp:705] Process exited: 1@127.0.0.1:49867
+I1126 21:29:29.860307 10639 master.cpp:717] slave 201111262113-0-0 disconnected
+I1126 21:29:29.860332 10639 simple_allocator.cpp:45] Removed slave 201111262113-0-0
+I1126 21:30:25.124655 10639 master.cpp:502] Registering slave 201111262113-0-1 at 1@127.0.0.1:33786
+I1126 21:30:25.124786 10639 simple_allocator.cpp:36] Added slave 201111262113-0-1
+I1126 21:33:07.183001 10639 master.cpp:310] Registering framework 201111262113-0-0000 at 1@127.0.0.1:46517
+I1126 21:33:07.183089 10639 event_logger.cpp:95] logged FrameworkRegistered event with File Event Writer. fwid: 201111262113-0-0000, user: hduser
+I1126 21:33:07.183107 10639 master.cpp:331] Logged framework registered to event history
+I1126 21:33:07.183212 10639 simple_allocator.cpp:18] Added framework 201111262113-0-0000
+I1126 21:33:07.183248 10639 master.cpp:766] Sending offer 201111262113-0-0 to framework 201111262113-0-0000
+I1126 21:33:07.183779 10639 master.cpp:788] Received reply for offer 201111262113-0-0
+I1126 21:33:07.183845 10639 event_logger.cpp:117] logged TaskCreated event with File Event Writer
+I1126 21:33:07.183867 10639 master.cpp:899] Launching task 201111262113-0-0000:0 on slave 201111262113-0-1
+I1126 21:33:07.183913 10639 simple_allocator.cpp:69] Offer returned: offer 201111262113-0-0, reason = 0
+I1126 21:33:07.188899 10639 master.cpp:582] Status update: task 201111262113-0-0000:0 is in state 1
+I1126 21:33:07.188945 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:08.189368 10639 master.cpp:582] Status update: task 201111262113-0-0000:0 is in state 2
+I1126 21:33:08.189422 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:08.189437 10639 master.cpp:588] Removing task 201111262113-0-0000:0 because it's done
+I1126 21:33:08.189453 10639 simple_allocator.cpp:53] Removed task 201111262113-0-0000:0
+I1126 21:33:08.189479 10639 master.cpp:766] Sending offer 201111262113-0-1 to framework 201111262113-0-0000
+I1126 21:33:08.190024 10639 master.cpp:788] Received reply for offer 201111262113-0-1
+I1126 21:33:08.190088 10639 event_logger.cpp:117] logged TaskCreated event with File Event Writer
+I1126 21:33:08.190109 10639 master.cpp:899] Launching task 201111262113-0-0000:1 on slave 201111262113-0-1
+I1126 21:33:08.190146 10639 simple_allocator.cpp:69] Offer returned: offer 201111262113-0-1, reason = 0
+I1126 21:33:08.191097 10639 master.cpp:582] Status update: task 201111262113-0-0000:1 is in state 1
+I1126 21:33:08.191141 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:09.191431 10639 master.cpp:582] Status update: task 201111262113-0-0000:1 is in state 2
+I1126 21:33:09.191483 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:09.191575 10639 master.cpp:588] Removing task 201111262113-0-0000:1 because it's done
+I1126 21:33:09.191598 10639 simple_allocator.cpp:53] Removed task 201111262113-0-0000:1
+I1126 21:33:09.191627 10639 master.cpp:766] Sending offer 201111262113-0-2 to framework 201111262113-0-0000
+I1126 21:33:09.192193 10639 master.cpp:788] Received reply for offer 201111262113-0-2
+I1126 21:33:09.192260 10639 event_logger.cpp:117] logged TaskCreated event with File Event Writer
+I1126 21:33:09.192286 10639 master.cpp:899] Launching task 201111262113-0-0000:2 on slave 201111262113-0-1
+I1126 21:33:09.192327 10639 simple_allocator.cpp:69] Offer returned: offer 201111262113-0-2, reason = 0
+I1126 21:33:09.193281 10639 master.cpp:582] Status update: task 201111262113-0-0000:2 is in state 1
+I1126 21:33:09.193331 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:10.193590 10639 master.cpp:582] Status update: task 201111262113-0-0000:2 is in state 2
+I1126 21:33:10.193670 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:10.193691 10639 master.cpp:588] Removing task 201111262113-0-0000:2 because it's done
+I1126 21:33:10.193709 10639 simple_allocator.cpp:53] Removed task 201111262113-0-0000:2
+I1126 21:33:10.193737 10639 master.cpp:766] Sending offer 201111262113-0-3 to framework 201111262113-0-0000
+I1126 21:33:10.194237 10639 master.cpp:788] Received reply for offer 201111262113-0-3
+I1126 21:33:10.194305 10639 event_logger.cpp:117] logged TaskCreated event with File Event Writer
+I1126 21:33:10.194330 10639 master.cpp:899] Launching task 201111262113-0-0000:3 on slave 201111262113-0-1
+I1126 21:33:10.194371 10639 simple_allocator.cpp:69] Offer returned: offer 201111262113-0-3, reason = 0
+I1126 21:33:10.195307 10639 master.cpp:582] Status update: task 201111262113-0-0000:3 is in state 1
+I1126 21:33:10.195356 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:11.195596 10639 master.cpp:582] Status update: task 201111262113-0-0000:3 is in state 2
+I1126 21:33:11.195674 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:11.195693 10639 master.cpp:588] Removing task 201111262113-0-0000:3 because it's done
+I1126 21:33:11.195713 10639 simple_allocator.cpp:53] Removed task 201111262113-0-0000:3
+I1126 21:33:11.195741 10639 master.cpp:766] Sending offer 201111262113-0-4 to framework 201111262113-0-0000
+I1126 21:33:11.196264 10639 master.cpp:788] Received reply for offer 201111262113-0-4
+I1126 21:33:11.196332 10639 event_logger.cpp:117] logged TaskCreated event with File Event Writer
+I1126 21:33:11.196357 10639 master.cpp:899] Launching task 201111262113-0-0000:4 on slave 201111262113-0-1
+I1126 21:33:11.196398 10639 simple_allocator.cpp:69] Offer returned: offer 201111262113-0-4, reason = 0
+I1126 21:33:11.197105 10639 master.cpp:582] Status update: task 201111262113-0-0000:4 is in state 1
+I1126 21:33:11.197152 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:12.198590 10639 master.cpp:582] Status update: task 201111262113-0-0000:4 is in state 2
+I1126 21:33:12.198670 10639 event_logger.cpp:128] logged TaskStateUpated event with File Event Writer
+I1126 21:33:12.198690 10639 master.cpp:588] Removing task 201111262113-0-0000:4 because it's done
+I1126 21:33:12.198710 10639 simple_allocator.cpp:53] Removed task 201111262113-0-0000:4
+I1126 21:33:12.198740 10639 master.cpp:766] Sending offer 201111262113-0-5 to framework 201111262113-0-0000
+I1126 21:33:12.199555 10639 master.cpp:705] Process exited: 1@127.0.0.1:46517
+I1126 21:33:12.199599 10639 master.cpp:709] framework 201111262113-0-0000 disconnected
+I1126 21:33:12.199694 10639 simple_allocator.cpp:69] Offer returned: offer 201111262113-0-5, reason = 2
+I1126 21:33:12.199733 10639 simple_allocator.cpp:25] Removed framework 201111262113-0-0000
+I1126 22:32:08.310269 10639 master.cpp:705] Process exited: 1@127.0.0.1:33786
+I1126 22:32:08.310415 10639 master.cpp:717] slave 201111262113-0-1 disconnected
+I1126 22:32:08.310451 10639 simple_allocator.cpp:45] Removed slave 201111262113-0-1

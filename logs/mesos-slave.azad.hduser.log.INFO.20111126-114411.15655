@@ -1,0 +1,15 @@
+Log file created at: 2011/11/26 11:44:11
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1126 11:44:11.596576 15655 logging.cpp:40] Logging to /media/LinuxShare2/mesos/logs
+I1126 11:44:11.596789 15655 main.cpp:66] Creating "process" isolation module
+I1126 11:44:11.596808 15655 main.cpp:74] Build: 2011-11-26 08:32:34 by hduser
+I1126 11:44:11.596818 15655 main.cpp:75] Starting Mesos slave
+I1126 11:44:11.597375 15658 slave.cpp:149] Slave started at 1@127.0.0.1:40391
+I1126 11:44:11.597412 15655 webui.cpp:74] Starting slave web UI on port 9836
+I1126 11:44:11.597520 15660 webui.cpp:34] Web UI thread started
+I1126 11:44:11.597542 15658 slave.cpp:160] setting up webUIUrl on port 9836
+I1126 11:44:11.597676 15658 slave.cpp:181] New master at 1@192.168.1.76:5050 with ID:0
+I1126 11:44:11.597923 15658 slave.cpp:408] Process exited: 1@192.168.1.76:5050
+W1126 11:44:11.597960 15658 slave.cpp:411] Master disconnected! Waiting for a new master to be elected.
+I1126 11:44:11.610915 15660 webui.cpp:47] Loading webui/slave/webui.py

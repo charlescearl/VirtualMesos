@@ -1,0 +1,55 @@
+Log file created at: 2011/12/31 03:02:21
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1231 03:02:21.538521 10704 logging.cpp:70] Logging to /media/LinuxShare2/mesos/logdir
+I1231 03:02:21.539068 10704 main.cpp:109] Creating "vm" isolation module
+I1231 03:02:21.539181 10704 main.cpp:117] Build: 2011-12-31 03:01:48 by hduser
+I1231 03:02:21.539202 10704 main.cpp:118] Starting Mesos slave
+I1231 03:02:21.539966 10705 slave.cpp:257] Slave started at slave@192.168.1.64:40209
+I1231 03:02:21.539995 10704 webui.cpp:92] Starting slave web server on port 9839
+I1231 03:02:21.540000 10705 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I1231 03:02:21.540092 10705 slave.cpp:287] Spawning the isolation module
+I1231 03:02:21.540106 10708 webui.cpp:50] Slave web server thread started
+I1231 03:02:21.540194 10705 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I1231 03:02:21.543421 10705 slave.cpp:340] Registered with master; given slave ID 201112310302-0-0
+I1231 03:02:21.548986 10708 webui.cpp:63] Loading webui/slave/webui.py
+I1231 03:02:29.574836 10705 slave.cpp:398] Got assigned task 0 for framework 201112310302-0-0000
+I1231 03:02:29.574908 10705 slave.cpp:1388] Generating a unique work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:29.575150 10705 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/0' as work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:29.576684 10705 vm_isolation_module.cpp:120] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/0 with resources mem=512' for framework 201112310302-0-0000
+I1231 03:02:29.577088 10705 vm_isolation_module.cpp:159] Forked executor at = 10785
+I1231 03:02:31.548974 10705 vm_isolation_module.cpp:362] Telling slave of lost executor default of framework 201112310302-0-0000
+I1231 03:02:31.549034 10705 vm_isolation_module.cpp:279] Stopping container hostvirkaz4
+I1231 03:02:31.557133 10705 slave.cpp:1277] Executor 'default' of framework 201112310302-0-0000 has exited with status 6
+I1231 03:02:31.563793 10705 slave.cpp:398] Got assigned task 1 for framework 201112310302-0-0000
+I1231 03:02:31.563839 10705 slave.cpp:1388] Generating a unique work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:31.563947 10705 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/1' as work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:31.565100 10705 vm_isolation_module.cpp:120] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/1 with resources mem=512' for framework 201112310302-0-0000
+I1231 03:02:31.565433 10705 vm_isolation_module.cpp:159] Forked executor at = 10847
+I1231 03:02:32.550977 10705 vm_isolation_module.cpp:362] Telling slave of lost executor default of framework 201112310302-0-0000
+I1231 03:02:32.551025 10705 vm_isolation_module.cpp:279] Stopping container hostvirkaz4
+I1231 03:02:32.558447 10705 slave.cpp:1277] Executor 'default' of framework 201112310302-0-0000 has exited with status 6
+I1231 03:02:32.563274 10705 slave.cpp:398] Got assigned task 2 for framework 201112310302-0-0000
+I1231 03:02:32.563316 10705 slave.cpp:1388] Generating a unique work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:32.563441 10705 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/2' as work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:32.564349 10705 vm_isolation_module.cpp:120] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/2 with resources mem=512' for framework 201112310302-0-0000
+I1231 03:02:32.564775 10705 vm_isolation_module.cpp:159] Forked executor at = 10857
+I1231 03:02:33.552513 10705 vm_isolation_module.cpp:362] Telling slave of lost executor default of framework 201112310302-0-0000
+I1231 03:02:33.552590 10705 vm_isolation_module.cpp:279] Stopping container hostvirkaz4
+I1231 03:02:33.560571 10705 slave.cpp:1277] Executor 'default' of framework 201112310302-0-0000 has exited with status 6
+I1231 03:02:33.564787 10705 slave.cpp:398] Got assigned task 3 for framework 201112310302-0-0000
+I1231 03:02:33.564838 10705 slave.cpp:1388] Generating a unique work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:33.564967 10705 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/3' as work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:33.565881 10705 vm_isolation_module.cpp:120] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/3 with resources mem=512' for framework 201112310302-0-0000
+I1231 03:02:33.566194 10705 vm_isolation_module.cpp:159] Forked executor at = 10868
+I1231 03:02:34.553884 10705 vm_isolation_module.cpp:362] Telling slave of lost executor default of framework 201112310302-0-0000
+I1231 03:02:34.553961 10705 vm_isolation_module.cpp:279] Stopping container hostvirkaz4
+I1231 03:02:34.561702 10705 slave.cpp:1277] Executor 'default' of framework 201112310302-0-0000 has exited with status 6
+I1231 03:02:34.566333 10705 slave.cpp:398] Got assigned task 4 for framework 201112310302-0-0000
+I1231 03:02:34.566380 10705 slave.cpp:1388] Generating a unique work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:34.566531 10705 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/4' as work directory for executor 'default' of framework 201112310302-0-0000
+I1231 03:02:34.567479 10705 vm_isolation_module.cpp:120] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201112310302-0-0/frameworks/201112310302-0-0000/executors/default/runs/4 with resources mem=512' for framework 201112310302-0-0000
+I1231 03:02:34.567806 10705 vm_isolation_module.cpp:159] Forked executor at = 10878
+I1231 03:02:35.555407 10705 vm_isolation_module.cpp:362] Telling slave of lost executor default of framework 201112310302-0-0000
+I1231 03:02:35.555479 10705 vm_isolation_module.cpp:279] Stopping container hostvirkaz4
+I1231 03:02:35.563109 10705 slave.cpp:1277] Executor 'default' of framework 201112310302-0-0000 has exited with status 6

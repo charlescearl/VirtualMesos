@@ -249,6 +249,7 @@ string ExecutorLauncher::fetchExecutor()
     // a HADOOP_HOME environment variable. Finally, if that doesn't exist,
     // try looking for hadoop on the PATH.
     string hadoopScript;
+    hadoopHome ="/hadoop-distro";
     if (hadoopHome != "") {
       hadoopScript = hadoopHome + "/bin/hadoop";
     } else if (getenv("HADOOP_HOME") != 0) {
@@ -360,6 +361,7 @@ void ExecutorLauncher::setupEnvironment()
     LOG(INFO) << "ExecutorLauncher::setupEnvironment: MESOS_HOME: " << mesosHome.c_str();
 
     setenv("MESOS_HOME", mesosHome.c_str(), 1);
+    setenv("HADOOP_HOME","/hadoop-distro",1);
   }
 }
 

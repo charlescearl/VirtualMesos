@@ -1,0 +1,158 @@
+Log file created at: 2011/12/31 03:23:18
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1231 03:23:18.661345 22034 logging.cpp:70] Logging to /media/LinuxShare2/mesos/logdir
+I1231 03:23:18.661905 22034 main.cpp:95] Build: 2011-12-31 03:09:10 by hduser
+I1231 03:23:18.661922 22034 main.cpp:96] Starting Mesos master
+I1231 03:23:18.662631 22034 webui.cpp:81] Starting master web server on port 9836
+I1231 03:23:18.662682 22035 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I1231 03:23:18.662725 22038 webui.cpp:47] Master web server thread started
+I1231 03:23:18.662735 22035 master.cpp:279] Master ID: 201112310323-0
+I1231 03:23:18.662925 22035 master.cpp:462] Elected as master!
+I1231 03:23:18.672178 22038 webui.cpp:59] Loading webui/master/webui.py
+I1231 03:23:21.050436 22035 master.cpp:814] Attempting to register slave 201112310323-0-0 at slave@192.168.1.64:54709
+I1231 03:23:21.050643 22035 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:54709 as active
+I1231 03:23:21.050675 22035 master.cpp:1588] Adding slave 201112310323-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I1231 03:23:21.050819 22035 simple_allocator.cpp:71] Added slave 201112310323-0-0 with cpus=1; mem=1024
+I1231 03:23:26.286326 22035 master.cpp:492] Registering framework 201112310323-0-0000 at 2@192.168.1.64:49444
+I1231 03:23:26.286456 22035 simple_allocator.cpp:48] Added framework 201112310323-0-0000
+I1231 03:23:26.286563 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:26.293040 22035 master.cpp:718] Reviving offers for framework 201112310323-0-0000
+I1231 03:23:26.293061 22035 simple_allocator.cpp:145] Filters removed for framework 201112310323-0-0000
+I1231 03:23:26.333335 22035 master.cpp:679] Received reply for offer 201112310323-0-0
+I1231 03:23:26.333467 22035 master.cpp:1453] Launching task 0 on slave 201112310323-0-0
+I1231 03:23:27.065621 22035 master.cpp:1001] Executor default of framework 201112310323-0-0000 on slave 201112310323-0-0 (azad.gateway.2wire.net) exited with status 6
+I1231 03:23:27.066911 22035 master.cpp:1033] Removing task 0 of framework 201112310323-0-0000 because of lost executor
+I1231 03:23:27.067020 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:27.071364 22035 master.cpp:679] Received reply for offer 201112310323-0-1
+I1231 03:23:27.071436 22035 master.cpp:1453] Launching task 1 on slave 201112310323-0-0
+I1231 03:23:28.066903 22035 master.cpp:1001] Executor default of framework 201112310323-0-0000 on slave 201112310323-0-0 (azad.gateway.2wire.net) exited with status 6
+I1231 03:23:28.067756 22035 master.cpp:1033] Removing task 1 of framework 201112310323-0-0000 because of lost executor
+I1231 03:23:28.067873 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:28.070499 22035 master.cpp:679] Received reply for offer 201112310323-0-2
+I1231 03:23:28.070556 22035 master.cpp:1453] Launching task 2 on slave 201112310323-0-0
+I1231 03:23:29.068505 22035 master.cpp:1001] Executor default of framework 201112310323-0-0000 on slave 201112310323-0-0 (azad.gateway.2wire.net) exited with status 6
+I1231 03:23:29.069367 22035 master.cpp:1033] Removing task 2 of framework 201112310323-0-0000 because of lost executor
+I1231 03:23:29.069464 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:29.072149 22035 master.cpp:679] Received reply for offer 201112310323-0-3
+I1231 03:23:29.072226 22035 master.cpp:1453] Launching task 3 on slave 201112310323-0-0
+I1231 03:23:30.069923 22035 master.cpp:1001] Executor default of framework 201112310323-0-0000 on slave 201112310323-0-0 (azad.gateway.2wire.net) exited with status 6
+I1231 03:23:30.070818 22035 master.cpp:1033] Removing task 3 of framework 201112310323-0-0000 because of lost executor
+I1231 03:23:30.070922 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:30.073386 22035 master.cpp:679] Received reply for offer 201112310323-0-4
+I1231 03:23:30.073446 22035 master.cpp:1453] Launching task 4 on slave 201112310323-0-0
+I1231 03:23:31.167510 22035 master.cpp:1001] Executor default of framework 201112310323-0-0000 on slave 201112310323-0-0 (azad.gateway.2wire.net) exited with status 6
+I1231 03:23:31.168889 22035 master.cpp:1033] Removing task 4 of framework 201112310323-0-0000 because of lost executor
+I1231 03:23:31.168989 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:31.171561 22035 master.cpp:679] Received reply for offer 201112310323-0-5
+I1231 03:23:31.171617 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:32.679446 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:32.680590 22035 master.cpp:679] Received reply for offer 201112310323-0-6
+I1231 03:23:32.680642 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:33.681702 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:33.682824 22035 master.cpp:679] Received reply for offer 201112310323-0-7
+I1231 03:23:33.682878 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:34.684005 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:34.685217 22035 master.cpp:679] Received reply for offer 201112310323-0-8
+I1231 03:23:34.685272 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:35.685421 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:35.686641 22035 master.cpp:679] Received reply for offer 201112310323-0-9
+I1231 03:23:35.686697 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:36.686806 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:36.687911 22035 master.cpp:679] Received reply for offer 201112310323-0-10
+I1231 03:23:36.687962 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:37.689138 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:37.690471 22035 master.cpp:679] Received reply for offer 201112310323-0-11
+I1231 03:23:37.690532 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:39.691910 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:39.693164 22035 master.cpp:679] Received reply for offer 201112310323-0-12
+I1231 03:23:39.693215 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:40.693343 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:40.694525 22035 master.cpp:679] Received reply for offer 201112310323-0-13
+I1231 03:23:40.694578 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:41.695673 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:41.696715 22035 master.cpp:679] Received reply for offer 201112310323-0-14
+I1231 03:23:41.696769 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:42.697505 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:42.698748 22035 master.cpp:679] Received reply for offer 201112310323-0-15
+I1231 03:23:42.716892 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:44.700232 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:44.701406 22035 master.cpp:679] Received reply for offer 201112310323-0-16
+I1231 03:23:44.701457 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:45.702518 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:45.703639 22035 master.cpp:679] Received reply for offer 201112310323-0-17
+I1231 03:23:45.703693 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:46.704828 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:46.705987 22035 master.cpp:679] Received reply for offer 201112310323-0-18
+I1231 03:23:46.706042 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:47.706830 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:47.712679 22035 master.cpp:679] Received reply for offer 201112310323-0-19
+I1231 03:23:47.717102 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:49.710208 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:49.711408 22035 master.cpp:679] Received reply for offer 201112310323-0-20
+I1231 03:23:49.711462 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:50.711591 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:50.712929 22035 master.cpp:679] Received reply for offer 201112310323-0-21
+I1231 03:23:50.712981 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:51.713451 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:51.714721 22035 master.cpp:679] Received reply for offer 201112310323-0-22
+I1231 03:23:51.714776 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:52.714884 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:52.716151 22035 master.cpp:679] Received reply for offer 201112310323-0-23
+I1231 03:23:52.726862 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:54.716799 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:54.718138 22035 master.cpp:679] Received reply for offer 201112310323-0-24
+I1231 03:23:54.718191 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:56.719598 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:56.720999 22035 master.cpp:679] Received reply for offer 201112310323-0-25
+I1231 03:23:56.721051 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:57.721180 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:57.722491 22035 master.cpp:679] Received reply for offer 201112310323-0-26
+I1231 03:23:57.736846 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:23:59.724031 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:23:59.725389 22035 master.cpp:679] Received reply for offer 201112310323-0-27
+I1231 03:23:59.725443 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:00.725564 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:00.726848 22035 master.cpp:679] Received reply for offer 201112310323-0-28
+I1231 03:24:00.726908 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:02.727967 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:02.729404 22035 master.cpp:679] Received reply for offer 201112310323-0-29
+I1231 03:24:02.737556 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:04.729939 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:04.731344 22035 master.cpp:679] Received reply for offer 201112310323-0-30
+I1231 03:24:04.731428 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:06.732892 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:06.734230 22035 master.cpp:679] Received reply for offer 201112310323-0-31
+I1231 03:24:06.734280 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:08.735677 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:08.736896 22035 master.cpp:679] Received reply for offer 201112310323-0-32
+I1231 03:24:08.736959 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:10.738244 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:10.739645 22035 master.cpp:679] Received reply for offer 201112310323-0-33
+I1231 03:24:10.739701 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:12.740840 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:12.742176 22035 master.cpp:679] Received reply for offer 201112310323-0-34
+I1231 03:24:12.742226 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:13.742349 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:13.743495 22035 master.cpp:679] Received reply for offer 201112310323-0-35
+I1231 03:24:13.746984 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:15.745897 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:15.747191 22035 master.cpp:679] Received reply for offer 201112310323-0-36
+I1231 03:24:15.747251 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:17.748040 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:17.749300 22035 master.cpp:679] Received reply for offer 201112310323-0-37
+I1231 03:24:17.749351 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:19.750669 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:19.751842 22035 master.cpp:679] Received reply for offer 201112310323-0-38
+I1231 03:24:19.751893 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:20.751991 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:20.753183 22035 master.cpp:679] Received reply for offer 201112310323-0-39
+I1231 03:24:20.753234 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:21.753769 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:21.754905 22035 master.cpp:679] Received reply for offer 201112310323-0-40
+I1231 03:24:21.754956 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:22.756044 22035 master.cpp:1184] Sending 1 offers to framework 201112310323-0-0000
+I1231 03:24:22.757375 22035 master.cpp:679] Received reply for offer 201112310323-0-41
+I1231 03:24:22.757432 22035 master.cpp:1403] Filtered slave 201112310323-0-0 for framework 201112310323-0-0000 for 1 seconds
+I1231 03:24:24.727738 22035 master.cpp:1143] Slave 201112310323-0-0 disconnected
+I1231 03:24:24.727852 22035 simple_allocator.cpp:83] Removed slave 201112310323-0-0

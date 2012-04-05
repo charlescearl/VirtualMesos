@@ -1,0 +1,4 @@
+Log file created at: 2012/01/18 20:30:30
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0118 20:30:30.856369  7671 slave.cpp:1061] WARNING! Master disconnected! Waiting for a new master to be elected.

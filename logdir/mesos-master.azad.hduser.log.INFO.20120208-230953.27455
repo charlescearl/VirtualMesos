@@ -1,0 +1,747 @@
+Log file created at: 2012/02/08 23:09:53
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0208 23:09:53.837821 27455 logging.cpp:70] Logging to /mesos-distro/logdir
+I0208 23:09:53.838620 27455 main.cpp:95] Build: 2012-02-07 13:20:47 by hduser
+I0208 23:09:53.838646 27455 main.cpp:96] Starting Mesos master
+I0208 23:09:53.839721 27455 webui.cpp:81] Starting master web server on port 9836
+I0208 23:09:53.839743 27456 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0208 23:09:53.839818 27456 master.cpp:279] Master ID: 201202082309-0
+I0208 23:09:53.839855 27459 webui.cpp:47] Master web server thread started
+I0208 23:09:53.840021 27456 master.cpp:462] Elected as master!
+I0208 23:09:53.852000 27459 webui.cpp:59] Loading webui/master/webui.py
+I0208 23:10:00.296654 27456 master.cpp:814] Attempting to register slave 201202082309-0-0 at slave@127.0.1.1:59987
+I0208 23:10:00.296952 27456 master.cpp:1057] Master now considering a slave at charles-virtual-machine:59987 as active
+I0208 23:10:00.296998 27456 master.cpp:1588] Adding slave 201202082309-0-0 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:00.297166 27456 simple_allocator.cpp:71] Added slave 201202082309-0-0 with cpus=1; mem=1024
+I0208 23:10:00.297220 27456 master.cpp:1143] Slave 201202082309-0-0 disconnected
+I0208 23:10:00.297338 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-0
+I0208 23:10:01.313503 27456 master.cpp:814] Attempting to register slave 201202082309-0-1 at slave@127.0.1.1:59987
+I0208 23:10:01.313626 27456 master.cpp:1588] Adding slave 201202082309-0-1 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:01.313766 27456 simple_allocator.cpp:71] Added slave 201202082309-0-1 with cpus=1; mem=1024
+I0208 23:10:01.313827 27456 master.cpp:1143] Slave 201202082309-0-1 disconnected
+I0208 23:10:01.313935 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-1
+I0208 23:10:02.314415 27456 master.cpp:814] Attempting to register slave 201202082309-0-2 at slave@127.0.1.1:59987
+I0208 23:10:02.314535 27456 master.cpp:1588] Adding slave 201202082309-0-2 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:02.314666 27456 simple_allocator.cpp:71] Added slave 201202082309-0-2 with cpus=1; mem=1024
+I0208 23:10:02.314786 27456 master.cpp:1143] Slave 201202082309-0-2 disconnected
+I0208 23:10:02.314836 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-2
+I0208 23:10:03.315330 27456 master.cpp:814] Attempting to register slave 201202082309-0-3 at slave@127.0.1.1:59987
+I0208 23:10:03.315445 27456 master.cpp:1588] Adding slave 201202082309-0-3 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:03.315575 27456 simple_allocator.cpp:71] Added slave 201202082309-0-3 with cpus=1; mem=1024
+I0208 23:10:03.315701 27456 master.cpp:1143] Slave 201202082309-0-3 disconnected
+I0208 23:10:03.315745 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-3
+I0208 23:10:04.316187 27456 master.cpp:814] Attempting to register slave 201202082309-0-4 at slave@127.0.1.1:59987
+I0208 23:10:04.316305 27456 master.cpp:1588] Adding slave 201202082309-0-4 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:04.316445 27456 simple_allocator.cpp:71] Added slave 201202082309-0-4 with cpus=1; mem=1024
+I0208 23:10:04.316573 27456 master.cpp:1143] Slave 201202082309-0-4 disconnected
+I0208 23:10:04.316617 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-4
+I0208 23:10:05.316850 27456 master.cpp:814] Attempting to register slave 201202082309-0-5 at slave@127.0.1.1:59987
+I0208 23:10:05.316972 27456 master.cpp:1588] Adding slave 201202082309-0-5 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:05.317921 27456 simple_allocator.cpp:71] Added slave 201202082309-0-5 with cpus=1; mem=1024
+I0208 23:10:05.318061 27456 master.cpp:1143] Slave 201202082309-0-5 disconnected
+I0208 23:10:05.318105 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-5
+I0208 23:10:06.317482 27456 master.cpp:814] Attempting to register slave 201202082309-0-6 at slave@127.0.1.1:59987
+I0208 23:10:06.317592 27456 master.cpp:1588] Adding slave 201202082309-0-6 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:06.317806 27456 simple_allocator.cpp:71] Added slave 201202082309-0-6 with cpus=1; mem=1024
+I0208 23:10:06.317945 27456 master.cpp:1143] Slave 201202082309-0-6 disconnected
+I0208 23:10:06.317994 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-6
+I0208 23:10:07.317802 27456 master.cpp:814] Attempting to register slave 201202082309-0-7 at slave@127.0.1.1:59987
+I0208 23:10:07.317924 27456 master.cpp:1588] Adding slave 201202082309-0-7 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:07.318215 27456 simple_allocator.cpp:71] Added slave 201202082309-0-7 with cpus=1; mem=1024
+I0208 23:10:07.318270 27456 master.cpp:1143] Slave 201202082309-0-7 disconnected
+I0208 23:10:07.318357 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-7
+I0208 23:10:08.318696 27456 master.cpp:814] Attempting to register slave 201202082309-0-8 at slave@127.0.1.1:59987
+I0208 23:10:08.318811 27456 master.cpp:1588] Adding slave 201202082309-0-8 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:08.318977 27456 simple_allocator.cpp:71] Added slave 201202082309-0-8 with cpus=1; mem=1024
+I0208 23:10:08.319020 27456 master.cpp:1143] Slave 201202082309-0-8 disconnected
+I0208 23:10:08.319103 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-8
+I0208 23:10:09.319370 27456 master.cpp:814] Attempting to register slave 201202082309-0-9 at slave@127.0.1.1:59987
+I0208 23:10:09.319511 27456 master.cpp:1588] Adding slave 201202082309-0-9 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:09.319746 27456 simple_allocator.cpp:71] Added slave 201202082309-0-9 with cpus=1; mem=1024
+I0208 23:10:09.319800 27456 master.cpp:1143] Slave 201202082309-0-9 disconnected
+I0208 23:10:09.319918 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-9
+I0208 23:10:10.320051 27456 master.cpp:814] Attempting to register slave 201202082309-0-10 at slave@127.0.1.1:59987
+I0208 23:10:10.320314 27456 master.cpp:1588] Adding slave 201202082309-0-10 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:10.321156 27456 simple_allocator.cpp:71] Added slave 201202082309-0-10 with cpus=1; mem=1024
+I0208 23:10:10.321216 27456 master.cpp:1143] Slave 201202082309-0-10 disconnected
+I0208 23:10:10.321334 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-10
+I0208 23:10:11.320793 27456 master.cpp:814] Attempting to register slave 201202082309-0-11 at slave@127.0.1.1:59987
+I0208 23:10:11.320927 27456 master.cpp:1588] Adding slave 201202082309-0-11 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:11.321146 27456 simple_allocator.cpp:71] Added slave 201202082309-0-11 with cpus=1; mem=1024
+I0208 23:10:11.321207 27456 master.cpp:1143] Slave 201202082309-0-11 disconnected
+I0208 23:10:11.321322 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-11
+I0208 23:10:12.321503 27456 master.cpp:814] Attempting to register slave 201202082309-0-12 at slave@127.0.1.1:59987
+I0208 23:10:12.321635 27456 master.cpp:1588] Adding slave 201202082309-0-12 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:12.321859 27456 simple_allocator.cpp:71] Added slave 201202082309-0-12 with cpus=1; mem=1024
+I0208 23:10:12.321918 27456 master.cpp:1143] Slave 201202082309-0-12 disconnected
+I0208 23:10:12.322033 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-12
+I0208 23:10:13.322047 27456 master.cpp:814] Attempting to register slave 201202082309-0-13 at slave@127.0.1.1:59987
+I0208 23:10:13.322180 27456 master.cpp:1588] Adding slave 201202082309-0-13 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:13.322401 27456 simple_allocator.cpp:71] Added slave 201202082309-0-13 with cpus=1; mem=1024
+I0208 23:10:13.322459 27456 master.cpp:1143] Slave 201202082309-0-13 disconnected
+I0208 23:10:13.322576 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-13
+I0208 23:10:14.322736 27456 master.cpp:814] Attempting to register slave 201202082309-0-14 at slave@127.0.1.1:59987
+I0208 23:10:14.322875 27456 master.cpp:1588] Adding slave 201202082309-0-14 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:14.323130 27456 simple_allocator.cpp:71] Added slave 201202082309-0-14 with cpus=1; mem=1024
+I0208 23:10:14.323192 27456 master.cpp:1143] Slave 201202082309-0-14 disconnected
+I0208 23:10:14.323312 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-14
+I0208 23:10:15.323420 27456 master.cpp:814] Attempting to register slave 201202082309-0-15 at slave@127.0.1.1:59987
+I0208 23:10:15.323711 27456 master.cpp:1588] Adding slave 201202082309-0-15 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:15.324612 27456 simple_allocator.cpp:71] Added slave 201202082309-0-15 with cpus=1; mem=1024
+I0208 23:10:15.324673 27456 master.cpp:1143] Slave 201202082309-0-15 disconnected
+I0208 23:10:15.324791 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-15
+I0208 23:10:16.324080 27456 master.cpp:814] Attempting to register slave 201202082309-0-16 at slave@127.0.1.1:59987
+I0208 23:10:16.324218 27456 master.cpp:1588] Adding slave 201202082309-0-16 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:16.324440 27456 simple_allocator.cpp:71] Added slave 201202082309-0-16 with cpus=1; mem=1024
+I0208 23:10:16.324501 27456 master.cpp:1143] Slave 201202082309-0-16 disconnected
+I0208 23:10:16.324620 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-16
+I0208 23:10:17.324713 27456 master.cpp:814] Attempting to register slave 201202082309-0-17 at slave@127.0.1.1:59987
+I0208 23:10:17.324841 27456 master.cpp:1588] Adding slave 201202082309-0-17 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:17.325047 27456 simple_allocator.cpp:71] Added slave 201202082309-0-17 with cpus=1; mem=1024
+I0208 23:10:17.325109 27456 master.cpp:1143] Slave 201202082309-0-17 disconnected
+I0208 23:10:17.325224 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-17
+I0208 23:10:18.325364 27456 master.cpp:814] Attempting to register slave 201202082309-0-18 at slave@127.0.1.1:59987
+I0208 23:10:18.325503 27456 master.cpp:1588] Adding slave 201202082309-0-18 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:18.325717 27456 simple_allocator.cpp:71] Added slave 201202082309-0-18 with cpus=1; mem=1024
+I0208 23:10:18.325778 27456 master.cpp:1143] Slave 201202082309-0-18 disconnected
+I0208 23:10:18.325896 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-18
+I0208 23:10:19.325989 27456 master.cpp:814] Attempting to register slave 201202082309-0-19 at slave@127.0.1.1:59987
+I0208 23:10:19.326122 27456 master.cpp:1588] Adding slave 201202082309-0-19 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:19.326339 27456 simple_allocator.cpp:71] Added slave 201202082309-0-19 with cpus=1; mem=1024
+I0208 23:10:19.326397 27456 master.cpp:1143] Slave 201202082309-0-19 disconnected
+I0208 23:10:19.326514 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-19
+I0208 23:10:20.326516 27456 master.cpp:814] Attempting to register slave 201202082309-0-20 at slave@127.0.1.1:59987
+I0208 23:10:20.326665 27456 master.cpp:1588] Adding slave 201202082309-0-20 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:20.332137 27456 simple_allocator.cpp:71] Added slave 201202082309-0-20 with cpus=1; mem=1024
+I0208 23:10:20.332201 27456 master.cpp:1143] Slave 201202082309-0-20 disconnected
+I0208 23:10:20.332319 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-20
+I0208 23:10:21.327958 27456 master.cpp:814] Attempting to register slave 201202082309-0-21 at slave@127.0.1.1:59987
+I0208 23:10:21.328096 27456 master.cpp:1588] Adding slave 201202082309-0-21 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:21.328250 27456 simple_allocator.cpp:71] Added slave 201202082309-0-21 with cpus=1; mem=1024
+I0208 23:10:21.328312 27456 master.cpp:1143] Slave 201202082309-0-21 disconnected
+I0208 23:10:21.328431 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-21
+I0208 23:10:22.329457 27456 master.cpp:814] Attempting to register slave 201202082309-0-22 at slave@127.0.1.1:59987
+I0208 23:10:22.329596 27456 master.cpp:1588] Adding slave 201202082309-0-22 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:22.329865 27456 simple_allocator.cpp:71] Added slave 201202082309-0-22 with cpus=1; mem=1024
+I0208 23:10:22.329928 27456 master.cpp:1143] Slave 201202082309-0-22 disconnected
+I0208 23:10:22.330047 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-22
+I0208 23:10:23.330747 27456 master.cpp:814] Attempting to register slave 201202082309-0-23 at slave@127.0.1.1:59987
+I0208 23:10:23.330873 27456 master.cpp:1588] Adding slave 201202082309-0-23 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:23.331049 27456 simple_allocator.cpp:71] Added slave 201202082309-0-23 with cpus=1; mem=1024
+I0208 23:10:23.331091 27456 master.cpp:1143] Slave 201202082309-0-23 disconnected
+I0208 23:10:23.331176 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-23
+I0208 23:10:23.826500 27456 master.cpp:492] Registering framework 201202082309-0-0000 at 2@127.0.1.1:45999
+I0208 23:10:23.826756 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0000
+I0208 23:10:23.826827 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:24.331045 27456 master.cpp:814] Attempting to register slave 201202082309-0-24 at slave@127.0.1.1:59987
+I0208 23:10:24.331179 27456 master.cpp:1588] Adding slave 201202082309-0-24 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:24.331434 27456 simple_allocator.cpp:71] Added slave 201202082309-0-24 with cpus=1; mem=1024
+I0208 23:10:24.331506 27456 master.cpp:1143] Slave 201202082309-0-24 disconnected
+I0208 23:10:24.331701 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-24
+I0208 23:10:24.839422 27456 master.cpp:492] Registering framework 201202082309-0-0001 at 2@127.0.1.1:45999
+I0208 23:10:24.839642 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0001
+I0208 23:10:24.839701 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:25.332578 27456 master.cpp:814] Attempting to register slave 201202082309-0-25 at slave@127.0.1.1:59987
+I0208 23:10:25.332708 27456 master.cpp:1588] Adding slave 201202082309-0-25 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:25.352097 27456 simple_allocator.cpp:71] Added slave 201202082309-0-25 with cpus=1; mem=1024
+I0208 23:10:25.352206 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:25.352311 27456 master.cpp:1143] Slave 201202082309-0-25 disconnected
+I0208 23:10:25.352675 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-25
+I0208 23:10:25.840911 27456 master.cpp:492] Registering framework 201202082309-0-0002 at 2@127.0.1.1:45999
+I0208 23:10:25.841128 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0002
+I0208 23:10:25.841195 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:26.334127 27456 master.cpp:814] Attempting to register slave 201202082309-0-26 at slave@127.0.1.1:59987
+I0208 23:10:26.334267 27456 master.cpp:1588] Adding slave 201202082309-0-26 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:26.334492 27456 simple_allocator.cpp:71] Added slave 201202082309-0-26 with cpus=1; mem=1024
+I0208 23:10:26.334590 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:26.334692 27456 master.cpp:1143] Slave 201202082309-0-26 disconnected
+I0208 23:10:26.335120 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-26
+I0208 23:10:26.842597 27456 master.cpp:492] Registering framework 201202082309-0-0003 at 2@127.0.1.1:45999
+I0208 23:10:26.842800 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0003
+I0208 23:10:26.842865 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:27.335690 27456 master.cpp:814] Attempting to register slave 201202082309-0-27 at slave@127.0.1.1:59987
+I0208 23:10:27.335851 27456 master.cpp:1588] Adding slave 201202082309-0-27 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:27.336073 27456 simple_allocator.cpp:71] Added slave 201202082309-0-27 with cpus=1; mem=1024
+I0208 23:10:27.336216 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:27.336321 27456 master.cpp:1143] Slave 201202082309-0-27 disconnected
+I0208 23:10:27.336818 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-27
+I0208 23:10:27.844102 27456 master.cpp:492] Registering framework 201202082309-0-0004 at 2@127.0.1.1:45999
+I0208 23:10:27.844313 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0004
+I0208 23:10:27.844380 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:28.337256 27456 master.cpp:814] Attempting to register slave 201202082309-0-28 at slave@127.0.1.1:59987
+I0208 23:10:28.337415 27456 master.cpp:1588] Adding slave 201202082309-0-28 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:28.337636 27456 simple_allocator.cpp:71] Added slave 201202082309-0-28 with cpus=1; mem=1024
+I0208 23:10:28.337741 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:28.337842 27456 master.cpp:1143] Slave 201202082309-0-28 disconnected
+I0208 23:10:28.338403 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-28
+I0208 23:10:28.845691 27456 master.cpp:492] Registering framework 201202082309-0-0005 at 2@127.0.1.1:45999
+I0208 23:10:28.845901 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0005
+I0208 23:10:28.845968 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:29.338807 27456 master.cpp:814] Attempting to register slave 201202082309-0-29 at slave@127.0.1.1:59987
+I0208 23:10:29.338968 27456 master.cpp:1588] Adding slave 201202082309-0-29 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:29.339190 27456 simple_allocator.cpp:71] Added slave 201202082309-0-29 with cpus=1; mem=1024
+I0208 23:10:29.339297 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:29.339398 27456 master.cpp:1143] Slave 201202082309-0-29 disconnected
+I0208 23:10:29.340023 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-29
+I0208 23:10:29.846968 27456 master.cpp:492] Registering framework 201202082309-0-0006 at 2@127.0.1.1:45999
+I0208 23:10:29.847177 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0006
+I0208 23:10:29.847242 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:30.340400 27456 master.cpp:814] Attempting to register slave 201202082309-0-30 at slave@127.0.1.1:59987
+I0208 23:10:30.340558 27456 master.cpp:1588] Adding slave 201202082309-0-30 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:30.341984 27456 simple_allocator.cpp:71] Added slave 201202082309-0-30 with cpus=1; mem=1024
+I0208 23:10:30.342090 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:30.342192 27456 master.cpp:1143] Slave 201202082309-0-30 disconnected
+I0208 23:10:30.342895 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-30
+I0208 23:10:30.848614 27456 master.cpp:492] Registering framework 201202082309-0-0007 at 2@127.0.1.1:45999
+I0208 23:10:30.848813 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0007
+I0208 23:10:30.848881 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:31.341881 27456 master.cpp:814] Attempting to register slave 201202082309-0-31 at slave@127.0.1.1:59987
+I0208 23:10:31.342036 27456 master.cpp:1588] Adding slave 201202082309-0-31 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:31.342252 27456 simple_allocator.cpp:71] Added slave 201202082309-0-31 with cpus=1; mem=1024
+I0208 23:10:31.342360 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:31.342463 27456 master.cpp:1143] Slave 201202082309-0-31 disconnected
+I0208 23:10:31.343229 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-31
+I0208 23:10:31.850203 27456 master.cpp:492] Registering framework 201202082309-0-0008 at 2@127.0.1.1:45999
+I0208 23:10:31.850404 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0008
+I0208 23:10:31.850472 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:32.343417 27456 master.cpp:814] Attempting to register slave 201202082309-0-32 at slave@127.0.1.1:59987
+I0208 23:10:32.343576 27456 master.cpp:1588] Adding slave 201202082309-0-32 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:32.343796 27456 simple_allocator.cpp:71] Added slave 201202082309-0-32 with cpus=1; mem=1024
+I0208 23:10:32.343904 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:32.344005 27456 master.cpp:1143] Slave 201202082309-0-32 disconnected
+I0208 23:10:32.344828 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-32
+I0208 23:10:32.851671 27456 master.cpp:492] Registering framework 201202082309-0-0009 at 2@127.0.1.1:45999
+I0208 23:10:32.851882 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0009
+I0208 23:10:32.851950 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:33.344938 27456 master.cpp:814] Attempting to register slave 201202082309-0-33 at slave@127.0.1.1:59987
+I0208 23:10:33.345099 27456 master.cpp:1588] Adding slave 201202082309-0-33 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:33.345326 27456 simple_allocator.cpp:71] Added slave 201202082309-0-33 with cpus=1; mem=1024
+I0208 23:10:33.345438 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:33.345542 27456 master.cpp:1143] Slave 201202082309-0-33 disconnected
+I0208 23:10:33.346425 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-33
+I0208 23:10:33.853168 27456 master.cpp:492] Registering framework 201202082309-0-0010 at 2@127.0.1.1:45999
+I0208 23:10:33.853373 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0010
+I0208 23:10:33.853443 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:34.346402 27456 master.cpp:814] Attempting to register slave 201202082309-0-34 at slave@127.0.1.1:59987
+I0208 23:10:34.346544 27456 master.cpp:1588] Adding slave 201202082309-0-34 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:34.346760 27456 simple_allocator.cpp:71] Added slave 201202082309-0-34 with cpus=1; mem=1024
+I0208 23:10:34.346873 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:34.346978 27456 master.cpp:1143] Slave 201202082309-0-34 disconnected
+I0208 23:10:34.347921 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-34
+I0208 23:10:34.853894 27456 master.cpp:492] Registering framework 201202082309-0-0011 at 2@127.0.1.1:45999
+I0208 23:10:34.854132 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0011
+I0208 23:10:34.854209 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:35.347931 27456 master.cpp:814] Attempting to register slave 201202082309-0-35 at slave@127.0.1.1:59987
+I0208 23:10:35.348074 27456 master.cpp:1588] Adding slave 201202082309-0-35 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:35.352023 27456 simple_allocator.cpp:71] Added slave 201202082309-0-35 with cpus=1; mem=1024
+I0208 23:10:35.352138 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:35.352244 27456 master.cpp:1143] Slave 201202082309-0-35 disconnected
+I0208 23:10:35.353251 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-35
+I0208 23:10:35.855649 27456 master.cpp:492] Registering framework 201202082309-0-0012 at 2@127.0.1.1:45999
+I0208 23:10:35.855892 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0012
+I0208 23:10:35.855969 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:36.349406 27456 master.cpp:814] Attempting to register slave 201202082309-0-36 at slave@127.0.1.1:59987
+I0208 23:10:36.349558 27456 master.cpp:1588] Adding slave 201202082309-0-36 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:36.349779 27456 simple_allocator.cpp:71] Added slave 201202082309-0-36 with cpus=1; mem=1024
+I0208 23:10:36.349905 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:36.350013 27456 master.cpp:1143] Slave 201202082309-0-36 disconnected
+I0208 23:10:36.351093 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-36
+I0208 23:10:36.857424 27456 master.cpp:492] Registering framework 201202082309-0-0013 at 2@127.0.1.1:45999
+I0208 23:10:36.857661 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0013
+I0208 23:10:36.857740 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:37.350967 27456 master.cpp:814] Attempting to register slave 201202082309-0-37 at slave@127.0.1.1:59987
+I0208 23:10:37.351105 27456 master.cpp:1588] Adding slave 201202082309-0-37 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:37.351312 27456 simple_allocator.cpp:71] Added slave 201202082309-0-37 with cpus=1; mem=1024
+I0208 23:10:37.351444 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:37.351557 27456 master.cpp:1143] Slave 201202082309-0-37 disconnected
+I0208 23:10:37.352674 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-37
+I0208 23:10:37.859190 27456 master.cpp:492] Registering framework 201202082309-0-0014 at 2@127.0.1.1:45999
+I0208 23:10:37.859418 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0014
+I0208 23:10:37.859498 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:38.352416 27456 master.cpp:814] Attempting to register slave 201202082309-0-38 at slave@127.0.1.1:59987
+I0208 23:10:38.352551 27456 master.cpp:1588] Adding slave 201202082309-0-38 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:38.352761 27456 simple_allocator.cpp:71] Added slave 201202082309-0-38 with cpus=1; mem=1024
+I0208 23:10:38.352880 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:38.352985 27456 master.cpp:1143] Slave 201202082309-0-38 disconnected
+I0208 23:10:38.354173 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-38
+I0208 23:10:38.860750 27456 master.cpp:492] Registering framework 201202082309-0-0015 at 2@127.0.1.1:45999
+I0208 23:10:38.860985 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0015
+I0208 23:10:38.861063 27456 master.cpp:1118] Framework 201202082309-0-0000 disconnected
+I0208 23:10:39.353828 27456 master.cpp:814] Attempting to register slave 201202082309-0-39 at slave@127.0.1.1:59987
+I0208 23:10:39.353991 27456 master.cpp:1588] Adding slave 201202082309-0-39 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:39.354221 27456 simple_allocator.cpp:71] Added slave 201202082309-0-39 with cpus=1; mem=1024
+I0208 23:10:39.354347 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:39.354455 27456 master.cpp:1143] Slave 201202082309-0-39 disconnected
+I0208 23:10:39.355702 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-39
+I0208 23:10:40.355283 27456 master.cpp:814] Attempting to register slave 201202082309-0-40 at slave@127.0.1.1:59987
+I0208 23:10:40.355427 27456 master.cpp:1588] Adding slave 201202082309-0-40 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:40.362069 27456 simple_allocator.cpp:71] Added slave 201202082309-0-40 with cpus=1; mem=1024
+I0208 23:10:40.362195 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:40.362303 27456 master.cpp:1143] Slave 201202082309-0-40 disconnected
+I0208 23:10:40.363560 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-40
+I0208 23:10:41.356825 27456 master.cpp:814] Attempting to register slave 201202082309-0-41 at slave@127.0.1.1:59987
+I0208 23:10:41.356962 27456 master.cpp:1588] Adding slave 201202082309-0-41 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:41.357187 27456 simple_allocator.cpp:71] Added slave 201202082309-0-41 with cpus=1; mem=1024
+I0208 23:10:41.357307 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:41.357422 27456 master.cpp:1143] Slave 201202082309-0-41 disconnected
+I0208 23:10:41.358664 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-41
+I0208 23:10:42.358469 27456 master.cpp:814] Attempting to register slave 201202082309-0-42 at slave@127.0.1.1:59987
+I0208 23:10:42.358640 27456 master.cpp:1588] Adding slave 201202082309-0-42 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:42.358862 27456 simple_allocator.cpp:71] Added slave 201202082309-0-42 with cpus=1; mem=1024
+I0208 23:10:42.358985 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:42.359096 27456 master.cpp:1143] Slave 201202082309-0-42 disconnected
+I0208 23:10:42.360316 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-42
+I0208 23:10:43.360143 27456 master.cpp:814] Attempting to register slave 201202082309-0-43 at slave@127.0.1.1:59987
+I0208 23:10:43.360280 27456 master.cpp:1588] Adding slave 201202082309-0-43 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:43.360465 27456 simple_allocator.cpp:71] Added slave 201202082309-0-43 with cpus=1; mem=1024
+I0208 23:10:43.360554 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:43.360630 27456 master.cpp:1143] Slave 201202082309-0-43 disconnected
+I0208 23:10:43.361490 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-43
+I0208 23:10:43.717511 27456 master.cpp:492] Registering framework 201202082309-0-0016 at 2@127.0.1.1:43599
+I0208 23:10:43.717700 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0016
+I0208 23:10:43.717761 27456 master.cpp:1118] Framework 201202082309-0-0016 disconnected
+I0208 23:10:44.361774 27456 master.cpp:814] Attempting to register slave 201202082309-0-44 at slave@127.0.1.1:59987
+I0208 23:10:44.361932 27456 master.cpp:1588] Adding slave 201202082309-0-44 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:44.362154 27456 simple_allocator.cpp:71] Added slave 201202082309-0-44 with cpus=1; mem=1024
+I0208 23:10:44.362275 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:44.362383 27456 master.cpp:1143] Slave 201202082309-0-44 disconnected
+I0208 23:10:44.363160 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-44
+I0208 23:10:44.733506 27456 master.cpp:492] Registering framework 201202082309-0-0017 at 2@127.0.1.1:43599
+I0208 23:10:44.733747 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0017
+I0208 23:10:44.733830 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:10:45.363241 27456 master.cpp:814] Attempting to register slave 201202082309-0-45 at slave@127.0.1.1:59987
+I0208 23:10:45.363428 27456 master.cpp:1588] Adding slave 201202082309-0-45 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:45.372038 27456 simple_allocator.cpp:71] Added slave 201202082309-0-45 with cpus=1; mem=1024
+I0208 23:10:45.372213 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:45.372391 27456 master.cpp:1143] Slave 201202082309-0-45 disconnected
+I0208 23:10:45.373824 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-45
+I0208 23:10:45.735151 27456 master.cpp:492] Registering framework 201202082309-0-0018 at 2@127.0.1.1:43599
+I0208 23:10:45.735373 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0018
+I0208 23:10:45.735460 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:10:46.364825 27456 master.cpp:814] Attempting to register slave 201202082309-0-46 at slave@127.0.1.1:59987
+I0208 23:10:46.364984 27456 master.cpp:1588] Adding slave 201202082309-0-46 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:46.365201 27456 simple_allocator.cpp:71] Added slave 201202082309-0-46 with cpus=1; mem=1024
+I0208 23:10:46.365330 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:46.365439 27456 master.cpp:1143] Slave 201202082309-0-46 disconnected
+I0208 23:10:46.366855 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-46
+I0208 23:10:46.736613 27456 master.cpp:492] Registering framework 201202082309-0-0019 at 2@127.0.1.1:43599
+I0208 23:10:46.736842 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0019
+I0208 23:10:46.736940 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:10:47.366206 27456 master.cpp:814] Attempting to register slave 201202082309-0-47 at slave@127.0.1.1:59987
+I0208 23:10:47.366391 27456 master.cpp:1588] Adding slave 201202082309-0-47 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:47.366616 27456 simple_allocator.cpp:71] Added slave 201202082309-0-47 with cpus=1; mem=1024
+I0208 23:10:47.366757 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:47.366868 27456 master.cpp:1143] Slave 201202082309-0-47 disconnected
+I0208 23:10:47.368355 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-47
+I0208 23:10:47.738030 27456 master.cpp:492] Registering framework 201202082309-0-0020 at 2@127.0.1.1:43599
+I0208 23:10:47.738271 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0020
+I0208 23:10:47.738360 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:48.367610 27456 master.cpp:814] Attempting to register slave 201202082309-0-48 at slave@127.0.1.1:59987
+I0208 23:10:48.367773 27456 master.cpp:1588] Adding slave 201202082309-0-48 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:48.368003 27456 simple_allocator.cpp:71] Added slave 201202082309-0-48 with cpus=1; mem=1024
+I0208 23:10:48.368146 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:48.368255 27456 master.cpp:1143] Slave 201202082309-0-48 disconnected
+I0208 23:10:48.369773 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-48
+I0208 23:10:48.739508 27456 master.cpp:492] Registering framework 201202082309-0-0021 at 2@127.0.1.1:43599
+I0208 23:10:48.739747 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0021
+I0208 23:10:48.739835 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:49.369021 27456 master.cpp:814] Attempting to register slave 201202082309-0-49 at slave@127.0.1.1:59987
+I0208 23:10:49.369182 27456 master.cpp:1588] Adding slave 201202082309-0-49 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:49.369403 27456 simple_allocator.cpp:71] Added slave 201202082309-0-49 with cpus=1; mem=1024
+I0208 23:10:49.369544 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:49.369654 27456 master.cpp:1143] Slave 201202082309-0-49 disconnected
+I0208 23:10:49.371232 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-49
+I0208 23:10:49.740906 27456 master.cpp:492] Registering framework 201202082309-0-0022 at 2@127.0.1.1:43599
+I0208 23:10:49.741138 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0022
+I0208 23:10:49.741225 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:50.370537 27456 master.cpp:814] Attempting to register slave 201202082309-0-50 at slave@127.0.1.1:59987
+I0208 23:10:50.370682 27456 master.cpp:1588] Adding slave 201202082309-0-50 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:50.371999 27456 simple_allocator.cpp:71] Added slave 201202082309-0-50 with cpus=1; mem=1024
+I0208 23:10:50.372135 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:50.372246 27456 master.cpp:1143] Slave 201202082309-0-50 disconnected
+I0208 23:10:50.373899 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-50
+I0208 23:10:50.742492 27456 master.cpp:492] Registering framework 201202082309-0-0023 at 2@127.0.1.1:43599
+I0208 23:10:50.742728 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0023
+I0208 23:10:50.742817 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:51.371963 27456 master.cpp:814] Attempting to register slave 201202082309-0-51 at slave@127.0.1.1:59987
+I0208 23:10:51.372117 27456 master.cpp:1588] Adding slave 201202082309-0-51 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:51.372333 27456 simple_allocator.cpp:71] Added slave 201202082309-0-51 with cpus=1; mem=1024
+I0208 23:10:51.372470 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:51.372591 27456 master.cpp:1143] Slave 201202082309-0-51 disconnected
+I0208 23:10:51.374300 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-51
+I0208 23:10:51.743893 27456 master.cpp:492] Registering framework 201202082309-0-0024 at 2@127.0.1.1:43599
+I0208 23:10:51.744143 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0024
+I0208 23:10:51.744233 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:52.373527 27456 master.cpp:814] Attempting to register slave 201202082309-0-52 at slave@127.0.1.1:59987
+I0208 23:10:52.373692 27456 master.cpp:1588] Adding slave 201202082309-0-52 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:52.373910 27456 simple_allocator.cpp:71] Added slave 201202082309-0-52 with cpus=1; mem=1024
+I0208 23:10:52.374055 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:52.374166 27456 master.cpp:1143] Slave 201202082309-0-52 disconnected
+I0208 23:10:52.375939 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-52
+I0208 23:10:52.745386 27456 master.cpp:492] Registering framework 201202082309-0-0025 at 2@127.0.1.1:43599
+I0208 23:10:52.745617 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0025
+I0208 23:10:52.745712 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:53.375102 27456 master.cpp:814] Attempting to register slave 201202082309-0-53 at slave@127.0.1.1:59987
+I0208 23:10:53.375257 27456 master.cpp:1588] Adding slave 201202082309-0-53 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:53.375483 27456 simple_allocator.cpp:71] Added slave 201202082309-0-53 with cpus=1; mem=1024
+I0208 23:10:53.375635 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:53.375747 27456 master.cpp:1143] Slave 201202082309-0-53 disconnected
+I0208 23:10:53.377585 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-53
+I0208 23:10:53.746881 27456 master.cpp:492] Registering framework 201202082309-0-0026 at 2@127.0.1.1:43599
+I0208 23:10:53.747117 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0026
+I0208 23:10:53.747212 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:54.376672 27456 master.cpp:814] Attempting to register slave 201202082309-0-54 at slave@127.0.1.1:59987
+I0208 23:10:54.376823 27456 master.cpp:1588] Adding slave 201202082309-0-54 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:54.377046 27456 simple_allocator.cpp:71] Added slave 201202082309-0-54 with cpus=1; mem=1024
+I0208 23:10:54.377192 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:54.377305 27456 master.cpp:1143] Slave 201202082309-0-54 disconnected
+I0208 23:10:54.379204 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-54
+I0208 23:10:54.748322 27456 master.cpp:492] Registering framework 201202082309-0-0027 at 2@127.0.1.1:43599
+I0208 23:10:54.748553 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0027
+I0208 23:10:54.748651 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:55.378222 27456 master.cpp:814] Attempting to register slave 201202082309-0-55 at slave@127.0.1.1:59987
+I0208 23:10:55.378391 27456 master.cpp:1588] Adding slave 201202082309-0-55 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:55.392151 27456 simple_allocator.cpp:71] Added slave 201202082309-0-55 with cpus=1; mem=1024
+I0208 23:10:55.392310 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:55.392424 27456 master.cpp:1143] Slave 201202082309-0-55 disconnected
+I0208 23:10:55.394399 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-55
+I0208 23:10:55.749780 27456 master.cpp:492] Registering framework 201202082309-0-0028 at 2@127.0.1.1:43599
+I0208 23:10:55.750002 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0028
+I0208 23:10:55.750105 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:56.379886 27456 master.cpp:814] Attempting to register slave 201202082309-0-56 at slave@127.0.1.1:59987
+I0208 23:10:56.380060 27456 master.cpp:1588] Adding slave 201202082309-0-56 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:56.380317 27456 simple_allocator.cpp:71] Added slave 201202082309-0-56 with cpus=1; mem=1024
+I0208 23:10:56.380496 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:56.380611 27456 master.cpp:1143] Slave 201202082309-0-56 disconnected
+I0208 23:10:56.382642 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-56
+I0208 23:10:56.751246 27456 master.cpp:492] Registering framework 201202082309-0-0029 at 2@127.0.1.1:43599
+I0208 23:10:56.751507 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0029
+I0208 23:10:56.751610 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:57.381458 27456 master.cpp:814] Attempting to register slave 201202082309-0-57 at slave@127.0.1.1:59987
+I0208 23:10:57.381630 27456 master.cpp:1588] Adding slave 201202082309-0-57 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:57.381860 27456 simple_allocator.cpp:71] Added slave 201202082309-0-57 with cpus=1; mem=1024
+I0208 23:10:57.382025 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:57.382140 27456 master.cpp:1143] Slave 201202082309-0-57 disconnected
+I0208 23:10:57.384201 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-57
+I0208 23:10:57.752220 27456 master.cpp:492] Registering framework 201202082309-0-0030 at 2@127.0.1.1:43599
+I0208 23:10:57.752480 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0030
+I0208 23:10:57.752584 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:58.383038 27456 master.cpp:814] Attempting to register slave 201202082309-0-58 at slave@127.0.1.1:59987
+I0208 23:10:58.383204 27456 master.cpp:1588] Adding slave 201202082309-0-58 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:58.383436 27456 simple_allocator.cpp:71] Added slave 201202082309-0-58 with cpus=1; mem=1024
+I0208 23:10:58.383602 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:58.383718 27456 master.cpp:1143] Slave 201202082309-0-58 disconnected
+I0208 23:10:58.385854 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-58
+I0208 23:10:58.753741 27456 master.cpp:492] Registering framework 201202082309-0-0031 at 2@127.0.1.1:43599
+I0208 23:10:58.753952 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0031
+I0208 23:10:58.754050 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:10:59.384492 27456 master.cpp:814] Attempting to register slave 201202082309-0-59 at slave@127.0.1.1:59987
+I0208 23:10:59.384662 27456 master.cpp:1588] Adding slave 201202082309-0-59 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:10:59.384894 27456 simple_allocator.cpp:71] Added slave 201202082309-0-59 with cpus=1; mem=1024
+I0208 23:10:59.385072 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:10:59.385189 27456 master.cpp:1143] Slave 201202082309-0-59 disconnected
+I0208 23:10:59.387394 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-59
+I0208 23:10:59.755204 27456 master.cpp:492] Registering framework 201202082309-0-0032 at 2@127.0.1.1:43599
+I0208 23:10:59.755414 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0032
+I0208 23:10:59.755514 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:00.386041 27456 master.cpp:814] Attempting to register slave 201202082309-0-60 at slave@127.0.1.1:59987
+I0208 23:11:00.386208 27456 master.cpp:1588] Adding slave 201202082309-0-60 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:00.392057 27456 simple_allocator.cpp:71] Added slave 201202082309-0-60 with cpus=1; mem=1024
+I0208 23:11:00.392241 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:00.392359 27456 master.cpp:1143] Slave 201202082309-0-60 disconnected
+I0208 23:11:00.394413 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-60
+I0208 23:11:00.756701 27456 master.cpp:492] Registering framework 201202082309-0-0033 at 2@127.0.1.1:43599
+I0208 23:11:00.756955 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0033
+I0208 23:11:00.757061 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:01.387580 27456 master.cpp:814] Attempting to register slave 201202082309-0-61 at slave@127.0.1.1:59987
+I0208 23:11:01.387753 27456 master.cpp:1588] Adding slave 201202082309-0-61 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:01.387992 27456 simple_allocator.cpp:71] Added slave 201202082309-0-61 with cpus=1; mem=1024
+I0208 23:11:01.388164 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:01.388283 27456 master.cpp:1143] Slave 201202082309-0-61 disconnected
+I0208 23:11:01.390604 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-61
+I0208 23:11:01.758194 27456 master.cpp:492] Registering framework 201202082309-0-0034 at 2@127.0.1.1:43599
+I0208 23:11:01.758409 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0034
+I0208 23:11:01.758512 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:02.389178 27456 master.cpp:814] Attempting to register slave 201202082309-0-62 at slave@127.0.1.1:59987
+I0208 23:11:02.389341 27456 master.cpp:1588] Adding slave 201202082309-0-62 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:02.389575 27456 simple_allocator.cpp:71] Added slave 201202082309-0-62 with cpus=1; mem=1024
+I0208 23:11:02.389750 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:02.389869 27456 master.cpp:1143] Slave 201202082309-0-62 disconnected
+I0208 23:11:02.391736 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-62
+I0208 23:11:02.759660 27456 master.cpp:492] Registering framework 201202082309-0-0035 at 2@127.0.1.1:43599
+I0208 23:11:02.759867 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0035
+I0208 23:11:02.759968 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:03.390748 27456 master.cpp:814] Attempting to register slave 201202082309-0-63 at slave@127.0.1.1:59987
+I0208 23:11:03.390912 27456 master.cpp:1588] Adding slave 201202082309-0-63 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:03.391144 27456 simple_allocator.cpp:71] Added slave 201202082309-0-63 with cpus=1; mem=1024
+I0208 23:11:03.391319 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:03.391558 27456 master.cpp:1143] Slave 201202082309-0-63 disconnected
+I0208 23:11:03.393990 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-63
+I0208 23:11:03.761142 27456 master.cpp:492] Registering framework 201202082309-0-0036 at 2@127.0.1.1:43599
+I0208 23:11:03.761361 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0036
+I0208 23:11:03.761580 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:04.392264 27456 master.cpp:814] Attempting to register slave 201202082309-0-64 at slave@127.0.1.1:59987
+I0208 23:11:04.392422 27456 master.cpp:1588] Adding slave 201202082309-0-64 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:04.392654 27456 simple_allocator.cpp:71] Added slave 201202082309-0-64 with cpus=1; mem=1024
+I0208 23:11:04.392838 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:04.392963 27456 master.cpp:1143] Slave 201202082309-0-64 disconnected
+I0208 23:11:04.395459 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-64
+I0208 23:11:04.762517 27456 master.cpp:492] Registering framework 201202082309-0-0037 at 2@127.0.1.1:43599
+I0208 23:11:04.762724 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0037
+I0208 23:11:04.762830 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:05.393755 27456 master.cpp:814] Attempting to register slave 201202082309-0-65 at slave@127.0.1.1:59987
+I0208 23:11:05.393930 27456 master.cpp:1588] Adding slave 201202082309-0-65 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:05.402142 27456 simple_allocator.cpp:71] Added slave 201202082309-0-65 with cpus=1; mem=1024
+I0208 23:11:05.402364 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:05.402488 27456 master.cpp:1143] Slave 201202082309-0-65 disconnected
+I0208 23:11:05.404827 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-65
+I0208 23:11:05.763943 27456 master.cpp:492] Registering framework 201202082309-0-0038 at 2@127.0.1.1:43599
+I0208 23:11:05.764154 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0038
+I0208 23:11:05.764266 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:06.395313 27456 master.cpp:814] Attempting to register slave 201202082309-0-66 at slave@127.0.1.1:59987
+I0208 23:11:06.395500 27456 master.cpp:1588] Adding slave 201202082309-0-66 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:06.395733 27456 simple_allocator.cpp:71] Added slave 201202082309-0-66 with cpus=1; mem=1024
+I0208 23:11:06.395935 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:06.396056 27456 master.cpp:1143] Slave 201202082309-0-66 disconnected
+I0208 23:11:06.398648 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-66
+I0208 23:11:06.765419 27456 master.cpp:492] Registering framework 201202082309-0-0039 at 2@127.0.1.1:43599
+I0208 23:11:06.765630 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0039
+I0208 23:11:06.765743 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:07.396883 27456 master.cpp:814] Attempting to register slave 201202082309-0-67 at slave@127.0.1.1:59987
+I0208 23:11:07.397053 27456 master.cpp:1588] Adding slave 201202082309-0-67 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:07.397291 27456 simple_allocator.cpp:71] Added slave 201202082309-0-67 with cpus=1; mem=1024
+I0208 23:11:07.397490 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:07.397615 27456 master.cpp:1143] Slave 201202082309-0-67 disconnected
+I0208 23:11:07.400310 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-67
+I0208 23:11:07.767034 27456 master.cpp:492] Registering framework 201202082309-0-0040 at 2@127.0.1.1:43599
+I0208 23:11:07.767237 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0040
+I0208 23:11:07.767346 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:08.398429 27456 master.cpp:814] Attempting to register slave 201202082309-0-68 at slave@127.0.1.1:59987
+I0208 23:11:08.398609 27456 master.cpp:1588] Adding slave 201202082309-0-68 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:08.398846 27456 simple_allocator.cpp:71] Added slave 201202082309-0-68 with cpus=1; mem=1024
+I0208 23:11:08.399040 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:08.399173 27456 master.cpp:1143] Slave 201202082309-0-68 disconnected
+I0208 23:11:08.402012 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-68
+I0208 23:11:08.768728 27456 master.cpp:492] Registering framework 201202082309-0-0041 at 2@127.0.1.1:43599
+I0208 23:11:08.768931 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0041
+I0208 23:11:08.769047 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:09.400058 27456 master.cpp:814] Attempting to register slave 201202082309-0-69 at slave@127.0.1.1:59987
+I0208 23:11:09.400223 27456 master.cpp:1588] Adding slave 201202082309-0-69 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:09.400446 27456 simple_allocator.cpp:71] Added slave 201202082309-0-69 with cpus=1; mem=1024
+I0208 23:11:09.400655 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:09.400784 27456 master.cpp:1143] Slave 201202082309-0-69 disconnected
+I0208 23:11:09.403765 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-69
+I0208 23:11:09.770334 27456 master.cpp:492] Registering framework 201202082309-0-0042 at 2@127.0.1.1:43599
+I0208 23:11:09.770534 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0042
+I0208 23:11:09.770652 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:10.401639 27456 master.cpp:814] Attempting to register slave 201202082309-0-70 at slave@127.0.1.1:59987
+I0208 23:11:10.401815 27456 master.cpp:1588] Adding slave 201202082309-0-70 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:10.412436 27456 simple_allocator.cpp:71] Added slave 201202082309-0-70 with cpus=1; mem=1024
+I0208 23:11:10.412659 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:10.412787 27456 master.cpp:1143] Slave 201202082309-0-70 disconnected
+I0208 23:11:10.415647 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-70
+I0208 23:11:10.771949 27456 master.cpp:492] Registering framework 201202082309-0-0043 at 2@127.0.1.1:43599
+I0208 23:11:10.772150 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0043
+I0208 23:11:10.772265 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:11.403213 27456 master.cpp:814] Attempting to register slave 201202082309-0-71 at slave@127.0.1.1:59987
+I0208 23:11:11.403383 27456 master.cpp:1588] Adding slave 201202082309-0-71 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:11.403614 27456 simple_allocator.cpp:71] Added slave 201202082309-0-71 with cpus=1; mem=1024
+I0208 23:11:11.403820 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:11.403951 27456 master.cpp:1143] Slave 201202082309-0-71 disconnected
+I0208 23:11:11.406868 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-71
+I0208 23:11:11.773357 27456 master.cpp:492] Registering framework 201202082309-0-0044 at 2@127.0.1.1:43599
+I0208 23:11:11.773576 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0044
+I0208 23:11:11.773691 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:12.404808 27456 master.cpp:814] Attempting to register slave 201202082309-0-72 at slave@127.0.1.1:59987
+I0208 23:11:12.404981 27456 master.cpp:1588] Adding slave 201202082309-0-72 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:12.405222 27456 simple_allocator.cpp:71] Added slave 201202082309-0-72 with cpus=1; mem=1024
+I0208 23:11:12.405438 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:12.405566 27456 master.cpp:1143] Slave 201202082309-0-72 disconnected
+I0208 23:11:12.408517 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-72
+I0208 23:11:12.774054 27456 master.cpp:492] Registering framework 201202082309-0-0045 at 2@127.0.1.1:43599
+I0208 23:11:12.774265 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0045
+I0208 23:11:12.774391 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:13.406453 27456 master.cpp:814] Attempting to register slave 201202082309-0-73 at slave@127.0.1.1:59987
+I0208 23:11:13.406633 27456 master.cpp:1588] Adding slave 201202082309-0-73 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:13.406852 27456 simple_allocator.cpp:71] Added slave 201202082309-0-73 with cpus=1; mem=1024
+I0208 23:11:13.407076 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:13.407201 27456 master.cpp:1143] Slave 201202082309-0-73 disconnected
+I0208 23:11:13.410223 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-73
+I0208 23:11:13.775645 27456 master.cpp:492] Registering framework 201202082309-0-0046 at 2@127.0.1.1:43599
+I0208 23:11:13.775854 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0046
+I0208 23:11:13.775980 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:14.407922 27456 master.cpp:814] Attempting to register slave 201202082309-0-74 at slave@127.0.1.1:59987
+I0208 23:11:14.408092 27456 master.cpp:1588] Adding slave 201202082309-0-74 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:14.408324 27456 simple_allocator.cpp:71] Added slave 201202082309-0-74 with cpus=1; mem=1024
+I0208 23:11:14.408545 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:14.408678 27456 master.cpp:1143] Slave 201202082309-0-74 disconnected
+I0208 23:11:14.411743 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-74
+I0208 23:11:14.777099 27456 master.cpp:492] Registering framework 201202082309-0-0047 at 2@127.0.1.1:43599
+I0208 23:11:14.777315 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0047
+I0208 23:11:14.777437 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:15.409319 27456 master.cpp:814] Attempting to register slave 201202082309-0-75 at slave@127.0.1.1:59987
+I0208 23:11:15.409504 27456 master.cpp:1588] Adding slave 201202082309-0-75 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:15.422091 27456 simple_allocator.cpp:71] Added slave 201202082309-0-75 with cpus=1; mem=1024
+I0208 23:11:15.422248 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:15.422335 27456 master.cpp:1143] Slave 201202082309-0-75 disconnected
+I0208 23:11:15.424499 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-75
+I0208 23:11:15.778769 27456 master.cpp:492] Registering framework 201202082309-0-0048 at 2@127.0.1.1:43599
+I0208 23:11:15.779002 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0048
+I0208 23:11:15.779137 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:16.410902 27456 master.cpp:814] Attempting to register slave 201202082309-0-76 at slave@127.0.1.1:59987
+I0208 23:11:16.411077 27456 master.cpp:1588] Adding slave 201202082309-0-76 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:16.411300 27456 simple_allocator.cpp:71] Added slave 201202082309-0-76 with cpus=1; mem=1024
+I0208 23:11:16.411644 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:16.411793 27456 master.cpp:1143] Slave 201202082309-0-76 disconnected
+I0208 23:11:16.415002 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-76
+I0208 23:11:16.780288 27456 master.cpp:492] Registering framework 201202082309-0-0049 at 2@127.0.1.1:43599
+I0208 23:11:16.780526 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0049
+I0208 23:11:16.780663 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:17.412299 27456 master.cpp:814] Attempting to register slave 201202082309-0-77 at slave@127.0.1.1:59987
+I0208 23:11:17.412471 27456 master.cpp:1588] Adding slave 201202082309-0-77 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:17.412704 27456 simple_allocator.cpp:71] Added slave 201202082309-0-77 with cpus=1; mem=1024
+I0208 23:11:17.412924 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:17.413048 27456 master.cpp:1143] Slave 201202082309-0-77 disconnected
+I0208 23:11:17.416324 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-77
+I0208 23:11:17.781965 27456 master.cpp:492] Registering framework 201202082309-0-0050 at 2@127.0.1.1:43599
+I0208 23:11:17.782202 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0050
+I0208 23:11:17.782341 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:18.413789 27456 master.cpp:814] Attempting to register slave 201202082309-0-78 at slave@127.0.1.1:59987
+I0208 23:11:18.413955 27456 master.cpp:1588] Adding slave 201202082309-0-78 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:18.414187 27456 simple_allocator.cpp:71] Added slave 201202082309-0-78 with cpus=1; mem=1024
+I0208 23:11:18.414427 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:18.414561 27456 master.cpp:1143] Slave 201202082309-0-78 disconnected
+I0208 23:11:18.417922 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-78
+I0208 23:11:18.783680 27456 master.cpp:492] Registering framework 201202082309-0-0051 at 2@127.0.1.1:43599
+I0208 23:11:18.783918 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0051
+I0208 23:11:18.784064 27456 master.cpp:1118] Framework 201202082309-0-0020 disconnected
+I0208 23:11:19.415267 27456 master.cpp:814] Attempting to register slave 201202082309-0-79 at slave@127.0.1.1:59987
+I0208 23:11:19.415438 27456 master.cpp:1588] Adding slave 201202082309-0-79 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:19.415710 27456 simple_allocator.cpp:71] Added slave 201202082309-0-79 with cpus=1; mem=1024
+I0208 23:11:19.415964 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:19.416095 27456 master.cpp:1143] Slave 201202082309-0-79 disconnected
+I0208 23:11:19.419503 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-79
+I0208 23:11:19.785294 27456 master.cpp:492] Registering framework 201202082309-0-0052 at 2@127.0.1.1:43599
+I0208 23:11:19.785521 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0052
+I0208 23:11:19.785655 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:20.416746 27456 master.cpp:814] Attempting to register slave 201202082309-0-80 at slave@127.0.1.1:59987
+I0208 23:11:20.416931 27456 master.cpp:1588] Adding slave 201202082309-0-80 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:20.422147 27456 simple_allocator.cpp:71] Added slave 201202082309-0-80 with cpus=1; mem=1024
+I0208 23:11:20.422407 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:20.422545 27456 master.cpp:1143] Slave 201202082309-0-80 disconnected
+I0208 23:11:20.426038 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-80
+I0208 23:11:20.786869 27456 master.cpp:492] Registering framework 201202082309-0-0053 at 2@127.0.1.1:43599
+I0208 23:11:20.787075 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0053
+I0208 23:11:20.787211 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:21.418220 27456 master.cpp:814] Attempting to register slave 201202082309-0-81 at slave@127.0.1.1:59987
+I0208 23:11:21.418391 27456 master.cpp:1588] Adding slave 201202082309-0-81 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:21.418635 27456 simple_allocator.cpp:71] Added slave 201202082309-0-81 with cpus=1; mem=1024
+I0208 23:11:21.418889 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:21.419024 27456 master.cpp:1143] Slave 201202082309-0-81 disconnected
+I0208 23:11:21.422584 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-81
+I0208 23:11:21.788444 27456 master.cpp:492] Registering framework 201202082309-0-0054 at 2@127.0.1.1:43599
+I0208 23:11:21.788657 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0054
+I0208 23:11:21.788800 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:22.419700 27456 master.cpp:814] Attempting to register slave 201202082309-0-82 at slave@127.0.1.1:59987
+I0208 23:11:22.419875 27456 master.cpp:1588] Adding slave 201202082309-0-82 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:22.420116 27456 simple_allocator.cpp:71] Added slave 201202082309-0-82 with cpus=1; mem=1024
+I0208 23:11:22.420372 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:22.420505 27456 master.cpp:1143] Slave 201202082309-0-82 disconnected
+I0208 23:11:22.424237 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-82
+I0208 23:11:22.789865 27456 master.cpp:492] Registering framework 201202082309-0-0055 at 2@127.0.1.1:43599
+I0208 23:11:22.790077 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0055
+I0208 23:11:22.790216 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:23.421159 27456 master.cpp:814] Attempting to register slave 201202082309-0-83 at slave@127.0.1.1:59987
+I0208 23:11:23.421344 27456 master.cpp:1588] Adding slave 201202082309-0-83 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:23.421529 27456 simple_allocator.cpp:71] Added slave 201202082309-0-83 with cpus=1; mem=1024
+I0208 23:11:23.421813 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:23.421955 27456 master.cpp:1143] Slave 201202082309-0-83 disconnected
+I0208 23:11:23.425808 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-83
+I0208 23:11:23.791211 27456 master.cpp:492] Registering framework 201202082309-0-0056 at 2@127.0.1.1:43599
+I0208 23:11:23.791501 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0056
+I0208 23:11:23.791651 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:24.422595 27456 master.cpp:814] Attempting to register slave 201202082309-0-84 at slave@127.0.1.1:59987
+I0208 23:11:24.422770 27456 master.cpp:1588] Adding slave 201202082309-0-84 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:24.423019 27456 simple_allocator.cpp:71] Added slave 201202082309-0-84 with cpus=1; mem=1024
+I0208 23:11:24.423279 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:24.423410 27456 master.cpp:1143] Slave 201202082309-0-84 disconnected
+I0208 23:11:24.426826 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-84
+I0208 23:11:24.792791 27456 master.cpp:492] Registering framework 201202082309-0-0057 at 2@127.0.1.1:43599
+I0208 23:11:24.792997 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0057
+I0208 23:11:24.793136 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:25.423949 27456 master.cpp:814] Attempting to register slave 201202082309-0-85 at slave@127.0.1.1:59987
+I0208 23:11:25.424130 27456 master.cpp:1588] Adding slave 201202082309-0-85 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:25.431995 27456 simple_allocator.cpp:71] Added slave 201202082309-0-85 with cpus=1; mem=1024
+I0208 23:11:25.432262 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:25.432375 27456 master.cpp:1143] Slave 201202082309-0-85 disconnected
+I0208 23:11:25.434897 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-85
+I0208 23:11:25.793895 27456 master.cpp:492] Registering framework 201202082309-0-0058 at 2@127.0.1.1:43599
+I0208 23:11:25.794044 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0058
+I0208 23:11:25.794200 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:26.425554 27456 master.cpp:814] Attempting to register slave 201202082309-0-86 at slave@127.0.1.1:59987
+I0208 23:11:26.425731 27456 master.cpp:1588] Adding slave 201202082309-0-86 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:26.425873 27456 simple_allocator.cpp:71] Added slave 201202082309-0-86 with cpus=1; mem=1024
+I0208 23:11:26.426136 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:26.426250 27456 master.cpp:1143] Slave 201202082309-0-86 disconnected
+I0208 23:11:26.427249 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-86
+I0208 23:11:26.795253 27456 master.cpp:492] Registering framework 201202082309-0-0059 at 2@127.0.1.1:43599
+I0208 23:11:26.795388 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0059
+I0208 23:11:26.795521 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:27.427078 27456 master.cpp:814] Attempting to register slave 201202082309-0-87 at slave@127.0.1.1:59987
+I0208 23:11:27.427263 27456 master.cpp:1588] Adding slave 201202082309-0-87 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:27.427412 27456 simple_allocator.cpp:71] Added slave 201202082309-0-87 with cpus=1; mem=1024
+I0208 23:11:27.427711 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:27.427839 27456 master.cpp:1143] Slave 201202082309-0-87 disconnected
+I0208 23:11:27.428884 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-87
+I0208 23:11:27.796962 27456 master.cpp:492] Registering framework 201202082309-0-0060 at 2@127.0.1.1:43599
+I0208 23:11:27.797103 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0060
+I0208 23:11:27.797251 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:28.428552 27456 master.cpp:814] Attempting to register slave 201202082309-0-88 at slave@127.0.1.1:59987
+I0208 23:11:28.428735 27456 master.cpp:1588] Adding slave 201202082309-0-88 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:28.428886 27456 simple_allocator.cpp:71] Added slave 201202082309-0-88 with cpus=1; mem=1024
+I0208 23:11:28.429203 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:28.429322 27456 master.cpp:1143] Slave 201202082309-0-88 disconnected
+I0208 23:11:28.431009 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-88
+I0208 23:11:28.798280 27456 master.cpp:492] Registering framework 201202082309-0-0061 at 2@127.0.1.1:43599
+I0208 23:11:28.798415 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0061
+I0208 23:11:28.798552 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:29.430013 27456 master.cpp:814] Attempting to register slave 201202082309-0-89 at slave@127.0.1.1:59987
+I0208 23:11:29.430193 27456 master.cpp:1588] Adding slave 201202082309-0-89 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:29.430342 27456 simple_allocator.cpp:71] Added slave 201202082309-0-89 with cpus=1; mem=1024
+I0208 23:11:29.430610 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:29.430726 27456 master.cpp:1143] Slave 201202082309-0-89 disconnected
+I0208 23:11:29.433502 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-89
+I0208 23:11:29.799716 27456 master.cpp:492] Registering framework 201202082309-0-0062 at 2@127.0.1.1:43599
+I0208 23:11:29.799864 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0062
+I0208 23:11:29.800004 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:30.431556 27456 master.cpp:814] Attempting to register slave 201202082309-0-90 at slave@127.0.1.1:59987
+I0208 23:11:30.431746 27456 master.cpp:1588] Adding slave 201202082309-0-90 at charles-virtual-machine with cpus=1; mem=1024
+I0208 23:11:30.452111 27456 simple_allocator.cpp:71] Added slave 201202082309-0-90 with cpus=1; mem=1024
+I0208 23:11:30.452389 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:11:30.452510 27456 master.cpp:1143] Slave 201202082309-0-90 disconnected
+I0208 23:11:30.454278 27456 simple_allocator.cpp:83] Removed slave 201202082309-0-90
+I0208 23:11:30.801179 27456 master.cpp:492] Registering framework 201202082309-0-0063 at 2@127.0.1.1:43599
+I0208 23:11:30.801329 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0063
+I0208 23:11:30.801573 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:31.802961 27456 master.cpp:492] Registering framework 201202082309-0-0064 at 2@127.0.1.1:43599
+I0208 23:11:31.803158 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0064
+I0208 23:11:31.803364 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:32.804116 27456 master.cpp:492] Registering framework 201202082309-0-0065 at 2@127.0.1.1:43599
+I0208 23:11:32.804288 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0065
+I0208 23:11:32.804446 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:33.805832 27456 master.cpp:492] Registering framework 201202082309-0-0066 at 2@127.0.1.1:43599
+I0208 23:11:33.806018 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0066
+I0208 23:11:33.806185 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:11:34.807374 27456 master.cpp:492] Registering framework 201202082309-0-0067 at 2@127.0.1.1:43599
+I0208 23:11:34.807549 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0067
+I0208 23:11:34.807715 27456 master.cpp:1118] Framework 201202082309-0-0017 disconnected
+I0208 23:12:08.311003 27456 master.cpp:814] Attempting to register slave 201202082309-0-91 at slave@192.168.1.64:45322
+I0208 23:12:08.311441 27456 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:45322 as active
+I0208 23:12:08.311537 27456 master.cpp:1588] Adding slave 201202082309-0-91 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0208 23:12:08.311727 27456 simple_allocator.cpp:71] Added slave 201202082309-0-91 with cpus=1; mem=1024
+I0208 23:12:08.312166 27456 master.cpp:1184] Sending 1 offers to framework 201202082309-0-0001
+I0208 23:12:18.715481 27456 master.cpp:492] Registering framework 201202082309-0-0068 at 2@192.168.1.64:33260
+I0208 23:12:18.715708 27456 simple_allocator.cpp:48] Added framework 201202082309-0-0068
+I0208 23:12:18.723165 27456 master.cpp:718] Reviving offers for framework 201202082309-0-0068
+I0208 23:12:18.723219 27456 simple_allocator.cpp:145] Filters removed for framework 201202082309-0-0068

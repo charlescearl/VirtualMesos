@@ -1,0 +1,127 @@
+I0328 21:07:15.215505 18657 launcher.cpp:341] ExecutorLauncher::setupEnvironment
+I0328 21:07:15.215636 18657 launcher.cpp:346] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203282053-0-0/frameworks/201203282053-0-0005/executors/default/runs/0
+I0328 21:07:15.216094 18657 launcher.cpp:348] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:59679
+I0328 21:07:15.216195 18657 launcher.cpp:350] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203282053-0-0005
+I0328 21:07:15.216321 18657 launcher.cpp:352] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0328 21:07:15.216495 18657 launcher.cpp:360] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 0
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 4
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 2
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 6
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 2
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 0
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 6
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 4
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 12
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 13
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 14
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 13
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 12
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 14
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 16
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 17
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 16
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 17
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 22
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 23
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 24
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 22
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 23
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 24
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 26
+12/03/28 21:07:16 INFO spark.Executor: Running task ID 27
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 27
+12/03/28 21:07:16 INFO spark.Executor: Finished task ID 26
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 30
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 31
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 32
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 33
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 32
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 30
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 31
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 33
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 38
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 40
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 41
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 42
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 38
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 40
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 43
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 42
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 41
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 44
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 49
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 50
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 43
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 51
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 44
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 50
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 49
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 55
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 56
+12/03/28 21:07:29 INFO spark.Executor: Running task ID 57
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:29 INFO spark.Executor: Finished task ID 51
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:30 INFO spark.Executor: Finished task ID 55
+12/03/28 21:07:30 INFO spark.Executor: Finished task ID 57
+12/03/28 21:07:30 INFO spark.Executor: Finished task ID 56
+12/03/28 21:07:30 INFO spark.Executor: Running task ID 62
+12/03/28 21:07:30 INFO spark.Executor: Running task ID 60
+12/03/28 21:07:30 INFO spark.Executor: Running task ID 64
+12/03/28 21:07:30 INFO spark.Executor: Running task ID 66
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:30 INFO spark.Executor: Finished task ID 64
+12/03/28 21:07:30 INFO spark.Executor: Finished task ID 62
+12/03/28 21:07:30 INFO spark.Executor: Running task ID 69
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:30 INFO spark.Executor: Finished task ID 66
+12/03/28 21:07:30 INFO spark.Executor: Finished task ID 60
+12/03/28 21:07:30 INFO spark.Executor: Running task ID 72
+12/03/28 21:07:30 INFO spark.Executor: Running task ID 73
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:31 INFO spark.Executor: Running task ID 75
+12/03/28 21:07:31 INFO spark.Executor: Finished task ID 72
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:31 INFO spark.Executor: Finished task ID 69
+12/03/28 21:07:31 INFO spark.Executor: Running task ID 79
+12/03/28 21:07:31 INFO spark.Executor: Finished task ID 73
+12/03/28 21:07:31 INFO spark.Executor: Running task ID 80
+12/03/28 21:07:31 INFO spark.Executor: Running task ID 81
+12/03/28 21:07:31 INFO spark.Executor: Finished task ID 79
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:31 INFO spark.Executor: Running task ID 85
+12/03/28 21:07:31 INFO spark.Executor: Finished task ID 81
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:31 INFO spark.Executor: Finished task ID 75
+12/03/28 21:07:31 INFO spark.Executor: Finished task ID 80
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:32 INFO spark.Executor: Running task ID 87
+12/03/28 21:07:32 INFO spark.Executor: Running task ID 88
+12/03/28 21:07:32 INFO spark.Executor: Running task ID 89
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:32 INFO spark.Executor: Finished task ID 88
+12/03/28 21:07:32 INFO spark.Executor: Finished task ID 85
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:32 INFO spark.Executor: Finished task ID 87
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 21:07:32 INFO spark.Executor: Finished task ID 89

@@ -1,0 +1,17 @@
+Log file created at: 2012/02/08 23:00:01
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0208 23:00:01.798693 22573 logging.cpp:70] Logging to /mesos-distro/logdir
+I0208 23:00:01.799458 22573 main.cpp:109] Creating "lxc" isolation module
+I0208 23:00:01.799538 22573 main.cpp:117] Build: 2012-02-07 13:20:47 by hduser
+I0208 23:00:01.799558 22573 main.cpp:118] Starting Mesos slave
+I0208 23:00:01.800678 22574 slave.cpp:257] Slave started at slave@192.168.1.64:59571
+I0208 23:00:01.800720 22574 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I0208 23:00:01.800736 22573 webui.cpp:92] Starting slave web server on port 9839
+I0208 23:00:01.800879 22574 slave.cpp:287] Spawning the isolation module
+I0208 23:00:01.800914 22577 webui.cpp:50] Slave web server thread started
+I0208 23:00:01.801000 22574 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I0208 23:00:01.807523 22574 slave.cpp:340] Registered with master; given slave ID 201202082259-0-0
+I0208 23:00:01.813158 22577 webui.cpp:63] Loading webui/slave/webui.py
+I0208 23:05:09.613137 22574 slave.cpp:1060] Process exited: master@192.168.1.64:5050
+W0208 23:05:09.613190 22574 slave.cpp:1063] WARNING! Master disconnected! Waiting for a new master to be elected.

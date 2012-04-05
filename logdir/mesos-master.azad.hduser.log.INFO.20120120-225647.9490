@@ -1,0 +1,26 @@
+Log file created at: 2012/01/20 22:56:47
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0120 22:56:47.951575  9490 logging.cpp:70] Logging to /mesos-distro/logdir
+I0120 22:56:47.952363  9490 main.cpp:95] Build: 2012-01-19 12:13:41 by hduser
+I0120 22:56:47.952388  9490 main.cpp:96] Starting Mesos master
+I0120 22:56:47.953457  9490 webui.cpp:81] Starting master web server on port 9836
+I0120 22:56:47.953502  9491 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0120 22:56:47.953573  9491 master.cpp:279] Master ID: 201201202256-0
+I0120 22:56:47.953595  9494 webui.cpp:47] Master web server thread started
+I0120 22:56:47.953846  9491 master.cpp:462] Elected as master!
+I0120 22:56:47.965752  9494 webui.cpp:59] Loading webui/master/webui.py
+I0120 22:57:11.462302  9491 master.cpp:814] Attempting to register slave 201201202256-0-0 at slave@192.168.1.64:58756
+I0120 22:57:11.462578  9491 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:58756 as active
+I0120 22:57:11.462622  9491 master.cpp:1588] Adding slave 201201202256-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0120 22:57:11.462820  9491 simple_allocator.cpp:71] Added slave 201201202256-0-0 with cpus=1; mem=1024
+I0120 22:57:18.747403  9491 master.cpp:492] Registering framework 201201202256-0-0000 at 2@192.168.1.64:60937
+I0120 22:57:18.747577  9491 simple_allocator.cpp:48] Added framework 201201202256-0-0000
+I0120 22:57:18.747699  9491 master.cpp:1184] Sending 1 offers to framework 201201202256-0-0000
+I0120 22:57:18.755420  9491 master.cpp:718] Reviving offers for framework 201201202256-0-0000
+I0120 22:57:18.755451  9491 simple_allocator.cpp:145] Filters removed for framework 201201202256-0-0000
+I0120 22:57:18.802155  9491 master.cpp:679] Received reply for offer 201201202256-0-0
+I0120 22:57:18.802261  9491 master.cpp:1453] Launching task 0 on slave 201201202256-0-0
+I0120 23:09:05.977617  9491 master.cpp:1118] Framework 201201202256-0-0000 disconnected
+I0120 23:16:06.761904  9491 master.cpp:1143] Slave 201201202256-0-0 disconnected
+I0120 23:16:06.763703  9491 simple_allocator.cpp:83] Removed slave 201201202256-0-0

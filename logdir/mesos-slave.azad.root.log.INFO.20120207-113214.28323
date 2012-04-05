@@ -1,0 +1,26 @@
+Log file created at: 2012/02/07 11:32:14
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0207 11:32:14.008776 28323 logging.cpp:70] Logging to /mesos-distro/logdir
+I0207 11:32:14.009570 28323 main.cpp:109] Creating "vm" isolation module
+I0207 11:32:14.009686 28323 main.cpp:117] Build: 2012-02-07 11:30:20 by hduser
+I0207 11:32:14.009717 28323 main.cpp:118] Starting Mesos slave
+I0207 11:32:14.010822 28324 slave.cpp:257] Slave started at slave@192.168.1.64:35874
+I0207 11:32:14.010875 28324 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I0207 11:32:14.010973 28323 webui.cpp:92] Starting slave web server on port 9839
+I0207 11:32:14.011054 28324 slave.cpp:287] Spawning the isolation module
+I0207 11:32:14.011127 28327 webui.cpp:50] Slave web server thread started
+I0207 11:32:14.011168 28324 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I0207 11:32:14.015701 28324 slave.cpp:340] Registered with master; given slave ID 201202071132-0-0
+I0207 11:32:14.024327 28327 webui.cpp:63] Loading webui/slave/webui.py
+I0207 11:32:25.216209 28324 slave.cpp:398] Got assigned task 0 for framework 201202071132-0-0000
+I0207 11:32:25.216261 28324 slave.cpp:1390] Generating a unique work directory for executor 'default' of framework 201202071132-0-0000
+I0207 11:32:25.216442 28324 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201202071132-0-0/frameworks/201202071132-0-0000/executors/default/runs/0' as work directory for executor 'default' of framework 201202071132-0-0000
+I0207 11:32:25.217375 28324 vm_isolation_module.cpp:125] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201202071132-0-0/frameworks/201202071132-0-0000/executors/default/runs/0 with resources mem=512' for framework 201202071132-0-0000
+I0207 11:32:25.217738 28324 vm_isolation_module.cpp:164] Forked executor at = 28503
+I0207 11:32:25.217773 28324 vm_isolation_module.cpp:179]  Will send registration later for the virtual machine
+I0207 11:32:25.217782 28324 vm_isolation_module.cpp:180]  Will need some way of tearing down the local launcher and vm
+I0207 11:32:25.217790 28324 vm_isolation_module.cpp:181]  Will need to register pid 28503 framework id 201202071132-0-0000
+I0207 11:32:47.644808 28324 slave.cpp:725] Got registration for executor 'default' of framework 201202071132-0-0000
+I0207 11:32:47.644855 28324 slave.cpp:753] 2@127.0.1.1:46328 is pid of the executor 
+I0207 11:32:47.644978 28324 slave.cpp:781] Flushing queued tasks for framework 201202071132-0-0000

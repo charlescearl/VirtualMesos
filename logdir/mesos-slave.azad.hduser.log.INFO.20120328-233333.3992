@@ -1,0 +1,153 @@
+Log file created at: 2012/03/28 23:33:33
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0328 23:33:33.209053  3992 logging.cpp:70] Logging to /mesos-distro/logdir
+I0328 23:33:33.209926  3992 main.cpp:109] Creating "process" isolation module
+I0328 23:33:33.210134  3992 main.cpp:117] Build: 2012-03-28 23:30:52 by hduser
+I0328 23:33:33.210165  3992 main.cpp:118] Starting Mesos slave
+I0328 23:33:33.211439  3993 slave.cpp:257] Slave started at slave@192.168.1.64:47902
+I0328 23:33:33.211503  3993 slave.cpp:258] Slave resources: cpus=4; mem=16384
+I0328 23:33:33.211550  3992 webui.cpp:92] Starting slave web server on port 9839
+I0328 23:33:33.211614  3993 slave.cpp:287] Spawning the isolation module
+I0328 23:33:33.211681  3996 webui.cpp:50] Slave web server thread started
+I0328 23:33:33.211720  3993 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I0328 23:33:33.213225  3993 slave.cpp:340] Registered with master; given slave ID 201203282333-0-0
+I0328 23:33:33.223477  3996 webui.cpp:63] Loading webui/slave/webui.py
+I0328 23:34:13.810030  3993 slave.cpp:398] Got assigned task 0 for framework 201203282333-0-0001
+I0328 23:34:13.810083  3993 slave.cpp:1390] Generating a unique work directory for executor 'default' of framework 201203282333-0-0001
+I0328 23:34:13.810297  3993 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201203282333-0-0/frameworks/201203282333-0-0001/executors/default/runs/0' as work directory for executor 'default' of framework 201203282333-0-0001
+I0328 23:34:13.811252  3993 slave.cpp:398] Got assigned task 1 for framework 201203282333-0-0001
+I0328 23:34:13.811274  3993 slave.cpp:436] Queuing task '1' for executor default of framework '201203282333-0-0001
+I0328 23:34:13.811301  3993 slave.cpp:398] Got assigned task 2 for framework 201203282333-0-0001
+I0328 23:34:13.811314  3993 slave.cpp:436] Queuing task '2' for executor default of framework '201203282333-0-0001
+I0328 23:34:13.811337  3993 slave.cpp:398] Got assigned task 3 for framework 201203282333-0-0001
+I0328 23:34:13.811353  3993 slave.cpp:436] Queuing task '3' for executor default of framework '201203282333-0-0001
+I0328 23:34:13.811384  3993 process_based_isolation_module.cpp:91] Launching default (/media/LinuxShare2/new-spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201203282333-0-0/frameworks/201203282333-0-0001/executors/default/runs/0 with resources mem=512' for framework 201203282333-0-0001
+I0328 23:34:13.811707  3993 process_based_isolation_module.cpp:114] Forked executor at = 4139
+I0328 23:34:13.812633  4139 launcher.cpp:342] ExecutorLauncher::setupEnvironment
+I0328 23:34:13.812674  4139 launcher.cpp:347] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203282333-0-0/frameworks/201203282333-0-0001/executors/default/runs/0
+I0328 23:34:13.812772  4139 launcher.cpp:349] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:47902
+I0328 23:34:13.812790  4139 launcher.cpp:351] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203282333-0-0001
+I0328 23:34:13.812803  4139 launcher.cpp:353] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0328 23:34:13.812819  4139 launcher.cpp:361] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+I0328 23:34:14.421561  3993 slave.cpp:725] Got registration for executor 'default' of framework 201203282333-0-0001
+I0328 23:34:14.421612  3993 slave.cpp:753] 2@192.168.1.64:60925 is pid of the executor 
+I0328 23:34:14.421738  3993 slave.cpp:781] Flushing queued tasks for framework 201203282333-0-0001
+I0328 23:34:14.628550  3993 slave.cpp:922] Status update: task 3 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:14.629498  3993 slave.cpp:642] Got acknowledgement of status update for task 3 of framework 201203282333-0-0001
+I0328 23:34:14.630960  3993 slave.cpp:922] Status update: task 0 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:14.635233  3993 slave.cpp:922] Status update: task 2 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:14.635387  3993 slave.cpp:922] Status update: task 1 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:14.635478  3993 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201203282333-0-0001
+I0328 23:34:14.636409  3993 slave.cpp:642] Got acknowledgement of status update for task 2 of framework 201203282333-0-0001
+I0328 23:34:14.636490  3993 slave.cpp:642] Got acknowledgement of status update for task 1 of framework 201203282333-0-0001
+I0328 23:34:15.046712  3993 slave.cpp:922] Status update: task 0 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:15.047679  3993 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201203282333-0-0001
+I0328 23:34:15.080656  3993 slave.cpp:922] Status update: task 1 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:15.081732  3993 slave.cpp:642] Got acknowledgement of status update for task 1 of framework 201203282333-0-0001
+I0328 23:34:15.099521  3993 slave.cpp:398] Got assigned task 4 for framework 201203282333-0-0001
+I0328 23:34:15.100167  3993 slave.cpp:398] Got assigned task 5 for framework 201203282333-0-0001
+I0328 23:34:15.108144  3993 slave.cpp:922] Status update: task 4 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:15.109035  3993 slave.cpp:642] Got acknowledgement of status update for task 4 of framework 201203282333-0-0001
+I0328 23:34:15.111476  3993 slave.cpp:922] Status update: task 5 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:15.112408  3993 slave.cpp:642] Got acknowledgement of status update for task 5 of framework 201203282333-0-0001
+I0328 23:34:15.116266  3993 slave.cpp:922] Status update: task 2 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:15.117292  3993 slave.cpp:642] Got acknowledgement of status update for task 2 of framework 201203282333-0-0001
+I0328 23:34:15.126999  3993 slave.cpp:398] Got assigned task 6 for framework 201203282333-0-0001
+I0328 23:34:15.133018  3993 slave.cpp:922] Status update: task 6 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:15.134265  3993 slave.cpp:642] Got acknowledgement of status update for task 6 of framework 201203282333-0-0001
+I0328 23:34:15.157685  3993 slave.cpp:922] Status update: task 3 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:15.158756  3993 slave.cpp:642] Got acknowledgement of status update for task 3 of framework 201203282333-0-0001
+I0328 23:34:15.166160  3993 slave.cpp:398] Got assigned task 7 for framework 201203282333-0-0001
+I0328 23:34:15.172178  3993 slave.cpp:922] Status update: task 7 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:15.173362  3993 slave.cpp:642] Got acknowledgement of status update for task 7 of framework 201203282333-0-0001
+I0328 23:34:15.228870  3993 slave.cpp:922] Status update: task 5 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:15.229830  3993 slave.cpp:642] Got acknowledgement of status update for task 5 of framework 201203282333-0-0001
+I0328 23:34:15.242389  3993 slave.cpp:922] Status update: task 4 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:15.243352  3993 slave.cpp:642] Got acknowledgement of status update for task 4 of framework 201203282333-0-0001
+I0328 23:34:15.258941  3993 slave.cpp:922] Status update: task 6 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:15.259909  3993 slave.cpp:642] Got acknowledgement of status update for task 6 of framework 201203282333-0-0001
+I0328 23:34:15.284018  3993 slave.cpp:922] Status update: task 7 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:15.284945  3993 slave.cpp:642] Got acknowledgement of status update for task 7 of framework 201203282333-0-0001
+I0328 23:34:27.274432  3993 slave.cpp:398] Got assigned task 8 for framework 201203282333-0-0001
+I0328 23:34:27.275254  3993 slave.cpp:398] Got assigned task 9 for framework 201203282333-0-0001
+I0328 23:34:27.275501  3993 slave.cpp:398] Got assigned task 10 for framework 201203282333-0-0001
+I0328 23:34:27.275861  3993 slave.cpp:398] Got assigned task 11 for framework 201203282333-0-0001
+I0328 23:34:27.278134  3993 slave.cpp:922] Status update: task 8 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.279013  3993 slave.cpp:642] Got acknowledgement of status update for task 8 of framework 201203282333-0-0001
+I0328 23:34:27.279873  3993 slave.cpp:922] Status update: task 9 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.286504  3993 slave.cpp:642] Got acknowledgement of status update for task 9 of framework 201203282333-0-0001
+I0328 23:34:27.286666  3993 slave.cpp:922] Status update: task 10 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.286972  3993 slave.cpp:922] Status update: task 11 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.287788  3993 slave.cpp:642] Got acknowledgement of status update for task 10 of framework 201203282333-0-0001
+I0328 23:34:27.287945  3993 slave.cpp:642] Got acknowledgement of status update for task 11 of framework 201203282333-0-0001
+I0328 23:34:27.364123  3993 slave.cpp:922] Status update: task 9 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.365082  3993 slave.cpp:642] Got acknowledgement of status update for task 9 of framework 201203282333-0-0001
+I0328 23:34:27.365265  3993 slave.cpp:922] Status update: task 11 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.367254  3993 slave.cpp:642] Got acknowledgement of status update for task 11 of framework 201203282333-0-0001
+I0328 23:34:27.367415  3993 slave.cpp:922] Status update: task 8 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.368244  3993 slave.cpp:642] Got acknowledgement of status update for task 8 of framework 201203282333-0-0001
+I0328 23:34:27.372377  3993 slave.cpp:922] Status update: task 10 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.373846  3993 slave.cpp:398] Got assigned task 12 for framework 201203282333-0-0001
+I0328 23:34:27.375200  3993 slave.cpp:642] Got acknowledgement of status update for task 10 of framework 201203282333-0-0001
+I0328 23:34:27.381930  3993 slave.cpp:922] Status update: task 12 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.382875  3993 slave.cpp:642] Got acknowledgement of status update for task 12 of framework 201203282333-0-0001
+I0328 23:34:27.391098  3993 slave.cpp:398] Got assigned task 13 for framework 201203282333-0-0001
+I0328 23:34:27.391358  3993 slave.cpp:398] Got assigned task 14 for framework 201203282333-0-0001
+I0328 23:34:27.391674  3993 slave.cpp:398] Got assigned task 15 for framework 201203282333-0-0001
+I0328 23:34:27.400538  3993 slave.cpp:922] Status update: task 13 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.402690  3993 slave.cpp:642] Got acknowledgement of status update for task 13 of framework 201203282333-0-0001
+I0328 23:34:27.403661  3993 slave.cpp:922] Status update: task 14 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.404439  3993 slave.cpp:642] Got acknowledgement of status update for task 14 of framework 201203282333-0-0001
+I0328 23:34:27.406056  3993 slave.cpp:922] Status update: task 15 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.407001  3993 slave.cpp:642] Got acknowledgement of status update for task 15 of framework 201203282333-0-0001
+I0328 23:34:27.477885  3993 slave.cpp:922] Status update: task 12 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.478942  3993 slave.cpp:642] Got acknowledgement of status update for task 12 of framework 201203282333-0-0001
+I0328 23:34:27.484784  3993 slave.cpp:922] Status update: task 13 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.485754  3993 slave.cpp:642] Got acknowledgement of status update for task 13 of framework 201203282333-0-0001
+I0328 23:34:27.494166  3993 slave.cpp:922] Status update: task 14 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.498942  3993 slave.cpp:922] Status update: task 15 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.523627  3993 slave.cpp:642] Got acknowledgement of status update for task 14 of framework 201203282333-0-0001
+I0328 23:34:27.523783  3993 slave.cpp:642] Got acknowledgement of status update for task 15 of framework 201203282333-0-0001
+I0328 23:34:27.580310  3993 slave.cpp:398] Got assigned task 16 for framework 201203282333-0-0001
+I0328 23:34:27.580641  3993 slave.cpp:398] Got assigned task 17 for framework 201203282333-0-0001
+I0328 23:34:27.581167  3993 slave.cpp:398] Got assigned task 18 for framework 201203282333-0-0001
+I0328 23:34:27.581352  3993 slave.cpp:398] Got assigned task 19 for framework 201203282333-0-0001
+I0328 23:34:27.585019  3993 slave.cpp:922] Status update: task 16 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.585937  3993 slave.cpp:642] Got acknowledgement of status update for task 16 of framework 201203282333-0-0001
+I0328 23:34:27.591366  3993 slave.cpp:922] Status update: task 17 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.594064  3993 slave.cpp:642] Got acknowledgement of status update for task 17 of framework 201203282333-0-0001
+I0328 23:34:27.594523  3993 slave.cpp:922] Status update: task 18 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.595429  3993 slave.cpp:642] Got acknowledgement of status update for task 18 of framework 201203282333-0-0001
+I0328 23:34:27.596889  3993 slave.cpp:922] Status update: task 19 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.597813  3993 slave.cpp:642] Got acknowledgement of status update for task 19 of framework 201203282333-0-0001
+I0328 23:34:27.668689  3993 slave.cpp:922] Status update: task 19 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.669844  3993 slave.cpp:642] Got acknowledgement of status update for task 19 of framework 201203282333-0-0001
+I0328 23:34:27.677573  3993 slave.cpp:398] Got assigned task 20 for framework 201203282333-0-0001
+I0328 23:34:27.678510  3993 slave.cpp:922] Status update: task 16 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.679587  3993 slave.cpp:642] Got acknowledgement of status update for task 16 of framework 201203282333-0-0001
+I0328 23:34:27.684150  3993 slave.cpp:922] Status update: task 20 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.685343  3993 slave.cpp:642] Got acknowledgement of status update for task 20 of framework 201203282333-0-0001
+I0328 23:34:27.687899  3993 slave.cpp:398] Got assigned task 21 for framework 201203282333-0-0001
+I0328 23:34:27.704568  3993 slave.cpp:922] Status update: task 21 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.705597  3993 slave.cpp:642] Got acknowledgement of status update for task 21 of framework 201203282333-0-0001
+I0328 23:34:27.711984  3993 slave.cpp:922] Status update: task 18 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.717059  3993 slave.cpp:922] Status update: task 17 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.717345  3993 slave.cpp:642] Got acknowledgement of status update for task 18 of framework 201203282333-0-0001
+I0328 23:34:27.718122  3993 slave.cpp:642] Got acknowledgement of status update for task 17 of framework 201203282333-0-0001
+I0328 23:34:27.727354  3993 slave.cpp:398] Got assigned task 22 for framework 201203282333-0-0001
+I0328 23:34:27.733403  3993 slave.cpp:922] Status update: task 22 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.734484  3993 slave.cpp:642] Got acknowledgement of status update for task 22 of framework 201203282333-0-0001
+I0328 23:34:27.795037  3993 slave.cpp:922] Status update: task 20 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.796324  3993 slave.cpp:642] Got acknowledgement of status update for task 20 of framework 201203282333-0-0001
+I0328 23:34:27.803164  3993 slave.cpp:398] Got assigned task 23 for framework 201203282333-0-0001
+I0328 23:34:27.809082  3993 slave.cpp:922] Status update: task 23 of framework 201203282333-0-0001 is now in state TASK_RUNNING
+I0328 23:34:27.810086  3993 slave.cpp:642] Got acknowledgement of status update for task 23 of framework 201203282333-0-0001
+I0328 23:34:27.842844  3993 slave.cpp:922] Status update: task 21 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.843758  3993 slave.cpp:642] Got acknowledgement of status update for task 21 of framework 201203282333-0-0001
+I0328 23:34:27.853415  3993 slave.cpp:922] Status update: task 22 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.854377  3993 slave.cpp:642] Got acknowledgement of status update for task 22 of framework 201203282333-0-0001
+I0328 23:34:27.914446  3993 slave.cpp:922] Status update: task 23 of framework 201203282333-0-0001 is now in state TASK_FINISHED
+I0328 23:34:27.915513  3993 slave.cpp:642] Got acknowledgement of status update for task 23 of framework 201203282333-0-0001
+I0328 23:55:45.401708  3993 slave.cpp:1060] Process exited: master@192.168.1.64:5050
+W0328 23:55:45.401865  3993 slave.cpp:1063] WARNING! Master disconnected! Waiting for a new master to be elected.

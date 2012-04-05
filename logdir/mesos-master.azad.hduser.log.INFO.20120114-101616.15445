@@ -1,0 +1,12 @@
+Log file created at: 2012/01/14 10:16:16
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0114 10:16:16.522264 15445 logging.cpp:70] Logging to /media/LinuxShare2/mesos/logdir
+I0114 10:16:16.523063 15445 main.cpp:95] Build: 2012-01-13 15:37:27 by hduser
+I0114 10:16:16.523088 15445 main.cpp:96] Starting Mesos master
+I0114 10:16:16.524133 15445 webui.cpp:81] Starting master web server on port 9836
+I0114 10:16:16.524181 15446 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0114 10:16:16.524253 15446 master.cpp:279] Master ID: 201201141016-0
+I0114 10:16:16.524277 15449 webui.cpp:47] Master web server thread started
+I0114 10:16:16.524503 15446 master.cpp:462] Elected as master!
+I0114 10:16:16.536548 15449 webui.cpp:59] Loading webui/master/webui.py

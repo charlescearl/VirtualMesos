@@ -1,0 +1,204 @@
+Log file created at: 2012/03/26 23:20:16
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0326 23:20:16.687993 28025 logging.cpp:70] Logging to /mesos-distro/logdir
+I0326 23:20:16.688901 28025 main.cpp:95] Build: 2012-02-07 13:20:47 by hduser
+I0326 23:20:16.688997 28025 main.cpp:96] Starting Mesos master
+I0326 23:20:16.690135 28025 webui.cpp:81] Starting master web server on port 9836
+I0326 23:20:16.690131 28026 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0326 23:20:16.690268 28026 master.cpp:279] Master ID: 201203262320-0
+I0326 23:20:16.690289 28029 webui.cpp:47] Master web server thread started
+I0326 23:20:16.690723 28026 master.cpp:462] Elected as master!
+I0326 23:20:16.703783 28029 webui.cpp:59] Loading webui/master/webui.py
+I0326 23:20:16.974961 28026 master.cpp:814] Attempting to register slave 201203262320-0-0 at slave@192.168.1.64:54365
+I0326 23:20:16.975363 28026 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:54365 as active
+I0326 23:20:16.975410 28026 master.cpp:1588] Adding slave 201203262320-0-0 at azad.gateway.2wire.net with cpus=8; mem=16384
+I0326 23:20:16.975664 28026 simple_allocator.cpp:71] Added slave 201203262320-0-0 with cpus=8; mem=16384
+I0326 23:20:17.264612 28026 master.cpp:814] Attempting to register slave 201203262320-0-1 at slave@192.168.1.66:41668
+I0326 23:20:17.264879 28026 master.cpp:1057] Master now considering a slave at ubuntu.gateway.2wire.net:41668 as active
+I0326 23:20:17.264925 28026 master.cpp:1588] Adding slave 201203262320-0-1 at ubuntu.gateway.2wire.net with cpus=8; mem=4096
+I0326 23:20:17.265077 28026 simple_allocator.cpp:71] Added slave 201203262320-0-1 with cpus=8; mem=4096
+I0326 23:20:35.641129 28026 master.cpp:492] Registering framework 201203262320-0-0000 at 2@192.168.1.64:58423
+I0326 23:20:35.641257 28026 simple_allocator.cpp:48] Added framework 201203262320-0-0000
+I0326 23:20:35.641360 28026 master.cpp:1184] Sending 2 offers to framework 201203262320-0-0000
+I0326 23:20:35.661962 28026 master.cpp:679] Received reply for offer 201203262320-0-0
+I0326 23:20:35.662034 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:35.662072 28026 master.cpp:679] Received reply for offer 201203262320-0-1
+I0326 23:20:35.662108 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:35.948904 28026 master.cpp:718] Reviving offers for framework 201203262320-0-0000
+I0326 23:20:35.948951 28026 simple_allocator.cpp:145] Filters removed for framework 201203262320-0-0000
+I0326 23:20:35.949058 28026 master.cpp:1184] Sending 2 offers to framework 201203262320-0-0000
+I0326 23:20:36.037631 28026 master.cpp:679] Received reply for offer 201203262320-0-2
+I0326 23:20:36.037755 28026 master.cpp:1453] Launching task 0 on slave 201203262320-0-0
+I0326 23:20:36.037919 28026 master.cpp:1453] Launching task 1 on slave 201203262320-0-0
+I0326 23:20:36.038044 28026 master.cpp:1453] Launching task 2 on slave 201203262320-0-0
+I0326 23:20:36.038234 28026 master.cpp:1453] Launching task 3 on slave 201203262320-0-0
+I0326 23:20:36.038367 28026 master.cpp:1453] Launching task 4 on slave 201203262320-0-0
+I0326 23:20:36.038496 28026 master.cpp:1453] Launching task 5 on slave 201203262320-0-0
+I0326 23:20:36.038686 28026 master.cpp:1453] Launching task 6 on slave 201203262320-0-0
+I0326 23:20:36.038835 28026 master.cpp:1453] Launching task 7 on slave 201203262320-0-0
+I0326 23:20:36.039032 28026 master.cpp:679] Received reply for offer 201203262320-0-3
+I0326 23:20:36.039180 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:36.861974 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 1 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:36.863450 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 3 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:36.865061 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 2 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:36.867188 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 6 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:36.869554 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 7 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:36.871948 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 0 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:36.874248 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 4 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:36.876653 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 5 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:37.223657 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 2 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:37.223912 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:37.225777 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 0 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:37.229431 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 3 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:37.230690 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 1 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:37.244349 28026 master.cpp:679] Received reply for offer 201203262320-0-4
+I0326 23:20:37.244484 28026 master.cpp:1453] Launching task 8 on slave 201203262320-0-0
+I0326 23:20:37.716583 28026 master.cpp:1184] Sending 2 offers to framework 201203262320-0-0000
+I0326 23:20:37.737890 28026 master.cpp:679] Received reply for offer 201203262320-0-5
+I0326 23:20:37.738046 28026 master.cpp:1453] Launching task 9 on slave 201203262320-0-0
+I0326 23:20:37.738508 28026 master.cpp:1453] Launching task 10 on slave 201203262320-0-0
+I0326 23:20:37.738819 28026 master.cpp:1453] Launching task 11 on slave 201203262320-0-0
+I0326 23:20:37.739034 28026 master.cpp:679] Received reply for offer 201203262320-0-6
+I0326 23:20:37.739462 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:38.001585 28026 master.cpp:1001] Executor default of framework 201203262320-0-0000 on slave 201203262320-0-0 (azad.gateway.2wire.net) exited with status 256
+I0326 23:20:38.003293 28026 master.cpp:1033] Removing task 10 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:38.003653 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:38.005204 28026 master.cpp:1033] Removing task 11 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:38.006726 28026 master.cpp:1033] Removing task 4 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:38.008401 28026 master.cpp:1033] Removing task 5 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:38.009959 28026 master.cpp:1033] Removing task 6 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:38.011680 28026 master.cpp:1033] Removing task 7 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:38.013267 28026 master.cpp:1033] Removing task 8 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:38.014822 28026 master.cpp:1033] Removing task 9 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:38.015164 28026 master.cpp:679] Received reply for offer 201203262320-0-7
+I0326 23:20:38.015327 28026 master.cpp:1453] Launching task 12 on slave 201203262320-0-0
+I0326 23:20:38.718488 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:38.746325 28026 master.cpp:679] Received reply for offer 201203262320-0-8
+I0326 23:20:38.746506 28026 master.cpp:1453] Launching task 13 on slave 201203262320-0-0
+I0326 23:20:38.746983 28026 master.cpp:1453] Launching task 14 on slave 201203262320-0-0
+I0326 23:20:38.747359 28026 master.cpp:1453] Launching task 15 on slave 201203262320-0-0
+I0326 23:20:38.747936 28026 master.cpp:1453] Launching task 16 on slave 201203262320-0-0
+I0326 23:20:38.748170 28026 master.cpp:1453] Launching task 17 on slave 201203262320-0-0
+I0326 23:20:38.748817 28026 master.cpp:1453] Launching task 18 on slave 201203262320-0-0
+I0326 23:20:38.749177 28026 master.cpp:1453] Launching task 19 on slave 201203262320-0-0
+I0326 23:20:38.868520 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 15 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:38.870008 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 16 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:38.871831 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 19 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:38.875285 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 12 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:38.875690 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 17 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:38.878006 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 18 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:38.880281 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 13 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:38.882635 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 14 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:39.212044 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 12 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:39.212306 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:39.216127 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 19 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:39.216523 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 13 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:39.219856 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 16 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:39.221087 28026 master.cpp:679] Received reply for offer 201203262320-0-9
+I0326 23:20:39.221199 28026 master.cpp:1453] Launching task 20 on slave 201203262320-0-0
+I0326 23:20:39.719764 28026 master.cpp:1184] Sending 2 offers to framework 201203262320-0-0000
+I0326 23:20:39.735767 28026 master.cpp:679] Received reply for offer 201203262320-0-10
+I0326 23:20:39.735941 28026 master.cpp:1453] Launching task 21 on slave 201203262320-0-0
+I0326 23:20:39.736287 28026 master.cpp:1453] Launching task 22 on slave 201203262320-0-0
+I0326 23:20:39.736563 28026 master.cpp:1453] Launching task 23 on slave 201203262320-0-0
+I0326 23:20:39.737304 28026 master.cpp:679] Received reply for offer 201203262320-0-11
+I0326 23:20:39.738031 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:40.003219 28026 master.cpp:1001] Executor default of framework 201203262320-0-0000 on slave 201203262320-0-0 (azad.gateway.2wire.net) exited with status 256
+I0326 23:20:40.004943 28026 master.cpp:1033] Removing task 14 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:40.005156 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:40.006778 28026 master.cpp:1033] Removing task 20 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:40.008504 28026 master.cpp:1033] Removing task 17 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:40.010200 28026 master.cpp:1033] Removing task 18 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:40.012132 28026 master.cpp:1033] Removing task 23 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:40.013805 28026 master.cpp:1033] Removing task 15 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:40.015568 28026 master.cpp:1033] Removing task 22 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:40.017202 28026 master.cpp:1033] Removing task 21 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:40.017514 28026 master.cpp:679] Received reply for offer 201203262320-0-12
+I0326 23:20:40.017773 28026 master.cpp:1453] Launching task 24 on slave 201203262320-0-0
+I0326 23:20:40.721138 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:40.732933 28026 master.cpp:679] Received reply for offer 201203262320-0-13
+I0326 23:20:40.733079 28026 master.cpp:1453] Launching task 25 on slave 201203262320-0-0
+I0326 23:20:40.733463 28026 master.cpp:1453] Launching task 26 on slave 201203262320-0-0
+I0326 23:20:40.733728 28026 master.cpp:1453] Launching task 27 on slave 201203262320-0-0
+I0326 23:20:40.733808 28026 master.cpp:1453] Launching task 28 on slave 201203262320-0-0
+I0326 23:20:40.734688 28026 master.cpp:1453] Launching task 29 on slave 201203262320-0-0
+I0326 23:20:40.734869 28026 master.cpp:1453] Launching task 30 on slave 201203262320-0-0
+I0326 23:20:40.736254 28026 master.cpp:1453] Launching task 31 on slave 201203262320-0-0
+I0326 23:20:40.842660 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 31 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:40.844881 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 24 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:40.847179 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 29 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:40.849568 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 30 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:40.852493 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 26 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:40.854811 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 27 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:40.857156 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 28 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:40.859391 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 25 of framework 201203262320-0-0000 is now in state TASK_RUNNING
+I0326 23:20:41.219589 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 27 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:41.219847 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:41.226553 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 26 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:41.228445 28026 master.cpp:679] Received reply for offer 201203262320-0-14
+I0326 23:20:41.228591 28026 master.cpp:1453] Launching task 32 on slave 201203262320-0-0
+I0326 23:20:41.230021 28026 master.cpp:902] Status update from slave@192.168.1.64:54365: task 25 of framework 201203262320-0-0000 is now in state TASK_FAILED
+I0326 23:20:41.230242 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:41.232694 28026 master.cpp:679] Received reply for offer 201203262320-0-15
+I0326 23:20:41.232841 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:41.722527 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:41.724053 28026 master.cpp:679] Received reply for offer 201203262320-0-16
+I0326 23:20:41.724232 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:42.004616 28026 master.cpp:1001] Executor default of framework 201203262320-0-0000 on slave 201203262320-0-0 (azad.gateway.2wire.net) exited with status 256
+I0326 23:20:42.006073 28026 master.cpp:1033] Removing task 30 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:42.007741 28026 master.cpp:1033] Removing task 31 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:42.009318 28026 master.cpp:1033] Removing task 32 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:42.010860 28026 master.cpp:1033] Removing task 28 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:42.012516 28026 master.cpp:1033] Removing task 29 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:42.014005 28026 master.cpp:1033] Removing task 24 of framework 201203262320-0-0000 because of lost executor
+I0326 23:20:42.723415 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:42.725117 28026 master.cpp:679] Received reply for offer 201203262320-0-17
+I0326 23:20:42.725343 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:43.725350 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:43.727102 28026 master.cpp:679] Received reply for offer 201203262320-0-18
+I0326 23:20:43.727249 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:44.727416 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:44.728750 28026 master.cpp:679] Received reply for offer 201203262320-0-19
+I0326 23:20:44.728896 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:45.728939 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:45.730346 28026 master.cpp:679] Received reply for offer 201203262320-0-20
+I0326 23:20:45.730442 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:46.730527 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:46.731976 28026 master.cpp:679] Received reply for offer 201203262320-0-21
+I0326 23:20:46.732169 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:47.732151 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:47.733464 28026 master.cpp:679] Received reply for offer 201203262320-0-22
+I0326 23:20:47.733611 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:48.733660 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:48.734961 28026 master.cpp:679] Received reply for offer 201203262320-0-23
+I0326 23:20:48.735182 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:49.735182 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:49.736502 28026 master.cpp:679] Received reply for offer 201203262320-0-24
+I0326 23:20:49.736651 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:50.736688 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:50.738069 28026 master.cpp:679] Received reply for offer 201203262320-0-25
+I0326 23:20:50.738162 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:51.738219 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:51.739686 28026 master.cpp:679] Received reply for offer 201203262320-0-26
+I0326 23:20:51.739835 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:52.739912 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:52.741299 28026 master.cpp:679] Received reply for offer 201203262320-0-27
+I0326 23:20:52.741452 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:53.741515 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:53.742836 28026 master.cpp:679] Received reply for offer 201203262320-0-28
+I0326 23:20:53.742985 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:54.743049 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:54.744495 28026 master.cpp:679] Received reply for offer 201203262320-0-29
+I0326 23:20:54.744645 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:55.744636 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:55.745950 28026 master.cpp:679] Received reply for offer 201203262320-0-30
+I0326 23:20:55.746047 28026 master.cpp:1403] Filtered slave 201203262320-0-1 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:56.745971 28026 master.cpp:1184] Sending 1 offers to framework 201203262320-0-0000
+I0326 23:20:56.747092 28026 master.cpp:679] Received reply for offer 201203262320-0-31
+I0326 23:20:56.747213 28026 master.cpp:1403] Filtered slave 201203262320-0-0 for framework 201203262320-0-0000 for 1 seconds
+I0326 23:20:57.133666 28026 master.cpp:1118] Framework 201203262320-0-0000 disconnected
+I0326 23:21:27.525701 28026 master.cpp:1143] Slave 201203262320-0-0 disconnected
+I0326 23:21:27.526073 28026 simple_allocator.cpp:83] Removed slave 201203262320-0-0
+I0326 23:21:33.789702 28026 master.cpp:1143] Slave 201203262320-0-1 disconnected
+I0326 23:21:33.789984 28026 simple_allocator.cpp:83] Removed slave 201203262320-0-1

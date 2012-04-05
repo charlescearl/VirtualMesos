@@ -17,5 +17,5 @@ SSH_OPTS="-o StrictHostKeyChecking=no -o ConnectTimeout=2"
 #LIBPROCESS_IP="hostname -i" 
 
 # This works with a newer version of hostname on Ubuntu.
-#FULL_IP="hostname --all-ip-addresses"
-#export LIBPROCESS_IP=`echo $FULL_IP | sed 's/\([^ ]*\) .*/\1/'`
+FULL_IP="hostname --all-ip-addresses"
+export LIBPROCESS_IP=`echo $FULL_IP | sed 's/\([^ ]*\) .*/\1/'`

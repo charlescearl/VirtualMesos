@@ -1,0 +1,34 @@
+I0329 03:33:01.040149 11282 launcher.cpp:342] ExecutorLauncher::setupEnvironment
+I0329 03:33:01.040277 11282 launcher.cpp:347] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203290332-0-0/frameworks/201203290332-0-0001/executors/default/runs/3
+I0329 03:33:01.040840 11282 launcher.cpp:349] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:51054
+I0329 03:33:01.040968 11282 launcher.cpp:351] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203290332-0-0001
+I0329 03:33:01.041247 11282 launcher.cpp:353] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0329 03:33:01.041494 11282 launcher.cpp:361] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/spark-distro/lib_managed/jars/org.slf4j/slf4j-log4j12/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/spark-distro/lib_managed/jars/hadoop_root/slf4j-log4j12-1.4.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:327)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:193)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:180)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:384)
+	at java.net.Socket.connect(Socket.java:546)
+	at java.net.Socket.connect(Socket.java:495)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:409)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:530)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1162)
+	at java.net.URL.openStream(URL.java:1029)
+	at spark.Executor.spark$Executor$$downloadFile(Executor.scala:148)
+	at spark.Executor$$anonfun$createClassLoader$2.apply(Executor.scala:119)
+	at spark.Executor$$anonfun$createClassLoader$2.apply(Executor.scala:116)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:34)
+	at scala.collection.mutable.ArrayOps.foreach(ArrayOps.scala:38)
+	at spark.Executor.createClassLoader(Executor.scala:116)
+	at spark.Executor.init(Executor.scala:43)
+java.lang.NullPointerException
+	at spark.Executor.launchTask(Executor.scala:52)
+/scala-distro/bin/scala: line 161: 11298 Killed                  "${JAVACMD:=java}" $JAVA_OPTS "${java_args[@]}" ${CPSELECT}${TOOL_CLASSPATH} -Dscala.usejavacp=true -Dscala.home="$SCALA_HOME" -Denv.emacs="$EMACS" $CYGWIN_JLINE_TERMINAL scala.tools.nsc.MainGenericRunner "$@"

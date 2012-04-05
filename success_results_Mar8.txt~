@@ -1,0 +1,3 @@
+Mesos Slave Command:sudo bin/mesos-slave -m mesos://master@azad:5050 -w 9839 --isolation=vm --vm=hostvirkaz3-clone
+Mesos Master Command: ./bin/mesos-master
+Spark Command:     ./run -verbose spark.examples.SparkPi mesos://master@azad:5050

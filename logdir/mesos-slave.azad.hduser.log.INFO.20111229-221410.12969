@@ -1,0 +1,14 @@
+Log file created at: 2011/12/29 22:14:10
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1229 22:14:10.581141 12969 logging.cpp:70] Logging to /media/LinuxShare2/mesos/logdir
+I1229 22:14:10.581697 12969 main.cpp:109] Creating "vm" isolation module
+I1229 22:14:10.581754 12969 main.cpp:117] Build: 2011-12-29 22:13:17 by hduser
+I1229 22:14:10.581769 12969 main.cpp:118] Starting Mesos slave
+I1229 22:14:10.582608 12970 slave.cpp:257] Slave started at slave@192.168.1.64:54384
+I1229 22:14:10.582643 12970 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I1229 22:14:10.582656 12969 webui.cpp:92] Starting slave web server on port 9839
+I1229 22:14:10.582775 12970 slave.cpp:287] Spawning the isolation module
+I1229 22:14:10.582836 12973 webui.cpp:50] Slave web server thread started
+I1229 22:14:10.582860 12970 slave.cpp:320] New master detected at master@192.168.1.64:5050
+F1229 22:14:10.586223 12970 vm_isolation_module.cpp:102] VM isolation module requires slave to run as root

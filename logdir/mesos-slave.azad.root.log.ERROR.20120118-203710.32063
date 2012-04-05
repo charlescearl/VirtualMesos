@@ -1,0 +1,4 @@
+Log file created at: 2012/01/18 20:37:10
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0118 20:37:10.564635 32189 vm_isolation_module.cpp:578] Find_Ip returned null

@@ -1,0 +1,25 @@
+Log file created at: 2012/01/17 06:18:49
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0117 06:18:49.322264 29261 logging.cpp:70] Logging to /mesos-distro/logdir
+I0117 06:18:49.323063 29261 main.cpp:95] Build: 2012-01-17 06:14:20 by hduser
+I0117 06:18:49.323089 29261 main.cpp:96] Starting Mesos master
+I0117 06:18:49.324147 29261 webui.cpp:81] Starting master web server on port 9836
+I0117 06:18:49.324306 29262 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0117 06:18:49.324376 29262 master.cpp:279] Master ID: 201201170618-0
+I0117 06:18:49.324384 29265 webui.cpp:47] Master web server thread started
+I0117 06:18:49.324694 29262 master.cpp:462] Elected as master!
+I0117 06:18:49.336717 29265 webui.cpp:59] Loading webui/master/webui.py
+I0117 06:21:06.643864 29262 master.cpp:814] Attempting to register slave 201201170618-0-0 at slave@192.168.1.64:49833
+I0117 06:21:06.644243 29262 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:49833 as active
+I0117 06:21:06.644310 29262 master.cpp:1588] Adding slave 201201170618-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0117 06:21:06.644551 29262 simple_allocator.cpp:71] Added slave 201201170618-0-0 with cpus=1; mem=1024
+I0117 06:21:22.846721 29262 master.cpp:492] Registering framework 201201170618-0-0000 at 2@192.168.1.64:45853
+I0117 06:21:22.846891 29262 simple_allocator.cpp:48] Added framework 201201170618-0-0000
+I0117 06:21:22.846992 29262 master.cpp:1184] Sending 1 offers to framework 201201170618-0-0000
+I0117 06:21:22.854380 29262 master.cpp:718] Reviving offers for framework 201201170618-0-0000
+I0117 06:21:22.854413 29262 simple_allocator.cpp:145] Filters removed for framework 201201170618-0-0000
+I0117 06:21:22.897574 29262 master.cpp:679] Received reply for offer 201201170618-0-0
+I0117 06:21:22.897703 29262 master.cpp:1453] Launching task 0 on slave 201201170618-0-0
+I0117 06:29:26.047591 29262 master.cpp:1143] Slave 201201170618-0-0 disconnected
+I0117 06:29:26.049051 29262 simple_allocator.cpp:83] Removed slave 201201170618-0-0

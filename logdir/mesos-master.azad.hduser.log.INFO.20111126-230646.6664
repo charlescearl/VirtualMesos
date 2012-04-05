@@ -1,0 +1,38 @@
+Log file created at: 2011/11/26 23:06:46
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1126 23:06:46.754058  6664 logging.cpp:70] Logging to /media/LinuxShare2/mesos/logdir
+I1126 23:06:46.754832  6664 main.cpp:95] Build: 2011-11-26 23:00:40 by hduser
+I1126 23:06:46.754856  6664 main.cpp:96] Starting Mesos master
+I1126 23:06:46.755925  6664 webui.cpp:81] Starting master web server on port 9836
+I1126 23:06:46.755969  6665 master.cpp:264] Master started at mesos://master@127.0.0.1:5050
+I1126 23:06:46.756038  6665 master.cpp:279] Master ID: 201111262306-0
+I1126 23:06:46.756060  6668 webui.cpp:47] Master web server thread started
+I1126 23:06:46.756525  6665 master.cpp:462] Elected as master!
+I1126 23:06:46.768641  6668 webui.cpp:59] Loading webui/master/webui.py
+I1126 23:08:53.056851  6665 master.cpp:814] Attempting to register slave 201111262306-0-0 at slave@127.0.0.1:58597
+I1126 23:08:53.057129  6665 master.cpp:1057] Master now considering a slave at azad:58597 as active
+I1126 23:08:53.057176  6665 master.cpp:1588] Adding slave 201111262306-0-0 at azad with cpus=1; mem=1024
+I1126 23:08:53.057370  6665 simple_allocator.cpp:71] Added slave 201111262306-0-0 with cpus=1; mem=1024
+I1126 23:09:17.180696  6665 master.cpp:492] Registering framework 201111262306-0-0000 at 2@127.0.0.1:39418
+I1126 23:09:17.180867  6665 simple_allocator.cpp:48] Added framework 201111262306-0-0000
+I1126 23:09:17.180985  6665 master.cpp:1184] Sending 1 offers to framework 201111262306-0-0000
+I1126 23:09:17.188207  6665 master.cpp:718] Reviving offers for framework 201111262306-0-0000
+I1126 23:09:17.188241  6665 simple_allocator.cpp:145] Filters removed for framework 201111262306-0-0000
+I1126 23:09:17.253523  6665 master.cpp:679] Received reply for offer 201111262306-0-0
+I1126 23:09:17.253619  6665 master.cpp:1453] Launching task 0 on slave 201111262306-0-0
+I1126 23:09:18.117315  6665 master.cpp:902] Status update from slave@127.0.0.1:58597: task 0 of framework 201111262306-0-0000 is now in state TASK_RUNNING
+I1126 23:09:18.225206  6665 master.cpp:902] Status update from slave@127.0.0.1:58597: task 0 of framework 201111262306-0-0000 is now in state TASK_FINISHED
+I1126 23:09:18.225402  6665 master.cpp:1184] Sending 1 offers to framework 201111262306-0-0000
+I1126 23:09:18.242440  6665 master.cpp:679] Received reply for offer 201111262306-0-1
+I1126 23:09:18.242523  6665 master.cpp:1453] Launching task 1 on slave 201111262306-0-0
+I1126 23:09:18.245640  6665 master.cpp:902] Status update from slave@127.0.0.1:58597: task 1 of framework 201111262306-0-0000 is now in state TASK_RUNNING
+I1126 23:09:18.252500  6665 master.cpp:902] Status update from slave@127.0.0.1:58597: task 1 of framework 201111262306-0-0000 is now in state TASK_FINISHED
+I1126 23:09:18.252665  6665 master.cpp:1184] Sending 1 offers to framework 201111262306-0-0000
+I1126 23:09:18.256011  6665 master.cpp:679] Received reply for offer 201111262306-0-2
+I1126 23:09:18.256072  6665 master.cpp:1403] Filtered slave 201111262306-0-0 for framework 201111262306-0-0000 for 1 seconds
+I1126 23:09:18.580719  6665 master.cpp:1118] Framework 201111262306-0-0000 disconnected
+I1126 23:09:51.513437  6665 http.cpp:227] HTTP request for '/master/state.json'
+I1126 23:10:07.765619  6665 http.cpp:227] HTTP request for '/master/state.json'
+I1127 01:20:56.739387  6665 master.cpp:1143] Slave 201111262306-0-0 disconnected
+I1127 01:20:56.739583  6665 simple_allocator.cpp:83] Removed slave 201111262306-0-0

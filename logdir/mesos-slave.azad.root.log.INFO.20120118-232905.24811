@@ -1,0 +1,22 @@
+Log file created at: 2012/01/18 23:29:05
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0118 23:29:05.319967 24811 logging.cpp:70] Logging to /mesos-distro/logdir
+I0118 23:29:05.321024 24811 main.cpp:109] Creating "vm" isolation module
+I0118 23:29:05.321099 24811 main.cpp:117] Build: 2012-01-18 23:01:27 by hduser
+I0118 23:29:05.321120 24811 main.cpp:118] Starting Mesos slave
+I0118 23:29:05.322305 24812 slave.cpp:257] Slave started at slave@192.168.1.64:40230
+I0118 23:29:05.322350 24812 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I0118 23:29:05.322376 24811 webui.cpp:92] Starting slave web server on port 9839
+I0118 23:29:05.322511 24812 slave.cpp:287] Spawning the isolation module
+I0118 23:29:05.322628 24815 webui.cpp:50] Slave web server thread started
+I0118 23:29:05.322698 24812 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I0118 23:29:05.327055 24812 slave.cpp:340] Registered with master; given slave ID 201201182328-0-0
+I0118 23:29:05.335439 24815 webui.cpp:63] Loading webui/slave/webui.py
+I0118 23:29:12.177515 24812 slave.cpp:398] Got assigned task 0 for framework 201201182328-0-0000
+I0118 23:29:12.177569 24812 slave.cpp:1388] Generating a unique work directory for executor 'default' of framework 201201182328-0-0000
+I0118 23:29:12.177743 24812 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201201182328-0-0/frameworks/201201182328-0-0000/executors/default/runs/0' as work directory for executor 'default' of framework 201201182328-0-0000
+I0118 23:29:12.178670 24812 vm_isolation_module.cpp:125] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201201182328-0-0/frameworks/201201182328-0-0000/executors/default/runs/0 with resources mem=512' for framework 201201182328-0-0000
+I0118 23:29:12.179028 24812 vm_isolation_module.cpp:164] Forked executor at = 24972
+I0118 23:46:33.206492 24812 slave.cpp:1058] Process exited: master@192.168.1.64:5050
+W0118 23:46:33.206553 24812 slave.cpp:1061] WARNING! Master disconnected! Waiting for a new master to be elected.

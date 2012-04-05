@@ -1,0 +1,21 @@
+Log file created at: 2011/11/26 12:40:12
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1126 12:40:12.190433 17495 logging.cpp:40] Logging to /media/LinuxShare2/mesos/logdir
+I1126 12:40:12.190644 17495 main.cpp:60] Creating event logger.
+I1126 12:40:12.190661 17495 event_logger.cpp:52] creating EventLogger, using log_dir: /media/LinuxShare2/mesos/logdir
+I1126 12:40:12.190675 17495 event_logger.cpp:64] creating FileEventWriter
+I1126 12:40:12.190721 17495 main.cpp:71] Build: 2011-11-26 08:32:25 by hduser
+I1126 12:40:12.190736 17495 main.cpp:72] Starting Mesos master
+I1126 12:40:12.191309 17495 webui.cpp:63] Starting master web UI on port 9836
+I1126 12:40:12.191396 17498 master.cpp:266] Master started at mesos://1@127.0.0.1:5050
+I1126 12:40:12.191441 17501 webui.cpp:31] Web UI thread started
+I1126 12:40:12.191476 17498 master.cpp:276] Master ID: 201111261240-0
+I1126 12:40:12.191491 17498 master.cpp:1115] Creating "simple" allocator
+I1126 12:40:12.191561 17498 master.cpp:294] New master detected ... maybe it's us!
+I1126 12:40:12.204954 17501 webui.cpp:43] Loading webui/master/webui.py
+I1126 12:40:12.417188 17498 master.cpp:502] Registering slave 201111261240-0-0 at 1@127.0.0.1:33840
+I1126 12:40:12.417369 17498 simple_allocator.cpp:36] Added slave 201111261240-0-0
+I1126 20:55:07.901859 17498 master.cpp:705] Process exited: 1@127.0.0.1:33840
+I1126 20:55:07.901909 17498 master.cpp:717] slave 201111261240-0-0 disconnected
+I1126 20:55:07.901926 17498 simple_allocator.cpp:45] Removed slave 201111261240-0-0

@@ -1,0 +1,32 @@
+Log file created at: 2012/03/30 22:39:42
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0330 22:39:42.671458  4153 logging.cpp:70] Logging to /mesos-distro/logdir
+I0330 22:39:42.672418  4153 main.cpp:95] Build: 2012-03-28 23:30:52 by hduser
+I0330 22:39:42.672456  4153 main.cpp:96] Starting Mesos master
+I0330 22:39:42.673626  4154 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0330 22:39:42.673666  4153 webui.cpp:81] Starting master web server on port 9836
+I0330 22:39:42.673750  4154 master.cpp:279] Master ID: 201203302239-0
+I0330 22:39:42.673869  4157 webui.cpp:47] Master web server thread started
+I0330 22:39:42.674037  4154 master.cpp:462] Elected as master!
+I0330 22:39:42.685114  4157 webui.cpp:59] Loading webui/master/webui.py
+I0330 22:39:46.977787  4154 master.cpp:814] Attempting to register slave 201203302239-0-0 at slave@192.168.1.66:47392
+I0330 22:39:46.978067  4154 master.cpp:1057] Master now considering a slave at ubuntu.gateway.2wire.net:47392 as active
+I0330 22:39:46.978112  4154 master.cpp:1588] Adding slave 201203302239-0-0 at ubuntu.gateway.2wire.net with cpus=8; mem=6144
+I0330 22:39:46.978313  4154 simple_allocator.cpp:71] Added slave 201203302239-0-0 with cpus=8; mem=6144
+I0330 22:39:49.756589  4154 master.cpp:814] Attempting to register slave 201203302239-0-1 at slave@192.168.1.64:59199
+I0330 22:39:49.756813  4154 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:59199 as active
+I0330 22:39:49.756858  4154 master.cpp:1588] Adding slave 201203302239-0-1 at azad.gateway.2wire.net with cpus=8; mem=8192
+I0330 22:39:49.757001  4154 simple_allocator.cpp:71] Added slave 201203302239-0-1 with cpus=8; mem=8192
+I0330 22:40:00.150609  4154 master.cpp:1143] Slave 201203302239-0-1 disconnected
+I0330 22:40:00.150709  4154 simple_allocator.cpp:83] Removed slave 201203302239-0-1
+I0330 22:40:52.575675  4154 master.cpp:814] Attempting to register slave 201203302239-0-2 at slave@192.168.1.64:38862
+I0330 22:40:52.575885  4154 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:38862 as active
+I0330 22:40:52.575929  4154 master.cpp:1588] Adding slave 201203302239-0-2 at azad.gateway.2wire.net with cpus=8; mem=8192
+I0330 22:40:52.576060  4154 simple_allocator.cpp:71] Added slave 201203302239-0-2 with cpus=8; mem=8192
+I0330 22:40:58.688966  4154 master.cpp:1143] Slave 201203302239-0-0 disconnected
+I0330 22:40:58.689054  4154 simple_allocator.cpp:83] Removed slave 201203302239-0-0
+I0330 22:41:21.149907  4154 master.cpp:814] Attempting to register slave 201203302239-0-3 at slave@192.168.1.66:45362
+I0330 22:41:21.150120  4154 master.cpp:1057] Master now considering a slave at ubuntu.gateway.2wire.net:45362 as active
+I0330 22:41:21.150167  4154 master.cpp:1588] Adding slave 201203302239-0-3 at ubuntu.gateway.2wire.net with cpus=8; mem=6144
+I0330 22:41:21.150302  4154 simple_allocator.cpp:71] Added slave 201203302239-0-3 with cpus=8; mem=6144

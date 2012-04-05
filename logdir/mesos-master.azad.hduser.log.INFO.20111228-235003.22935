@@ -1,0 +1,42 @@
+Log file created at: 2011/12/28 23:50:03
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1228 23:50:03.631254 22935 logging.cpp:70] Logging to /media/LinuxShare2/mesos/logdir
+I1228 23:50:03.631806 22935 main.cpp:95] Build: 2011-12-28 22:30:38 by hduser
+I1228 23:50:03.631824 22935 main.cpp:96] Starting Mesos master
+I1228 23:50:03.632529 22935 webui.cpp:81] Starting master web server on port 9836
+I1228 23:50:03.632580 22936 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I1228 23:50:03.632624 22939 webui.cpp:47] Master web server thread started
+I1228 23:50:03.632635 22936 master.cpp:279] Master ID: 201112282350-0
+I1228 23:50:03.632841 22936 master.cpp:462] Elected as master!
+I1228 23:50:03.640965 22939 webui.cpp:59] Loading webui/master/webui.py
+I1228 23:50:31.790217 22936 master.cpp:814] Attempting to register slave 201112282350-0-0 at slave@192.168.1.64:33383
+I1228 23:50:31.790434 22936 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:33383 as active
+I1228 23:50:31.790467 22936 master.cpp:1588] Adding slave 201112282350-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I1228 23:50:31.790606 22936 simple_allocator.cpp:71] Added slave 201112282350-0-0 with cpus=1; mem=1024
+I1228 23:50:57.507750 22936 master.cpp:1143] Slave 201112282350-0-0 disconnected
+I1228 23:50:57.507841 22936 simple_allocator.cpp:83] Removed slave 201112282350-0-0
+I1228 23:51:04.570094 22936 master.cpp:814] Attempting to register slave 201112282350-0-1 at slave@192.168.1.64:43951
+I1228 23:51:04.570253 22936 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:43951 as active
+I1228 23:51:04.570288 22936 master.cpp:1588] Adding slave 201112282350-0-1 at azad.gateway.2wire.net with cpus=1; mem=1024
+I1228 23:51:04.570397 22936 simple_allocator.cpp:71] Added slave 201112282350-0-1 with cpus=1; mem=1024
+I1228 23:53:21.799948 22936 master.cpp:492] Registering framework 201112282350-0-0000 at 2@192.168.1.64:38352
+I1228 23:53:21.800078 22936 simple_allocator.cpp:48] Added framework 201112282350-0-0000
+I1228 23:53:21.800156 22936 master.cpp:1184] Sending 1 offers to framework 201112282350-0-0000
+I1228 23:53:21.807615 22936 master.cpp:718] Reviving offers for framework 201112282350-0-0000
+I1228 23:53:21.807641 22936 simple_allocator.cpp:145] Filters removed for framework 201112282350-0-0000
+I1228 23:53:21.904520 22936 master.cpp:679] Received reply for offer 201112282350-0-0
+I1228 23:53:21.904608 22936 master.cpp:1453] Launching task 0 on slave 201112282350-0-1
+I1228 23:53:22.822758 22936 master.cpp:902] Status update from slave@192.168.1.64:43951: task 0 of framework 201112282350-0-0000 is now in state TASK_RUNNING
+I1228 23:53:22.961498 22936 master.cpp:902] Status update from slave@192.168.1.64:43951: task 0 of framework 201112282350-0-0000 is now in state TASK_FINISHED
+I1228 23:53:22.961639 22936 master.cpp:1184] Sending 1 offers to framework 201112282350-0-0000
+I1228 23:53:23.015115 22936 master.cpp:679] Received reply for offer 201112282350-0-1
+I1228 23:53:23.015174 22936 master.cpp:1453] Launching task 1 on slave 201112282350-0-1
+I1228 23:53:23.017685 22936 master.cpp:902] Status update from slave@192.168.1.64:43951: task 1 of framework 201112282350-0-0000 is now in state TASK_RUNNING
+I1228 23:53:23.023947 22936 master.cpp:902] Status update from slave@192.168.1.64:43951: task 1 of framework 201112282350-0-0000 is now in state TASK_FINISHED
+I1228 23:53:23.024070 22936 master.cpp:1184] Sending 1 offers to framework 201112282350-0-0000
+I1228 23:53:23.027439 22936 master.cpp:679] Received reply for offer 201112282350-0-2
+I1228 23:53:23.027487 22936 master.cpp:1403] Filtered slave 201112282350-0-1 for framework 201112282350-0-0000 for 1 seconds
+I1228 23:53:23.368717 22936 master.cpp:1118] Framework 201112282350-0-0000 disconnected
+I1229 00:01:30.572335 22936 master.cpp:1143] Slave 201112282350-0-1 disconnected
+I1229 00:01:30.572499 22936 simple_allocator.cpp:83] Removed slave 201112282350-0-1

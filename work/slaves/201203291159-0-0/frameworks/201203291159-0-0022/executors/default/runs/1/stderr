@@ -1,0 +1,71 @@
+I0330 22:37:05.899993  3587 launcher.cpp:342] ExecutorLauncher::setupEnvironment
+I0330 22:37:05.900125  3587 launcher.cpp:347] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203291159-0-0/frameworks/201203291159-0-0022/executors/default/runs/1
+I0330 22:37:05.900388  3587 launcher.cpp:349] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:44054
+I0330 22:37:05.900611  3587 launcher.cpp:351] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203291159-0-0022
+I0330 22:37:05.900852  3587 launcher.cpp:353] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0330 22:37:05.901124  3587 launcher.cpp:361] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/spark-distro/lib_managed/jars/org.slf4j/slf4j-log4j12/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/spark-distro/lib_managed/jars/hadoop_root/slf4j-log4j12-1.4.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+12/03/30 22:37:06 INFO spark.Executor: Running task ID 15
+12/03/30 22:37:06 INFO spark.Executor: Running task ID 16
+12/03/30 22:37:07 INFO spark.LocalFileShuffle: Shuffle dir: /tmp/spark-local-e5bccb1f-58c9-45de-91a2-390f7552fa29/shuffle
+12/03/30 22:37:07 INFO server.Server: jetty-7.5.3.v20111011
+12/03/30 22:37:07 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:44286 STARTING
+12/03/30 22:37:07 INFO spark.LocalFileShuffle: Local URI: http://192.168.1.64:44286
+12/03/30 22:37:07 ERROR spark.Executor: Exception in task ID 15
+java.io.NotSerializableException: org.apache.hadoop.io.Text
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1180)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1528)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1493)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1416)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1174)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:346)
+	at spark.JavaSerializationStream.writeObject(JavaSerializer.scala:7)
+	at spark.ShuffleMapTask$$anonfun$run$1$$anonfun$apply$mcVI$sp$1.apply(ShuffleMapTask.scala:31)
+	at spark.ShuffleMapTask$$anonfun$run$1$$anonfun$apply$mcVI$sp$1.apply(ShuffleMapTask.scala:31)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:93)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:93)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:660)
+	at scala.collection.mutable.HashTable$$anon$1.foreach(HashTable.scala:157)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:190)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:43)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:93)
+	at spark.ShuffleMapTask.run(ShuffleMapTask.scala:28)
+	at spark.ShuffleMapTask.run(ShuffleMapTask.scala:9)
+	at spark.Executor$TaskRunner.run(Executor.scala:71)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:679)
+12/03/30 22:37:07 ERROR spark.Executor: Exception in task ID 16
+java.io.NotSerializableException: org.apache.hadoop.io.Text
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1180)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1528)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1493)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1416)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1174)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:346)
+	at spark.JavaSerializationStream.writeObject(JavaSerializer.scala:7)
+	at spark.ShuffleMapTask$$anonfun$run$1$$anonfun$apply$mcVI$sp$1.apply(ShuffleMapTask.scala:31)
+	at spark.ShuffleMapTask$$anonfun$run$1$$anonfun$apply$mcVI$sp$1.apply(ShuffleMapTask.scala:31)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:93)
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:93)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:660)
+	at scala.collection.mutable.HashTable$$anon$1.foreach(HashTable.scala:157)
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:190)
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:43)
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:93)
+	at spark.ShuffleMapTask.run(ShuffleMapTask.scala:28)
+	at spark.ShuffleMapTask.run(ShuffleMapTask.scala:9)
+	at spark.Executor$TaskRunner.run(Executor.scala:71)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:679)
+12/03/30 22:37:07 INFO spark.Executor: Running task ID 17
+12/03/30 22:37:07 INFO spark.Executor: Running task ID 18
+12/03/30 22:37:07 INFO spark.Executor: Running task ID 19
+12/03/30 22:37:07 INFO spark.Executor: Running task ID 20
+12/03/30 22:37:07 INFO spark.Executor: Running task ID 21
+12/03/30 22:37:07 INFO spark.Executor: Running task ID 22
+12/03/30 22:37:07 INFO spark.Executor: Running task ID 23

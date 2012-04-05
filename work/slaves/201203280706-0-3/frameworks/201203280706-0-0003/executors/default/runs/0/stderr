@@ -1,0 +1,316 @@
+I0328 07:25:25.971621  2897 launcher.cpp:341] ExecutorLauncher::setupEnvironment
+I0328 07:25:25.971729  2897 launcher.cpp:346] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203280706-0-3/frameworks/201203280706-0-0003/executors/default/runs/0
+I0328 07:25:25.971912  2897 launcher.cpp:348] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:56951
+I0328 07:25:25.972013  2897 launcher.cpp:350] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203280706-0-0003
+I0328 07:25:25.972161  2897 launcher.cpp:352] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0328 07:25:25.972290  2897 launcher.cpp:360] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+12/03/28 07:25:26 INFO spark.Executor: Running task ID 0
+12/03/28 07:25:26 INFO spark.Executor: Running task ID 3
+12/03/28 07:25:26 INFO spark.Executor: Running task ID 2
+12/03/28 07:25:26 INFO spark.Executor: Running task ID 1
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 2
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 3
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 0
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 1
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 4
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 4
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 5
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 7
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 8
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 6
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 6
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 9
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 8
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 5
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 7
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 10
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 9
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 10
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 11
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 12
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 13
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 14
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 11
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 13
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 12
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 14
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 15
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 16
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 15
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 17
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 18
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 19
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 16
+12/03/28 07:25:27 INFO spark.Executor: Running task ID 20
+12/03/28 07:25:27 INFO spark.Executor: Finished task ID 17
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 19
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 18
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 21
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 20
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 21
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 22
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 23
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 22
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 24
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 25
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 26
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 23
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 24
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 27
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 26
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 25
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 28
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 27
+12/03/28 07:25:28 INFO spark.Executor: Running task ID 29
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 28
+12/03/28 07:25:28 INFO spark.Executor: Finished task ID 29
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 30
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 31
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 32
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 33
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 32
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 33
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 30
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 31
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 34
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 34
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 35
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 36
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 37
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 38
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 38
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 37
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 36
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:51 INFO spark.Executor: Finished task ID 35
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 39
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 41
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 40
+12/03/28 07:25:51 INFO spark.Executor: Running task ID 42
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 39
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 43
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 41
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 42
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 44
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 40
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 45
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 43
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 46
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 47
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 44
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 48
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 45
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 49
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 47
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 46
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 50
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 51
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 48
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 52
+12/03/28 07:25:52 INFO spark.Executor: Finished task ID 49
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:52 INFO spark.Executor: Running task ID 53
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 50
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 51
+12/03/28 07:25:53 INFO spark.Executor: Running task ID 54
+12/03/28 07:25:53 INFO spark.Executor: Running task ID 55
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 54
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 52
+12/03/28 07:25:53 INFO spark.Executor: Running task ID 56
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:53 INFO spark.Executor: Running task ID 57
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 53
+12/03/28 07:25:53 INFO spark.Executor: Running task ID 58
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 55
+12/03/28 07:25:53 INFO spark.Executor: Running task ID 59
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 57
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 59
+12/03/28 07:25:53 INFO spark.Executor: Finished task ID 56
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+/hadoop-distro/StdInReaderForArray: error while loading shared libraries: libTree.so: cannot open shared object file: No such file or directory
+12/03/28 07:25:54 INFO spark.Executor: Finished task ID 58
+12/03/28 07:25:54 INFO spark.Executor: Running task ID 61
+12/03/28 07:25:54 INFO spark.Executor: Running task ID 60
+12/03/28 07:25:54 INFO spark.Executor: Running task ID 62
+12/03/28 07:25:54 INFO spark.Executor: Running task ID 63
+12/03/28 07:25:54 ERROR spark.Executor: Exception in task ID 61
+java.lang.ClassNotFoundException: hadooproot.HadoopRootRDD$$anonfun$main$1
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.scala$tools$nsc$util$ScalaClassLoader$$super$findClass(ScalaClassLoader.scala:88)
+	at scala.tools.nsc.util.ScalaClassLoader$class.findClass(ScalaClassLoader.scala:44)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.findClass(ScalaClassLoader.scala:88)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:321)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.scala$tools$nsc$util$ScalaClassLoader$$super$loadClass(ScalaClassLoader.scala:88)
+	at scala.tools.nsc.util.ScalaClassLoader$class.loadClass(ScalaClassLoader.scala:50)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.loadClass(ScalaClassLoader.scala:88)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at spark.Utils$$anon$1.resolveClass(Utils.scala:33)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1592)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1513)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1749)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:368)
+	at spark.Utils$.deserialize(Utils.scala:35)
+	at spark.Executor$TaskRunner.run(Executor.scala:68)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:679)
+12/03/28 07:25:54 ERROR spark.Executor: Exception in task ID 63
+java.lang.ClassNotFoundException: hadooproot.HadoopRootRDD$$anonfun$main$1
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.scala$tools$nsc$util$ScalaClassLoader$$super$findClass(ScalaClassLoader.scala:88)
+	at scala.tools.nsc.util.ScalaClassLoader$class.findClass(ScalaClassLoader.scala:44)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.findClass(ScalaClassLoader.scala:88)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:321)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.scala$tools$nsc$util$ScalaClassLoader$$super$loadClass(ScalaClassLoader.scala:88)
+	at scala.tools.nsc.util.ScalaClassLoader$class.loadClass(ScalaClassLoader.scala:50)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.loadClass(ScalaClassLoader.scala:88)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at spark.Utils$$anon$1.resolveClass(Utils.scala:33)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1592)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1513)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1749)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:368)
+	at spark.Utils$.deserialize(Utils.scala:35)
+	at spark.Executor$TaskRunner.run(Executor.scala:68)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:679)
+12/03/28 07:25:54 ERROR spark.Executor: Exception in task ID 62
+java.lang.ClassNotFoundException: hadooproot.HadoopRootRDD$$anonfun$main$1
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.scala$tools$nsc$util$ScalaClassLoader$$super$findClass(ScalaClassLoader.scala:88)
+	at scala.tools.nsc.util.ScalaClassLoader$class.findClass(ScalaClassLoader.scala:44)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.findClass(ScalaClassLoader.scala:88)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:321)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.scala$tools$nsc$util$ScalaClassLoader$$super$loadClass(ScalaClassLoader.scala:88)
+	at scala.tools.nsc.util.ScalaClassLoader$class.loadClass(ScalaClassLoader.scala:50)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.loadClass(ScalaClassLoader.scala:88)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at spark.Utils$$anon$1.resolveClass(Utils.scala:33)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1592)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1513)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1749)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:368)
+	at spark.Utils$.deserialize(Utils.scala:35)
+	at spark.Executor$TaskRunner.run(Executor.scala:68)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:679)
+12/03/28 07:25:54 ERROR spark.Executor: Exception in task ID 60
+java.lang.ClassNotFoundException: hadooproot.HadoopRootRDD$$anonfun$main$1
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:217)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.scala$tools$nsc$util$ScalaClassLoader$$super$findClass(ScalaClassLoader.scala:88)
+	at scala.tools.nsc.util.ScalaClassLoader$class.findClass(ScalaClassLoader.scala:44)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.findClass(ScalaClassLoader.scala:88)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:321)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.scala$tools$nsc$util$ScalaClassLoader$$super$loadClass(ScalaClassLoader.scala:88)
+	at scala.tools.nsc.util.ScalaClassLoader$class.loadClass(ScalaClassLoader.scala:50)
+	at scala.tools.nsc.util.ScalaClassLoader$URLClassLoader.loadClass(ScalaClassLoader.scala:88)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at spark.Utils$$anon$1.resolveClass(Utils.scala:33)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1592)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1513)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1749)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:368)
+	at spark.Utils$.deserialize(Utils.scala:35)
+	at spark.Executor$TaskRunner.run(Executor.scala:68)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:679)
+12/03/28 07:25:54 INFO spark.Executor: Running task ID 64
+12/03/28 07:25:54 INFO spark.Executor: Running task ID 65
+12/03/28 07:25:54 INFO spark.Executor: Running task ID 66
+12/03/28 07:25:54 INFO spark.Executor: Running task ID 67

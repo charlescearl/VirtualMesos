@@ -62,6 +62,14 @@ public:
 
   static UPID spawn(ProcessBase* process, bool manage = false);
 
+  // Sends a message with data to PID.
+  void send(const UPID& to,
+            const std::string &name,
+            const char *data = NULL,
+            size_t length = 0);
+
+
+
 protected:
   // Function run when process spawned.
 //   virtual void operator () () = 0;
@@ -84,12 +92,6 @@ protected:
               const std::string& name,
               const char* data = NULL,
               size_t length = 0);
-
-  // Sends a message with data to PID.
-  void send(const UPID& to,
-            const std::string &name,
-            const char *data = NULL,
-            size_t length = 0);
 
   // Blocks for message at most specified seconds (0 implies forever).
   std::string receive(double secs = 0);

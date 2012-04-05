@@ -1,0 +1,32 @@
+I0328 06:20:05.896806 15156 launcher.cpp:341] ExecutorLauncher::setupEnvironment
+I0328 06:20:05.897089 15156 launcher.cpp:346] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203280614-0-0/frameworks/201203280614-0-0003/executors/default/runs/0
+I0328 06:20:05.897557 15156 launcher.cpp:348] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:44422
+I0328 06:20:05.898069 15156 launcher.cpp:350] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203280614-0-0003
+I0328 06:20:05.898352 15156 launcher.cpp:352] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0328 06:20:05.898625 15156 launcher.cpp:360] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+12/03/28 06:20:06 INFO spark.Executor: Running task ID 1
+12/03/28 06:20:06 INFO spark.Executor: Running task ID 7
+12/03/28 06:20:06 INFO spark.Executor: Running task ID 3
+12/03/28 06:20:06 INFO spark.Executor: Running task ID 5
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 3
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 7
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 1
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 5
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 13
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 15
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 16
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 17
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 17
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 15
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 13
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 22
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 16
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 24
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 22
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 26
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 27
+12/03/28 06:20:07 INFO spark.Executor: Running task ID 29
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 24
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 26
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 27
+12/03/28 06:20:07 INFO spark.Executor: Finished task ID 29

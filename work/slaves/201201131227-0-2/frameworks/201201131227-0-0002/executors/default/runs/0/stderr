@@ -1,0 +1,4 @@
+12/01/13 12:33:36 INFO spark.Executor: Running task ID 0
+12/01/13 12:33:37 INFO spark.Executor: Finished task ID 0
+12/01/13 12:33:37 INFO spark.Executor: Running task ID 1
+12/01/13 12:33:37 INFO spark.Executor: Finished task ID 1

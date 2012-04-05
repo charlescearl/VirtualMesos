@@ -1,0 +1,379 @@
+Log file created at: 2012/02/08 22:33:37
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0208 22:33:37.761086  8487 logging.cpp:70] Logging to /mesos-distro/logdir
+I0208 22:33:37.775631  8487 main.cpp:95] Build: 2012-02-07 13:20:47 by hduser
+I0208 22:33:37.775653  8487 main.cpp:96] Starting Mesos master
+I0208 22:33:37.776561  8487 webui.cpp:81] Starting master web server on port 9836
+I0208 22:33:37.776600  8488 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0208 22:33:37.776670  8488 master.cpp:279] Master ID: 201202082233-0
+I0208 22:33:37.776692  8491 webui.cpp:47] Master web server thread started
+I0208 22:33:37.776975  8488 master.cpp:462] Elected as master!
+I0208 22:33:37.896780  8491 webui.cpp:59] Loading webui/master/webui.py
+I0208 22:34:15.103608  8488 master.cpp:814] Attempting to register slave 201202082233-0-0 at slave@192.168.1.64:41334
+I0208 22:34:15.103904  8488 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:41334 as active
+I0208 22:34:15.103952  8488 master.cpp:1588] Adding slave 201202082233-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0208 22:34:15.104152  8488 simple_allocator.cpp:71] Added slave 201202082233-0-0 with cpus=1; mem=1024
+I0208 22:34:30.153709  8488 master.cpp:492] Registering framework 201202082233-0-0000 at 2@192.168.1.64:42782
+I0208 22:34:30.153877  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0000
+I0208 22:34:30.153995  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:30.164235  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0000
+I0208 22:34:30.164268  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0000
+I0208 22:34:30.254385  8488 master.cpp:679] Received reply for offer 201202082233-0-0
+I0208 22:34:30.254513  8488 master.cpp:1453] Launching task 0 on slave 201202082233-0-0
+I0208 22:34:31.125036  8488 master.cpp:1001] Executor default of framework 201202082233-0-0000 on slave 201202082233-0-0 (azad.gateway.2wire.net) exited with status 65280
+I0208 22:34:31.126366  8488 master.cpp:1033] Removing task 0 of framework 201202082233-0-0000 because of lost executor
+I0208 22:34:31.126543  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:31.132194  8488 master.cpp:679] Received reply for offer 201202082233-0-1
+I0208 22:34:31.132282  8488 master.cpp:1453] Launching task 1 on slave 201202082233-0-0
+I0208 22:34:32.125787  8488 master.cpp:1001] Executor default of framework 201202082233-0-0000 on slave 201202082233-0-0 (azad.gateway.2wire.net) exited with status 65280
+I0208 22:34:32.127105  8488 master.cpp:1033] Removing task 1 of framework 201202082233-0-0000 because of lost executor
+I0208 22:34:32.127236  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:32.130769  8488 master.cpp:679] Received reply for offer 201202082233-0-2
+I0208 22:34:32.130856  8488 master.cpp:1453] Launching task 2 on slave 201202082233-0-0
+I0208 22:34:33.127599  8488 master.cpp:1001] Executor default of framework 201202082233-0-0000 on slave 201202082233-0-0 (azad.gateway.2wire.net) exited with status 65280
+I0208 22:34:33.128907  8488 master.cpp:1033] Removing task 2 of framework 201202082233-0-0000 because of lost executor
+I0208 22:34:33.129040  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:33.132899  8488 master.cpp:679] Received reply for offer 201202082233-0-3
+I0208 22:34:33.132985  8488 master.cpp:1453] Launching task 3 on slave 201202082233-0-0
+I0208 22:34:34.129291  8488 master.cpp:1001] Executor default of framework 201202082233-0-0000 on slave 201202082233-0-0 (azad.gateway.2wire.net) exited with status 65280
+I0208 22:34:34.130596  8488 master.cpp:1033] Removing task 3 of framework 201202082233-0-0000 because of lost executor
+I0208 22:34:34.130731  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:34.134533  8488 master.cpp:679] Received reply for offer 201202082233-0-4
+I0208 22:34:34.134624  8488 master.cpp:1453] Launching task 4 on slave 201202082233-0-0
+I0208 22:34:35.131078  8488 master.cpp:1001] Executor default of framework 201202082233-0-0000 on slave 201202082233-0-0 (azad.gateway.2wire.net) exited with status 65280
+I0208 22:34:35.132498  8488 master.cpp:1033] Removing task 4 of framework 201202082233-0-0000 because of lost executor
+I0208 22:34:35.132637  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:35.136904  8488 master.cpp:679] Received reply for offer 201202082233-0-5
+I0208 22:34:35.136976  8488 master.cpp:1403] Filtered slave 201202082233-0-0 for framework 201202082233-0-0000 for 1 seconds
+I0208 22:34:36.851194  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:36.852596  8488 master.cpp:679] Received reply for offer 201202082233-0-6
+I0208 22:34:36.852664  8488 master.cpp:1403] Filtered slave 201202082233-0-0 for framework 201202082233-0-0000 for 1 seconds
+I0208 22:34:37.852864  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:37.854434  8488 master.cpp:679] Received reply for offer 201202082233-0-7
+I0208 22:34:37.854503  8488 master.cpp:1403] Filtered slave 201202082233-0-0 for framework 201202082233-0-0000 for 1 seconds
+I0208 22:34:38.854679  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:38.856225  8488 master.cpp:679] Received reply for offer 201202082233-0-8
+I0208 22:34:38.856293  8488 master.cpp:1403] Filtered slave 201202082233-0-0 for framework 201202082233-0-0000 for 1 seconds
+I0208 22:34:39.856475  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:39.858010  8488 master.cpp:679] Received reply for offer 201202082233-0-9
+I0208 22:34:39.858078  8488 master.cpp:1403] Filtered slave 201202082233-0-0 for framework 201202082233-0-0000 for 1 seconds
+I0208 22:34:40.858286  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:40.859829  8488 master.cpp:679] Received reply for offer 201202082233-0-10
+I0208 22:34:40.859897  8488 master.cpp:1403] Filtered slave 201202082233-0-0 for framework 201202082233-0-0000 for 1 seconds
+I0208 22:34:41.860103  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0000
+I0208 22:34:41.861896  8488 master.cpp:679] Received reply for offer 201202082233-0-11
+I0208 22:34:41.862004  8488 master.cpp:1403] Filtered slave 201202082233-0-0 for framework 201202082233-0-0000 for 1 seconds
+I0208 22:34:43.664561  8488 master.cpp:1118] Framework 201202082233-0-0000 disconnected
+I0208 22:38:28.307999  8488 master.cpp:492] Registering framework 201202082233-0-0001 at 2@192.168.1.64:49428
+I0208 22:38:28.308187  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0001
+I0208 22:38:28.308275  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0001
+I0208 22:38:28.315964  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0001
+I0208 22:38:28.316015  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0001
+I0208 22:38:28.366823  8488 master.cpp:679] Received reply for offer 201202082233-0-12
+I0208 22:38:28.366938  8488 master.cpp:1453] Launching task 0 on slave 201202082233-0-0
+I0208 22:38:29.412855  8488 master.cpp:902] Status update from slave@192.168.1.64:41334: task 0 of framework 201202082233-0-0001 is now in state TASK_RUNNING
+I0208 22:38:29.540237  8488 master.cpp:902] Status update from slave@192.168.1.64:41334: task 0 of framework 201202082233-0-0001 is now in state TASK_FINISHED
+I0208 22:38:29.540467  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0001
+I0208 22:38:29.556479  8488 master.cpp:679] Received reply for offer 201202082233-0-13
+I0208 22:38:29.556576  8488 master.cpp:1453] Launching task 1 on slave 201202082233-0-0
+I0208 22:38:29.562580  8488 master.cpp:902] Status update from slave@192.168.1.64:41334: task 1 of framework 201202082233-0-0001 is now in state TASK_RUNNING
+I0208 22:38:29.571024  8488 master.cpp:902] Status update from slave@192.168.1.64:41334: task 1 of framework 201202082233-0-0001 is now in state TASK_FINISHED
+I0208 22:38:29.571264  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0001
+I0208 22:38:29.574985  8488 master.cpp:679] Received reply for offer 201202082233-0-14
+I0208 22:38:29.575078  8488 master.cpp:1403] Filtered slave 201202082233-0-0 for framework 201202082233-0-0001 for 1 seconds
+I0208 22:38:29.909052  8488 master.cpp:1118] Framework 201202082233-0-0001 disconnected
+I0208 22:39:53.035831  8488 master.cpp:492] Registering framework 201202082233-0-0002 at 2@192.168.1.64:40019
+I0208 22:39:53.036018  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0002
+I0208 22:39:53.036146  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0002
+I0208 22:39:53.043728  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0002
+I0208 22:39:53.043776  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0002
+I0208 22:39:53.092332  8488 master.cpp:679] Received reply for offer 201202082233-0-15
+I0208 22:39:53.092469  8488 master.cpp:1453] Launching task 0 on slave 201202082233-0-0
+I0208 22:39:54.063853  8488 master.cpp:902] Status update from slave@192.168.1.64:41334: task 0 of framework 201202082233-0-0002 is now in state TASK_RUNNING
+I0208 22:39:54.161659  8488 master.cpp:902] Status update from slave@192.168.1.64:41334: task 0 of framework 201202082233-0-0002 is now in state TASK_FINISHED
+I0208 22:41:58.796322  8488 master.cpp:1118] Framework 201202082233-0-0002 disconnected
+I0208 22:48:59.021070  8488 master.cpp:492] Registering framework 201202082233-0-0003 at 2@192.168.1.64:40173
+I0208 22:48:59.021234  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0003
+I0208 22:48:59.028646  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0003
+I0208 22:48:59.028693  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0003
+I0208 22:50:06.235515  8488 master.cpp:1118] Framework 201202082233-0-0003 disconnected
+I0208 22:50:20.789391  8488 master.cpp:492] Registering framework 201202082233-0-0004 at 2@192.168.1.64:52378
+I0208 22:50:20.789587  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0004
+I0208 22:50:20.796972  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0004
+I0208 22:50:20.797035  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0004
+I0208 22:50:24.835906  8488 master.cpp:1118] Framework 201202082233-0-0004 disconnected
+I0208 22:50:34.633128  8488 master.cpp:1143] Slave 201202082233-0-0 disconnected
+I0208 22:50:34.633618  8488 simple_allocator.cpp:83] Removed slave 201202082233-0-0
+I0208 22:50:45.278841  8488 master.cpp:814] Attempting to register slave 201202082233-0-1 at slave@192.168.1.64:40901
+I0208 22:50:45.279120  8488 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:40901 as active
+I0208 22:50:45.279175  8488 master.cpp:1588] Adding slave 201202082233-0-1 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0208 22:50:45.279299  8488 simple_allocator.cpp:71] Added slave 201202082233-0-1 with cpus=1; mem=1024
+I0208 22:51:02.717963  8488 master.cpp:492] Registering framework 201202082233-0-0005 at 2@192.168.1.64:37482
+I0208 22:51:02.718158  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0005
+I0208 22:51:02.718276  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0005
+I0208 22:51:02.725991  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0005
+I0208 22:51:02.726040  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0005
+I0208 22:51:02.773772  8488 master.cpp:679] Received reply for offer 201202082233-0-16
+I0208 22:51:02.773905  8488 master.cpp:1453] Launching task 0 on slave 201202082233-0-1
+I0208 22:51:03.709836  8488 master.cpp:902] Status update from slave@192.168.1.64:40901: task 0 of framework 201202082233-0-0005 is now in state TASK_RUNNING
+I0208 22:51:03.808733  8488 master.cpp:902] Status update from slave@192.168.1.64:40901: task 0 of framework 201202082233-0-0005 is now in state TASK_FINISHED
+I0208 22:51:03.808953  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0005
+I0208 22:51:03.822525  8488 master.cpp:679] Received reply for offer 201202082233-0-17
+I0208 22:51:03.822633  8488 master.cpp:1453] Launching task 1 on slave 201202082233-0-1
+I0208 22:51:03.828758  8488 master.cpp:902] Status update from slave@192.168.1.64:40901: task 1 of framework 201202082233-0-0005 is now in state TASK_RUNNING
+I0208 22:51:03.836190  8488 master.cpp:902] Status update from slave@192.168.1.64:40901: task 1 of framework 201202082233-0-0005 is now in state TASK_FINISHED
+I0208 22:51:03.836354  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0005
+I0208 22:51:03.839879  8488 master.cpp:679] Received reply for offer 201202082233-0-18
+I0208 22:51:03.839956  8488 master.cpp:1403] Filtered slave 201202082233-0-1 for framework 201202082233-0-0005 for 1 seconds
+I0208 22:51:04.165117  8488 master.cpp:1118] Framework 201202082233-0-0005 disconnected
+I0208 22:51:26.533670  8488 master.cpp:492] Registering framework 201202082233-0-0006 at 2@192.168.1.64:36802
+I0208 22:51:26.533853  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0006
+I0208 22:51:26.533942  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0006
+I0208 22:51:26.541267  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0006
+I0208 22:51:26.541306  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0006
+I0208 22:51:26.587767  8488 master.cpp:679] Received reply for offer 201202082233-0-19
+I0208 22:51:26.587877  8488 master.cpp:1453] Launching task 0 on slave 201202082233-0-1
+I0208 22:51:27.529717  8488 master.cpp:902] Status update from slave@192.168.1.64:40901: task 0 of framework 201202082233-0-0006 is now in state TASK_RUNNING
+I0208 22:51:27.626200  8488 master.cpp:902] Status update from slave@192.168.1.64:40901: task 0 of framework 201202082233-0-0006 is now in state TASK_FINISHED
+I0208 22:51:47.763691  8488 master.cpp:1118] Framework 201202082233-0-0006 disconnected
+I0208 22:51:56.740231  8488 master.cpp:492] Registering framework 201202082233-0-0007 at 2@192.168.1.64:50480
+I0208 22:51:56.740398  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0007
+I0208 22:51:56.748167  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0007
+I0208 22:51:56.748215  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0007
+I0208 22:52:06.943339  8488 master.cpp:1143] Slave 201202082233-0-1 disconnected
+I0208 22:52:06.944002  8488 simple_allocator.cpp:83] Removed slave 201202082233-0-1
+I0208 22:52:14.241374  8488 master.cpp:814] Attempting to register slave 201202082233-0-2 at slave@192.168.1.64:55226
+I0208 22:52:14.241756  8488 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:55226 as active
+I0208 22:52:14.241835  8488 master.cpp:1588] Adding slave 201202082233-0-2 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0208 22:52:14.242024  8488 simple_allocator.cpp:71] Added slave 201202082233-0-2 with cpus=1; mem=1024
+I0208 22:52:14.242130  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0007
+I0208 22:52:14.292963  8488 master.cpp:679] Received reply for offer 201202082233-0-20
+I0208 22:52:14.293072  8488 master.cpp:1453] Launching task 0 on slave 201202082233-0-2
+I0208 22:52:15.154703  8488 master.cpp:902] Status update from slave@192.168.1.64:55226: task 0 of framework 201202082233-0-0007 is now in state TASK_RUNNING
+I0208 22:52:15.272935  8488 master.cpp:902] Status update from slave@192.168.1.64:55226: task 0 of framework 201202082233-0-0007 is now in state TASK_FINISHED
+I0208 22:52:15.273087  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0007
+I0208 22:52:15.288682  8488 master.cpp:679] Received reply for offer 201202082233-0-21
+I0208 22:52:15.288789  8488 master.cpp:1453] Launching task 1 on slave 201202082233-0-2
+I0208 22:52:15.294597  8488 master.cpp:902] Status update from slave@192.168.1.64:55226: task 1 of framework 201202082233-0-0007 is now in state TASK_RUNNING
+I0208 22:52:15.302130  8488 master.cpp:902] Status update from slave@192.168.1.64:55226: task 1 of framework 201202082233-0-0007 is now in state TASK_FINISHED
+I0208 22:52:15.302332  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0007
+I0208 22:52:15.305824  8488 master.cpp:679] Received reply for offer 201202082233-0-22
+I0208 22:52:15.305914  8488 master.cpp:1403] Filtered slave 201202082233-0-2 for framework 201202082233-0-0007 for 1 seconds
+I0208 22:52:15.630444  8488 master.cpp:1118] Framework 201202082233-0-0007 disconnected
+I0208 22:52:32.113183  8488 master.cpp:1143] Slave 201202082233-0-2 disconnected
+I0208 22:52:32.113899  8488 simple_allocator.cpp:83] Removed slave 201202082233-0-2
+I0208 22:52:35.061410  8488 master.cpp:814] Attempting to register slave 201202082233-0-3 at slave@192.168.1.64:40140
+I0208 22:52:35.061760  8488 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:40140 as active
+I0208 22:52:35.061841  8488 master.cpp:1588] Adding slave 201202082233-0-3 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0208 22:52:35.062029  8488 simple_allocator.cpp:71] Added slave 201202082233-0-3 with cpus=1; mem=1024
+I0208 22:52:39.272171  8488 master.cpp:492] Registering framework 201202082233-0-0008 at 2@192.168.1.64:43744
+I0208 22:52:39.272349  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0008
+I0208 22:52:39.272430  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0008
+I0208 22:52:39.279814  8488 master.cpp:718] Reviving offers for framework 201202082233-0-0008
+I0208 22:52:39.279851  8488 simple_allocator.cpp:145] Filters removed for framework 201202082233-0-0008
+I0208 22:52:39.335867  8488 master.cpp:679] Received reply for offer 201202082233-0-23
+I0208 22:52:39.335975  8488 master.cpp:1453] Launching task 0 on slave 201202082233-0-3
+I0208 22:52:40.217573  8488 master.cpp:902] Status update from slave@192.168.1.64:40140: task 0 of framework 201202082233-0-0008 is now in state TASK_RUNNING
+I0208 22:52:40.325984  8488 master.cpp:902] Status update from slave@192.168.1.64:40140: task 0 of framework 201202082233-0-0008 is now in state TASK_FINISHED
+I0208 22:52:40.326143  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0008
+I0208 22:52:40.340600  8488 master.cpp:679] Received reply for offer 201202082233-0-24
+I0208 22:52:40.340690  8488 master.cpp:1453] Launching task 1 on slave 201202082233-0-3
+I0208 22:52:40.347287  8488 master.cpp:902] Status update from slave@192.168.1.64:40140: task 1 of framework 201202082233-0-0008 is now in state TASK_RUNNING
+I0208 22:52:40.356377  8488 master.cpp:902] Status update from slave@192.168.1.64:40140: task 1 of framework 201202082233-0-0008 is now in state TASK_FINISHED
+I0208 22:52:40.356541  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0008
+I0208 22:52:40.359937  8488 master.cpp:679] Received reply for offer 201202082233-0-25
+I0208 22:52:40.360033  8488 master.cpp:1403] Filtered slave 201202082233-0-3 for framework 201202082233-0-0008 for 1 seconds
+I0208 22:52:40.685436  8488 master.cpp:1118] Framework 201202082233-0-0008 disconnected
+I0208 22:53:02.391618  8488 master.cpp:492] Registering framework 201202082233-0-0009 at 2@127.0.1.1:44966
+I0208 22:53:02.391808  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0009
+I0208 22:53:02.391908  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0009
+I0208 22:53:02.392007  8488 master.cpp:1118] Framework 201202082233-0-0009 disconnected
+I0208 22:53:03.399967  8488 master.cpp:492] Registering framework 201202082233-0-0010 at 2@127.0.1.1:44966
+I0208 22:53:03.400141  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0010
+I0208 22:53:03.400228  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0010
+I0208 22:53:03.400326  8488 master.cpp:1118] Framework 201202082233-0-0010 disconnected
+I0208 22:53:04.401458  8488 master.cpp:492] Registering framework 201202082233-0-0011 at 2@127.0.1.1:44966
+I0208 22:53:04.401618  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0011
+I0208 22:53:04.401752  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0011
+I0208 22:53:04.401856  8488 master.cpp:1118] Framework 201202082233-0-0011 disconnected
+I0208 22:53:05.403112  8488 master.cpp:492] Registering framework 201202082233-0-0012 at 2@127.0.1.1:44966
+I0208 22:53:05.403283  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0012
+I0208 22:53:05.403370  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0012
+I0208 22:53:05.403468  8488 master.cpp:1118] Framework 201202082233-0-0012 disconnected
+I0208 22:53:06.404285  8488 master.cpp:492] Registering framework 201202082233-0-0013 at 2@127.0.1.1:44966
+I0208 22:53:06.404458  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0013
+I0208 22:53:06.404544  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0013
+I0208 22:53:06.404643  8488 master.cpp:1118] Framework 201202082233-0-0013 disconnected
+I0208 22:53:07.406191  8488 master.cpp:492] Registering framework 201202082233-0-0014 at 2@127.0.1.1:44966
+I0208 22:53:07.406364  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0014
+I0208 22:53:07.411916  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0014
+I0208 22:53:07.412035  8488 master.cpp:1118] Framework 201202082233-0-0014 disconnected
+I0208 22:53:08.407810  8488 master.cpp:492] Registering framework 201202082233-0-0015 at 2@127.0.1.1:44966
+I0208 22:53:08.407989  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0015
+I0208 22:53:08.408079  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0015
+I0208 22:53:08.408179  8488 master.cpp:1118] Framework 201202082233-0-0015 disconnected
+I0208 22:53:09.409268  8488 master.cpp:492] Registering framework 201202082233-0-0016 at 2@127.0.1.1:44966
+I0208 22:53:09.409440  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0016
+I0208 22:53:09.409530  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0016
+I0208 22:53:09.409629  8488 master.cpp:1118] Framework 201202082233-0-0015 disconnected
+I0208 22:53:15.583112  8488 master.cpp:1143] Slave 201202082233-0-3 disconnected
+I0208 22:53:15.584141  8488 simple_allocator.cpp:83] Removed slave 201202082233-0-3
+I0208 22:53:17.421273  8488 master.cpp:814] Attempting to register slave 201202082233-0-4 at slave@192.168.1.64:55444
+I0208 22:53:17.421708  8488 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:55444 as active
+I0208 22:53:17.421793  8488 master.cpp:1588] Adding slave 201202082233-0-4 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0208 22:53:17.421988  8488 simple_allocator.cpp:71] Added slave 201202082233-0-4 with cpus=1; mem=1024
+I0208 22:53:17.422118  8488 master.cpp:1184] Sending 1 offers to framework 201202082233-0-0016
+I0208 22:53:24.463052  8488 master.cpp:492] Registering framework 201202082233-0-0017 at 2@127.0.1.1:38106
+I0208 22:53:24.463246  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0017
+I0208 22:53:24.463328  8488 master.cpp:1118] Framework 201202082233-0-0017 disconnected
+I0208 22:53:25.473945  8488 master.cpp:492] Registering framework 201202082233-0-0018 at 2@127.0.1.1:38106
+I0208 22:53:25.474128  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0018
+I0208 22:53:25.474200  8488 master.cpp:1118] Framework 201202082233-0-0018 disconnected
+I0208 22:53:26.475461  8488 master.cpp:492] Registering framework 201202082233-0-0019 at 2@127.0.1.1:38106
+I0208 22:53:26.475641  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0019
+I0208 22:53:26.475711  8488 master.cpp:1118] Framework 201202082233-0-0019 disconnected
+I0208 22:53:27.476907  8488 master.cpp:492] Registering framework 201202082233-0-0020 at 2@127.0.1.1:38106
+I0208 22:53:27.477154  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0020
+I0208 22:53:27.477246  8488 master.cpp:1118] Framework 201202082233-0-0020 disconnected
+I0208 22:53:28.478534  8488 master.cpp:492] Registering framework 201202082233-0-0021 at 2@127.0.1.1:38106
+I0208 22:53:28.478726  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0021
+I0208 22:53:28.478838  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:29.479960  8488 master.cpp:492] Registering framework 201202082233-0-0022 at 2@127.0.1.1:38106
+I0208 22:53:29.480136  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0022
+I0208 22:53:29.480223  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:30.481544  8488 master.cpp:492] Registering framework 201202082233-0-0023 at 2@127.0.1.1:38106
+I0208 22:53:30.481722  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0023
+I0208 22:53:30.481881  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:31.483120  8488 master.cpp:492] Registering framework 201202082233-0-0024 at 2@127.0.1.1:38106
+I0208 22:53:31.483297  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0024
+I0208 22:53:31.483384  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:32.484604  8488 master.cpp:492] Registering framework 201202082233-0-0025 at 2@127.0.1.1:38106
+I0208 22:53:32.484783  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0025
+I0208 22:53:32.484855  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:33.486140  8488 master.cpp:492] Registering framework 201202082233-0-0026 at 2@127.0.1.1:38106
+I0208 22:53:33.486322  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0026
+I0208 22:53:33.492017  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:34.487577  8488 master.cpp:492] Registering framework 201202082233-0-0027 at 2@127.0.1.1:38106
+I0208 22:53:34.487746  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0027
+I0208 22:53:34.487820  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:35.489048  8488 master.cpp:492] Registering framework 201202082233-0-0028 at 2@127.0.1.1:38106
+I0208 22:53:35.489219  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0028
+I0208 22:53:35.489296  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:36.490588  8488 master.cpp:492] Registering framework 201202082233-0-0029 at 2@127.0.1.1:38106
+I0208 22:53:36.490783  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0029
+I0208 22:53:36.490871  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:37.492246  8488 master.cpp:492] Registering framework 201202082233-0-0030 at 2@127.0.1.1:38106
+I0208 22:53:37.492419  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0030
+I0208 22:53:37.492508  8488 master.cpp:1118] Framework 201202082233-0-0021 disconnected
+I0208 22:53:38.493814  8488 master.cpp:492] Registering framework 201202082233-0-0031 at 2@127.0.1.1:38106
+I0208 22:53:38.494000  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0031
+I0208 22:53:38.502029  8488 master.cpp:1118] Framework 201202082233-0-0031 disconnected
+I0208 22:53:39.495344  8488 master.cpp:492] Registering framework 201202082233-0-0032 at 2@127.0.1.1:38106
+I0208 22:53:39.495519  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0032
+I0208 22:53:39.495599  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:40.496863  8488 master.cpp:492] Registering framework 201202082233-0-0033 at 2@127.0.1.1:38106
+I0208 22:53:40.497030  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0033
+I0208 22:53:40.497113  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:41.498363  8488 master.cpp:492] Registering framework 201202082233-0-0034 at 2@127.0.1.1:38106
+I0208 22:53:41.498534  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0034
+I0208 22:53:41.498615  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:42.499007  8488 master.cpp:492] Registering framework 201202082233-0-0035 at 2@127.0.1.1:38106
+I0208 22:53:42.499174  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0035
+I0208 22:53:42.499255  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:43.500494  8488 master.cpp:492] Registering framework 201202082233-0-0036 at 2@127.0.1.1:38106
+I0208 22:53:43.500658  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0036
+I0208 22:53:43.502110  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:44.501951  8488 master.cpp:492] Registering framework 201202082233-0-0037 at 2@127.0.1.1:38106
+I0208 22:53:44.502116  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0037
+I0208 22:53:44.502214  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:45.503485  8488 master.cpp:492] Registering framework 201202082233-0-0038 at 2@127.0.1.1:38106
+I0208 22:53:45.503638  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0038
+I0208 22:53:45.503739  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:46.504832  8488 master.cpp:492] Registering framework 201202082233-0-0039 at 2@127.0.1.1:38106
+I0208 22:53:46.504997  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0039
+I0208 22:53:46.505112  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:47.506484  8488 master.cpp:492] Registering framework 201202082233-0-0040 at 2@127.0.1.1:38106
+I0208 22:53:47.506659  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0040
+I0208 22:53:47.506767  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:48.507972  8488 master.cpp:492] Registering framework 201202082233-0-0041 at 2@127.0.1.1:38106
+I0208 22:53:48.508158  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0041
+I0208 22:53:48.511972  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:49.509515  8488 master.cpp:492] Registering framework 201202082233-0-0042 at 2@127.0.1.1:38106
+I0208 22:53:49.509683  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0042
+I0208 22:53:49.509795  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:50.510952  8488 master.cpp:492] Registering framework 201202082233-0-0043 at 2@127.0.1.1:38106
+I0208 22:53:50.511126  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0043
+I0208 22:53:50.511239  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:51.512632  8488 master.cpp:492] Registering framework 201202082233-0-0044 at 2@127.0.1.1:38106
+I0208 22:53:51.512810  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0044
+I0208 22:53:51.512928  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:52.514072  8488 master.cpp:492] Registering framework 201202082233-0-0045 at 2@127.0.1.1:38106
+I0208 22:53:52.514241  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0045
+I0208 22:53:52.514356  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:53.515471  8488 master.cpp:492] Registering framework 201202082233-0-0046 at 2@127.0.1.1:38106
+I0208 22:53:53.515638  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0046
+I0208 22:53:53.522078  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:54.516969  8488 master.cpp:492] Registering framework 201202082233-0-0047 at 2@127.0.1.1:38106
+I0208 22:53:54.517148  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0047
+I0208 22:53:54.517267  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:55.518579  8488 master.cpp:492] Registering framework 201202082233-0-0048 at 2@127.0.1.1:38106
+I0208 22:53:55.518748  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0048
+I0208 22:53:55.518878  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:56.520062  8488 master.cpp:492] Registering framework 201202082233-0-0049 at 2@127.0.1.1:38106
+I0208 22:53:56.520239  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0049
+I0208 22:53:56.520372  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:57.521540  8488 master.cpp:492] Registering framework 201202082233-0-0050 at 2@127.0.1.1:38106
+I0208 22:53:57.521754  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0050
+I0208 22:53:57.521899  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:58.523155  8488 master.cpp:492] Registering framework 201202082233-0-0051 at 2@127.0.1.1:38106
+I0208 22:53:58.523344  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0051
+I0208 22:53:58.532150  8488 master.cpp:1118] Framework 201202082233-0-0032 disconnected
+I0208 22:53:59.523834  8488 master.cpp:492] Registering framework 201202082233-0-0052 at 2@127.0.1.1:38106
+I0208 22:53:59.524027  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0052
+I0208 22:53:59.524166  8488 master.cpp:1118] Framework 201202082233-0-0040 disconnected
+I0208 22:54:04.126636  8488 master.cpp:492] Registering framework 201202082233-0-0053 at 2@127.0.1.1:41558
+I0208 22:54:04.126813  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0053
+I0208 22:54:04.126991  8488 master.cpp:1118] Framework 201202082233-0-0053 disconnected
+I0208 22:54:05.138366  8488 master.cpp:492] Registering framework 201202082233-0-0054 at 2@127.0.1.1:41558
+I0208 22:54:05.138546  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0054
+I0208 22:54:05.138705  8488 master.cpp:1118] Framework 201202082233-0-0054 disconnected
+I0208 22:54:06.140022  8488 master.cpp:492] Registering framework 201202082233-0-0055 at 2@127.0.1.1:41558
+I0208 22:54:06.140200  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0055
+I0208 22:54:06.140353  8488 master.cpp:1118] Framework 201202082233-0-0054 disconnected
+I0208 22:54:07.141757  8488 master.cpp:492] Registering framework 201202082233-0-0056 at 2@127.0.1.1:41558
+I0208 22:54:07.141933  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0056
+I0208 22:54:07.142094  8488 master.cpp:1118] Framework 201202082233-0-0054 disconnected
+I0208 22:54:08.143385  8488 master.cpp:492] Registering framework 201202082233-0-0057 at 2@127.0.1.1:41558
+I0208 22:54:08.143568  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0057
+I0208 22:54:08.143735  8488 master.cpp:1118] Framework 201202082233-0-0054 disconnected
+I0208 22:54:09.143926  8488 master.cpp:492] Registering framework 201202082233-0-0058 at 2@127.0.1.1:41558
+I0208 22:54:09.144136  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0058
+I0208 22:54:09.144422  8488 master.cpp:1118] Framework 201202082233-0-0054 disconnected
+I0208 22:54:10.145674  8488 master.cpp:492] Registering framework 201202082233-0-0059 at 2@127.0.1.1:41558
+I0208 22:54:10.145851  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0059
+I0208 22:54:10.146016  8488 master.cpp:1118] Framework 201202082233-0-0059 disconnected
+I0208 22:54:22.412461  8488 master.cpp:492] Registering framework 201202082233-0-0060 at 2@127.0.1.1:35664
+I0208 22:54:22.412674  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0060
+I0208 22:54:22.422088  8488 master.cpp:1118] Framework 201202082233-0-0060 disconnected
+I0208 22:54:23.423879  8488 master.cpp:492] Registering framework 201202082233-0-0061 at 2@127.0.1.1:35664
+I0208 22:54:23.424068  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0061
+I0208 22:54:23.424198  8488 master.cpp:1118] Framework 201202082233-0-0060 disconnected
+I0208 22:54:24.425277  8488 master.cpp:492] Registering framework 201202082233-0-0062 at 2@127.0.1.1:35664
+I0208 22:54:24.425561  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0062
+I0208 22:54:24.425807  8488 master.cpp:1118] Framework 201202082233-0-0062 disconnected
+I0208 22:54:25.426960  8488 master.cpp:492] Registering framework 201202082233-0-0063 at 2@127.0.1.1:35664
+I0208 22:54:25.427199  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0063
+I0208 22:54:25.427364  8488 master.cpp:1118] Framework 201202082233-0-0062 disconnected
+I0208 22:54:26.428494  8488 master.cpp:492] Registering framework 201202082233-0-0064 at 2@127.0.1.1:35664
+I0208 22:54:26.428750  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0064
+I0208 22:54:26.428915  8488 master.cpp:1118] Framework 201202082233-0-0062 disconnected
+I0208 22:54:27.429993  8488 master.cpp:492] Registering framework 201202082233-0-0065 at 2@127.0.1.1:35664
+I0208 22:54:27.430400  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0065
+I0208 22:54:27.431088  8488 master.cpp:1118] Framework 201202082233-0-0062 disconnected
+I0208 22:54:28.431562  8488 master.cpp:492] Registering framework 201202082233-0-0066 at 2@127.0.1.1:35664
+I0208 22:54:28.431810  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0066
+I0208 22:54:28.431980  8488 master.cpp:1118] Framework 201202082233-0-0062 disconnected
+I0208 22:54:29.433022  8488 master.cpp:492] Registering framework 201202082233-0-0067 at 2@127.0.1.1:35664
+I0208 22:54:29.433322  8488 simple_allocator.cpp:48] Added framework 201202082233-0-0067
+I0208 22:54:29.433497  8488 master.cpp:1118] Framework 201202082233-0-0062 disconnected

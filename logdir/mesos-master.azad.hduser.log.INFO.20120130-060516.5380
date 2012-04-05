@@ -1,0 +1,24 @@
+Log file created at: 2012/01/30 06:05:16
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0130 06:05:16.228539  5380 logging.cpp:70] Logging to /mesos-distro/logdir
+I0130 06:05:16.248173  5380 main.cpp:95] Build: 2012-01-30 05:58:05 by hduser
+I0130 06:05:16.248191  5380 main.cpp:96] Starting Mesos master
+I0130 06:05:16.248895  5380 webui.cpp:81] Starting master web server on port 9836
+I0130 06:05:16.248939  5382 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0130 06:05:16.248999  5382 master.cpp:279] Master ID: 201201300605-0
+I0130 06:05:16.249037  5385 webui.cpp:47] Master web server thread started
+I0130 06:05:16.249342  5382 master.cpp:462] Elected as master!
+I0130 06:05:16.385622  5385 webui.cpp:59] Loading webui/master/webui.py
+I0130 06:06:39.049928  5382 master.cpp:814] Attempting to register slave 201201300605-0-0 at slave@192.168.1.64:52799
+I0130 06:06:39.050220  5382 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:52799 as active
+I0130 06:06:39.050261  5382 master.cpp:1588] Adding slave 201201300605-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0130 06:06:39.050432  5382 simple_allocator.cpp:71] Added slave 201201300605-0-0 with cpus=1; mem=1024
+I0130 06:07:15.093984  5382 master.cpp:492] Registering framework 201201300605-0-0000 at 2@192.168.1.64:55345
+I0130 06:07:15.094153  5382 simple_allocator.cpp:48] Added framework 201201300605-0-0000
+I0130 06:07:15.094267  5382 master.cpp:1184] Sending 1 offers to framework 201201300605-0-0000
+I0130 06:07:15.108575  5382 master.cpp:718] Reviving offers for framework 201201300605-0-0000
+I0130 06:07:15.108599  5382 simple_allocator.cpp:145] Filters removed for framework 201201300605-0-0000
+I0130 06:07:15.185410  5382 master.cpp:679] Received reply for offer 201201300605-0-0
+I0130 06:07:15.185578  5382 master.cpp:1453] Launching task 0 on slave 201201300605-0-0
+I0130 22:50:10.895875  5382 master.cpp:1118] Framework 201201300605-0-0000 disconnected

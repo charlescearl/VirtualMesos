@@ -1,0 +1,68 @@
+Log file created at: 2012/02/09 05:51:08
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0209 05:51:08.697904 32186 logging.cpp:70] Logging to /mesos-distro/logdir
+I0209 05:51:08.698715 32186 main.cpp:95] Build: 2012-02-07 13:20:47 by hduser
+I0209 05:51:08.698740 32186 main.cpp:96] Starting Mesos master
+I0209 05:51:08.699836 32186 webui.cpp:81] Starting master web server on port 9836
+I0209 05:51:08.699900 32187 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0209 05:51:08.699975 32187 master.cpp:279] Master ID: 201202090551-0
+I0209 05:51:08.700011 32190 webui.cpp:47] Master web server thread started
+I0209 05:51:08.700196 32187 master.cpp:462] Elected as master!
+I0209 05:51:08.712102 32190 webui.cpp:59] Loading webui/master/webui.py
+I0209 05:51:25.418658 32187 master.cpp:814] Attempting to register slave 201202090551-0-0 at slave@127.0.1.1:48578
+I0209 05:51:25.418946 32187 master.cpp:1057] Master now considering a slave at charles-virtual-machine:48578 as active
+I0209 05:51:25.418992 32187 master.cpp:1588] Adding slave 201202090551-0-0 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:25.419241 32187 simple_allocator.cpp:71] Added slave 201202090551-0-0 with cpus=1; mem=1024
+I0209 05:51:25.419297 32187 master.cpp:1143] Slave 201202090551-0-0 disconnected
+I0209 05:51:25.419422 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-0
+I0209 05:51:26.433341 32187 master.cpp:814] Attempting to register slave 201202090551-0-1 at slave@127.0.1.1:48578
+I0209 05:51:26.433460 32187 master.cpp:1588] Adding slave 201202090551-0-1 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:26.433677 32187 simple_allocator.cpp:71] Added slave 201202090551-0-1 with cpus=1; mem=1024
+I0209 05:51:26.433734 32187 master.cpp:1143] Slave 201202090551-0-1 disconnected
+I0209 05:51:26.433851 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-1
+I0209 05:51:27.434388 32187 master.cpp:814] Attempting to register slave 201202090551-0-2 at slave@127.0.1.1:48578
+I0209 05:51:27.434497 32187 master.cpp:1588] Adding slave 201202090551-0-2 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:27.434708 32187 simple_allocator.cpp:71] Added slave 201202090551-0-2 with cpus=1; mem=1024
+I0209 05:51:27.434766 32187 master.cpp:1143] Slave 201202090551-0-2 disconnected
+I0209 05:51:27.434877 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-2
+I0209 05:51:28.435472 32187 master.cpp:814] Attempting to register slave 201202090551-0-3 at slave@127.0.1.1:48578
+I0209 05:51:28.435583 32187 master.cpp:1588] Adding slave 201202090551-0-3 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:28.435848 32187 simple_allocator.cpp:71] Added slave 201202090551-0-3 with cpus=1; mem=1024
+I0209 05:51:28.435907 32187 master.cpp:1143] Slave 201202090551-0-3 disconnected
+I0209 05:51:28.436020 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-3
+I0209 05:51:29.436494 32187 master.cpp:814] Attempting to register slave 201202090551-0-4 at slave@127.0.1.1:48578
+I0209 05:51:29.436604 32187 master.cpp:1588] Adding slave 201202090551-0-4 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:29.436821 32187 simple_allocator.cpp:71] Added slave 201202090551-0-4 with cpus=1; mem=1024
+I0209 05:51:29.436877 32187 master.cpp:1143] Slave 201202090551-0-4 disconnected
+I0209 05:51:29.436991 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-4
+I0209 05:51:30.437542 32187 master.cpp:814] Attempting to register slave 201202090551-0-5 at slave@127.0.1.1:48578
+I0209 05:51:30.437676 32187 master.cpp:1588] Adding slave 201202090551-0-5 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:30.438285 32187 simple_allocator.cpp:71] Added slave 201202090551-0-5 with cpus=1; mem=1024
+I0209 05:51:30.438341 32187 master.cpp:1143] Slave 201202090551-0-5 disconnected
+I0209 05:51:30.438452 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-5
+I0209 05:51:31.438320 32187 master.cpp:814] Attempting to register slave 201202090551-0-6 at slave@127.0.1.1:48578
+I0209 05:51:31.438426 32187 master.cpp:1588] Adding slave 201202090551-0-6 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:31.438710 32187 simple_allocator.cpp:71] Added slave 201202090551-0-6 with cpus=1; mem=1024
+I0209 05:51:31.438773 32187 master.cpp:1143] Slave 201202090551-0-6 disconnected
+I0209 05:51:31.438890 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-6
+I0209 05:51:32.439146 32187 master.cpp:814] Attempting to register slave 201202090551-0-7 at slave@127.0.1.1:48578
+I0209 05:51:32.439293 32187 master.cpp:1588] Adding slave 201202090551-0-7 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:32.439513 32187 simple_allocator.cpp:71] Added slave 201202090551-0-7 with cpus=1; mem=1024
+I0209 05:51:32.439571 32187 master.cpp:1143] Slave 201202090551-0-7 disconnected
+I0209 05:51:32.439690 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-7
+I0209 05:51:33.440034 32187 master.cpp:814] Attempting to register slave 201202090551-0-8 at slave@127.0.1.1:48578
+I0209 05:51:33.440178 32187 master.cpp:1588] Adding slave 201202090551-0-8 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:33.440397 32187 simple_allocator.cpp:71] Added slave 201202090551-0-8 with cpus=1; mem=1024
+I0209 05:51:33.440459 32187 master.cpp:1143] Slave 201202090551-0-8 disconnected
+I0209 05:51:33.440574 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-8
+I0209 05:51:34.440860 32187 master.cpp:814] Attempting to register slave 201202090551-0-9 at slave@127.0.1.1:48578
+I0209 05:51:34.440999 32187 master.cpp:1588] Adding slave 201202090551-0-9 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:34.441220 32187 simple_allocator.cpp:71] Added slave 201202090551-0-9 with cpus=1; mem=1024
+I0209 05:51:34.441282 32187 master.cpp:1143] Slave 201202090551-0-9 disconnected
+I0209 05:51:34.441409 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-9
+I0209 05:51:35.441661 32187 master.cpp:814] Attempting to register slave 201202090551-0-10 at slave@127.0.1.1:48578
+I0209 05:51:35.441901 32187 master.cpp:1588] Adding slave 201202090551-0-10 at charles-virtual-machine with cpus=1; mem=1024
+I0209 05:51:35.442795 32187 simple_allocator.cpp:71] Added slave 201202090551-0-10 with cpus=1; mem=1024
+I0209 05:51:35.442858 32187 master.cpp:1143] Slave 201202090551-0-10 disconnected
+I0209 05:51:35.443017 32187 simple_allocator.cpp:83] Removed slave 201202090551-0-10

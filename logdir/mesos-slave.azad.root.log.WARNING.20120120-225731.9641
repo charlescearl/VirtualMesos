@@ -1,0 +1,4 @@
+Log file created at: 2012/01/20 22:57:31
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0120 22:57:31.505807  9642 vm_isolation_module.cpp:344] Failed to set cpu.shares for vm hostvirkaz3-clone: lxc-cgroup returned 65280

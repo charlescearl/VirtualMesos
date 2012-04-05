@@ -1,0 +1,58 @@
+Log file created at: 2012/02/08 22:50:45
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0208 22:50:45.276084 18087 logging.cpp:70] Logging to /mesos-distro/logdir
+I0208 22:50:45.276856 18087 main.cpp:109] Creating "lxc" isolation module
+I0208 22:50:45.276938 18087 main.cpp:117] Build: 2012-02-07 13:20:47 by hduser
+I0208 22:50:45.276959 18087 main.cpp:118] Starting Mesos slave
+I0208 22:50:45.278203 18089 slave.cpp:257] Slave started at slave@192.168.1.64:40901
+I0208 22:50:45.278245 18089 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I0208 22:50:45.278264 18087 webui.cpp:92] Starting slave web server on port 9839
+I0208 22:50:45.278389 18089 slave.cpp:287] Spawning the isolation module
+I0208 22:50:45.278431 18092 webui.cpp:50] Slave web server thread started
+I0208 22:50:45.278493 18089 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I0208 22:50:45.284816 18089 slave.cpp:340] Registered with master; given slave ID 201202082233-0-1
+I0208 22:50:45.291740 18092 webui.cpp:63] Loading webui/slave/webui.py
+I0208 22:51:02.774245 18089 slave.cpp:398] Got assigned task 0 for framework 201202082233-0-0005
+I0208 22:51:02.774315 18089 slave.cpp:1390] Generating a unique work directory for executor 'default' of framework 201202082233-0-0005
+I0208 22:51:02.774586 18089 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201202082233-0-1/frameworks/201202082233-0-0005/executors/default/runs/0' as work directory for executor 'default' of framework 201202082233-0-0005
+I0208 22:51:02.776033 18089 lxc_isolation_module.cpp:112] Entering LxcIsolationModule::launchExecutor 
+I0208 22:51:02.776059 18089 lxc_isolation_module.cpp:117] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201202082233-0-1/frameworks/201202082233-0-0005/executors/default/runs/0 with resources mem=512' for framework 201202082233-0-0005
+I0208 22:51:02.776548 18089 lxc_isolation_module.cpp:148] Forked executor at = 18223
+I0208 22:51:03.493924 18089 slave.cpp:725] Got registration for executor 'default' of framework 201202082233-0-0005
+I0208 22:51:03.493968 18089 slave.cpp:753] 2@192.168.1.64:58093 is pid of the executor 
+I0208 22:51:03.494078 18089 slave.cpp:781] Flushing queued tasks for framework 201202082233-0-0005
+I0208 22:51:03.494258 18089 lxc_isolation_module.cpp:352] Setting cpu.shares for container mesos.executor-default.framework-201202082233-0-0005 to 10
+I0208 22:51:03.496387 18089 lxc_isolation_module.cpp:352] Setting memory.limit_in_bytes for container mesos.executor-default.framework-201202082233-0-0005 to 536870912
+I0208 22:51:03.709561 18089 slave.cpp:922] Status update: task 0 of framework 201202082233-0-0005 is now in state TASK_RUNNING
+I0208 22:51:03.710594 18089 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201202082233-0-0005
+I0208 22:51:03.808413 18089 slave.cpp:922] Status update: task 0 of framework 201202082233-0-0005 is now in state TASK_FINISHED
+I0208 22:51:03.808552 18089 lxc_isolation_module.cpp:352] Setting cpu.shares for container mesos.executor-default.framework-201202082233-0-0005 to 10
+I0208 22:51:03.810760 18089 lxc_isolation_module.cpp:352] Setting memory.limit_in_bytes for container mesos.executor-default.framework-201202082233-0-0005 to 536870912
+I0208 22:51:03.813447 18089 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201202082233-0-0005
+I0208 22:51:03.823012 18089 slave.cpp:398] Got assigned task 1 for framework 201202082233-0-0005
+I0208 22:51:03.823253 18089 lxc_isolation_module.cpp:352] Setting cpu.shares for container mesos.executor-default.framework-201202082233-0-0005 to 10
+I0208 22:51:03.826014 18089 lxc_isolation_module.cpp:352] Setting memory.limit_in_bytes for container mesos.executor-default.framework-201202082233-0-0005 to 536870912
+I0208 22:51:03.828423 18089 slave.cpp:922] Status update: task 1 of framework 201202082233-0-0005 is now in state TASK_RUNNING
+I0208 22:51:03.829447 18089 slave.cpp:642] Got acknowledgement of status update for task 1 of framework 201202082233-0-0005
+I0208 22:51:03.835830 18089 slave.cpp:922] Status update: task 1 of framework 201202082233-0-0005 is now in state TASK_FINISHED
+I0208 22:51:03.836015 18089 lxc_isolation_module.cpp:352] Setting cpu.shares for container mesos.executor-default.framework-201202082233-0-0005 to 10
+I0208 22:51:03.838873 18089 lxc_isolation_module.cpp:352] Setting memory.limit_in_bytes for container mesos.executor-default.framework-201202082233-0-0005 to 536870912
+I0208 22:51:03.841580 18089 slave.cpp:642] Got acknowledgement of status update for task 1 of framework 201202082233-0-0005
+I0208 22:51:26.588171 18089 slave.cpp:398] Got assigned task 0 for framework 201202082233-0-0006
+I0208 22:51:26.588245 18089 slave.cpp:1390] Generating a unique work directory for executor 'default' of framework 201202082233-0-0006
+I0208 22:51:26.588407 18089 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201202082233-0-1/frameworks/201202082233-0-0006/executors/default/runs/0' as work directory for executor 'default' of framework 201202082233-0-0006
+I0208 22:51:26.589328 18089 lxc_isolation_module.cpp:112] Entering LxcIsolationModule::launchExecutor 
+I0208 22:51:26.589349 18089 lxc_isolation_module.cpp:117] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201202082233-0-1/frameworks/201202082233-0-0006/executors/default/runs/0 with resources mem=512' for framework 201202082233-0-0006
+I0208 22:51:26.589684 18089 lxc_isolation_module.cpp:148] Forked executor at = 18513
+I0208 22:51:27.300750 18089 slave.cpp:725] Got registration for executor 'default' of framework 201202082233-0-0006
+I0208 22:51:27.300817 18089 slave.cpp:753] 2@192.168.1.64:45275 is pid of the executor 
+I0208 22:51:27.300928 18089 slave.cpp:781] Flushing queued tasks for framework 201202082233-0-0006
+I0208 22:51:27.301097 18089 lxc_isolation_module.cpp:352] Setting cpu.shares for container mesos.executor-default.framework-201202082233-0-0006 to 10
+I0208 22:51:27.303422 18089 lxc_isolation_module.cpp:352] Setting memory.limit_in_bytes for container mesos.executor-default.framework-201202082233-0-0006 to 536870912
+I0208 22:51:27.529247 18089 slave.cpp:922] Status update: task 0 of framework 201202082233-0-0006 is now in state TASK_RUNNING
+I0208 22:51:27.530287 18089 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201202082233-0-0006
+I0208 22:51:27.625732 18089 slave.cpp:922] Status update: task 0 of framework 201202082233-0-0006 is now in state TASK_FINISHED
+I0208 22:51:27.625880 18089 lxc_isolation_module.cpp:352] Setting cpu.shares for container mesos.executor-default.framework-201202082233-0-0006 to 10
+I0208 22:51:27.628648 18089 lxc_isolation_module.cpp:352] Setting memory.limit_in_bytes for container mesos.executor-default.framework-201202082233-0-0006 to 536870912
+I0208 22:51:27.631315 18089 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201202082233-0-0006

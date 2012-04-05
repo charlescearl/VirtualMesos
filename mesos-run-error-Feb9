@@ -1,0 +1,27 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0209 06:21:25.481215  3801 launcher.cpp:341] ExecutorLauncher::setupEnvironment
+I0209 06:21:25.481462  3801 launcher.cpp:346] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /mesos-distro/work/slaves/201202090620-0-0/frameworks/201202090620-0-0000/executors/default/runs/0
+I0209 06:21:25.481511  3801 launcher.cpp:348] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:58094
+I0209 06:21:25.481529  3801 launcher.cpp:350] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201202090620-0-0000
+I0209 06:21:25.481541  3801 launcher.cpp:352] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0209 06:21:25.481565  3801 launcher.cpp:360] ExecutorLauncher::setupEnvironment: MESOS_HOME: /mesos-distro
+12/02/09 06:21:26 INFO spark.Executor: Running task ID 0
+12/02/09 06:21:26 ERROR spark.Executor: Exception in task ID 0
+java.io.InvalidClassException: spark.RDD; local class incompatible: stream classdesc serialVersionUID = -4508698398545621754, local class serialVersionUID = -401508341650774495
+	at java.io.ObjectStreamClass.initNonProxy(ObjectStreamClass.java:579)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1600)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1513)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1600)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1513)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1749)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1963)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1887)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1770)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1346)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:368)
+	at spark.Utils$.deserialize(Utils.scala:35)
+	at spark.Executor$TaskRunner.run(Executor.scala:68)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:679)

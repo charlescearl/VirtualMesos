@@ -1,0 +1,60 @@
+Log file created at: 2012/01/20 00:52:39
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0120 00:52:39.731504  3150 logging.cpp:70] Logging to /mesos-distro/logdir
+I0120 00:52:39.732313  3150 main.cpp:95] Build: 2012-01-19 12:13:41 by hduser
+I0120 00:52:39.732338  3150 main.cpp:96] Starting Mesos master
+I0120 00:52:39.733430  3150 webui.cpp:81] Starting master web server on port 9836
+I0120 00:52:39.733486  3151 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0120 00:52:39.733554  3151 master.cpp:279] Master ID: 201201200052-0
+I0120 00:52:39.733577  3154 webui.cpp:47] Master web server thread started
+I0120 00:52:39.733808  3151 master.cpp:462] Elected as master!
+I0120 00:52:39.745743  3154 webui.cpp:59] Loading webui/master/webui.py
+I0120 00:53:03.142886  3151 master.cpp:814] Attempting to register slave 201201200052-0-0 at slave@192.168.1.64:49619
+I0120 00:53:03.143159  3151 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:49619 as active
+I0120 00:53:03.143204  3151 master.cpp:1588] Adding slave 201201200052-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0120 00:53:03.143401  3151 simple_allocator.cpp:71] Added slave 201201200052-0-0 with cpus=1; mem=1024
+I0120 00:53:12.625076  3151 master.cpp:492] Registering framework 201201200052-0-0000 at 2@192.168.1.64:35689
+I0120 00:53:12.625246  3151 simple_allocator.cpp:48] Added framework 201201200052-0-0000
+I0120 00:53:12.625385  3151 master.cpp:1184] Sending 1 offers to framework 201201200052-0-0000
+I0120 00:53:12.632776  3151 master.cpp:718] Reviving offers for framework 201201200052-0-0000
+I0120 00:53:12.632802  3151 simple_allocator.cpp:145] Filters removed for framework 201201200052-0-0000
+I0120 00:53:12.688554  3151 master.cpp:679] Received reply for offer 201201200052-0-0
+I0120 00:53:12.688643  3151 master.cpp:1453] Launching task 0 on slave 201201200052-0-0
+I0120 00:59:08.128696  3151 master.cpp:1118] Framework 201201200052-0-0000 disconnected
+I0120 00:59:20.351950  3151 master.cpp:492] Registering framework 201201200052-0-0001 at 2@192.168.1.64:57982
+I0120 00:59:20.352107  3151 simple_allocator.cpp:48] Added framework 201201200052-0-0001
+I0120 00:59:20.359688  3151 master.cpp:718] Reviving offers for framework 201201200052-0-0001
+I0120 00:59:20.359721  3151 simple_allocator.cpp:145] Filters removed for framework 201201200052-0-0001
+I0120 00:59:31.006489  3151 master.cpp:1143] Slave 201201200052-0-0 disconnected
+I0120 00:59:31.008294  3151 simple_allocator.cpp:83] Removed slave 201201200052-0-0
+I0120 00:59:34.185037  3151 master.cpp:814] Attempting to register slave 201201200052-0-1 at slave@192.168.1.64:32823
+I0120 00:59:34.185278  3151 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:32823 as active
+I0120 00:59:34.185346  3151 master.cpp:1588] Adding slave 201201200052-0-1 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0120 00:59:34.185529  3151 simple_allocator.cpp:71] Added slave 201201200052-0-1 with cpus=1; mem=1024
+I0120 00:59:34.185647  3151 master.cpp:1184] Sending 1 offers to framework 201201200052-0-0001
+I0120 00:59:34.235085  3151 master.cpp:679] Received reply for offer 201201200052-0-1
+I0120 00:59:34.235195  3151 master.cpp:1453] Launching task 0 on slave 201201200052-0-1
+I0120 01:07:00.466506  3151 master.cpp:1143] Slave 201201200052-0-1 disconnected
+I0120 01:07:00.468313  3151 simple_allocator.cpp:83] Removed slave 201201200052-0-1
+I0120 01:16:11.613059  3151 master.cpp:814] Attempting to register slave 201201200052-0-2 at slave@192.168.1.64:54243
+I0120 01:16:11.613266  3151 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:54243 as active
+I0120 01:16:11.613312  3151 master.cpp:1588] Adding slave 201201200052-0-2 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0120 01:16:11.613446  3151 simple_allocator.cpp:71] Added slave 201201200052-0-2 with cpus=1; mem=1024
+I0120 01:16:11.613538  3151 master.cpp:1184] Sending 1 offers to framework 201201200052-0-0001
+I0120 01:16:11.616900  3151 master.cpp:679] Received reply for offer 201201200052-0-2
+I0120 01:16:11.617068  3151 master.cpp:1453] Launching task 1 on slave 201201200052-0-2
+I0120 01:16:19.008208  3151 master.cpp:1118] Framework 201201200052-0-0001 disconnected
+I0120 01:17:12.627100  3151 master.cpp:492] Registering framework 201201200052-0-0002 at 2@192.168.1.64:36694
+I0120 01:17:12.627289  3151 simple_allocator.cpp:48] Added framework 201201200052-0-0002
+I0120 01:17:12.634641  3151 master.cpp:718] Reviving offers for framework 201201200052-0-0002
+I0120 01:17:12.634678  3151 simple_allocator.cpp:145] Filters removed for framework 201201200052-0-0002
+I0120 01:17:23.126770  3151 master.cpp:1143] Slave 201201200052-0-2 disconnected
+I0120 01:17:23.128322  3151 simple_allocator.cpp:83] Removed slave 201201200052-0-2
+I0120 01:17:25.305348  3151 master.cpp:814] Attempting to register slave 201201200052-0-3 at slave@192.168.1.64:47416
+I0120 01:17:25.305678  3151 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:47416 as active
+I0120 01:17:25.305753  3151 master.cpp:1588] Adding slave 201201200052-0-3 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0120 01:17:25.305949  3151 simple_allocator.cpp:71] Added slave 201201200052-0-3 with cpus=1; mem=1024
+I0120 01:17:25.306071  3151 master.cpp:1184] Sending 1 offers to framework 201201200052-0-0002
+I0120 01:17:25.355463  3151 master.cpp:679] Received reply for offer 201201200052-0-3
+I0120 01:17:25.355599  3151 master.cpp:1453] Launching task 0 on slave 201201200052-0-3

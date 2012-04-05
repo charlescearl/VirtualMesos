@@ -1,0 +1,14 @@
+Log file created at: 2011/11/26 12:40:12
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1126 12:40:12.415694 17627 logging.cpp:40] Logging to /media/LinuxShare2/mesos/logdir
+I1126 12:40:12.415905 17627 main.cpp:66] Creating "process" isolation module
+I1126 12:40:12.415925 17627 main.cpp:74] Build: 2011-11-26 08:32:34 by hduser
+I1126 12:40:12.415935 17627 main.cpp:75] Starting Mesos slave
+I1126 12:40:12.416488 17629 slave.cpp:149] Slave started at 1@127.0.0.1:33840
+I1126 12:40:12.416573 17627 webui.cpp:74] Starting slave web UI on port 9836
+I1126 12:40:12.416734 17629 slave.cpp:160] setting up webUIUrl on port 9836
+I1126 12:40:12.416810 17632 webui.cpp:34] Web UI thread started
+I1126 12:40:12.416842 17629 slave.cpp:181] New master at 1@127.0.0.1:5050 with ID:0
+I1126 12:40:12.417520 17629 slave.cpp:217] Registered with master; given slave ID 201111261240-0-0
+I1126 12:40:12.429591 17632 webui.cpp:47] Loading webui/slave/webui.py

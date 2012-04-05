@@ -1,0 +1,20 @@
+Log file created at: 2012/01/14 20:37:30
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0114 20:37:30.892837 30585 logging.cpp:70] Logging to /mesos-distro/logdir
+I0114 20:37:30.893611 30585 main.cpp:109] Creating "vm" isolation module
+I0114 20:37:30.893692 30585 main.cpp:117] Build: 2012-01-14 20:33:13 by hduser
+I0114 20:37:30.893723 30585 main.cpp:118] Starting Mesos slave
+I0114 20:37:30.894877 30586 slave.cpp:257] Slave started at slave@192.168.1.64:58133
+I0114 20:37:30.894927 30586 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I0114 20:37:30.895056 30585 webui.cpp:92] Starting slave web server on port 9839
+I0114 20:37:30.895081 30586 slave.cpp:287] Spawning the isolation module
+I0114 20:37:30.895231 30589 webui.cpp:50] Slave web server thread started
+I0114 20:37:30.895231 30586 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I0114 20:37:30.899931 30586 slave.cpp:340] Registered with master; given slave ID 201201142037-0-1
+I0114 20:37:30.908443 30589 webui.cpp:63] Loading webui/slave/webui.py
+I0114 20:39:05.326524 30586 slave.cpp:398] Got assigned task 0 for framework 201201142037-0-0000
+I0114 20:39:05.326588 30586 slave.cpp:1388] Generating a unique work directory for executor 'default' of framework 201201142037-0-0000
+I0114 20:39:05.326766 30586 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201201142037-0-1/frameworks/201201142037-0-0000/executors/default/runs/0' as work directory for executor 'default' of framework 201201142037-0-0000
+I0114 20:39:05.327713 30586 vm_isolation_module.cpp:120] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201201142037-0-1/frameworks/201201142037-0-0000/executors/default/runs/0 with resources mem=512' for framework 201201142037-0-0000
+I0114 20:39:05.328064 30586 vm_isolation_module.cpp:159] Forked executor at = 31405

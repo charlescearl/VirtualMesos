@@ -1,0 +1,36 @@
+Log file created at: 2012/02/09 10:30:36
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0209 10:30:36.967803  9379 logging.cpp:70] Logging to /mesos-distro/logdir
+I0209 10:30:36.982283  9379 main.cpp:95] Build: 2012-02-07 13:20:47 by hduser
+I0209 10:30:36.982308  9379 main.cpp:96] Starting Mesos master
+I0209 10:30:36.983366  9379 webui.cpp:81] Starting master web server on port 9836
+I0209 10:30:36.983408  9380 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0209 10:30:36.983479  9380 master.cpp:279] Master ID: 201202091030-0
+I0209 10:30:36.983510  9383 webui.cpp:47] Master web server thread started
+I0209 10:30:36.983710  9380 master.cpp:462] Elected as master!
+I0209 10:30:36.991616  9383 webui.cpp:59] Loading webui/master/webui.py
+I0209 10:30:48.759696  9380 master.cpp:814] Attempting to register slave 201202091030-0-0 at slave@192.168.1.64:38126
+I0209 10:30:48.759981  9380 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:38126 as active
+I0209 10:30:48.760027  9380 master.cpp:1588] Adding slave 201202091030-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0209 10:30:48.760226  9380 simple_allocator.cpp:71] Added slave 201202091030-0-0 with cpus=1; mem=1024
+I0209 10:31:37.747470  9380 master.cpp:492] Registering framework 201202091030-0-0000 at 2@192.168.1.64:41730
+I0209 10:31:37.747643  9380 simple_allocator.cpp:48] Added framework 201202091030-0-0000
+I0209 10:31:37.747757  9380 master.cpp:1184] Sending 1 offers to framework 201202091030-0-0000
+I0209 10:31:37.755841  9380 master.cpp:718] Reviving offers for framework 201202091030-0-0000
+I0209 10:31:37.755875  9380 simple_allocator.cpp:145] Filters removed for framework 201202091030-0-0000
+I0209 10:31:37.814095  9380 master.cpp:679] Received reply for offer 201202091030-0-0
+I0209 10:31:37.814224  9380 master.cpp:1453] Launching task 0 on slave 201202091030-0-0
+I0209 10:31:49.607086  9380 master.cpp:902] Status update from slave@192.168.1.64:38126: task 0 of framework 201202091030-0-0000 is now in state TASK_RUNNING
+I0209 10:31:49.736410  9380 master.cpp:902] Status update from slave@192.168.1.64:38126: task 0 of framework 201202091030-0-0000 is now in state TASK_FINISHED
+I0209 10:31:49.736575  9380 master.cpp:1184] Sending 1 offers to framework 201202091030-0-0000
+I0209 10:31:49.750670  9380 master.cpp:679] Received reply for offer 201202091030-0-1
+I0209 10:31:49.750746  9380 master.cpp:1453] Launching task 1 on slave 201202091030-0-0
+I0209 10:31:49.755314  9380 master.cpp:902] Status update from slave@192.168.1.64:38126: task 1 of framework 201202091030-0-0000 is now in state TASK_RUNNING
+I0209 10:31:49.763864  9380 master.cpp:902] Status update from slave@192.168.1.64:38126: task 1 of framework 201202091030-0-0000 is now in state TASK_FINISHED
+I0209 10:31:49.764003  9380 master.cpp:1184] Sending 1 offers to framework 201202091030-0-0000
+I0209 10:31:49.768035  9380 master.cpp:679] Received reply for offer 201202091030-0-2
+I0209 10:31:49.768103  9380 master.cpp:1403] Filtered slave 201202091030-0-0 for framework 201202091030-0-0000 for 1 seconds
+I0209 10:31:50.093123  9380 master.cpp:1118] Framework 201202091030-0-0000 disconnected
+I0210 10:31:50.093894  9380 master.cpp:1107] Framework failover timeout, removing framework 201202091030-0-0000
+I0210 10:31:50.094033  9380 simple_allocator.cpp:61] Removed framework 201202091030-0-0000

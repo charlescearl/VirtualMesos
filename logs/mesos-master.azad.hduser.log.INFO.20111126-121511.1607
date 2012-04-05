@@ -1,0 +1,15 @@
+Log file created at: 2011/11/26 12:15:11
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1126 12:15:11.065089  1607 logging.cpp:40] Logging to /media/LinuxShare2/mesos/logs
+I1126 12:15:11.065378  1607 main.cpp:60] Creating event logger.
+I1126 12:15:11.065404  1607 event_logger.cpp:75] No log directory was specified, so not creating any event writers (e.g. FileEventWriter). No event logging will happen!
+I1126 12:15:11.065435  1607 main.cpp:71] Build: 2011-11-26 08:32:25 by hduser
+I1126 12:15:11.065456  1607 main.cpp:72] Starting Mesos master
+I1126 12:15:11.066174  1611 master.cpp:266] Master started at mesos://1@127.0.0.1:5050
+I1126 12:15:11.066210  1607 webui.cpp:63] Starting master web UI on port 9836
+I1126 12:15:11.066263  1611 master.cpp:276] Master ID: 201111261215-0
+I1126 12:15:11.066278  1611 master.cpp:1115] Creating "simple" allocator
+I1126 12:15:11.066321  1611 master.cpp:294] New master detected ... maybe it's us!
+I1126 12:15:11.066324  1613 webui.cpp:31] Web UI thread started
+I1126 12:15:11.079474  1613 webui.cpp:43] Loading webui/master/webui.py

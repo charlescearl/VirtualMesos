@@ -1,0 +1,9 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0208 22:51:26.688261     2 launcher.cpp:341] ExecutorLauncher::setupEnvironment
+I0208 22:51:26.688349     2 launcher.cpp:346] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201202082233-0-1/frameworks/201202082233-0-0006/executors/default/runs/0
+I0208 22:51:26.688364     2 launcher.cpp:348] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:40901
+I0208 22:51:26.688374     2 launcher.cpp:350] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201202082233-0-0006
+I0208 22:51:26.688385     2 launcher.cpp:352] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0208 22:51:26.688396     2 launcher.cpp:360] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+12/02/08 22:51:27 INFO spark.Executor: Running task ID 0
+12/02/08 22:51:27 INFO spark.Executor: Finished task ID 0

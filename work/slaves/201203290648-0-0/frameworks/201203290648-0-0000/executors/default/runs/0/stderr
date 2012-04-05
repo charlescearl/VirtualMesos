@@ -1,0 +1,42 @@
+I0329 06:50:24.933758 12838 launcher.cpp:342] ExecutorLauncher::setupEnvironment
+I0329 06:50:24.933835 12838 launcher.cpp:347] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203290648-0-0/frameworks/201203290648-0-0000/executors/default/runs/0
+I0329 06:50:24.933853 12838 launcher.cpp:349] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:48520
+I0329 06:50:24.933868 12838 launcher.cpp:351] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203290648-0-0000
+I0329 06:50:24.933882 12838 launcher.cpp:353] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0329 06:50:24.933899 12838 launcher.cpp:361] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/spark-distro/lib_managed/jars/org.slf4j/slf4j-log4j12/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/spark-distro/lib_managed/jars/hadoop_root/slf4j-log4j12-1.4.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+12/03/29 06:50:25 INFO spark.Executor: Running task ID 0
+12/03/29 06:50:25 INFO spark.Executor: Running task ID 3
+12/03/29 06:50:25 INFO spark.Executor: Running task ID 1
+12/03/29 06:50:25 INFO spark.Executor: Running task ID 2
+12/03/29 06:50:25 INFO spark.Executor: Running task ID 4
+12/03/29 06:50:25 INFO spark.Executor: Running task ID 5
+12/03/29 06:50:25 INFO spark.Executor: Running task ID 6
+12/03/29 06:50:25 INFO spark.Executor: Running task ID 7
+12/03/29 06:50:26 INFO spark.Executor: Finished task ID 6
+12/03/29 06:50:26 INFO spark.Executor: Finished task ID 3
+12/03/29 06:50:26 INFO spark.Executor: Finished task ID 2
+12/03/29 06:50:26 INFO spark.Executor: Finished task ID 1
+12/03/29 06:50:26 INFO spark.Executor: Finished task ID 7
+12/03/29 06:50:26 INFO spark.Executor: Finished task ID 0
+12/03/29 06:50:27 INFO spark.Executor: Finished task ID 5
+12/03/29 06:50:27 INFO spark.Executor: Finished task ID 4
+12/03/29 06:51:08 INFO spark.Executor: Running task ID 8
+12/03/29 06:51:08 INFO spark.Executor: Running task ID 10
+12/03/29 06:51:08 INFO spark.Executor: Running task ID 9
+12/03/29 06:51:08 INFO spark.Executor: Running task ID 11
+12/03/29 06:51:08 INFO spark.Executor: Running task ID 12
+12/03/29 06:51:08 INFO spark.Executor: Running task ID 13
+12/03/29 06:51:08 INFO spark.Executor: Running task ID 14
+12/03/29 06:51:08 INFO spark.Executor: Running task ID 15
+12/03/29 06:52:24 INFO spark.Executor: Finished task ID 12
+12/03/29 06:52:25 INFO spark.Executor: Finished task ID 13
+12/03/29 06:52:25 INFO spark.Executor: Finished task ID 9
+12/03/29 06:52:25 INFO spark.Executor: Finished task ID 14
+12/03/29 06:52:26 INFO spark.Executor: Finished task ID 10
+12/03/29 06:52:26 INFO spark.Executor: Finished task ID 8
+12/03/29 06:52:26 INFO spark.Executor: Finished task ID 15
+12/03/29 06:52:27 INFO spark.Executor: Finished task ID 11

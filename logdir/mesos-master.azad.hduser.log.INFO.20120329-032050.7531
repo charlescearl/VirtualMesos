@@ -1,0 +1,12 @@
+Log file created at: 2012/03/29 03:20:50
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0329 03:20:50.553725  7531 logging.cpp:70] Logging to /mesos-distro/logdir
+I0329 03:20:50.554669  7531 main.cpp:95] Build: 2012-03-28 23:30:52 by hduser
+I0329 03:20:50.554712  7531 main.cpp:96] Starting Mesos master
+I0329 03:20:50.555881  7532 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0329 03:20:50.555904  7531 webui.cpp:81] Starting master web server on port 9836
+I0329 03:20:50.556063  7532 master.cpp:279] Master ID: 201203290320-0
+I0329 03:20:50.556133  7535 webui.cpp:47] Master web server thread started
+I0329 03:20:50.556514  7532 master.cpp:462] Elected as master!
+I0329 03:20:50.567564  7535 webui.cpp:59] Loading webui/master/webui.py

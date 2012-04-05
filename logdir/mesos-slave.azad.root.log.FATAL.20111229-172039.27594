@@ -1,0 +1,5 @@
+Log file created at: 2011/12/29 17:20:39
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+F1229 17:20:39.772743 27675 vm_isolation_module.cpp:265] Could not exec lxc-execute
+F1229 17:20:39.772743 27675 vm_isolation_module.cpp:265] Could not exec lxc-execute

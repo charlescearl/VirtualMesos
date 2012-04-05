@@ -1,0 +1,4 @@
+Log file created at: 2012/01/19 12:02:21
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+F0119 12:02:21.581819 11477 process.cpp:1177] Failed to initialize, bind: Address already in use [98]

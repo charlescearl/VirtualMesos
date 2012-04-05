@@ -1,0 +1,23 @@
+Log file created at: 2012/01/20 01:30:29
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0120 01:30:29.761416 22460 logging.cpp:70] Logging to /mesos-distro/logdir
+I0120 01:30:29.762217 22460 main.cpp:95] Build: 2012-01-19 12:13:41 by hduser
+I0120 01:30:29.762241 22460 main.cpp:96] Starting Mesos master
+I0120 01:30:29.763299 22460 webui.cpp:81] Starting master web server on port 9836
+I0120 01:30:29.763344 22461 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0120 01:30:29.763416 22461 master.cpp:279] Master ID: 201201200130-0
+I0120 01:30:29.763437 22464 webui.cpp:47] Master web server thread started
+I0120 01:30:29.763663 22461 master.cpp:462] Elected as master!
+I0120 01:30:29.776154 22464 webui.cpp:59] Loading webui/master/webui.py
+I0120 01:30:36.085125 22461 master.cpp:814] Attempting to register slave 201201200130-0-0 at slave@192.168.1.64:36970
+I0120 01:30:36.085405 22461 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:36970 as active
+I0120 01:30:36.085451 22461 master.cpp:1588] Adding slave 201201200130-0-0 at azad.gateway.2wire.net with cpus=1; mem=1024
+I0120 01:30:36.085649 22461 simple_allocator.cpp:71] Added slave 201201200130-0-0 with cpus=1; mem=1024
+I0120 01:30:42.401509 22461 master.cpp:492] Registering framework 201201200130-0-0000 at 2@192.168.1.64:43139
+I0120 01:30:42.401681 22461 simple_allocator.cpp:48] Added framework 201201200130-0-0000
+I0120 01:30:42.401824 22461 master.cpp:1184] Sending 1 offers to framework 201201200130-0-0000
+I0120 01:30:42.409829 22461 master.cpp:718] Reviving offers for framework 201201200130-0-0000
+I0120 01:30:42.409859 22461 simple_allocator.cpp:145] Filters removed for framework 201201200130-0-0000
+I0120 01:30:42.455412 22461 master.cpp:679] Received reply for offer 201201200130-0-0
+I0120 01:30:42.455509 22461 master.cpp:1453] Launching task 0 on slave 201201200130-0-0

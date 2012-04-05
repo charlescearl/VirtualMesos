@@ -1,0 +1,178 @@
+Log file created at: 2012/02/09 04:50:23
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0209 04:50:23.307894  2015 logging.cpp:70] Logging to /mesos-distro/logdir
+I0209 04:50:23.308696  2015 main.cpp:95] Build: 2012-02-07 13:20:47 by hduser
+I0209 04:50:23.308722  2015 main.cpp:96] Starting Mesos master
+I0209 04:50:23.309779  2015 webui.cpp:81] Starting master web server on port 9836
+I0209 04:50:23.309911  2016 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0209 04:50:23.309980  2016 master.cpp:279] Master ID: 201202090450-0
+I0209 04:50:23.310000  2019 webui.cpp:47] Master web server thread started
+I0209 04:50:23.310261  2016 master.cpp:462] Elected as master!
+I0209 04:50:23.322540  2019 webui.cpp:59] Loading webui/master/webui.py
+I0209 04:52:06.296339  2016 master.cpp:492] Registering framework 201202090450-0-0000 at 2@192.168.1.64:42714
+I0209 04:52:06.296517  2016 simple_allocator.cpp:48] Added framework 201202090450-0-0000
+I0209 04:52:06.304338  2016 master.cpp:718] Reviving offers for framework 201202090450-0-0000
+I0209 04:52:06.304381  2016 simple_allocator.cpp:145] Filters removed for framework 201202090450-0-0000
+I0209 04:53:21.756948  2016 master.cpp:814] Attempting to register slave 201202090450-0-0 at slave@127.0.1.1:49191
+I0209 04:53:21.757256  2016 master.cpp:1057] Master now considering a slave at charles-virtual-machine:49191 as active
+I0209 04:53:21.757302  2016 master.cpp:1588] Adding slave 201202090450-0-0 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:21.757465  2016 simple_allocator.cpp:71] Added slave 201202090450-0-0 with cpus=1; mem=1024
+I0209 04:53:21.757560  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:21.757616  2016 master.cpp:1143] Slave 201202090450-0-0 disconnected
+I0209 04:53:21.757771  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-0
+I0209 04:53:21.805035  2016 master.cpp:679] Received reply for offer 201202090450-0-0
+I0209 04:53:22.773368  2016 master.cpp:814] Attempting to register slave 201202090450-0-1 at slave@127.0.1.1:49191
+I0209 04:53:22.773486  2016 master.cpp:1588] Adding slave 201202090450-0-1 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:22.773707  2016 simple_allocator.cpp:71] Added slave 201202090450-0-1 with cpus=1; mem=1024
+I0209 04:53:22.773808  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:22.773862  2016 master.cpp:1143] Slave 201202090450-0-1 disconnected
+I0209 04:53:22.774080  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-1
+I0209 04:53:22.777292  2016 master.cpp:679] Received reply for offer 201202090450-0-1
+I0209 04:53:23.774286  2016 master.cpp:814] Attempting to register slave 201202090450-0-2 at slave@127.0.1.1:49191
+I0209 04:53:23.774401  2016 master.cpp:1588] Adding slave 201202090450-0-2 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:23.774623  2016 simple_allocator.cpp:71] Added slave 201202090450-0-2 with cpus=1; mem=1024
+I0209 04:53:23.774714  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:23.774767  2016 master.cpp:1143] Slave 201202090450-0-2 disconnected
+I0209 04:53:23.774982  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-2
+I0209 04:53:23.778048  2016 master.cpp:679] Received reply for offer 201202090450-0-2
+I0209 04:53:24.775297  2016 master.cpp:814] Attempting to register slave 201202090450-0-3 at slave@127.0.1.1:49191
+I0209 04:53:24.775410  2016 master.cpp:1588] Adding slave 201202090450-0-3 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:24.775626  2016 simple_allocator.cpp:71] Added slave 201202090450-0-3 with cpus=1; mem=1024
+I0209 04:53:24.775720  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:24.775774  2016 master.cpp:1143] Slave 201202090450-0-3 disconnected
+I0209 04:53:24.775979  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-3
+I0209 04:53:24.779003  2016 master.cpp:679] Received reply for offer 201202090450-0-3
+I0209 04:53:25.775951  2016 master.cpp:814] Attempting to register slave 201202090450-0-4 at slave@127.0.1.1:49191
+I0209 04:53:25.776134  2016 master.cpp:1588] Adding slave 201202090450-0-4 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:25.776355  2016 simple_allocator.cpp:71] Added slave 201202090450-0-4 with cpus=1; mem=1024
+I0209 04:53:25.776454  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:25.776517  2016 master.cpp:1143] Slave 201202090450-0-4 disconnected
+I0209 04:53:25.776731  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-4
+I0209 04:53:25.779685  2016 master.cpp:679] Received reply for offer 201202090450-0-4
+I0209 04:53:26.776640  2016 master.cpp:814] Attempting to register slave 201202090450-0-5 at slave@127.0.1.1:49191
+I0209 04:53:26.776797  2016 master.cpp:1588] Adding slave 201202090450-0-5 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:26.777014  2016 simple_allocator.cpp:71] Added slave 201202090450-0-5 with cpus=1; mem=1024
+I0209 04:53:26.777112  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:26.777169  2016 master.cpp:1143] Slave 201202090450-0-5 disconnected
+I0209 04:53:26.777381  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-5
+I0209 04:53:26.778589  2016 master.cpp:679] Received reply for offer 201202090450-0-5
+I0209 04:53:27.777242  2016 master.cpp:814] Attempting to register slave 201202090450-0-6 at slave@127.0.1.1:49191
+I0209 04:53:27.777398  2016 master.cpp:1588] Adding slave 201202090450-0-6 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:27.777623  2016 simple_allocator.cpp:71] Added slave 201202090450-0-6 with cpus=1; mem=1024
+I0209 04:53:27.777725  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:27.777784  2016 master.cpp:1143] Slave 201202090450-0-6 disconnected
+I0209 04:53:27.777998  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-6
+I0209 04:53:27.779258  2016 master.cpp:679] Received reply for offer 201202090450-0-6
+I0209 04:53:28.778321  2016 master.cpp:814] Attempting to register slave 201202090450-0-7 at slave@127.0.1.1:49191
+I0209 04:53:28.778449  2016 master.cpp:1588] Adding slave 201202090450-0-7 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:28.778589  2016 simple_allocator.cpp:71] Added slave 201202090450-0-7 with cpus=1; mem=1024
+I0209 04:53:28.778678  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:28.778728  2016 master.cpp:1143] Slave 201202090450-0-7 disconnected
+I0209 04:53:28.778868  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-7
+I0209 04:53:28.780321  2016 master.cpp:679] Received reply for offer 201202090450-0-7
+I0209 04:53:29.779014  2016 master.cpp:814] Attempting to register slave 201202090450-0-8 at slave@127.0.1.1:49191
+I0209 04:53:29.779147  2016 master.cpp:1588] Adding slave 201202090450-0-8 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:29.779281  2016 simple_allocator.cpp:71] Added slave 201202090450-0-8 with cpus=1; mem=1024
+I0209 04:53:29.779376  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:29.779427  2016 master.cpp:1143] Slave 201202090450-0-8 disconnected
+I0209 04:53:29.779566  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-8
+I0209 04:53:29.781020  2016 master.cpp:679] Received reply for offer 201202090450-0-8
+I0209 04:53:30.779734  2016 master.cpp:814] Attempting to register slave 201202090450-0-9 at slave@127.0.1.1:49191
+I0209 04:53:30.779968  2016 master.cpp:1588] Adding slave 201202090450-0-9 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:30.780761  2016 simple_allocator.cpp:71] Added slave 201202090450-0-9 with cpus=1; mem=1024
+I0209 04:53:30.780853  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:30.780904  2016 master.cpp:1143] Slave 201202090450-0-9 disconnected
+I0209 04:53:30.781046  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-9
+I0209 04:53:30.782424  2016 master.cpp:679] Received reply for offer 201202090450-0-9
+I0209 04:53:31.780432  2016 master.cpp:814] Attempting to register slave 201202090450-0-10 at slave@127.0.1.1:49191
+I0209 04:53:31.780570  2016 master.cpp:1588] Adding slave 201202090450-0-10 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:31.780709  2016 simple_allocator.cpp:71] Added slave 201202090450-0-10 with cpus=1; mem=1024
+I0209 04:53:31.780802  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:31.780851  2016 master.cpp:1143] Slave 201202090450-0-10 disconnected
+I0209 04:53:31.780997  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-10
+I0209 04:53:31.782441  2016 master.cpp:679] Received reply for offer 201202090450-0-10
+I0209 04:53:32.781064  2016 master.cpp:814] Attempting to register slave 201202090450-0-11 at slave@127.0.1.1:49191
+I0209 04:53:32.781198  2016 master.cpp:1588] Adding slave 201202090450-0-11 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:32.781334  2016 simple_allocator.cpp:71] Added slave 201202090450-0-11 with cpus=1; mem=1024
+I0209 04:53:32.781612  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:32.781976  2016 master.cpp:1143] Slave 201202090450-0-11 disconnected
+I0209 04:53:32.782155  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-11
+I0209 04:53:32.783521  2016 master.cpp:679] Received reply for offer 201202090450-0-11
+I0209 04:53:33.781934  2016 master.cpp:814] Attempting to register slave 201202090450-0-12 at slave@127.0.1.1:49191
+I0209 04:53:33.782058  2016 master.cpp:1588] Adding slave 201202090450-0-12 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:33.782188  2016 simple_allocator.cpp:71] Added slave 201202090450-0-12 with cpus=1; mem=1024
+I0209 04:53:33.782277  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:33.782327  2016 master.cpp:1143] Slave 201202090450-0-12 disconnected
+I0209 04:53:33.782471  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-12
+I0209 04:53:33.783848  2016 master.cpp:679] Received reply for offer 201202090450-0-12
+I0209 04:53:34.782578  2016 master.cpp:814] Attempting to register slave 201202090450-0-13 at slave@127.0.1.1:49191
+I0209 04:53:34.782697  2016 master.cpp:1588] Adding slave 201202090450-0-13 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:34.782834  2016 simple_allocator.cpp:71] Added slave 201202090450-0-13 with cpus=1; mem=1024
+I0209 04:53:34.782927  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:34.782978  2016 master.cpp:1143] Slave 201202090450-0-13 disconnected
+I0209 04:53:34.783123  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-13
+I0209 04:53:34.784488  2016 master.cpp:679] Received reply for offer 201202090450-0-13
+I0209 04:53:35.783382  2016 master.cpp:814] Attempting to register slave 201202090450-0-14 at slave@127.0.1.1:49191
+I0209 04:53:35.783516  2016 master.cpp:1588] Adding slave 201202090450-0-14 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:35.792088  2016 simple_allocator.cpp:71] Added slave 201202090450-0-14 with cpus=1; mem=1024
+I0209 04:53:35.792222  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:35.792305  2016 master.cpp:1143] Slave 201202090450-0-14 disconnected
+I0209 04:53:35.792518  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-14
+I0209 04:53:35.793772  2016 master.cpp:679] Received reply for offer 201202090450-0-14
+I0209 04:53:36.784194  2016 master.cpp:814] Attempting to register slave 201202090450-0-15 at slave@127.0.1.1:49191
+I0209 04:53:36.784322  2016 master.cpp:1588] Adding slave 201202090450-0-15 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:36.784456  2016 simple_allocator.cpp:71] Added slave 201202090450-0-15 with cpus=1; mem=1024
+I0209 04:53:36.784556  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:36.784608  2016 master.cpp:1143] Slave 201202090450-0-15 disconnected
+I0209 04:53:36.784749  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-15
+I0209 04:53:36.786200  2016 master.cpp:679] Received reply for offer 201202090450-0-15
+I0209 04:53:37.784713  2016 master.cpp:814] Attempting to register slave 201202090450-0-16 at slave@127.0.1.1:49191
+I0209 04:53:37.784844  2016 master.cpp:1588] Adding slave 201202090450-0-16 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:37.784981  2016 simple_allocator.cpp:71] Added slave 201202090450-0-16 with cpus=1; mem=1024
+I0209 04:53:37.785078  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:37.785130  2016 master.cpp:1143] Slave 201202090450-0-16 disconnected
+I0209 04:53:37.785274  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-16
+I0209 04:53:37.786712  2016 master.cpp:679] Received reply for offer 201202090450-0-16
+I0209 04:53:38.785437  2016 master.cpp:814] Attempting to register slave 201202090450-0-17 at slave@127.0.1.1:49191
+I0209 04:53:38.785572  2016 master.cpp:1588] Adding slave 201202090450-0-17 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:38.785701  2016 simple_allocator.cpp:71] Added slave 201202090450-0-17 with cpus=1; mem=1024
+I0209 04:53:38.785790  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:38.785840  2016 master.cpp:1143] Slave 201202090450-0-17 disconnected
+I0209 04:53:38.785990  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-17
+I0209 04:53:38.787314  2016 master.cpp:679] Received reply for offer 201202090450-0-17
+I0209 04:53:39.786162  2016 master.cpp:814] Attempting to register slave 201202090450-0-18 at slave@127.0.1.1:49191
+I0209 04:53:39.786289  2016 master.cpp:1588] Adding slave 201202090450-0-18 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:39.786422  2016 simple_allocator.cpp:71] Added slave 201202090450-0-18 with cpus=1; mem=1024
+I0209 04:53:39.786509  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:39.786558  2016 master.cpp:1143] Slave 201202090450-0-18 disconnected
+I0209 04:53:39.786701  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-18
+I0209 04:53:39.788028  2016 master.cpp:679] Received reply for offer 201202090450-0-18
+I0209 04:53:40.786815  2016 master.cpp:814] Attempting to register slave 201202090450-0-19 at slave@127.0.1.1:49191
+I0209 04:53:40.786942  2016 master.cpp:1588] Adding slave 201202090450-0-19 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:40.791889  2016 simple_allocator.cpp:71] Added slave 201202090450-0-19 with cpus=1; mem=1024
+I0209 04:53:40.791998  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:40.792055  2016 master.cpp:1143] Slave 201202090450-0-19 disconnected
+I0209 04:53:40.792202  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-19
+I0209 04:53:40.793627  2016 master.cpp:679] Received reply for offer 201202090450-0-19
+I0209 04:53:41.787540  2016 master.cpp:814] Attempting to register slave 201202090450-0-20 at slave@127.0.1.1:49191
+I0209 04:53:41.787685  2016 master.cpp:1588] Adding slave 201202090450-0-20 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:41.787824  2016 simple_allocator.cpp:71] Added slave 201202090450-0-20 with cpus=1; mem=1024
+I0209 04:53:41.787914  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:41.787964  2016 master.cpp:1143] Slave 201202090450-0-20 disconnected
+I0209 04:53:41.788105  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-20
+I0209 04:53:41.789554  2016 master.cpp:679] Received reply for offer 201202090450-0-20
+I0209 04:53:42.788934  2016 master.cpp:814] Attempting to register slave 201202090450-0-21 at slave@127.0.1.1:49191
+I0209 04:53:42.789068  2016 master.cpp:1588] Adding slave 201202090450-0-21 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:42.789211  2016 simple_allocator.cpp:71] Added slave 201202090450-0-21 with cpus=1; mem=1024
+I0209 04:53:42.789304  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:42.789355  2016 master.cpp:1143] Slave 201202090450-0-21 disconnected
+I0209 04:53:42.789499  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-21
+I0209 04:53:42.790885  2016 master.cpp:679] Received reply for offer 201202090450-0-21
+I0209 04:53:43.790451  2016 master.cpp:814] Attempting to register slave 201202090450-0-22 at slave@127.0.1.1:49191
+I0209 04:53:43.790580  2016 master.cpp:1588] Adding slave 201202090450-0-22 at charles-virtual-machine with cpus=1; mem=1024
+I0209 04:53:43.790719  2016 simple_allocator.cpp:71] Added slave 201202090450-0-22 with cpus=1; mem=1024
+I0209 04:53:43.790809  2016 master.cpp:1184] Sending 1 offers to framework 201202090450-0-0000
+I0209 04:53:43.790859  2016 master.cpp:1143] Slave 201202090450-0-22 disconnected
+I0209 04:53:43.791002  2016 simple_allocator.cpp:83] Removed slave 201202090450-0-22
+I0209 04:53:43.792405  2016 master.cpp:679] Received reply for offer 201202090450-0-22

@@ -1,0 +1,35 @@
+Log file created at: 2012/03/08 02:09:11
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0308 02:09:11.211570 17149 logging.cpp:70] Logging to /mesos-distro/logdir
+I0308 02:09:11.212502 17149 main.cpp:109] Creating "vm" isolation module
+I0308 02:09:11.212685 17149 main.cpp:117] Build: 2012-02-07 13:20:47 by hduser
+I0308 02:09:11.212717 17149 main.cpp:118] Starting Mesos slave
+I0308 02:09:11.213949 17150 slave.cpp:257] Slave started at slave@192.168.1.64:37276
+I0308 02:09:11.214030 17149 webui.cpp:92] Starting slave web server on port 9839
+I0308 02:09:11.214032 17150 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I0308 02:09:11.214215 17153 webui.cpp:50] Slave web server thread started
+I0308 02:09:11.214242 17150 slave.cpp:287] Spawning the isolation module
+I0308 02:09:11.214510 17150 slave.cpp:320] New master detected at master@192.168.1.64:5050
+I0308 02:09:11.219528 17150 slave.cpp:340] Registered with master; given slave ID 201203080209-0-0
+I0308 02:09:11.227716 17153 webui.cpp:63] Loading webui/slave/webui.py
+I0308 02:09:19.530346 17150 slave.cpp:398] Got assigned task 0 for framework 201203080209-0-0000
+I0308 02:09:19.530397 17150 slave.cpp:1390] Generating a unique work directory for executor 'default' of framework 201203080209-0-0000
+I0308 02:09:19.530591 17150 slave.cpp:465] Using '/media/LinuxShare2/mesos/work/slaves/201203080209-0-0/frameworks/201203080209-0-0000/executors/default/runs/0' as work directory for executor 'default' of framework 201203080209-0-0000
+I0308 02:09:19.531625 17150 vm_isolation_module.cpp:125] Launching default (/media/LinuxShare2/new-spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201203080209-0-0/frameworks/201203080209-0-0000/executors/default/runs/0 with resources mem=512' for framework 201203080209-0-0000
+I0308 02:09:19.531968 17150 vm_isolation_module.cpp:164] Forked executor at = 17229
+I0308 02:09:19.531999 17150 vm_isolation_module.cpp:179]  Will send registration later for the virtual machine
+I0308 02:09:19.532008 17150 vm_isolation_module.cpp:180]  Will need some way of tearing down the local launcher and vm
+I0308 02:09:19.532016 17150 vm_isolation_module.cpp:181]  Will need to register pid 17229 framework id 201203080209-0-0000
+I0308 02:09:56.188424 17150 slave.cpp:725] Got registration for executor 'default' of framework 201203080209-0-0000
+I0308 02:09:56.188480 17150 slave.cpp:753] 2@192.168.122.148:43228 is pid of the executor 
+I0308 02:09:56.188637 17150 slave.cpp:781] Flushing queued tasks for framework 201203080209-0-0000
+I0308 02:09:59.866410 17150 slave.cpp:922] Status update: task 0 of framework 201203080209-0-0000 is now in state TASK_RUNNING
+I0308 02:09:59.867506 17150 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201203080209-0-0000
+I0308 02:10:00.999737 17150 slave.cpp:922] Status update: task 0 of framework 201203080209-0-0000 is now in state TASK_FINISHED
+I0308 02:10:01.001049 17150 slave.cpp:642] Got acknowledgement of status update for task 0 of framework 201203080209-0-0000
+I0308 02:10:01.071702 17150 slave.cpp:398] Got assigned task 1 for framework 201203080209-0-0000
+I0308 02:10:01.159848 17150 slave.cpp:922] Status update: task 1 of framework 201203080209-0-0000 is now in state TASK_RUNNING
+I0308 02:10:01.161056 17150 slave.cpp:642] Got acknowledgement of status update for task 1 of framework 201203080209-0-0000
+I0308 02:10:01.189693 17150 slave.cpp:922] Status update: task 1 of framework 201203080209-0-0000 is now in state TASK_FINISHED
+I0308 02:10:01.190847 17150 slave.cpp:642] Got acknowledgement of status update for task 1 of framework 201203080209-0-0000

@@ -1,0 +1,30 @@
+Log file created at: 2011/12/28 23:51:04
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1228 23:51:04.568235 23698 logging.cpp:70] Logging to /media/LinuxShare2/mesos/logdir
+I1228 23:51:04.568759 23698 main.cpp:109] Creating "vm" isolation module
+I1228 23:51:04.568822 23698 main.cpp:117] Build: 2011-12-28 22:30:38 by hduser
+I1228 23:51:04.568836 23698 main.cpp:118] Starting Mesos slave
+I1228 23:51:04.569656 23698 webui.cpp:92] Starting slave web server on port 9839
+I1228 23:51:04.569665 23699 slave.cpp:257] Slave started at slave@192.168.1.64:43951
+I1228 23:51:04.569694 23699 slave.cpp:258] Slave resources: cpus=1; mem=1024
+I1228 23:51:04.569762 23702 webui.cpp:50] Slave web server thread started
+I1228 23:51:04.569834 23699 slave.cpp:319] New master detected at master@192.168.1.64:5050
+I1228 23:51:04.570549 23699 slave.cpp:339] Registered with master; given slave ID 201112282350-0-1
+I1228 23:51:04.578138 23702 webui.cpp:63] Loading webui/slave/webui.py
+I1228 23:53:21.904961 23699 slave.cpp:397] Got assigned task 0 for framework 201112282350-0-0000
+I1228 23:53:21.905021 23699 slave.cpp:1387] Generating a unique work directory for executor 'default' of framework 201112282350-0-0000
+I1228 23:53:21.924834 23699 slave.cpp:464] Using '/media/LinuxShare2/mesos/work/slaves/201112282350-0-1/frameworks/201112282350-0-0000/executors/default/runs/0' as work directory for executor 'default' of framework 201112282350-0-0000
+I1228 23:53:21.925726 23699 process_based_isolation_module.cpp:91] Launching default (/media/LinuxShare2/spark/spark-executor) in /media/LinuxShare2/mesos/work/slaves/201112282350-0-1/frameworks/201112282350-0-0000/executors/default/runs/0 with resources mem=512' for framework 201112282350-0-0000
+I1228 23:53:21.926064 23699 process_based_isolation_module.cpp:114] Forked executor at = 24509
+I1228 23:53:22.567852 23699 slave.cpp:724] Got registration for executor 'default' of framework 201112282350-0-0000
+I1228 23:53:22.567993 23699 slave.cpp:778] Flushing queued tasks for framework 201112282350-0-0000
+I1228 23:53:22.822500 23699 slave.cpp:919] Status update: task 0 of framework 201112282350-0-0000 is now in state TASK_RUNNING
+I1228 23:53:22.823232 23699 slave.cpp:641] Got acknowledgement of status update for task 0 of framework 201112282350-0-0000
+I1228 23:53:22.961244 23699 slave.cpp:919] Status update: task 0 of framework 201112282350-0-0000 is now in state TASK_FINISHED
+I1228 23:53:22.962054 23699 slave.cpp:641] Got acknowledgement of status update for task 0 of framework 201112282350-0-0000
+I1228 23:53:23.015414 23699 slave.cpp:397] Got assigned task 1 for framework 201112282350-0-0000
+I1228 23:53:23.017525 23699 slave.cpp:919] Status update: task 1 of framework 201112282350-0-0000 is now in state TASK_RUNNING
+I1228 23:53:23.018188 23699 slave.cpp:641] Got acknowledgement of status update for task 1 of framework 201112282350-0-0000
+I1228 23:53:23.023777 23699 slave.cpp:919] Status update: task 1 of framework 201112282350-0-0000 is now in state TASK_FINISHED
+I1228 23:53:23.024529 23699 slave.cpp:641] Got acknowledgement of status update for task 1 of framework 201112282350-0-0000

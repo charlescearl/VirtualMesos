@@ -1,0 +1,122 @@
+I0329 12:38:36.422474 16158 launcher.cpp:342] ExecutorLauncher::setupEnvironment
+I0329 12:38:36.422603 16158 launcher.cpp:347] ExecutorLauncher::setupEnvironment: MESOS_DIRECTORY: /media/LinuxShare2/mesos/work/slaves/201203291159-0-0/frameworks/201203291159-0-0002/executors/default/runs/0
+I0329 12:38:36.423023 16158 launcher.cpp:349] ExecutorLauncher::setupEnvironment: MESOS_SLAVE_PID: slave@192.168.1.64:44054
+I0329 12:38:36.424759 16158 launcher.cpp:351] ExecutorLauncher::setupEnvironment: MESOS_FRAMEWORK_ID: 201203291159-0-0002
+I0329 12:38:36.424979 16158 launcher.cpp:353] ExecutorLauncher::setupEnvironment: MESOS_EXECUTOR_ID: default
+I0329 12:38:36.425211 16158 launcher.cpp:361] ExecutorLauncher::setupEnvironment: MESOS_HOME: /media/LinuxShare2/mesos
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/spark-distro/lib_managed/jars/org.slf4j/slf4j-log4j12/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/spark-distro/lib_managed/jars/hadoop_root/slf4j-log4j12-1.4.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+12/03/29 12:38:37 INFO spark.Executor: Running task ID 0
+12/03/29 12:38:37 INFO spark.Executor: Running task ID 3
+12/03/29 12:38:37 INFO spark.Executor: Running task ID 1
+12/03/29 12:38:37 INFO spark.Executor: Running task ID 2
+12/03/29 12:38:37 INFO spark.Executor: Running task ID 4
+12/03/29 12:38:37 INFO spark.Executor: Running task ID 5
+12/03/29 12:38:37 INFO spark.Executor: Running task ID 6
+12/03/29 12:38:37 INFO spark.Executor: Running task ID 7
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 12:48:16 INFO spark.Executor: Finished task ID 4
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 12:48:18 INFO spark.Executor: Finished task ID 3
+12/03/29 12:48:18 INFO spark.Executor: Finished task ID 0
+12/03/29 12:48:19 INFO spark.Executor: Running task ID 24
+12/03/29 12:48:19 INFO spark.Executor: Running task ID 25
+12/03/29 12:48:19 INFO spark.Executor: Running task ID 26
+12/03/29 12:48:19 INFO spark.Executor: Finished task ID 7
+12/03/29 12:48:19 INFO spark.Executor: Running task ID 27
+12/03/29 12:48:19 INFO spark.Executor: Finished task ID 1
+12/03/29 12:48:19 INFO spark.Executor: Running task ID 28
+12/03/29 12:48:21 INFO spark.Executor: Finished task ID 5
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 12:48:23 INFO spark.Executor: Finished task ID 2
+12/03/29 12:48:25 INFO spark.Executor: Finished task ID 6
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 12:54:55 INFO spark.Executor: Finished task ID 24
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 12:54:58 INFO spark.Executor: Finished task ID 25
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 12:55:03 INFO spark.Executor: Finished task ID 26
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 12:55:09 INFO spark.Executor: Finished task ID 27
+12/03/29 12:55:25 INFO spark.Executor: Running task ID 29
+12/03/29 12:55:25 INFO spark.Executor: Running task ID 30
+12/03/29 12:55:25 INFO spark.Executor: Running task ID 31
+12/03/29 12:55:25 INFO spark.Executor: Running task ID 32
+12/03/29 12:55:25 INFO spark.Executor: Running task ID 33
+12/03/29 12:55:25 INFO spark.Executor: Running task ID 34
+12/03/29 12:55:25 INFO spark.Executor: Running task ID 35
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 12:55:49 INFO spark.Executor: Finished task ID 28
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 13:04:11 INFO spark.Executor: Finished task ID 33
+12/03/29 13:04:11 INFO spark.Executor: Finished task ID 29
+Warning: $HADOOP_HOME is deprecated.
+
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 13:04:13 INFO spark.Executor: Finished task ID 30
+12/03/29 13:04:14 INFO spark.Executor: Finished task ID 31
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 13:04:17 INFO spark.Executor: Finished task ID 34
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 13:04:22 INFO spark.Executor: Finished task ID 35
+Warning: $HADOOP_HOME is deprecated.
+
+12/03/29 13:04:25 INFO spark.Executor: Finished task ID 32
+12/03/29 13:04:25 INFO spark.Executor: Running task ID 40
+12/03/29 13:04:25 INFO spark.Executor: Running task ID 41
+12/03/29 13:04:25 INFO spark.Executor: Running task ID 42
+12/03/29 13:04:25 INFO spark.Executor: Running task ID 43
+12/03/29 13:04:25 INFO spark.Executor: Running task ID 45
+12/03/29 13:04:25 INFO spark.Executor: Running task ID 46
+12/03/29 13:04:25 INFO spark.Executor: Running task ID 44
+12/03/29 13:04:25 INFO spark.Executor: Running task ID 47
+12/03/29 13:13:59 INFO spark.Executor: Finished task ID 45
+12/03/29 13:14:00 INFO spark.Executor: Finished task ID 41
+12/03/29 13:14:00 INFO spark.Executor: Running task ID 64
+12/03/29 13:14:00 INFO spark.Executor: Running task ID 65
+12/03/29 13:14:01 INFO spark.Executor: Finished task ID 40
+12/03/29 13:14:03 INFO spark.Executor: Finished task ID 42
+12/03/29 13:14:03 INFO spark.Executor: Finished task ID 43
+12/03/29 13:14:03 INFO spark.Executor: Running task ID 66
+12/03/29 13:14:03 INFO spark.Executor: Running task ID 68
+12/03/29 13:14:03 INFO spark.Executor: Running task ID 67
+12/03/29 13:14:04 INFO spark.Executor: Finished task ID 47
+12/03/29 13:14:04 INFO spark.Executor: Running task ID 69
+12/03/29 13:14:07 INFO spark.Executor: Finished task ID 46
+12/03/29 13:14:11 INFO spark.Executor: Finished task ID 44
+12/03/29 13:21:01 INFO spark.Executor: Running task ID 70
+12/03/29 13:21:01 INFO spark.Executor: Running task ID 71
+12/03/29 13:21:41 INFO spark.Executor: Finished task ID 64
+12/03/29 13:21:57 INFO spark.Executor: Finished task ID 65
+12/03/29 13:22:04 INFO spark.Executor: Finished task ID 68
+12/03/29 13:22:05 INFO spark.Executor: Finished task ID 66
+12/03/29 13:22:11 INFO spark.Executor: Finished task ID 69
+12/03/29 13:22:15 INFO spark.Executor: Finished task ID 67
+12/03/29 13:26:48 INFO spark.Executor: Finished task ID 71
+12/03/29 13:26:53 INFO spark.Executor: Finished task ID 70

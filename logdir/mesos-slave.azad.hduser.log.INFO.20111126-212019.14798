@@ -1,0 +1,4 @@
+Log file created at: 2011/11/26 21:20:19
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1126 21:20:19.762959 14798 logging.cpp:40] Logging to /media/LinuxShare2/mesos/logdir

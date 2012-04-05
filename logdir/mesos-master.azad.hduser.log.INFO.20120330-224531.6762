@@ -1,0 +1,20 @@
+Log file created at: 2012/03/30 22:45:31
+Running on machine: azad
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0330 22:45:31.478605  6762 logging.cpp:70] Logging to /mesos-distro/logdir
+I0330 22:45:31.479462  6762 main.cpp:95] Build: 2012-03-28 23:30:52 by hduser
+I0330 22:45:31.479504  6762 main.cpp:96] Starting Mesos master
+I0330 22:45:31.480607  6762 webui.cpp:81] Starting master web server on port 9836
+I0330 22:45:31.480608  6763 master.cpp:264] Master started at mesos://master@192.168.1.64:5050
+I0330 22:45:31.480733  6763 master.cpp:279] Master ID: 201203302245-0
+I0330 22:45:31.480777  6766 webui.cpp:47] Master web server thread started
+I0330 22:45:31.481093  6763 master.cpp:462] Elected as master!
+I0330 22:45:31.493351  6766 webui.cpp:59] Loading webui/master/webui.py
+I0330 22:45:38.490962  6763 master.cpp:814] Attempting to register slave 201203302245-0-0 at slave@192.168.1.64:53790
+I0330 22:45:38.491278  6763 master.cpp:1057] Master now considering a slave at azad.gateway.2wire.net:53790 as active
+I0330 22:45:38.491327  6763 master.cpp:1588] Adding slave 201203302245-0-0 at azad.gateway.2wire.net with cpus=8; mem=8192
+I0330 22:45:38.491514  6763 simple_allocator.cpp:71] Added slave 201203302245-0-0 with cpus=8; mem=8192
+I0330 22:45:44.099516  6763 master.cpp:814] Attempting to register slave 201203302245-0-1 at slave@192.168.1.66:46831
+I0330 22:45:44.099767  6763 master.cpp:1057] Master now considering a slave at ubuntu.gateway.2wire.net:46831 as active
+I0330 22:45:44.100152  6763 master.cpp:1588] Adding slave 201203302245-0-1 at ubuntu.gateway.2wire.net with cpus=8; mem=6144
+I0330 22:45:44.100262  6763 simple_allocator.cpp:71] Added slave 201203302245-0-1 with cpus=8; mem=6144
