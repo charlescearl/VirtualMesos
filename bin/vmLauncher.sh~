@@ -1,8 +1,0 @@
-#!/bin/sh
-# Temporary launcher for virtual machine.
-# Takes environment variables from the command line.
-# Sets them and spawns the appropriate executor
-
-# Setup the environment
-
-# Call the executor
