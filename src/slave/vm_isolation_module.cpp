@@ -55,9 +55,15 @@ namespace {
   const int32_t MIN_CPU_SHARES = 10;
   const int64_t MIN_MEMORY_MB = 128 * Megabyte;
 
+  // Assume that MESOS_HOME, HADOOP_HOME, and SPARK_HOME are environment variables that
+  // are set by the user.
+  // These are virkaz specific values for the mesos, hadoop, and spark distribution homes
+  // and also a specific test virtual machine image
+  // TODO: Fix immediately to allow these to be determined from environment variables
   const std::string defaultMesosHome = "/mesos-distro";
   const std::string defaultHadoopHome = "/hadoop-distro";
   const std::string defaultSparkHome = "/spark-distro";
+  const std::string defaultVmName = "hostvirkaz3-clone";
 } // namespace {
 
 
@@ -139,7 +145,7 @@ void VmIsolationModule::launchExecutor(
   info->frameworkId = frameworkId;
   info->executorId = executorId;
   // Get the name of the vm or set to default
-  info->vm = conf.get("vm","hostvirkaz3-clone");
+  info->vm = conf.get("vm",defaultVmName);
   // Assume that the executorInfo will contain a value for the 
   // virtual machine name
   // There should be a command line argument in which the 
@@ -298,26 +304,6 @@ void VmIsolationModule::resourcesChanged(
 
   property = "cpu.shares";
   value = cpu_shares;
-
-  /*
-  if (!setControlGroupValue(vm, property, value)) {
-    // TODO(benh): Kill the executor, but do it in such a way that the
-    // slave finds out about it exiting.
-    return;
-  }
-
-  double mem = resources.get("mem", Resource::Scalar()).value();
-  int64_t limit_in_bytes = max((int64_t) mem, MIN_MEMORY_MB) * 1024LL * 1024LL;
-
-  property = "memory.limit_in_bytes";
-  value = limit_in_bytes;
-
-  if (!setControlGroupValue(vm, property, value)) {
-    // TODO(benh): Kill the executor, but do it in such a way that the
-    // slave finds out about it exiting.
-    return;
-  }
-  */
 }
 
 
@@ -423,6 +409,8 @@ int VmIsolationModule::launchVirtualMachine(VmInfo* info){
     // First launch the virtual machine
     // This will have to be changed to account for the virtual machine init
     // Assume that for now we will use libvirt
+    // TODO: Determine if this is a safe path assumption, I assume not, and if not
+    //  then do so in platform agnostic manner.
     vmArgs[i++] = "/usr/bin/virsh";
     vmArgs[i++] = "start";
     // the container name will be fixed...some VM that is in the local cache
@@ -467,11 +455,6 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
     }
 
     
-    /*
-      I0118 20:40:24.152222  5558 vm_isolation_module.cpp:455] VmIsolationModule::launchVirtualTask: host mesos home /media/LinuxShare2/mesos
-      I0118 20:40:24.152279  5558 vm_isolation_module.cpp:462] VmIsolationModule::launchVirtualTask: vmDirectory originally /media/LinuxShare2/mesos/work/slaves/201201182040-0-0/frameworks/201201182040-0-0000/executors/default/runs/0
-      I0118 20:40:24.152290  5558 vm_isolation_module.cpp:464] VmIsolationModule::launchVirtualTask: vmDirectory setup to be /mesos-distro/0
-    */
     // Use the configuration stored in the launcher
     // Set up the mesos_home and spark_home based parameters to use the 
     // default value
@@ -494,6 +477,10 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
     replacePathSubstring(vmFrameworksHome,hostMesosHome,defaultMesosHome);
     LOG(INFO) << "VmIsolationModule::launchVirtualTask: vmFrameworksHome setup to be " << vmFrameworksHome;
     
+    // Set the paths for Mesos, Hadoop, and Spark
+    std::string mesosHome = conf.get("mesos_home", defaultMesosHome);
+    std::string hadoopHome = conf.get("hadoop_home", defaultHadoopHome);
+
     ExecutorLauncher* launcher =
       new ExecutorLauncher(frameworkId,
 			   executorId,
@@ -504,11 +491,8 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
                            // directory, // should be relative to defaultMesosHome
 			   slave,
 			   vmFrameworksHome,
-			   // conf.get("frameworks_home", ""), // check this
-			   defaultMesosHome,
-			   //			   conf.get("home", ""), // should be defaultMesosHome
-			   defaultHadoopHome,
-			   // conf.get("hadoop_home", ""), // should be defaultHadoopHome
+			   mesosHome,
+			   hadoopHome,
 			   !local,
 			   conf.get("switch_user", true),
 			   vm,
@@ -519,7 +503,7 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
     // Create an ExecutorLauncher to set up the environment for executing
     // an external launcher_main.cpp process (inside of lxc-execute).
     
-    std::string mesosDirectory= "/mesos-distro/";
+    std::string mesosDirectory= conf.get("mesos_home", defaultMesosHome);
     std::ofstream templateShellFile;
     // change the file name to MESOS_FRAMEWORK_ID
     //    std::string frameworkId;
@@ -536,52 +520,6 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
 
     launchVmTask(vmIp,launchFileName,frameworkInfo);
 
-    // scp the file here
-
-    
-
-    /*
-    // Construct the initial control group options that specify the
-    // initial resources limits for this executor.
-    const vector<string>& options = getControlGroupOptions(resources);
-
-
-    const char** args = (const char**) new char*[3 + options.size() + 2];
-
-    //    vmArgs[i++] = info->vm;
-    // We can fork and exec the virtual machine
-    
-    // Then here first get the ip address
-    // Then launch an ssh that will run the job inside of the vm
-    // The first test is just the fork exec
-
-
-
-    // Here is where I think he launches the mesos task...or is it rather the place
-    // that he configures an environment that will "phone home" to the mesos 
-    // master
-    int i = 0;
-    for (int j = 0; j < options.size(); j++) {
-      args[i++] = options[j].c_str();
-    }
-
-    // Determine path for mesos-launcher from Mesos home directory.
-    string path = conf.get("home", ".") + "/bin/mesos-launcher";
-    args[i++] = path.c_str();
-    args[i] = NULL;
-
-    // Run lxc-execute.
-    // So here, have launched the VM within the forked executor process
-    // I think that the lxc is already passed the arguments of the task?
-    // How do we manage the VM?
-    // So one command has to launch the vm, ssh to start the task
-    LOG(INFO) << "Starting up the virtual machine ";
-    // execvp(args[0], (char* const*) args);
-
-    // If we get here, the execvp call failed.
-    LOG(FATAL) << "Could not exec lxc-execute";
-    // <<-- End env setup
-    */
   return 0;
 }
 
@@ -589,7 +527,8 @@ std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
   //  std::string ip= "192.168.1.1";
   std::string ip;
   // Local non-relative path, please resolve
-  std::string find_ip_perl = "/media/LinuxShare2/mesos/bin/find_addr.pl ";
+  std::string mesosHome = conf.get("mesos_home", defaultMesosHome);
+  std::string find_ip_perl = mesosHome+"/bin/find_addr.pl ";
   find_ip_perl += vm;
   LOG(INFO) << find_ip_perl << " is command line.";
   FILE * ip_result;
@@ -636,26 +575,17 @@ std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
     }
 }
 
-/*
-void VmIsolationModule::copyEnvParametersToScriptFile (const std::ofstream & ofs, ExecutorLauncher* launcher)
-{
-  ofs << "export MESOS_FRAMEWORK_ID=" << launcher->frameworkId.value().c_str() << std::endl;
-  ofs << "export MESOS_EXECUTOR_URI=" << launcher->executorUri.c_str()  << std::endl;
-  ofs << "export MESOS_USER=" << launcher->user.c_str()  << std::endl;
-  ofs << "export MESOS_WORK_DIRECTORY=" << launcher->workDirectory.c_str()  << std::endl;
-  ofs << "export MESOS_SLAVE_PID=" << launcher->slavePid.c_str()  << std::endl;
-  ofs << "export MESOS_HOME=" << launcher->mesosHome.c_str()  << std::endl;
-  ofs << "export MESOS_HADOOP_HOME=" << launcher->hadoopHome.c_str()  << std::endl;
-  ofs << "export MESOS_REDIRECT_IO=" << launcher->redirectIO  << std::endl;
-  ofs << "export MESOS_SWITCH_USER=" << launcher->shouldSwitchUser  << std::endl;
-  ofs << "export MESOS_CONTAINER=" << launcher->container.c_str()  << std::endl;
-}
-*/
-
+/**
+ * Launch the virtual machine task. In order to do this, we assume that ssh has been 
+ * setup between the host and guest vm to allow password-less login
+ */
 void VmIsolationModule::launchVmTask(const std::string & vmIp,std::string & launchFileName,
 				     const FrameworkInfo& frameworkInfo){
     std::string newIp(vmIp);
-    std::string vmLaunchCopyCommand= "scp -i /home/hduser/.ssh/id_rsa "+launchFileName+" hduser@"+newIp+":"+launchFileName;
+    // Assuming that the user is 'hduser' need to change immediately.
+    // TODO: Change the assumed user name, I think this should be the MESOS_USER environment variable
+    std::string userName= frameworkInfo.user()
+    std::string vmLaunchCopyCommand= "scp  "+launchFileName+" "+userName+"@"+newIp+":"+launchFileName;
     LOG(INFO) << "Copy command is " << vmLaunchCopyCommand << std::endl;
     FILE * remoteCommandPipe;
     char tempChar[100];
@@ -682,11 +612,10 @@ void VmIsolationModule::launchVmTask(const std::string & vmIp,std::string & laun
     remoteResultString.clear();
     
     // Now setup for the commannd
-    std::string vmLaunchCommand= "ssh -i /home/hduser/.ssh/id_rsa ";
+    std::string vmLaunchCommand= "ssh  ";
     vmLaunchCommand += frameworkInfo.user();
     vmLaunchCommand += "@";
     vmLaunchCommand += newIp;
-    //    vmLaunchCommand += " 'cd /mesos-distro;ls -l'";
     vmLaunchCommand += " 'bash "+launchFileName+"'";
 
     // Now run the command 
@@ -720,9 +649,10 @@ void VmIsolationModule::replacePathSubstring(std::string & path, const std::stri
 }
 
 std::string VmIsolationModule::mapHostToGuestPath(std::string & path){
-  std::string sparkPath= "/spark-distro/spark-executor";
+  std::string sparkPath= conf.get("spark_home", defaultSparkHome);
+  std::string sparkExecutorPath = sparkPath + "/spark-executor";
   if(path.find_first_of("spark-executor") != std::string::npos)
-    return sparkPath;
+    return sparkExecutorPath;
   else return path;
 }
 
