@@ -1,8 +1,0 @@
-Log file created at: 2011/12/29 22:21:14
-Running on machine: azad
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-E1229 22:21:14.065866 17014 vm_isolation_module.cpp:294] Failed to stop container hostvirkaz2, virsh returned: 256
-E1229 22:21:15.066689 17014 vm_isolation_module.cpp:294] Failed to stop container hostvirkaz2, virsh returned: 256
-E1229 22:21:16.067888 17014 vm_isolation_module.cpp:294] Failed to stop container hostvirkaz2, virsh returned: 256
-E1229 22:21:17.069020 17014 vm_isolation_module.cpp:294] Failed to stop container hostvirkaz2, virsh returned: 256
-E1229 22:21:18.070461 17014 vm_isolation_module.cpp:294] Failed to stop container hostvirkaz2, virsh returned: 256

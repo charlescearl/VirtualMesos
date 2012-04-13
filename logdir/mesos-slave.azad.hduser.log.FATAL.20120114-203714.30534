@@ -1,4 +1,0 @@
-Log file created at: 2012/01/14 20:37:14
-Running on machine: azad
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-F0114 20:37:14.189249 30535 vm_isolation_module.cpp:102] VM isolation module requires slave to run as root

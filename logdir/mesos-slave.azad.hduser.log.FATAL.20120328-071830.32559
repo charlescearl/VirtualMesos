@@ -1,4 +1,0 @@
-Log file created at: 2012/03/28 07:18:30
-Running on machine: azad
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-F0328 07:18:30.003581 32560 utils.hpp:130] Expecting 'MESOS_HOME' in environment variables
