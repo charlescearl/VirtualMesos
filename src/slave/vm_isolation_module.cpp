@@ -56,10 +56,7 @@ namespace {
   const int64_t MIN_MEMORY_MB = 128 * Megabyte;
 
   // Assume that MESOS_HOME, HADOOP_HOME, and SPARK_HOME are environment variables that
-  // are set by the user.
-  // These are virkaz specific values for the mesos, hadoop, and spark distribution homes
-  // and also a specific test virtual machine image
-  // TODO: Fix immediately to allow these to be determined from environment variables
+  // TODO: Let's place these into a configuration file. How about mesos.conf?
   const std::string defaultMesosHome = "/mesos-distro";
   const std::string defaultHadoopHome = "/hadoop-distro";
   const std::string defaultSparkHome = "/spark-distro";
@@ -409,8 +406,7 @@ int VmIsolationModule::launchVirtualMachine(VmInfo* info){
     // First launch the virtual machine
     // This will have to be changed to account for the virtual machine init
     // Assume that for now we will use libvirt
-    // TODO: Determine if this is a safe path assumption, I assume not, and if not
-    //  then do so in platform agnostic manner.
+    // TODO: This should be configurable
     vmArgs[i++] = "/usr/bin/virsh";
     vmArgs[i++] = "start";
     // the container name will be fixed...some VM that is in the local cache
@@ -420,7 +416,7 @@ int VmIsolationModule::launchVirtualMachine(VmInfo* info){
     vmArgs[3]= NULL;
 
     execvp(vmArgs[0], (char* const*) vmArgs);
-    LOG(ERROR) << "Did not launch vm " << " err no is " << errno;
+    LOG(FATAL) << "Did not launch vm " << " err no is " << errno;
   }
 }
 
@@ -518,7 +514,7 @@ int VmIsolationModule::launchVirtualTask(const ExecutorInfo&  executorInfo,
     
     templateShellFile.close();
 
-    launchVmTask(vmIp,launchFileName,frameworkInfo);
+    launchVirtualTask(vmIp,launchFileName,frameworkInfo);
 
   return 0;
 }
@@ -571,7 +567,7 @@ std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
     {
       std::string newIp(ip);
       newIp.erase(std::remove(newIp.begin(), newIp.end(), '\n'), newIp.end());
-     return newIp;
+      return newIp;
     }
 }
 
@@ -579,11 +575,10 @@ std::string  VmIsolationModule::getVirtualMachineIp(std::string &vm){
  * Launch the virtual machine task. In order to do this, we assume that ssh has been 
  * setup between the host and guest vm to allow password-less login
  */
-void VmIsolationModule::launchVmTask(const std::string & vmIp,std::string & launchFileName,
+void VmIsolationModule::launchVirtualTask(const std::string & vmIp,std::string & launchFileName,
 				     const FrameworkInfo& frameworkInfo){
     std::string newIp(vmIp);
-    // Assuming that the user is 'hduser' need to change immediately.
-    // TODO: Change the assumed user name, I think this should be the MESOS_USER environment variable
+    // TODO: Change the launch code so it can support a phone-home approach
     std::string userName= frameworkInfo.user()
     std::string vmLaunchCopyCommand= "scp  "+launchFileName+" "+userName+"@"+newIp+":"+launchFileName;
     LOG(INFO) << "Copy command is " << vmLaunchCopyCommand << std::endl;

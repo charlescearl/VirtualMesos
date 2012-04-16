@@ -87,7 +87,7 @@ public:
   virtual void setupEnvironmentForLauncherMain(std::ofstream & ofs);
   // Send message to the slave informing of the existence of the virtual machine
   // launched executor
-  virtual void notifySlaveOfTask(int pid);
+  virtual void notifySlaveOfExecutor(int pid);
 
 protected:
   // Initialize executor's working director.

@@ -112,7 +112,7 @@ private:
   std::string getVirtualMachineIp(std::string& vm);
 
   // Handle the setup of a virtual machine launch
-  void launchVmTask(const std::string & vmIp,std::string & launchFileName,const FrameworkInfo& frameworkInfo);
+  void launchVirtualTask(const std::string & vmIp,std::string & launchFileName,const FrameworkInfo& frameworkInfo);
 
   // TODO(benh): Make variables const by passing them via constructor.
   Configuration conf;

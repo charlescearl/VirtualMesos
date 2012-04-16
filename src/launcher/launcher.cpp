@@ -58,8 +58,6 @@ using std::ostringstream;
 using std::string;
 using std::vector;
 
-//using process;
-
 ExecutorLauncher::ExecutorLauncher(const FrameworkID& _frameworkId,
                                    const ExecutorID& _executorId,
                                    const string& _executorUri,
@@ -186,8 +184,6 @@ int ExecutorLauncher::runAndNotify()
     if (pid) {
       // In parent process.
       int status;
-      // Here send the slave message.
-      //      notifySlaveOfTask(pid);
       wait(&status);
       // TODO(benh): Provide a utils::os::system.
       // CCE: This block has to be specialized for VM case -->
@@ -249,7 +245,6 @@ string ExecutorLauncher::fetchExecutor()
     // a HADOOP_HOME environment variable. Finally, if that doesn't exist,
     // try looking for hadoop on the PATH.
     string hadoopScript;
-    hadoopHome ="/hadoop-distro";
     if (hadoopHome != "") {
       hadoopScript = hadoopHome + "/bin/hadoop";
     } else if (getenv("HADOOP_HOME") != 0) {
@@ -361,7 +356,7 @@ void ExecutorLauncher::setupEnvironment()
     LOG(INFO) << "ExecutorLauncher::setupEnvironment: MESOS_HOME: " << mesosHome.c_str();
 
     setenv("MESOS_HOME", mesosHome.c_str(), 1);
-    setenv("HADOOP_HOME","/hadoop-distro",1);
+    setenv("HADOOP_HOME",hadoopHome.c_str(),1);
   }
 }
 
@@ -380,13 +375,9 @@ void ExecutorLauncher::setupEnvironment( std::ofstream & ofs)
   ofs << "export MESOS_SLAVE_PID=" << slavePid  << std::endl;
   ofs << "export MESOS_REDIRECT_IO=" << redirectIO  << std::endl;
   ofs << "export MESOS_SWITCH_USER=" << shouldSwitchUser  << std::endl;
-  // Don't think this is needed
-  // ofs << "export MESOS_CONTAINER=" << container  << std::endl;
-
   // Set MESOS_HOME so that Java and Python executors can find libraries
   if (mesosHome != "") {
     ofs << "export MESOS_HOME=" << mesosHome  << std::endl;
-    // setenv("MESOS_HOME", mesosHome.c_str(), 1);
   }
 }
 
@@ -462,34 +453,19 @@ void ExecutorLauncher::setupEnvironmentForLauncherMain(std::ofstream & ofs)
 {
   // Set up environment variables passed through env.* params
   setupEnvironment(ofs);
-
   // Set up Mesos environment variables that launcher_main.cpp will
   // pass as arguments to an ExecutorLauncher there
-  //  ofs << "export MESOS_FRAMEWORK_ID=" << frameworkId.value() << std::endl;
-  // ofs << "export MESOS_EXECUTOR_URI=" << executorUri  << std::endl;
   ofs << "export MESOS_EXECUTOR_ID=" << executorId.value()  << std::endl;
-  // ofs << "export MESOS_USER=" << user  << std::endl;
-  // ofs << "export MESOS_WORK_DIRECTORY=" << workDirectory  << std::endl;
-  // ofs << "export MESOS_SLAVE_PID=" << slavePid  << std::endl;
   ofs << "export MESOS_HOME=" << mesosHome  << std::endl;
-  // ofs << "export MESOS_HADOOP_HOME=" << hadoopHome  << std::endl;
-  // ofs << "export MESOS_REDIRECT_IO=" << redirectIO  << std::endl;
-  // ofs << "export MESOS_SWITCH_USER=" << shouldSwitchUser  << std::endl;
-  // Don't think the container is needed.
-  // ofs << "export MESOS_CONTAINER=" << container  << std::endl;
-  // make the work directory
   ofs << "mkdir -p " << workDirectory <<  std::endl;
-  // Add the mesosHome/bin/mesos-launcher call
   ofs <<  mesosHome << "/bin/mesos-vm-launcher" << std::endl;
 }
 
 
 /**
  * Send the slave the message. Will have to fork/exec in order to do this.
- * Send the pid of the child process. I think this would be executor->pid
- * This code taken from slave/slave.cpp
  */
-void ExecutorLauncher::notifySlaveOfTask(int pid){
+void ExecutorLauncher::notifySlaveOfExecutor(int pid){
     ExecutorRegisteredMessage message;
     ExecutorArgs* args = message.mutable_args();
     LOG(INFO) << "Notifying slave of task with message";
@@ -512,11 +488,6 @@ void ExecutorLauncher::notifySlaveOfTask(int pid){
     args->set_hostname(hostname);
 
     process::ProcessBase baseProcess("executor");
-    // TODO: figure out if info is needed for this message
-    // args->set_data(info.data());
-    // TODO: The signature is std::string,message but is defaulting to something else. How do we fix this?
-    //    baseProcess.send(slavePid, message);
-    //    baseProcess.send(slavePid, args->GetTypeName(),args->mutable_data()->c_str(), (size_t) args->mutable_data()->size());
     LOG(INFO) << "Slave Pid is: " << slavePid;
     LOG(INFO) << "Exec type name is : " << args->GetTypeName();
     LOG(INFO) << "Exec data is : " << args->mutable_data()->c_str();

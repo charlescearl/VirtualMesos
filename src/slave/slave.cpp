@@ -648,77 +648,6 @@ void Slave::statusUpdateAcknowledgement(const SlaveID& slaveId,
 }
 
 
-// void Slave::statusUpdateAcknowledged(const SlaveID& slaveId,
-//                                      const FrameworkID& frameworkId,
-//                                      const TaskID& taskId,
-//                                      uint32_t sequence)
-// {
-//   StatusUpdateStreamID id(frameworkId, taskId);
-//   StatusUpdateStream* stream = getStatusUpdateStream(id);
-
-//   if (stream == NULL) {
-//     LOG(WARNING) << "WARNING! Received unexpected status update"
-//                  << " acknowledgement for task " << taskId
-//                  << " of framework " << frameworkId;
-//     return;
-//   }
-
-//   CHECK(!stream->pending.empty());
-
-//   const StatusUpdate& update = stream->pending.front();
-
-//   if (update->sequence() != sequence) {
-//     LOG(WARNING) << "WARNING! Received status update acknowledgement"
-//                  << " with bad sequence number (received " << sequence
-//                  << ", expecting " << update->sequence()
-//                  << ") for task " << taskId
-//                  << " of framework " << frameworkId;
-//   } else {
-//     LOG(INFO) << "Received status update acknowledgement for task "
-//               << taskId << " of framework " << frameworkId;
-
-//     // Write the update out to disk.
-//     CHECK(stream->acknowledged != NULL);
-
-//     Result<bool> result =
-//       utils::protobuf::write(stream->acknowledged, update);
-
-//     if (result.isError()) {
-//       // Failing here is rather dramatic, but so is not being able to
-//       // write to disk ... seems like failing early and often might do
-//       // more benefit than harm.
-//       LOG(FATAL) << "Failed to write status update to "
-//                  << stream->directory << "/acknowledged: "
-//                  << result.message();
-//     }
-
-//     stream->pending.pop();
-
-//     bool empty = stream->pending.empty();
-
-//     bool terminal =
-//       update.status().state() == TASK_FINISHED &&
-//       update.status().state() == TASK_FAILED &&
-//       update.status().state() == TASK_KILLED &&
-//       update.status().state() == TASK_LOST;
-
-//     if (empty && terminal) {
-//       cleanupStatusUpdateStream(stream);
-//     } else if (!empty && terminal) {
-//       LOG(WARNING) << "WARNING! Acknowledged a \"terminal\""
-//                    << " task status but updates are still pending";
-//     } else if (!empty) {
-//       StatusUpdateMessage message;
-//       message.mutable_update()->MergeFrom(stream->pending.front());
-//       message.set_reliable(true);
-//       send(master, message);
-
-//       stream->timeout = elapsedTime() + STATUS_UPDATE_RETRY_INTERVAL;
-//     }
-//   }
-// }
-
-
 void Slave::registerExecutor(const FrameworkID& frameworkId,
                              const ExecutorID& executorId)
 {
@@ -755,7 +684,6 @@ void Slave::registerExecutor(const FrameworkID& frameworkId,
     // First account for the tasks we're about to start.
     foreachvalue (const TaskDescription& task, executor->queuedTasks) {
       // Add the task to the executor.
-      // LOG(INFO) << " Adding task " << task << " to the q ";
       executor->addTask(task);
     }
 
