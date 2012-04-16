@@ -11,12 +11,10 @@ my $dom = $conn->get_domain_by_name ($ARGV[0]);
 
 # Get the libvirt XML for the domain.
 my $xml = $dom->get_xml_description ();
-# print "$xml\n";
+
 
 # Parse out the MAC addresses using an XPath expression.
 my $xp = XML::XPath->new (xml => $xml);
-#my $nodes = $xp->find ("//devices/interface[\@type='bridge' and /source/\@bridge='virbr0']");
-#my $nodes = $xp->find ("//devices/interface[/source/\@bridge='virbr0']");
 my $nodes = $xp->find ("//devices/interface[\@type='bridge']/mac[../source/\@bridge='virbr0']/\@address");
 my $node;
 my @mac_addrs;
@@ -24,22 +22,15 @@ my $node_value;
 my $node_subset;
 foreach $node ($nodes->get_nodelist) {
     $node_value= ($node->getData);
-#    print "$node_value\n";
     push @mac_addrs, lc $node_value;
-#    $xp = XML::XPath->new( context => $node );
-#    $node_subset= $xp->find ("//mac/\@address");
-#    foreach $node_value ($node_subset->get_nodelist){
-#	print "$node_value\n";
-#	
-#}
 }
 
 # Look up the MAC addresses in the output of 'arp -an'.
 my @arp_lines = split /\n/, `/usr/sbin/arp -an`;
 foreach (@arp_lines) {
     if (/\((.*?)\) at (.*?) /) {
-        my $this_addr = lc $2;
-        if (list_member ($this_addr, @mac_addrs)) {
+      my %mac_addrs; $mac_addrs{lc $node_value} = 1;
+      if ($mac_addrs{$this_addr}) {
             print "$1\n";
         }
     }
